@@ -1,0 +1,15 @@
+@import "./variables";
+
+
+h1,h2,h3,h4,h5,h6,body,p,a {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: $font-family-amatic;
+	font-weight: $font-weight-bold;
+	font-size: $font-56;
+	line-height: $line-height-71;
+	
+}
