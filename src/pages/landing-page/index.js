@@ -4,7 +4,7 @@ import React from "react";
 //pages
 
 //components
-
+import { Header } from "../../components/commons";
 //constants
 
 //styles
@@ -12,7 +12,11 @@ import React from "react";
 //assets
 
 const LandingPage = () => {
-  return <h1>LandingPage</h1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default LandingPage;

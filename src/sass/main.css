@@ -15,4 +15,11 @@ h1 {
   font-size: 56px;
   line-height: 71px;
 }
+
+h2 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+}
 /*# sourceMappingURL=main.css.map */
