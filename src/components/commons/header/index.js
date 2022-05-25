@@ -3,9 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="container d-flex justify-content-between flex-row align-items-center ">
-        <h1 className="text-align-center">WHODUNIT Cats</h1>
-        <h6>How it works?</h6>
+      <div className="container d-flex justify-content-between  align-items-center">
+        <div></div>
+        <h1>WhoDunIt Cats</h1>
+        <h6 className="flex-end">How it works?</h6>
       </div>
     </>
   );
