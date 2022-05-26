@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6, body, p, a {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
