@@ -26,3 +26,10 @@ h6 {
 	font-size: $font-20;
 	line-height: $line-height-24;
 }
+
+.btn-primary {
+	background-color: $white;
+	color: $black;
+	padding: 10px, 24px, 6px, 24px;
+	border-radius: 0px;
+}

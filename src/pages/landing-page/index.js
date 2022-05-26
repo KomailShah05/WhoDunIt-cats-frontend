@@ -5,6 +5,7 @@ import React from "react";
 
 //components
 import { Header } from "../../components/commons";
+import HeroSection from "../../components/hero";
 //constants
 
 //styles
@@ -15,6 +16,7 @@ const LandingPage = () => {
   return (
     <>
       <Header />
+      <HeroSection />
     </>
   );
 };
