@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.header-position {
+  min-width: 58%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 4.375rem;
+  margin-top: 2.5rem;
+}
+
+.text-white:not(:first-child) {
+  margin-left: 2.5rem;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,13 @@
+.header-position {
+  min-width: 58%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4.375rem;
+  margin-top: 2.5rem;
+}
+
+.text-white:not(:first-child) {
+  margin-left: 2.5rem;
+}

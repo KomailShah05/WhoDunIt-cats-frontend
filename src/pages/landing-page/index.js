@@ -5,7 +5,8 @@ import React from "react";
 
 //components
 import { Header } from "../../components/commons";
-import HeroSection from "../../components/hero";
+import { HeroSection } from "../../components/landing-page";
+
 //constants
 
 //styles

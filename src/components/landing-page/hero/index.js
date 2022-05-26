@@ -1,12 +1,14 @@
+// libraries
 import React from "react";
+
+// styles
 import "./index.css";
+
 const HeroSection = () => {
   return (
     <div className="hero">
-      <div className="container ">
-        <div className="row">
-          <div className="col-md align-self-end"> Hello</div>
-        </div>
+      <div className="d-flex">
+        <div className="justify-self-center align-self-center">Hello</div>
       </div>
     </div>
   );
