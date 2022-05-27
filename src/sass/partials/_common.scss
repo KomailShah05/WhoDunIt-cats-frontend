@@ -32,9 +32,17 @@ h6 {
 	line-height: $line-height-24;
 }
 
-.btn-primary {
-	background-color: $white;
-	color: $black;
-	padding: 10px, 24px, 6px, 24px;
-	border-radius: 0px;
+p {
+	font-family: $font-family-inter;
+	font-weight: $font-weight-regular;
+	color: $dark-grey;
+}
+
+.btn {
+	&.btn-primary {
+		background: $white;
+		color: $black;
+		padding: 10px, 24px, 6px, 24px;
+		border-radius: 0px;
+	}
 }

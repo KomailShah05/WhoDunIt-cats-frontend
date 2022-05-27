@@ -34,8 +34,14 @@ h6 {
   line-height: 24px;
 }
 
-.btn-primary {
-  background-color: #FFFFFF;
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #999999;
+}
+
+.btn.btn-primary {
+  background: #FFFFFF;
   color: #000000;
   padding: 10px, 24px, 6px, 24px;
   border-radius: 0px;

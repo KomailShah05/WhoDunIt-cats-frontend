@@ -7,8 +7,15 @@ import "./index.css";
 const HeroSection = () => {
   return (
     <div className="hero">
-      <div className="container d-flex hero-content justify-content-end  text-white">
-        <div>Card goes here</div>
+      <div className="container d-md-flex hero-content justify-content-end  text-white">
+        <div className="hero-card">
+          <p>
+            Suscipit sem dolor id adipiscing tincidunt parturient. Vitae,
+            sagittis a, justo, pellentesque diam. Malesuada ullamcorper et ut
+            quis donec eget tellus ac nec.
+          </p>
+          <button classsName="hero-card-btn">Join the hunt</button>
+        </div>
       </div>
     </div>
   );
