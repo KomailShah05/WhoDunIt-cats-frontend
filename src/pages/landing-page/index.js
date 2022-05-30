@@ -9,6 +9,7 @@ import {
   HeroSection,
   MintedSection,
   WhoDidIt,
+  HowItWorks,
 } from "../../components/landing-page";
 
 //constants
@@ -23,6 +24,7 @@ const LandingPage = () => {
       <Header />
       <HeroSection />
       <MintedSection />
+      <HowItWorks />
       <WhoDidIt />
     </>
   );
