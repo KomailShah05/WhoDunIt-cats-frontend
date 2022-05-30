@@ -1,7 +1,7 @@
 @import "./variables";
 
 
-h1,h2,h3,h4,h5,h6,body,p,a {
+h1,h2,h3,h4,h5,h6,body,p,a,span {
 	margin: 0;
 	padding: 0;
 }
@@ -36,6 +36,13 @@ p {
 	font-family: $font-family-inter;
 	font-weight: $font-weight-regular;
 	color: $dark-grey;
+}
+
+.minted {
+	font-size: $font-80;
+	line-height: $line-height-64;
+	font-family: $font-family-gochi-hand;
+	color: $white;
 }
 
 .btn {

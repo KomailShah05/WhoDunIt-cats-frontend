@@ -14,7 +14,7 @@ const HeroSection = () => {
             sagittis a, justo, pellentesque diam. Malesuada ullamcorper et ut
             quis donec eget tellus ac nec.
           </p>
-          <button classsName="hero-card-btn">Join the hunt</button>
+          <button className="btn hero-card-btn">Join the hunt</button>
         </div>
       </div>
     </div>

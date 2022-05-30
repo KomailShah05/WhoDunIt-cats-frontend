@@ -6,6 +6,8 @@ import React from "react";
 //components
 import { Header } from "../../components/commons";
 import { HeroSection } from "../../components/landing-page";
+import MintedSection from "../../components/landing-page/minted-section";
+import WhoDidIt from "../../components/landing-page/who-did-it";
 
 //constants
 
@@ -18,6 +20,8 @@ const LandingPage = () => {
     <>
       <Header />
       <HeroSection />
+      <MintedSection />
+      <WhoDidIt />
     </>
   );
 };
