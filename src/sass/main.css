@@ -4,7 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
-h1, h2, h3, h4, h5, h6, body, p, a, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p,
+a,
+span {
   margin: 0;
   padding: 0;
 }
@@ -40,15 +49,15 @@ p {
   color: #999999;
 }
 
-.minted {
-  font-size: 80px;
-  line-height: 64px;
+.minted-text {
+  font-size: 5rem;
+  line-height: 38px;
   font-family: "Gochi Hand", cursive;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .btn.btn-primary {
-  background: #FFFFFF;
+  background: #ffffff;
   color: #000000;
   padding: 10px, 24px, 6px, 24px;
   border-radius: 0px;

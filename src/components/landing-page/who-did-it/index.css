@@ -1,8 +1,16 @@
 .who-did-it {
-  background-image: url(../../../assets/images/who-did-it.svg);
+  background: radial-gradient(70.9% 173.52% at 50% 6.19%, rgba(0, 0, 0, 0) 25.31%, #000000 100%), url(../../../assets/images/image_1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 45.813rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=index.css.map */
