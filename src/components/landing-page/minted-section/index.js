@@ -7,14 +7,14 @@ import "./index.css";
 const MintedSection = () => {
   return (
     <section id="minted">
-      <div className="container d-flex justify-content-around">
-        <h2 className="text-white total-minted text-capitalize">
-          total minted
-        </h2>
-        <p className=" minted align-self-end">
-          3016 <br />
-          <span className="remaining-minted">of 5000</span>
-        </p>
+      <div className="d-flex justify-content-center align-items-center w-100">
+        <div className="text-box">
+          <h2 className="text-white text-capitalize">total minted</h2>
+          <p className="minted-text">
+            3016 <br />
+            <span className="remaining-minted">of 5000</span>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -2,12 +2,20 @@
   background: url(../../../assets/images/minted-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 35.938rem;
 }
 
-.total-minted {
-  margin-top: 13.313rem;
-  margin-left: 8.5rem;
+#minted .width-100 {
+  width: 100% !important;
 }
 
 .remaining-minted {
@@ -15,5 +23,18 @@
   line-height: 37.72px;
   color: #999999;
   font-family: "Gochi Hand", cursive;
+}
+
+#minted .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: inherit;
 }
 /*# sourceMappingURL=index.css.map */
