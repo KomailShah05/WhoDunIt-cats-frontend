@@ -35,5 +35,10 @@
   line-height: 28px;
   height: 44px;
   font-weight: 400;
+  border: 0;
+  outline: 0;
 }
-/*# sourceMappingURL=index.css.map */
+
+.btn.hero-card-btn:hover {
+  background: #dad3d3;
+}

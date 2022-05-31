@@ -1,3 +1,4 @@
+// importing all files
 import HeroSection from "./hero";
 import WhoDidIt from "./who-did-it";
 import MintedSection from "./minted-section";

@@ -10,7 +10,8 @@ import LandingPage from "./pages/landing-page";
 import { routes } from "./lib/utills/constants";
 
 //styles
-import "./sass/main.css";
+import "./sass/main.scss";
+
 //assets
 
 const App = () => {

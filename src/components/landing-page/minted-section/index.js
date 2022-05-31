@@ -5,7 +5,7 @@ import React from "react";
 import { eng_lang } from "../../../lib/utills/constants";
 
 //styles
-import "./index.css";
+import "./index.scss";
 
 const MintedSection = () => {
   return (
@@ -16,9 +16,10 @@ const MintedSection = () => {
             {eng_lang.mintedSection.total_Minted}
           </h2>
           <p className="minted-text">
-            3016 <br />
+            {eng_lang.mintedSection.minted_tokens}
+            <br />
             <span className="remaining-minted">
-              {eng_lang.mintedSection.remaining_minted}
+              {`${eng_lang.mintedSection.of} ${eng_lang.mintedSection.remaining_minted}`}
             </span>
           </p>
         </div>
