@@ -7,6 +7,20 @@ export const routes = {
 
 // Landing Page Constants
 export const eng_lang = {
+  buttonConstants: {
+    join_hunt_text: "Join the hunt",
+  },
+  header: {
+    heading: "WhoDunIt Cats?",
+  },
+  hero: {
+    card_text:
+      "Suscipit sem dolor id adipiscing tincidunt parturient. Vitae, sagittis a, justo, pellentesque diam. Malesuada ullamcorper et ut quis donec eget tellus ac nec.",
+  },
+  mintedSection: {
+    total_Minted: "total minted",
+    remaining_minted: "of 5000",
+  },
   howItWorks: {
     heading: "How it works?",
     first_line:
