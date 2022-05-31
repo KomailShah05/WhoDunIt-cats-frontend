@@ -1,39 +1,38 @@
 //libraries
 import React from "react";
 
-//styles
-import "./index.css";
+// constants
+import { eng_lang } from "../../../lib/utills/constants";
 
-//image imports
-import HowToExport from "../../../assets/images/how-to-export.svg";
-import Underline from "../../../assets/images/under-line.svg";
+//styles
+import "./index.scss";
+
+//assets
+import { HowToExport, Underline } from "../../../assets";
 
 const HowItWorks = () => {
   return (
-    <section id="HowItWorks">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-4">
-            <div className=" d-flex justify-content-center">
-              <img src={HowToExport} alt="HowToExport" />
-            </div>
+    <section className="HowItWorks">
+      <div className="row ps-lg-5 HowItWorks__margin-tp-btm">
+        <div className="col-lg-5">
+          <div className=" d-flex justify-content-center">
+            <img src={HowToExport} alt="HowToExport" />
           </div>
-          <div className="col-8 align-self-start ">
-            <h2 className="text-white">How it works?</h2>
-            <img className="underline" src={Underline} alt="Underline" />
-            <p className="working-text">
-              Neque orci dui, sit libero diam magnis nunc et. Molestie diam
-              gravida suspendisse hac aliquam elit. Et turpis placerat non
-              turpis dui. Egestas elit nibh in eros dictum. Odio feugiat amet,
-              diam eget cursus. Nec, vivamus arcu, amet leo aliquam aenean
-              egestas. <br /> Risus elit, et id rhoncus leo lectus nisl molestie
-              consectetur. Mi, suspendisse lectus consectetur at. Aenean dolor,
-              risus, fermentum sem. Nec quam egestas orci, eleifend ac commodo.
-              Leo ornare posuere mauris vestibulum bibendum ante. Nulla at
-              maecenas euismod et consequat nibh. Sit faucibus amet, vitae
-              gravida id lectus quis.
-            </p>
-          </div>
+        </div>
+        <div className="col-lg-7">
+          <h2 className="text-white">{eng_lang.howItWorks.heading}</h2>
+          <img className="underline" src={Underline} alt="Underline" />
+          <p className="working-text">
+            {eng_lang.howItWorks.first_line} <br />
+            {eng_lang.howItWorks.second_line} <br />
+            {eng_lang.howItWorks.third_line} <br />
+            {eng_lang.howItWorks.fourth_line} <br />
+            {eng_lang.howItWorks.fifth_line} <br />
+            {eng_lang.howItWorks.sixth_line} <br />
+            {eng_lang.howItWorks.seventh_line} <br />
+            {eng_lang.howItWorks.eight_line} <br />
+            {eng_lang.howItWorks.last_line}
+          </p>
         </div>
       </div>
     </section>

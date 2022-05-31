@@ -1,10 +1,28 @@
 // libraries
-import React from "react";
+import React, { useState } from "react";
 
 // styles
-import "./index.css";
+import "./index.scss";
 
 const Header = () => {
+  const [scroll, setScroll] = useState(false);
+  // detect scroll on page
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  //on scroll change header
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("header").style.fontSize = "30px";
+    } else {
+      document.getElementById("header").style.fontSize = "90px";
+    }
+  }
+
   return (
     <>
       <div className="bg-transparent d-flex justify-content-end align-items-center fixed-top">

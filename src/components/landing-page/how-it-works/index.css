@@ -1,11 +1,15 @@
-#HowItWorks {
-  background-color: #0F1016;
+.HowItWorks {
+  background-color: #0e0f15;
   overflow-x: hidden;
 }
 
-#HowItWorks .working-text {
+.HowItWorks .working-text {
   font-size: 1.125rem;
   line-height: 2rem;
+}
+
+.HowItWorks__margin-tp-btm {
+  margin: 5.03rem 0 4.25rem 0;
 }
 
 .underline {
