@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #f7f4f4 !important;
+}
+
 h1 {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
@@ -62,4 +66,26 @@ p {
   padding: 10px, 24px, 6px, 24px;
   border-radius: 0px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.btn:focus, .btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+}
+
+.ripple {
+  background-position: center;
+  -webkit-transition: background 0.8s;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: radial-gradient(circle, transparent 1%, #3374a2 1%) center/15000% #253f55;
+}
+
+.ripple:active {
+  background-color: #253f55;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}

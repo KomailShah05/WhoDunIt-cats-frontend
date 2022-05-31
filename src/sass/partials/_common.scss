@@ -16,6 +16,9 @@ span {
 
 a {
   text-decoration: none;
+  &:hover {
+    color: $medium-grey !important;
+  }
 }
 
 h1 {
@@ -59,4 +62,23 @@ p {
     padding: 10px, 24px, 6px, 24px;
     border-radius: 0px;
   }
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: none !important;
+  }
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: radial-gradient(circle, transparent 1%, #3374a2 1%) center/15000%
+    #253f55;
+}
+.ripple:active {
+  background-color: #253f55;
+  background-size: 100%;
+  transition: background 0s;
 }

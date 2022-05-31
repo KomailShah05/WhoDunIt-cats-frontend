@@ -1,3 +1,5 @@
+@import "../../../sass/partials/variables";
+
 .header-position {
   min-width: 58%;
   display: flex;
@@ -6,6 +8,11 @@
   align-items: center;
   padding-right: 4.375rem;
   margin-top: 2.5rem;
+}
+.header {
+  &__scroll-heading {
+    font-size: $font-40 !important; //40px
+  }
 }
 
 .text-white:not(:first-child) {
