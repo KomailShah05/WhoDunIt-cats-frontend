@@ -12,11 +12,13 @@ const HowItWorks = () => {
   return (
     <section id="HowItWorks">
       <div className="container">
-        <div className="row justify-content-between">
-          <div className="col-4  d-flex justify-content-center">
-            <img src={HowToExport} alt="HowToExport" />
+        <div className="row justify-content-center">
+          <div className="col-4">
+            <div className=" d-flex justify-content-center">
+              <img src={HowToExport} alt="HowToExport" />
+            </div>
           </div>
-          <div className="col-8 align-self-center ">
+          <div className="col-8 align-self-start ">
             <h2 className="text-white">How it works?</h2>
             <img className="underline" src={Underline} alt="Underline" />
             <p className="working-text">
