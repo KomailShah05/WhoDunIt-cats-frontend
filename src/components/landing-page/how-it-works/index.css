@@ -1,5 +1,6 @@
 #HowItWorks {
   background-color: #0F1016;
+  overflow-x: hidden;
 }
 
 #HowItWorks .working-text {
