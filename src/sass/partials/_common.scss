@@ -82,3 +82,22 @@ p {
   background-size: 100%;
   transition: background 0s;
 }
+
+.bg-dark {
+  background: $black !important;
+}
+
+.subscribe-btn {
+  background: $white;
+  padding: 10px 24px 6px 24px;
+  border-radius: 0px;
+  width: 24.438rem; //391px
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-24;
+  line-height: $line-height-28;
+  color: $black;
+  &:hover {
+    background: #dad3d3;
+  }
+}

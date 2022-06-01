@@ -11,11 +11,29 @@ import "./index.scss";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 
+  const listenScrollEvent = () => {
+    if (window.scrollY < 70) {
+      return setScroll(false);
+    } else if (window.scrollY > 70) {
+      return setScroll(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
     <>
-      <div className="bg-transparent d-flex justify-content-end align-items-center fixed-top">
-        <div className="header-position">
-          <h1 className={`text-white ${scroll && "header__scroll-heading"}`}>
+      <div
+        className={` d-flex justify-content-end align-items-center fixed-top ${
+          scroll && "bg-dark"
+        }`}
+      >
+        <div className={`header-position ${scroll && "mt-0 "}`}>
+          <h1 className={`text-white ${scroll && "header__scroll-heading "}`}>
             {eng_lang.title}
           </h1>
           <div className="d-flex">

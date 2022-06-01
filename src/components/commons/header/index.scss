@@ -11,7 +11,8 @@
 }
 .header {
   &__scroll-heading {
-    font-size: $font-40 !important; //40px
+    font-size: $font-40; //40px
+    margin-left: 2.2rem;
   }
 }
 

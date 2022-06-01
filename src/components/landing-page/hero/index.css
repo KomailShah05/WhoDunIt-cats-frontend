@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .hero {
   background-image: url(../../../assets/images/HeroImg.svg);
   background-size: cover;
@@ -25,15 +28,15 @@
 }
 
 .btn.hero-card-btn {
-  margin-top: 34px;
-  background: #fff;
-  color: #000;
+  margin-top: 2.125rem;
+  background: #ffffff;
+  color: #000000;
   padding: 10px 24px 6px 24px;
   border-radius: 0px;
   font-family: "Gochi Hand", cursive;
-  font-size: 24px;
-  line-height: 28px;
-  height: 44px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  height: 2.75rem;
   font-weight: 400;
   border: 0;
   outline: 0;
@@ -42,3 +45,4 @@
 .btn.hero-card-btn:hover {
   background: #dad3d3;
 }
+/*# sourceMappingURL=index.css.map */

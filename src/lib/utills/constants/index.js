@@ -10,6 +10,7 @@ export const eng_lang = {
   title: "WhoDunIt Cats?",
   buttonConstants: {
     join_hunt_text: "Join the hunt",
+    subscribe_btn_text: "Subscribe to our Newsletter",
   },
   header: {
     heading: "WhoDunIt Cats?",
@@ -43,5 +44,14 @@ export const eng_lang = {
     eight_line:
       "ante. Nulla at maecenas euismod et consequat nibh. Sit faucibus amet, vitae",
     last_line: "gravida id lectus quis.",
+  },
+  footer: {
+    terms_and_conditions: "Terms and Conditions",
+    support_email: "support@whodunitcats.com",
+    stay_in_touch: "Stay in touch with us",
+    copyrights: "©2022 WhoDunItCats. All Rights Reserved.",
+    twitter: "Twitter",
+    instagram: "Instagram",
+    discord: "Discord",
   },
 };
