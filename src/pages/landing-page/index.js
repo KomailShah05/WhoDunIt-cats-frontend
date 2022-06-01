@@ -4,13 +4,14 @@ import React from "react";
 //pages
 
 //components
-import { Header, PopUp, Footer } from "../../components/commons";
+import { Header, Footer } from "../../components/commons";
 import {
   HeroSection,
   MintedSection,
   WhoDidIt,
   HowItWorks,
 } from "../../components/landing-page";
+import { PopUp } from "../../components/join-the-hunt";
 
 //constants
 

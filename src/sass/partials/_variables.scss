@@ -1,7 +1,9 @@
+// font styles
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
+// colors
 $black: #000000;
 $bg-light-black: #0f1016;
 $white: #ffffff;
@@ -11,6 +13,7 @@ $dark-grey: #999999;
 $bg-light-grey: #e5e5e5;
 $maroon: #871616;
 $charcoal: #333333;
+$dark-brown: #08080c;
 
 //font-faces
 $font-family-inter: "Inter", sans-serif;
@@ -65,9 +68,24 @@ $font-weight-light: 300;
 $font-weight-lighter: 200;
 $font-weight-lightest: 100;
 
-//breakpoints 
+// font-styles
+$font-style-normal: normal;
+
+//breakpoints
 $breakpoint-xs: 0;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+
+// px to rem values e.g 1rem = 16px
+$size-16: 1rem;
+$size-18: 1.12rem;
+$size-20: 1.25rem;
+$size-22: 1.428rem; //22.85px
+$size-24: 1.5rem;
+$size-28: 1.75rem;
+$size-36: 2.25rem;
+$size-40: 2.5rem;
+$size-40: 2.875rem;
+$size-48: 3rem;

@@ -12,6 +12,7 @@ export const eng_lang = {
     join_hunt_text: "Join the hunt",
     subscribe_btn_text: "Subscribe to our Newsletter",
   },
+  connect_to_metamask: "Connect  Metamask",
   header: {
     heading: "WhoDunIt Cats?",
     tabs: " How it works?",
@@ -53,5 +54,14 @@ export const eng_lang = {
     twitter: "Twitter",
     instagram: "Instagram",
     discord: "Discord",
+  },
+  joint_the_hunt_modal: {
+    title: "Furry Cat",
+    price: "Price",
+    total_minted: "Total Minted",
+    sub_title: "What you get & how to use",
+    of: "of",
+    paragraph:
+      "Suscipit sem dolor id adipiscing tincidunt parturient. Vitae, sagittis a, justo, pellentesque diam. Malesuada ullamcorper et ut quis donec eget tellus ac nec.",
   },
 };
