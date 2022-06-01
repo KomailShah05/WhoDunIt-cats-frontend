@@ -1,0 +1,48 @@
+@import "../../../sass/partials/variables";
+
+#footer {
+    background-color: $black;
+    background: url(../../../assets/images/whodunit-footer.svg);
+    background-size: cover;
+    background-position: end;
+    background-repeat: no-repeat;
+}
+
+.list {
+    margin: 4.5rem 0 4.5rem 0;
+    font-family: $font-family-inter;
+    font-weight: $font-weight-bold;
+    font-size: $font-16;
+    line-height: $line-height-24;
+    color: $white;
+    &__copyrights {
+        font-weight: $font-weight-regular;
+        color: $dark-grey;
+    }
+    & ul {
+        margin-right: 12.125rem;
+    }
+    & li {
+        margin: 0 0 1rem 0;
+        & img {
+            margin-right: 1rem;
+        }
+    }
+    & a {
+        & li {
+            color: $white;
+            &:hover {
+                color: $dark-grey ;
+            }
+        }
+    }
+}
+
+.footer-touch-heading {
+    font-family: $font-family-gochi-hand;
+    font-weight: $font-weight-regular;
+    font-size: $font-24;
+    line-height: $line-height-28;
+}
+
+

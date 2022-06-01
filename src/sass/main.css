@@ -28,7 +28,7 @@ a:hover {
 
 h1 {
   font-family: "Amatic SC", cursive;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3.5rem;
   line-height: 4.438rem;
 }
@@ -92,5 +92,21 @@ p {
 
 .bg-dark {
   background: #000000 !important;
+}
+
+.subscribe-btn {
+  background: #ffffff;
+  padding: 10px 24px 6px 24px;
+  border-radius: 0px;
+  width: 24.438rem;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #000000;
+}
+
+.subscribe-btn:hover {
+  background: #dad3d3;
 }
 /*# sourceMappingURL=main.css.map */

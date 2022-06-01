@@ -1,3 +1,4 @@
+@import "../../../sass/partials/variables";
 #minted {
   background: url(../../../assets/images/minted-bg.svg);
   background-repeat: no-repeat;
@@ -13,10 +14,10 @@
 }
 
 .remaining-minted {
-  font-size: 32px;
-  line-height: 37.72px;
-  color: #999999;
-  font-family: "Gochi Hand", cursive;
+  font-size: $font-32; //32px
+  line-height: 2.358rem; //37.72px
+  color: $dark-grey;
+  font-family: $font-family-gochi-hand;
 }
 
 #minted .text-box {

@@ -11,7 +11,7 @@ import "./index.scss";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 
-  const listenScrollEvent = (event) => {
+  const listenScrollEvent = () => {
     if (window.scrollY < 70) {
       return setScroll(false);
     } else if (window.scrollY > 70) {

@@ -1,3 +1,4 @@
+@import "../../../sass/partials/variables";
 .hero {
   background-image: url(../../../assets/images/HeroImg.svg);
   background-size: cover;
@@ -24,16 +25,16 @@
 
 .btn {
   &.hero-card-btn {
-    margin-top: 34px;
-    background: #fff;
-    color: #000;
+    margin-top: 2.125rem; //34px
+    background: $white;
+    color: $black;
     padding: 10px 24px 6px 24px;
     border-radius: 0px;
-    font-family: "Gochi Hand", cursive;
-    font-size: 24px;
-    line-height: 28px;
-    height: 44px;
-    font-weight: 400;
+    font-family: $font-family-gochi-hand;
+    font-size: $font-24;
+    line-height: $line-height-28;
+    height: 2.75rem; //44px
+    font-weight: $font-weight-regular;
     border: 0;
     outline: 0;
     &:hover {
