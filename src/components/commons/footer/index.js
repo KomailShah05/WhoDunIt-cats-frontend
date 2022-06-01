@@ -15,8 +15,8 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className="container">
-        <div className="row align-items-center ">
-          <div className="col-5">
+        <div className="row align-items-center">
+          <div className="col-lg-5">
             <ul className="list-unstyled list">
               <Link to={"/"}>
                 <li>{eng_lang.footer.terms_and_conditions}</li>
@@ -29,7 +29,7 @@ const Footer = () => {
               <li className="list__copyrights">{eng_lang.footer.copyrights}</li>
             </ul>
           </div>
-          <div className="col-2 ">
+          <div className="col-lg-3 ">
             {" "}
             <ul className="list-unstyled list ">
               <Link to={"/"}>
@@ -53,13 +53,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-5">
+          <div className="col-lg-4 ps-lg-5">
             <ul className="list-unstyled list">
-              <li className="footer-touch-heading ">
+              <li className="footer-touch-heading mb-2rem">
                 {eng_lang.footer.stay_in_touch}
               </li>
               <li>
-                <button className="subscribe-btn">
+                <button
+                  className="subscribe-btn"
+                  data-mdb-ripple-color="primary"
+                >
                   {eng_lang.buttonConstants.subscribe_btn_text}
                 </button>
               </li>

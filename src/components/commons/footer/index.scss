@@ -1,11 +1,14 @@
 @import "../../../sass/partials/variables";
 
 #footer {
-    background-color: $black;
-    background: url(../../../assets/images/whodunit-footer.svg);
-    background-size: cover;
-    background-position: end;
+    background: url(../../../assets/images/whodunit-footer.svg) $black;
+    // background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
+    @media screen and (max-width: $breakpoint-md){
+        background: $black;
+      
+    }
 }
 
 .list {
@@ -36,6 +39,9 @@
             }
         }
     }
+    @media screen and (max-width: $breakpoint-md ){
+        margin: 2.5rem 0 2rem 0;
+    }
 }
 
 .footer-touch-heading {
@@ -44,5 +50,10 @@
     font-size: $font-24;
     line-height: $line-height-28;
 }
+
+.mb-2rem {
+    margin-bottom: 2rem !important;
+}
+
 
 

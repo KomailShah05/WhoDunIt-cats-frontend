@@ -2,11 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 #footer {
-  background-color: #000000;
-  background: url(../../../assets/images/whodunit-footer.svg);
-  background-size: cover;
-  background-position: end;
+  background: url(../../../assets/images/whodunit-footer.svg) #000000;
+  background-position: bottom;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    background: #000000;
+  }
 }
 
 .list {
@@ -43,10 +47,20 @@
   color: #999999;
 }
 
+@media screen and (max-width: 768px) {
+  .list {
+    margin: 2.5rem 0 2rem 0;
+  }
+}
+
 .footer-touch-heading {
   font-family: "Gochi Hand", cursive;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.75rem;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem !important;
 }
 /*# sourceMappingURL=index.css.map */

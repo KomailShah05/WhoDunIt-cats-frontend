@@ -10,7 +10,7 @@ import "./index.scss";
 const HeroSection = () => {
   return (
     <div className="hero">
-      <div className="container d-md-flex hero-content justify-content-end  text-white">
+      <div className="container d-md-flex hero-content justify-content-lg-end justify-content-center  text-white">
         <div className="hero-card">
           <p>{eng_lang.hero.card_text}</p>
           <button
