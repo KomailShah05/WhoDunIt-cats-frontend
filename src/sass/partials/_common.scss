@@ -82,3 +82,7 @@ p {
   background-size: 100%;
   transition: background 0s;
 }
+
+.bg-dark {
+  background: $black !important;
+}

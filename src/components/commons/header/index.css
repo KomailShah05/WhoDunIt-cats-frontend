@@ -21,9 +21,11 @@
 }
 
 .header__scroll-heading {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
+  margin-left: 2.2rem;
 }
 
 .text-white:not(:first-child) {
   margin-left: 2.5rem;
 }
+/*# sourceMappingURL=index.css.map */

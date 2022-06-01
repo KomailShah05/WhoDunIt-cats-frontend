@@ -89,3 +89,8 @@ p {
   -webkit-transition: background 0s;
   transition: background 0s;
 }
+
+.bg-dark {
+  background: #000000 !important;
+}
+/*# sourceMappingURL=main.css.map */
