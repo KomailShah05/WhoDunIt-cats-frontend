@@ -5,9 +5,8 @@
     // background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    @media screen and (max-width: $breakpoint-md){
+    @media screen and (max-width: $breakpoint-lg){
         background: $black;
-      
     }
 }
 
@@ -41,6 +40,11 @@
     }
     @media screen and (max-width: $breakpoint-md ){
         margin: 2.5rem 0 2rem 0;
+        font-size: $font-14;
+        line-height: $line-height-20;
+    }
+    @media screen and (max-width: $breakpoint-lg ){
+        margin: 2rem 0 2rem 0;
     }
 }
 

@@ -7,10 +7,13 @@
   justify-content: center;
   align-items: center;
   height: 35.938rem;
-
   .width-100 {
     width: 100% !important;
   }
+  @media screen and (max-width: $breakpoint-lg) {
+    height: 39.938rem;
+  }
+ 
 }
 
 .remaining-minted {
@@ -31,6 +34,11 @@
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   width: inherit;
+  @media screen and (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

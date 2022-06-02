@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-center text-center text-lg-start">
           <div className="col-lg-5">
             <ul className="list-unstyled list">
               <Link to={"/"}>
