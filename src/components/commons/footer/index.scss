@@ -5,7 +5,7 @@
     // background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    @media screen and (max-width: $breakpoint-md){
+    @media screen and (max-width: $breakpoint-lg){
         background: $black;
     }
 }
