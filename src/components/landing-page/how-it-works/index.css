@@ -1,11 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .HowItWorks {
-  background-color: #0e0f15;
+  background-color: #0f1016;
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .HowItWorks__text-section h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .HowItWorks__text-section h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .HowItWorks .working-text {
   font-size: 1.125rem;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .HowItWorks .working-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .HowItWorks .working-text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
 }
 
 .HowItWorks__margin-tp-btm {
@@ -16,3 +47,4 @@
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+/*# sourceMappingURL=index.css.map */

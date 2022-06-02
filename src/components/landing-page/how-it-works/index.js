@@ -19,7 +19,7 @@ const HowItWorks = () => {
             <img src={HowToExport} alt="HowToExport" />
           </div>
         </div>
-        <div className="col-lg-7 text-lg-start text-center">
+        <div className="col-lg-7 text-lg-start text-center HowItWorks__text-section">
           <h2 className="text-white">{eng_lang.howItWorks.heading}</h2>
           <img className="underline" src={Underline} alt="Underline" />
           <p className="working-text">

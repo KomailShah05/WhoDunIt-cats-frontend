@@ -29,16 +29,20 @@ const Header = () => {
     <>
       <div
         className={` d-flex justify-content-end align-items-center fixed-top ${
-          scroll && "bg-dark"
+          scroll && "bg-dark "
         }`}
       >
-        <div className={`header-position ${scroll && "mt-0 "}`}>
-          <h1 className={`text-white ${scroll && "header__scroll-heading "}`}>
+        <div className={`header-position ${scroll && "mt-0 scroll-animation"}`}>
+          <h1
+            className={`text-white header__heading ${
+              scroll && "header__scroll-heading "
+            }`}
+          >
             {eng_lang.title}
           </h1>
-          <div className="d-flex">
+          <div className="d-flex tabs">
             <h6>
-              <Link to={"/"} className="text-white">
+              <Link to={"/"} className="text-white ">
                 {eng_lang.header.tabs}
               </Link>
             </h6>

@@ -58,7 +58,7 @@ const Footer = () => {
               <li className="footer-touch-heading mb-2rem">
                 {eng_lang.footer.stay_in_touch}
               </li>
-              <li>
+              <li className="width-100">
                 <button
                   className="subscribe-btn"
                   data-mdb-ripple-color="primary"
