@@ -21,6 +21,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  max-height: 21.063rem;
+  max-width: 21.063rem;
 }
 
 .modal__bg-img img {

@@ -17,6 +17,9 @@
     display: flex;
     justify-content: center;
     padding: 0;
+    max-height: $size-337;
+    max-width: $size-337;
+
     img {
       width: 100%;
     }

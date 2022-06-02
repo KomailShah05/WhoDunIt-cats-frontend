@@ -74,8 +74,12 @@ p {
   &.btn-primary {
     background: $white;
     color: $black;
-    padding: 10px, 24px, 6px, 24px;
+    padding: 10px 24px 6px 24px;
     border-radius: 0px;
+    border: none;
+    &:hover {
+      background: $bg-light-grey;
+    }
   }
   &:focus,
   &:active {
