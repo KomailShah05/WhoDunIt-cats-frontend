@@ -1,6 +1,9 @@
 // libraries
 import React from "react";
 
+// components
+import { BlockButton } from "../../commons";
+
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 
@@ -8,7 +11,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./style.scss";
 
 // assets
-import { brown_cat } from "../../../assets";
+import { brown_cat, cat } from "../../../assets";
 
 const PopUp = () => {
   return (
@@ -57,7 +60,11 @@ const PopUp = () => {
                   </h5>
                   <p>{eng_lang.joint_the_hunt_modal.paragraph}</p>
                 </div>
-                <button>{eng_lang.connect_to_metamask}</button>
+                <BlockButton
+                  showImg={true}
+                  text={eng_lang.connect_to_metamask}
+                  imgPath={cat}
+                />
               </div>
             </div>
           </div>
