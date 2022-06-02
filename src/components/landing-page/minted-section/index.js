@@ -10,7 +10,7 @@ import "./index.scss";
 const MintedSection = () => {
   return (
     <section id="minted">
-      <div className="d-flex justify-content-center align-items-center w-100">
+      <div className="d-flex  justify-content-center align-items-center w-100">
         <div className="text-box">
           <h2 className="text-white text-capitalize">
             {eng_lang.mintedSection.total_Minted}

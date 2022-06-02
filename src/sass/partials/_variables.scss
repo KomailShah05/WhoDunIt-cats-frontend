@@ -24,10 +24,13 @@ $font-family-amatic: "Amatic SC", cursive;
 $font-80: 5rem;
 $font-56: 3.5rem;
 $font-48: 3rem;
+$font-44: 2.75rem;
 $font-40: 2.5rem;
 $font-36: 2.25rem;
 $font-32: 2rem;
+$font-28: 1.75rem;
 $font-24: 1.5rem;
+$font-22: 1.375rem;
 $font-20: 1.25rem;
 $font-18: 1.125rem;
 $font-16: 1rem;
@@ -72,7 +75,7 @@ $font-weight-lightest: 100;
 $font-style-normal: normal;
 
 //breakpoints
-$breakpoint-xs: 0;
+$breakpoint-xs: 320px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;

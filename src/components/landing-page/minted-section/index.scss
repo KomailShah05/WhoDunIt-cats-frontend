@@ -21,6 +21,10 @@
   line-height: 2.358rem; //37.72px
   color: $dark-grey;
   font-family: $font-family-gochi-hand;
+  @media screen and (max-width: $breakpoint-lg) {
+    font-size: $font-24; //24px
+    line-height: 2rem;
+  }
 }
 
 #minted .text-box {
@@ -39,6 +43,18 @@
     align-items: center;
     justify-content: space-around;
   }
+  & h2 {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: $font-32;
+    }
+  }
+  & .minted-text {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: $font-24;
+    }
+  }
 }
+
+
 
 /*# sourceMappingURL=index.css.map */
