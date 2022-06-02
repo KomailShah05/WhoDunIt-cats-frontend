@@ -8,14 +8,13 @@
   align-items: center;
   padding-right: 4.375rem;
   margin-top: 2.5rem;
+  .text-white:not(:first-child) {
+    margin-left: 2.5rem;
+  }
 }
 .header {
   &__scroll-heading {
     font-size: $font-40; //40px
     margin-left: 2.2rem;
   }
-}
-
-.text-white:not(:first-child) {
-  margin-left: 2.5rem;
 }

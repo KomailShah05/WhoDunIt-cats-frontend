@@ -11,6 +11,7 @@ import {
   WhoDidIt,
   HowItWorks,
 } from "../../components/landing-page";
+import { PopUp } from "../../components/join-the-hunt";
 
 //constants
 
@@ -26,6 +27,7 @@ const LandingPage = () => {
       <MintedSection />
       <HowItWorks />
       <WhoDidIt />
+      <PopUp />
       <Footer />
     </>
   );
