@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
 import LandingPage from "./pages/landing-page";
+import StoryUpdate from "./pages/story-update";
 
 //components
 
@@ -19,6 +20,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path={routes.HOME} element={<LandingPage />} />
+        <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
       </Routes>
     </BrowserRouter>
   );

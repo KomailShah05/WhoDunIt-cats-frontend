@@ -1,0 +1,30 @@
+@import "../../../sass/partials/variables";
+body {
+    background-color: $bg-light-black;
+}
+.intro-section {
+    background-color: $bg-light-black;
+}
+
+.intro-content {
+    margin-top: 11.938rem; //191px
+}
+
+.underline-pos {
+    margin: 28px 0px 28px 0;
+}
+
+.button-pos {
+    margin-top: 5.25rem; //84px
+}
+
+.button-style {
+    width: 10rem; //160px
+    font-size: $font-24;
+    line-height: $line-height-28;
+    font-family: $font-family-gochi-hand;
+    font-weight: $font-weight-regular;
+    padding: 10px 24px 6px;
+    height: 2.75rem;
+    margin-bottom: 5.25rem;
+}
