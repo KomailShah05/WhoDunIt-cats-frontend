@@ -81,6 +81,16 @@ p {
       background: $bg-light-grey;
     }
   }
+  &.btn-secondary {
+    background: $charcoal;
+    color: $white;
+    padding: 10px 24px 6px 24px;
+    border-radius: 0px;
+    border: none;
+    &:hover {
+      background: $bg-light-grey;
+    }
+  }
   &:focus,
   &:active {
     box-shadow: none;
@@ -120,4 +130,3 @@ p {
     background: #dad3d3;
   }
 }
-

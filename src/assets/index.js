@@ -11,6 +11,9 @@ import cat from "./images/cat.svg";
 import Clipper from "./images/Clipper.svg";
 import Undeline from "./images/Undeline.svg";
 import golden from "./images/golden.svg";
+import clipper_loading from "./images/Clipper-loading.svg";
+import success from "./images/Success.svg";
+import opensea from "./images/opensea.svg";
 
 // exports
 export {
@@ -26,4 +29,7 @@ export {
   Clipper,
   Undeline,
   golden,
+  clipper_loading,
+  success,
+  opensea,
 };
