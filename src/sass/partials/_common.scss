@@ -1,15 +1,123 @@
 @import "./variables";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
 
-h1,h2,h3,h4,h5,h6,body,p,a {
-	margin: 0;
-	padding: 0;
+a {
+  text-decoration: none;
+  &:hover {
+    color: $medium-grey !important;
+  }
 }
 
 h1 {
-	font-family: $font-family-amatic;
-	font-weight: $font-weight-bold;
-	font-size: $font-56;
-	line-height: $line-height-71;
-	
+  font-family: $font-family-amatic;
+  font-weight: $font-weight-bold;
+  font-size: $font-56;
+  line-height: $line-height-71;
 }
+
+h2 {
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-40;
+  line-height: $line-height-48;
+}
+h3 {
+  font-family: $font-family-gochi-hand;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-regular;
+  font-size: $font-32;
+  line-height: $line-height-38;
+}
+
+h5 {
+  font-family: $font-family-gochi-hand;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-regular;
+  font-size: $font-24;
+  line-height: $line-height-28;
+}
+
+h6 {
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-20;
+  line-height: $line-height-24;
+}
+
+p {
+  font-family: $font-family-inter;
+  font-weight: $font-weight-regular;
+  color: $dark-grey;
+}
+
+.minted-text {
+  font-size: $font-80;
+  line-height: $line-height-38;
+  font-family: $font-family-gochi-hand;
+  color: $white;
+}
+
+.btn {
+  &.btn-primary {
+    background: $white;
+    color: $black;
+    padding: 10px 24px 6px 24px;
+    border-radius: 0px;
+    border: none;
+    &:hover {
+      background: $bg-light-grey;
+    }
+  }
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: none !important;
+  }
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: radial-gradient(circle, transparent 1%, #3374a2 1%) center/15000%
+    #253f55;
+}
+.ripple:active {
+  background-color: #253f55;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.bg-dark {
+  background: $black !important;
+}
+
+.subscribe-btn {
+  background: $white;
+  padding: 10px 24px 6px 24px;
+  border-radius: 0px;
+  width: 24.438rem; //391px
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-24;
+  line-height: $line-height-28;
+  color: $black;
+  &:hover {
+    background: #dad3d3;
+  }
+}
+

@@ -1,0 +1,60 @@
+@import "../../../sass/partials/variables";
+#minted {
+  background: url(../../../assets/images/minted-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35.938rem;
+  .width-100 {
+    width: 100% !important;
+  }
+  @media screen and (max-width: $breakpoint-lg) {
+    height: 39.938rem;
+  }
+ 
+}
+
+.remaining-minted {
+  font-size: $font-32; //32px
+  line-height: 2.358rem; //37.72px
+  color: $dark-grey;
+  font-family: $font-family-gochi-hand;
+  @media screen and (max-width: $breakpoint-lg) {
+    font-size: $font-24; //24px
+    line-height: 2rem;
+  }
+}
+
+#minted .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: inherit;
+  @media screen and (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  & h2 {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: $font-32;
+    }
+  }
+  & .minted-text {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: $font-24;
+    }
+  }
+}
+
+
+
+/*# sourceMappingURL=index.css.map */

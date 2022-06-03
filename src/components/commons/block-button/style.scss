@@ -1,0 +1,44 @@
+@import "../../../sass/partials/variables";
+
+.block {
+  &__btn-text {
+    font-family: $font-family-gochi-hand;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-regular;
+    font-size: $font-24;
+    line-height: $line-height-28;
+    color: $black;
+    img {
+      margin-right: 1rem;
+    }
+    /* // Extra large devices (large desktops, 1200px and up) */
+    @media (max-width: 1200px) {
+    }
+    /* // Large devices (desktops, 992px and up) */
+    @media (max-width: 1000px) {
+    }
+    @media (max-width: 850px) {
+    }
+    /* // Medium devices (tablets, 768px and up) */
+    @media (max-width: 768px) {
+    }
+    /* Extereme smaal device */
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+      line-height: 0.75rem;
+      img {
+        width: 1.5rem;
+        margin-right: 0.75rem;
+      }
+    }
+
+    @media (max-width: 370px) {
+      font-size: 1rem;
+      line-height: 0.25rem;
+      img {
+        width: 1.5rem;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}

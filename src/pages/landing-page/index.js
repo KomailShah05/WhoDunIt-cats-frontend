@@ -4,6 +4,14 @@ import React from "react";
 //pages
 
 //components
+import { Header, Footer, SmallPopup } from "../../components/commons";
+import {
+  HeroSection,
+  MintedSection,
+  WhoDidIt,
+  HowItWorks,
+} from "../../components/landing-page";
+import { PopUp } from "../../components/join-the-hunt";
 
 //constants
 
@@ -12,7 +20,18 @@ import React from "react";
 //assets
 
 const LandingPage = () => {
-  return <h1>LandingPage</h1>;
+  return (
+    <>
+      <Header />
+      <HeroSection />
+      <MintedSection />
+      <HowItWorks />
+      <WhoDidIt />
+      <PopUp />
+      <SmallPopup />
+      <Footer />
+    </>
+  );
 };
 
 export default LandingPage;

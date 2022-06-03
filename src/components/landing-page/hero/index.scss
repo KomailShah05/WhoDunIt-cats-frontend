@@ -1,0 +1,54 @@
+@import "../../../sass/partials/variables";
+.hero {
+  background-image: url(../../../assets/images/HeroImg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50.625rem;
+  overflow-x: hidden;
+}
+
+.hero-content {
+  margin-top: 19.875rem;
+  @media screen and (max-width: $breakpoint-md ){
+    margin-top: 15.625rem;
+  }
+  .hero-card {
+    max-width: 26.125rem;
+    height: auto;
+    padding: 2.5rem;
+    margin-right: 1rem;
+    background: rgba(0, 0, 0, 0.65);
+    & p {
+      font-size: 1rem; // 16px
+      line-height: 1.875rem; //30px
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: 1rem; 
+        line-height: 2rem;      
+      }
+    }
+  }
+}
+
+.btn {
+  &.hero-card-btn {
+    margin-top: 2.125rem; //34px
+    background: $white;
+    color: $black;
+    padding: 10px 24px 6px 24px;
+    border-radius: 0px;
+    font-family: $font-family-gochi-hand;
+    font-size: $font-24;
+    line-height: $line-height-28;
+    height: 2.75rem; //44px
+    font-weight: $font-weight-regular;
+    border: 0;
+    outline: 0;
+    &:hover {
+      background: $bg-light-grey;
+    }
+    @media screen and  (max-width: $breakpoint-md) {
+     width: 100%;
+    }
+  }
+}

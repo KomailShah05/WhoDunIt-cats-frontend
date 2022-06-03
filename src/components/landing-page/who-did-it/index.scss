@@ -1,0 +1,16 @@
+@import "../../../sass/partials/variables";
+.who-did-it {
+  background: radial-gradient(
+      70.9% 173.52% at 50% 6.19%,
+      rgba(0, 0, 0, 0) 25.31%,
+      $black 100%
+    ),
+    url(../../../assets/images/image_1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
