@@ -14,6 +14,7 @@ export const eng_lang = {
     read_story: "Read Story",
   },
   connect_to_metamask: "Connect  Metamask",
+
   header: {
     heading: "WhoDunIt Cats?",
     tabs: " How it works?",
@@ -74,4 +75,13 @@ export const eng_lang = {
     paragraph:
       "Suscipit sem dolor id adipiscing tincidunt parturient. Vitae, sagittis a, justo, pellentesque diam. Malesuada ullamcorper et ut quis donec eget tellus ac nec.",
   },
+  buy_flow_modal: {
+    transaction_detail: "Transaction Details",
+    nft_price: "Nft Price",
+    transaction_fee: "Transaction Fee",
+    total_price: "Total Price",
+  },
+  buy_nft: "Buy Nft",
+  eth: "ETH",
+  dollar: "$",
 };
