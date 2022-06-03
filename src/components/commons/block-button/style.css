@@ -8,8 +8,34 @@
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #000000;
+  /* // Extra large devices (large desktops, 1200px and up) */
+  /* // Large devices (desktops, 992px and up) */
+  /* // Medium devices (tablets, 768px and up) */
+  /* Extereme smaal device */
 }
 
 .block__btn-text img {
   margin-right: 1rem;
+}
+
+@media (max-width: 576px) {
+  .block__btn-text {
+    font-size: 1.4rem;
+    line-height: 0.75rem;
+  }
+  .block__btn-text img {
+    width: 1.5rem;
+    margin-right: 0.75rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .block__btn-text {
+    font-size: 1rem;
+    line-height: 0.25rem;
+  }
+  .block__btn-text img {
+    width: 1.5rem;
+    margin-right: 0.2rem;
+  }
 }

@@ -1,0 +1,37 @@
+@import "./variables";
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 1000px) {
+}
+@media (max-width: 850px) {
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+/* Extereme smaal device */
+@media (max-width: 576px) {
+  h5 {
+    font-size: 1.4rem;
+    line-height: 1.55rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 370px) {
+  h5 {
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  .btn {
+    &.btn-primary {
+      padding: 0.625rem 1rem 0.375rem 1.25rem;
+    }
+  }
+}
