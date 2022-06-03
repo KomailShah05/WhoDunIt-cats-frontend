@@ -47,5 +47,8 @@
     &:hover {
       background: $bg-light-grey;
     }
+    @media screen and  (max-width: $breakpoint-md) {
+     width: 100%;
+    }
   }
 }

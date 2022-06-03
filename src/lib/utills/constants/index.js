@@ -1,7 +1,7 @@
 // Routes Constants
 export const routes = {
   HOME: "/",
-  WAITLIST: "/waitlist",
+  STORY_UPDATE: "/story-update",
   LOGIN: "/login",
 };
 
@@ -11,6 +11,7 @@ export const eng_lang = {
   buttonConstants: {
     join_hunt_text: "Join the hunt",
     subscribe_btn_text: "Subscribe to our Newsletter",
+    read_story: "Read Story",
   },
   connect_to_metamask: "Connect  Metamask",
   header: {
@@ -45,6 +46,15 @@ export const eng_lang = {
     eight_line:
       "ante. Nulla at maecenas euismod et consequat nibh. Sit faucibus amet, vitae",
     last_line: "gravida id lectus quis.",
+  },
+  storyUpdate: {
+    intro_heading: "How it All Started",
+    first_line:
+      "Neque orci dui, sit libero diam magnis nunc et. Molestie diam gravida suspendisse hac ",
+    second_line:
+      "aliquam elit. Et turpis placerat non turpis dui. Egestas elit nibh in eros dictum. Odio",
+    third_line:
+      "feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam aenean egestas.",
   },
   footer: {
     terms_and_conditions: "Terms and Conditions",
