@@ -58,4 +58,10 @@
 .btn.hero-card-btn:hover {
   background: #e5e5e5;
 }
+
+@media screen and (max-width: 768px) {
+  .btn.hero-card-btn {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=index.css.map */
