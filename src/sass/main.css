@@ -100,7 +100,7 @@ p {
 }
 
 .btn.btn-secondary:hover {
-  background: #e5e5e5;
+  opacity: 0.8;
 }
 
 .btn:focus, .btn:active {
