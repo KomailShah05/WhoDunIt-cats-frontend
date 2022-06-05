@@ -4,7 +4,7 @@ import React from "react";
 //pages
 
 //components
-import { Header, Footer } from "../../components/commons";
+import { Header, Footer, SmallPopup } from "../../components/commons";
 import {
   HeroSection,
   MintedSection,
@@ -28,6 +28,7 @@ const LandingPage = () => {
       <HowItWorks />
       <WhoDidIt />
       <PopUp />
+      <SmallPopup />
       <Footer />
     </>
   );

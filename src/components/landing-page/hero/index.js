@@ -14,10 +14,10 @@ const HeroSection = () => {
         <div className="hero-card">
           <p>{eng_lang.hero.card_text}</p>
           <button
-            className="btn btn-secondary hero-card-btn join_hunt_text "
+            className="btn btn-secondary hero-card-btn join_hunt_text"
             data-mdb-ripple-color="primary"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#smallModal"
           >
             {eng_lang.buttonConstants.join_hunt_text}
           </button>

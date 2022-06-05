@@ -4,6 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 h1,
 h2,
 h3,
@@ -88,6 +91,18 @@ p {
   background: #e5e5e5;
 }
 
+.btn.btn-secondary {
+  background: #333333;
+  color: #ffffff;
+  padding: 10px 24px 6px 24px;
+  border-radius: 0px;
+  border: none;
+}
+
+.btn.btn-secondary:hover {
+  opacity: 0.8;
+}
+
 .btn:focus, .btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -130,4 +145,51 @@ p {
 .subscribe-btn:hover {
   background: #dad3d3;
 }
-/*# sourceMappingURL=main.css.map */
+
+/* // Extra large devices (large desktops, 1200px and up) */
+/* // Large devices (desktops, 992px and up) */
+/* // Medium devices (tablets, 768px and up) */
+/* Extereme smaal device */
+@media (max-width: 576px) {
+  h5 {
+    font-size: 1.4rem;
+    line-height: 1.55rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+  }
+  .btn.btn-primary {
+    padding: 10px 12px 6px 12px;
+  }
+  .btn.btn-secondary {
+    padding: 10px 12px 6px 12px;
+  }
+}
+
+@media (max-width: 370px) {
+  h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  h5 {
+    font-size: 1rem;
+    line-height: 0.75rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  .btn.btn-primary {
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
+  }
+  .btn.btn-secondary {
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
+  }
+}
