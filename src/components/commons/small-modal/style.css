@@ -12,7 +12,11 @@
 }
 
 .sm-modal__wide {
-  max-width: 52%;
+  max-width: 32%;
+}
+
+.sm-modal__loading-wide {
+  max-width: 28%;
 }
 
 .sm-modal__bg-img {
@@ -29,12 +33,21 @@
   max-width: 21.063rem;
 }
 
-.sm-modal__bg-img img {
-  width: 100%;
+.sm-modal__bg-color {
+  position: relative;
+  background-color: #000000;
 }
 
-.sm-modal__bg-color {
-  background-color: #000000;
+.sm-modal__img-top {
+  position: relative;
+  bottom: 4.7rem;
+}
+
+.sm-modal__img-top img {
+  max-width: 7.313rem;
+  max-height: 5.25rem;
+  position: absolute;
+  top: 3%;
 }
 
 .sm-modal__btn-close {
@@ -59,19 +72,39 @@
 }
 
 .sm-modal__body-margin .justify-content-between:first-child {
-  margin: 1.5rem 0 1.25rem 0;
+  margin: 0.75rem 0 0 0;
 }
 
 .sm-modal__body-margin .justify-content-between:nth-child(2) {
-  margin: 1.25rem 0 2.875rem 0;
+  margin: 0.75rem 0 0;
+}
+
+.sm-modal__body-margin .justify-content-between:last-child {
+  margin: 1.25rem 0 2.5rem 0;
 }
 
 .sm-modal__body-margin .text-white {
+  margin-bottom: 0rem;
+}
+
+.sm-modal__loading-body {
+  margin: 4rem 0 4rem 0;
+}
+
+.sm-modal__loading-body h3 {
   margin-bottom: 0.5rem;
 }
 
-.sm-modal__body-margin p:last-child {
-  margin-bottom: 2.875rem;
+.sm-modal__congrats-body-margin p {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.sm-modal__congrats-body-margin h5 {
+  margin-bottom: 1rem;
+}
+
+.sm-modal__mg-btw-btns {
+  margin-top: 1rem;
 }
 
 .sm-modal .color-gray {
@@ -80,40 +113,34 @@
 
 @media (max-width: 1200px) {
   .sm-modal__wide {
-    max-width: 66%;
+    max-width: 50%;
+  }
+  .sm-modal__loading-wide {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sm-modal__loading-body {
+    padding: 0 0.5rem 0 0.5rem;
   }
 }
 
 @media (max-width: 850px) {
   .sm-modal__wide {
-    max-width: 85%;
-  }
-  .sm-modal__bg-img {
-    max-height: 18.063rem;
-    max-width: 15.063rem;
-  }
-  .sm-modal__body-margin .justify-content-between:first-child {
-    margin: 1.5rem 0 0.5rem 0;
-  }
-  .sm-modal__body-margin .justify-content-between:nth-child(2) {
-    margin: 0.8rem 0 1rem 0;
-  }
-  .sm-modal__body-margin .text-white {
-    margin-bottom: 0.5rem;
-  }
-  .sm-modal__body-margin p:last-child {
-    margin-bottom: 1.875rem;
+    max-width: 55%;
   }
   .sm-modal__padding-body {
     padding: 0 1.25rem 2.875rem 1.25rem;
   }
+  .sm-modal__loading-body {
+    margin: 3rem 0 3rem 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .sm-modal__bg-img {
-    max-height: 14.063rem;
-    max-width: 100%;
-    margin-bottom: 3rem;
+  .sm-modal__wide, .sm-modal__loading-wide {
+    max-width: 60%;
   }
 }
 
@@ -124,22 +151,15 @@
   }
   .sm-modal__wide {
     margin: auto;
-    max-width: 85%;
+    max-width: 75%;
+    margin-top: 2rem;
+  }
+  .sm-modal__loading-wide {
+    margin: auto;
+    max-width: 75%;
     margin-top: 2rem;
   }
   .sm-modal__padding-body {
     padding: 1.5rem 1.25rem 2.875rem 1.25rem;
-  }
-  .sm-modal__body-margin .justify-content-between:first-child {
-    margin: 1.5rem 0 0.5rem 0;
-  }
-  .sm-modal__body-margin .justify-content-between:nth-child(2) {
-    margin: 0rem 0 2rem 0;
-  }
-  .sm-modal__body-margin .text-white {
-    margin-bottom: 0.8rem;
-  }
-  .sm-modal__body-margin p:last-child {
-    margin-bottom: 1.875rem;
   }
 }
