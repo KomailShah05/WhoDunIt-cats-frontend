@@ -1,0 +1,11 @@
+@import "../../../sass/partials/variables";
+
+.attribute {
+  padding: $size-151 $size-72 $size-80 $size-70;
+  > div {
+    border-right: 2px solid $brown;
+  }
+  div:last-child {
+    border: none;
+  }
+}

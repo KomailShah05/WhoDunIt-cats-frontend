@@ -3,17 +3,28 @@ export const routes = {
   HOME: "/",
   STORY_UPDATE: "/story-update",
   LOGIN: "/login",
+  CLAIM_ATTRIBUTE: "/claim-attribute",
 };
 
 // Landing Page Constants
 export const eng_lang = {
   title: "WhoDunIt Cats?",
+  buy_nft: "Buy Nft",
+  eth: "ETH",
+  dollar: "$",
+  congratulation: "Congratulations!",
+  stay_updated: "Stay updated!",
+  view_on_open_sea: "View NFT on Opensea",
+  try_again: "Try Again",
+  transaction_failed: "Transaction Failed...",
+  insufficient_fund: "Insufficient Funds! ",
+  connect_to_metamask: "Connect  Metamask",
+
   buttonConstants: {
     join_hunt_text: "Join the hunt",
     subscribe_btn_text: "Subscribe to our Newsletter",
     read_story: "Read Story",
   },
-  connect_to_metamask: "Connect  Metamask",
 
   header: {
     heading: "WhoDunIt Cats?",
@@ -86,13 +97,4 @@ export const eng_lang = {
       "You have successfully obtained a WhoDunItCats NFT. The NFT has been transfered to your wallet.",
     trans_failed_content: "Eu sollicitudin risus nunc, scelerisque semper ac.",
   },
-  buy_nft: "Buy Nft",
-  eth: "ETH",
-  dollar: "$",
-  congratulation: "Congratulations!",
-  stay_updated: "Stay updated!",
-  view_on_open_sea: "View NFT on Opensea",
-  try_again: "Try Again",
-  transaction_failed: "Transaction Failed...",
-  insufficient_fund: "Insufficient Funds! ",
 };

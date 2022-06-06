@@ -2,8 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
-import LandingPage from "./pages/landing-page";
-import StoryUpdate from "./pages/story-update";
+
+import { LandingPage, StoryUpdate, ClaimAttributeSet } from "./pages";
 
 //components
 
@@ -21,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path={routes.HOME} element={<LandingPage />} />
         <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
+        <Route path={routes.CLAIM_ATTRIBUTE} element={<ClaimAttributeSet />} />
       </Routes>
     </BrowserRouter>
   );

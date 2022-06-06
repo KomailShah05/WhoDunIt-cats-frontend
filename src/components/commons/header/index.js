@@ -42,7 +42,7 @@ const Header = () => {
           </h1>
           <div className="d-flex tabs">
             <h6>
-              <Link to={"/"} className="text-white ">
+              <Link to={"/"} className="text-white">
                 {eng_lang.header.tabs}
               </Link>
             </h6>
