@@ -97,4 +97,25 @@ export const eng_lang = {
       "You have successfully obtained a WhoDunItCats NFT. The NFT has been transfered to your wallet.",
     trans_failed_content: "Eu sollicitudin risus nunc, scelerisque semper ac.",
   },
+  claim_attribute_set: {
+    section_one: {
+      title: "Select suspect traits",
+      height: "Height",
+      select_height: "Select Height",
+      eyes: "Eyes",
+      select_eyes: "Select Eyes",
+      glasses: "Glasses",
+      select_glasses: "Select Glasses",
+      hats: "Hats",
+      select_hats: "Select Hats",
+      clothes: "Clothes",
+      select_clothes: "Select Clothes",
+    },
+    section_two: {
+      title: "Choose your suspect",
+    },
+    section_three: {
+      title: "Mint your Suspect",
+    },
+  },
 };
