@@ -10,6 +10,13 @@
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 576px) {
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .hero-content {
   margin-top: 19.875rem;
 }
@@ -20,12 +27,27 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .hero-content {
+    margin-top: 7.625rem;
+    padding: 3rem 0rem 2rem 0rem;
+  }
+}
+
 .hero-content .hero-card {
   max-width: 26.125rem;
   height: auto;
   padding: 2.5rem;
   margin-right: 1rem;
   background: rgba(0, 0, 0, 0.65);
+}
+
+@media screen and (max-width: 576px) {
+  .hero-content .hero-card {
+    padding: 1.2rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .hero-content .hero-card p {
@@ -38,6 +60,21 @@
     font-size: 1rem;
     line-height: 2rem;
   }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-content .hero-card p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+}
+
+.hero-content .hero-card h1 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  width: 100%;
 }
 
 .btn.hero-card-btn {
@@ -64,3 +101,14 @@
     width: 100%;
   }
 }
+
+.story-release-heading {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.underline {
+  margin: 24px 0px 24px 0px;
+}
+/*# sourceMappingURL=index.css.map */

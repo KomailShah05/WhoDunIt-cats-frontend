@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   height: 50.625rem;
   overflow-x: hidden;
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .hero-content {
@@ -13,12 +17,21 @@
   @media screen and (max-width: $breakpoint-md ){
     margin-top: 15.625rem;
   }
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 7.625rem;
+    padding: 3rem 0rem 2rem 0rem;
+  }
   .hero-card {
     max-width: 26.125rem;
     height: auto;
     padding: 2.5rem;
     margin-right: 1rem;
     background: rgba(0, 0, 0, 0.65);
+    @media screen and (max-width: $breakpoint-sm) {
+      padding: 1.2rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
     & p {
       font-size: 1rem; // 16px
       line-height: 1.875rem; //30px
@@ -26,6 +39,17 @@
         font-size: 1rem; 
         line-height: 2rem;      
       }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 0.9rem; 
+        line-height: 1.5rem;      
+      }
+    }
+    & h1 {
+      font-family: $font-family-gochi-hand;
+      font-weight: $font-weight-regular;
+      font-size: $font-40;
+      line-height: $line-height-48;
+      width: 100%;
     }
   }
 }
@@ -51,4 +75,12 @@
      width: 100%;
     }
   }
+}
+
+.story-release-heading {
+  width: max-content;
+}
+
+.underline {
+  margin: 24px 0px 24px 0px;
 }

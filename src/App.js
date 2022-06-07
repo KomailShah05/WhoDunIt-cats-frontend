@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //pages
 import LandingPage from "./pages/landing-page";
 import StoryUpdate from "./pages/story-update";
+import StoryCluesPage from "./pages/story-clues";
 
 //components
 
@@ -20,7 +21,9 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path={routes.HOME} element={<LandingPage />} />
-        <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
+        <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
+        <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
+        <Route path={routes.CLUES} element={<StoryCluesPage />} />
       </Routes>
     </BrowserRouter>
   );

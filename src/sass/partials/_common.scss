@@ -19,6 +19,10 @@ a {
   &:hover {
     color: $medium-grey !important;
   }
+  &:active {
+    text-decoration: underline;
+  }
+
 }
 
 h1 {
@@ -50,12 +54,12 @@ h5 {
   line-height: $line-height-28;
 }
 
-h6 {
-  font-family: $font-family-gochi-hand;
-  font-weight: $font-weight-regular;
-  font-size: $font-20;
-  line-height: $line-height-24;
-}
+// h6 {
+//   font-family: $font-family-gochi-hand;
+//   font-weight: $font-weight-regular;
+//   font-size: $font-20;
+//   line-height: $line-height-24;
+// }
 
 p {
   font-family: $font-family-inter;
@@ -79,6 +83,11 @@ p {
     border: none;
     &:hover {
       background: $bg-light-grey;
+    }
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: none !important;
     }
   }
   &.btn-secondary {
@@ -127,6 +136,6 @@ p {
   line-height: $line-height-28;
   color: $black;
   &:hover {
-    background: #dad3d3;
+    background: $bg-light-grey;
   }
 }

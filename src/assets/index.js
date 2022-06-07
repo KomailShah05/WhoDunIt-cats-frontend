@@ -14,6 +14,7 @@ import golden from "./images/golden.svg";
 import clipper_loading from "./images/Clipper-loading.svg";
 import success from "./images/Success.svg";
 import opensea from "./images/opensea.svg";
+import HeroImg from "./images/HeroImg.svg";
 
 // exports
 export {
@@ -32,4 +33,5 @@ export {
   clipper_loading,
   success,
   opensea,
+  HeroImg,
 };

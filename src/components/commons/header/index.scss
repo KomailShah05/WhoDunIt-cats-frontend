@@ -64,11 +64,14 @@
 }
 
 .tabs {
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-20;
+  line-height: $line-height-24;
 
   @media screen and (max-width: $breakpoint-xs ) {
     width: 100%;
   }
-  & h6 {
       & a {
       @media screen and (max-width: $breakpoint-lg) {
         font-size: $font-24 !important; //24px
@@ -86,7 +89,6 @@
         
       }
     }
-  }
 }
 
 .scroll-animation {
