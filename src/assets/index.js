@@ -15,6 +15,7 @@ import clipper_loading from "./images/Clipper-loading.svg";
 import success from "./images/Success.svg";
 import opensea from "./images/opensea.svg";
 import underline_vertical from "./images/Undeline-vertical.svg";
+import arrow_down from "./images/Vector-down.svg";
 
 // exports
 export {
@@ -34,4 +35,5 @@ export {
   success,
   opensea,
   underline_vertical,
+  arrow_down,
 };

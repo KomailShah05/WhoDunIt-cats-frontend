@@ -21,6 +21,7 @@
   height: 2rem;
   border-radius: 2rem;
   margin-right: 0.75rem;
+  border: 1px solid #871616;
 }
 
 .filter__round-btn.fill {

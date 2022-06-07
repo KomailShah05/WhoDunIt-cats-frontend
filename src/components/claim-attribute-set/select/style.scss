@@ -1,0 +1,21 @@
+@import "../../../sass/partials/variables";
+
+.custom-select {
+  padding: $size-12 $size-16;
+  gap: $size-8;
+  border: 1px solid #dee2e6;
+  border-radius: $size-4;
+  background-color: transparent;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-size: $size-16;
+  line-height: $size-24;
+  color: #cccccc;
+  max-width: 73%;
+  background-image: url(../../../assets/images/Vector-down.svg);
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
