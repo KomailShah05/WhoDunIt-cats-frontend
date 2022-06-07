@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //constants
-import { eng_lang } from "../../../lib/utills/constants";
+import { eng_lang, routes } from "../../../lib/utills/constants";
 
 // styles
 import "./index.scss";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-
+  const url = window.location.pathname;
   const listenScrollEvent = () => {
     if (window.scrollY < 70) {
       return setScroll(false);
@@ -41,11 +41,20 @@ const Header = () => {
             {eng_lang.title}
           </h1>
           <div className="d-flex tabs">
-            <h6>
-              <Link to={"/"} className="text-white">
-                {eng_lang.header.tabs}
-              </Link>
-            </h6>
+            <Link to={"/"} className="text-white ">
+              {eng_lang.header.tabs[0]}
+            </Link>
+            {url === routes.STORY_RELEASE ? (
+              <>
+                {" "}
+                <Link to={"/"} className="text-white ">
+                  {eng_lang.header.tabs[1]}
+                </Link>
+                <Link to={"/"} className="text-white ">
+                  {eng_lang.header.tabs[2]}
+                </Link>
+              </>
+            ) : null}
           </div>
         </div>
       </div>

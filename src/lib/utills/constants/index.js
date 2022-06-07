@@ -1,7 +1,9 @@
 // Routes Constants
 export const routes = {
   HOME: "/",
-  STORY_UPDATE: "/story-update",
+  STORY_RELEASE: "/story-release",
+  STORY_INTRO: "/story-intro",
+  CLUES: "/story-clues",
   LOGIN: "/login",
   CLAIM_ATTRIBUTE: "/claim-attribute",
 };
@@ -24,11 +26,12 @@ export const eng_lang = {
     join_hunt_text: "Join the hunt",
     subscribe_btn_text: "Subscribe to our Newsletter",
     read_story: "Read Story",
+    begin_hunt: "Begin Hunt",
   },
 
   header: {
     heading: "WhoDunIt Cats?",
-    tabs: " How it works?",
+    tabs: ["How it works?", "The Story", "Set Attributes"],
   },
   hero: {
     card_text:
@@ -58,6 +61,9 @@ export const eng_lang = {
     eight_line:
       "ante. Nulla at maecenas euismod et consequat nibh. Sit faucibus amet, vitae",
     last_line: "gravida id lectus quis.",
+  },
+  storyRelease: {
+    heading: "Now the hunt begins",
   },
   storyUpdate: {
     intro_heading: "How it All Started",

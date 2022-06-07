@@ -16,6 +16,7 @@ import success from "./images/Success.svg";
 import opensea from "./images/opensea.svg";
 import underline_vertical from "./images/Undeline-vertical.svg";
 import arrow_down from "./images/Vector-down.svg";
+import HeroImg from "./images/HeroImg.svg";
 
 // exports
 export {
@@ -36,4 +37,5 @@ export {
   opensea,
   underline_vertical,
   arrow_down,
+  HeroImg,
 };
