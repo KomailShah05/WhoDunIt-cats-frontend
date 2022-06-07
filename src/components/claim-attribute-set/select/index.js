@@ -1,20 +1,27 @@
 // libraries
 import React from "react";
 
+// constants
+
 // styles
 import "./style.scss";
 
-const Select = () => {
+const Select = ({ heading, options }) => {
   return (
-    <select
-      class="form-select form-select-sm custom-select"
-      aria-label=".form-select-sm example"
-    >
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
+    <>
+      <p className="text-white font-gouchi">{heading}</p>
+      <select
+        class="form-select form-select-sm custom-select"
+        aria-label=".form-select-sm example"
+      >
+        {options?.length > 0 &&
+          options.map((item, index) => (
+            <>
+              <option value={item}>{item}</option>
+            </>
+          ))}
+      </select>
+    </>
   );
 };
 

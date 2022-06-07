@@ -15,4 +15,8 @@
   .col-md-3 div:first-child {
     justify-content: center;
   }
+  &__min-width {
+    min-width: 77%;
+    padding-left: 0 !important;
+  }
 }
