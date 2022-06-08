@@ -2,10 +2,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
-
-import { LandingPage, StoryUpdate, ClaimAttributeSet } from "./pages";
-
-import StoryCluesPage from "./pages/story-clues";
+import {
+  LandingPage,
+  StoryUpdate,
+  ClaimAttributeSet,
+  StoryCluesPage,
+} from "./pages";
 
 //components
 
