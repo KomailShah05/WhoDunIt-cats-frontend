@@ -4,3 +4,8 @@
 .carousel__carousel-section {
   margin: 8rem 0 7rem 0;
 }
+
+.carousel .carousel-control-next,
+.carousel .carousel-control-prev {
+  position: relative;
+}
