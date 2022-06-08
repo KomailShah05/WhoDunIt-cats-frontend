@@ -2,10 +2,55 @@
 
 .carousel {
   &__carousel-section {
-    margin: 8rem 0 7rem 0;
+    margin: $size-175 0 $size-80 0;
+    padding: 0 $size-70 0 $size-70;
+  }
+  .carousel-item p:first-child {
+    margin-bottom: 2.5rem;
   }
   .carousel-control-next,
   .carousel-control-prev {
     position: relative;
+  }
+
+  &__spacing {
+    margin-top: $size-40;
+  }
+  &__min-width {
+    min-width: 9%;
+  }
+
+  /* // Extra large devices (large desktops, 1200px and up) */
+  @media (max-width: 1200px) {
+    .carousel-item p:first-child {
+      & br {
+        display: none;
+      }
+    }
+  }
+  /* // Large devices (desktops, 992px and up) */
+  @media (max-width: 1000px) {
+    &__carousel-section {
+      padding: 0 $size-48 0 $size-48;
+    }
+  }
+  @media (max-width: 850px) {
+  }
+  /* // Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    &__carousel-section {
+      padding: 0 $size-32 0 $size-32;
+    }
+  }
+  /* Extereme smaal device */
+  @media (max-width: 576px) {
+    &__carousel-section {
+      margin: $size-127 0 $size-16 0;
+    }
+    &__min-width {
+      min-width: 26%;
+    }
+  }
+  @media (max-width: 300px) {
   }
 }

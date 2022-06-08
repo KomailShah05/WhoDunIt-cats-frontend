@@ -41,4 +41,8 @@
       }
     }
   }
+  &__bg-tranparent {
+    background: transparent !important;
+    border: $size-1 solid $white !important;
+  }
 }
