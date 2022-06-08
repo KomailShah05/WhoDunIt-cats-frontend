@@ -21,7 +21,11 @@ const HowItWorks = () => {
         </div>
         <div className="col-lg-7 HowItWorks__text-section">
           <h2 className="text-white">{eng_lang.howItWorks.heading}</h2>
-          <img className="underline" src={Underline} alt="Underline" />
+          <img
+            className="underline align-self-center"
+            src={Underline}
+            alt="Underline"
+          />
           <p className="working-text">
             {eng_lang.howItWorks.first_line} <br />
             {eng_lang.howItWorks.second_line} <br />

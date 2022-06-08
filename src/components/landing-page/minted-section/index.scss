@@ -13,6 +13,11 @@
   @media screen and (max-width: $breakpoint-lg) {
     height: 39.938rem;
   }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+    height: auto;
+  }
  
 }
 
@@ -38,11 +43,7 @@
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   width: inherit;
-  @media screen and (max-width: $breakpoint-lg) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
+ 
   & h2 {
     @media screen and (max-width: $breakpoint-md) {
       font-size: $font-32;
@@ -52,6 +53,14 @@
     @media screen and (max-width: $breakpoint-md) {
       font-size: $font-24;
     }
+  }
+  @media screen and (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    margin: 5rem 0 5rem 0;
   }
 }
 

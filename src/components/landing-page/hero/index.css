@@ -13,7 +13,7 @@
 @media screen and (max-width: 576px) {
   .hero {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 576px) {
   .hero-content .hero-card {
-    padding: 1.2rem;
+    padding: 1.5rem;
     margin-right: auto;
     margin-left: auto;
   }

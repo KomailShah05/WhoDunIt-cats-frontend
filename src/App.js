@@ -12,6 +12,7 @@ import StoryCluesPage from "./pages/story-clues";
 import { routes } from "./lib/utills/constants";
 
 //styles
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./sass/main.scss";
 
 //assets

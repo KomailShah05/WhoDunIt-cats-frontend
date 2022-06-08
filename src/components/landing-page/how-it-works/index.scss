@@ -4,7 +4,7 @@
   background-color: $bg-light-black;
   &__text-section {
     & h2 {
-      @media screen and (max-width: $breakpoint-md ){
+      @media screen and (max-width: $breakpoint-lg ){
         font-size: $font-32;
         line-height: $line-height-48;
         text-align: center;
@@ -14,6 +14,12 @@
         font-size: $font-24;
         line-height: $line-height-32;        
       }    
+    }
+    & img {
+      @media screen and (max-width: $breakpoint-lg ){
+        display: flex;
+        justify-content: center;
+      }
     }
   }
   & .working-text {
@@ -55,7 +61,7 @@
 .underline {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  @media screen and (max-width: $breakpoint-md ){
+  @media screen and (max-width: $breakpoint-lg ){
     margin-left: auto;
     margin-right: auto;
   }
