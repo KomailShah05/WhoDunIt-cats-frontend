@@ -19,6 +19,9 @@
   &__min-width {
     min-width: 9%;
   }
+  &__max-height {
+    max-height: 45.563rem;
+  }
 
   /* // Extra large devices (large desktops, 1200px and up) */
   @media (max-width: 1200px) {
@@ -35,6 +38,9 @@
     }
   }
   @media (max-width: 850px) {
+    .carousel-item p:first-child {
+      text-align: left !important;
+    }
   }
   /* // Medium devices (tablets, 768px and up) */
   @media (max-width: 768px) {
@@ -49,6 +55,13 @@
     }
     &__min-width {
       min-width: 26%;
+    }
+    &__max-height {
+      max-height: 100%;
+    }
+    .carousel-item p:first-child {
+      font-size: 0.8rem !important;
+      text-align: left !important;
     }
   }
   @media (max-width: 300px) {

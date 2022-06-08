@@ -11,7 +11,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./index.scss";
 
 //assets
-import { HeroImg } from "../../../assets";
+import { HeroImg, brown_cat, Caseboard_Colored } from "../../../assets";
 
 const StoryClues = () => {
   return (
@@ -29,7 +29,11 @@ const StoryClues = () => {
             <br />
             {eng_lang.story_clues.paragrapgh_line_2}
           </p>
-          <img src={HeroImg} class="d-block w-100" alt="..." />
+          <img
+            src={HeroImg}
+            class="d-block w-100 carousel__max-height"
+            alt="..."
+          />
         </div>
         <div class="carousel-item">
           <p className="text-center">
@@ -37,7 +41,11 @@ const StoryClues = () => {
             <br />
             {eng_lang.story_clues.paragrapgh_line_2}
           </p>
-          <img src={HeroImg} class="d-block w-100" alt="..." />
+          <img
+            src={brown_cat}
+            class="d-block w-100 carousel__max-height"
+            alt="..."
+          />
         </div>
         <div class="carousel-item">
           <p className="text-center">
@@ -45,7 +53,11 @@ const StoryClues = () => {
             <br />
             {eng_lang.story_clues.paragrapgh_line_2}
           </p>
-          <img src={HeroImg} class="d-block w-100" alt="..." />
+          <img
+            src={Caseboard_Colored}
+            class="d-block w-100 carousel__max-height"
+            alt="..."
+          />
         </div>
       </div>
       <div className="d-flex justify-content-between carousel__spacing">
