@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={` d-flex justify-content-end align-items-center fixed-top ${
+        className={` d-flex justify-content-end align-items-center fixed-top navbar navbar-dark navbar-light navbar-expand-lg ${
           scroll && "bg-dark "
         }`}
       >
@@ -40,21 +40,39 @@ const Header = () => {
           >
             {eng_lang.title}
           </h1>
-          <div className="d-flex tabs">
-            <Link to={"/"} className="text-white ">
-              {eng_lang.header.tabs[0]}
-            </Link>
-            {url === routes.STORY_RELEASE ? (
-              <>
-                {" "}
-                <Link to={"/"} className="text-white ">
-                  {eng_lang.header.tabs[1]}
-                </Link>
-                <Link to={"/"} className="text-white ">
-                  {eng_lang.header.tabs[2]}
-                </Link>
-              </>
-            ) : null}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            anchor="bottom"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="collapsibleNavId"
+          >
+            <div className="d-flex tabs">
+              <Link to={"/"} className="text-white ">
+                {eng_lang.header.tabs[0]}
+              </Link>
+              {url === routes.STORY_RELEASE ? (
+                <>
+                  {" "}
+                  <Link to={"/"} className="text-white ">
+                    {eng_lang.header.tabs[1]}
+                  </Link>
+                  <Link to={"/"} className="text-white ">
+                    {eng_lang.header.tabs[2]}
+                  </Link>
+                </>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
