@@ -16,6 +16,8 @@ const BlockButton = ({
   data_bs_target,
   data_bs_slide,
   transparent_btn,
+  data_bs_toggle,
+  data_bs_dismiss,
 }) => {
   return (
     <div class="d-grid gap-2 block">
@@ -31,6 +33,8 @@ const BlockButton = ({
         name={name}
         onClick={handleModalName}
         data-bs-target={data_bs_target}
+        data-bs-toggle={data_bs_toggle}
+        data-bs-dismiss={data_bs_dismiss}
         data-bs-slide={data_bs_slide}
       >
         {showImg && <img src={imgPath} alt={imgPath} />}

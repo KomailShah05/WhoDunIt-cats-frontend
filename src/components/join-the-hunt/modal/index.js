@@ -64,6 +64,9 @@ const PopUp = () => {
                   showImg={true}
                   text={eng_lang.connect_to_metamask}
                   imgPath={cat}
+                  data_bs_toggle="modal"
+                  data_bs_target="#smallModal"
+                  data_bs_dismiss="modal"
                 />
               </div>
             </div>
