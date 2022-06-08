@@ -30,6 +30,10 @@
   min-width: 9%;
 }
 
+.carousel__max-height {
+  max-height: 45.563rem;
+}
+
 @media (max-width: 1200px) {
   .carousel .carousel-item p:first-child br {
     display: none;
@@ -39,6 +43,12 @@
 @media (max-width: 1000px) {
   .carousel__carousel-section {
     padding: 0 3rem 0 3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .carousel .carousel-item p:first-child {
+    text-align: left !important;
   }
 }
 
@@ -54,5 +64,12 @@
   }
   .carousel__min-width {
     min-width: 26%;
+  }
+  .carousel__max-height {
+    max-height: 100%;
+  }
+  .carousel .carousel-item p:first-child {
+    font-size: 0.8rem !important;
+    text-align: left !important;
   }
 }
