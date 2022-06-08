@@ -162,4 +162,11 @@
   .sm-modal__padding-body {
     padding: 1.5rem 1.25rem 2.875rem 1.25rem;
   }
+  .sm-modal__img-top {
+    position: relative;
+    bottom: 3.5rem;
+  }
+  .sm-modal__img-top img {
+    max-width: 5.313rem;
+  }
 }
