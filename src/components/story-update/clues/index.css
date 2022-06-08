@@ -1,11 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+.carousel {
+  /* // Extra large devices (large desktops, 1200px and up) */
+  /* // Large devices (desktops, 992px and up) */
+  /* // Medium devices (tablets, 768px and up) */
+  /* Extereme smaal device */
+}
+
 .carousel__carousel-section {
-  margin: 8rem 0 7rem 0;
+  margin: 10.938rem 0 5rem 0;
+  padding: 0 4.375rem 0 4.375rem;
+}
+
+.carousel .carousel-item p:first-child {
+  margin-bottom: 2.5rem;
 }
 
 .carousel .carousel-control-next,
 .carousel .carousel-control-prev {
   position: relative;
+}
+
+.carousel__spacing {
+  margin-top: 2.875rem;
+}
+
+.carousel__min-width {
+  min-width: 9%;
+}
+
+@media (max-width: 1200px) {
+  .carousel .carousel-item p:first-child br {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .carousel__carousel-section {
+    padding: 0 3rem 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel__carousel-section {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel__carousel-section {
+    margin: 7.938rem 0 1rem 0;
+  }
+  .carousel__min-width {
+    min-width: 26%;
+  }
 }
