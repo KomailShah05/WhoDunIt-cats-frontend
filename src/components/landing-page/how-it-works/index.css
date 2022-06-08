@@ -10,6 +10,7 @@
   .HowItWorks__text-section h2 {
     font-size: 2rem;
     line-height: 3rem;
+    text-align: center;
   }
 }
 
@@ -25,10 +26,26 @@
   line-height: 2rem;
 }
 
+@media screen and (max-width: 992px) {
+  .HowItWorks .working-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .HowItWorks .working-text {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .HowItWorks .working-text br {
+    display: none;
   }
 }
 
@@ -43,7 +60,26 @@
   margin: 5.03rem 0 4.25rem 0;
 }
 
+@media screen and (max-width: 768px) {
+  .HowItWorks__margin-tp-btm .cat-in-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .HowItWorks__margin-tp-btm .cat-in-box {
+    width: 100%;
+  }
+}
+
 .underline {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

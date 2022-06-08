@@ -13,6 +13,7 @@ $dark-grey: #999999;
 $bg-light-grey: #e5e5e5;
 $maroon: #871616;
 $charcoal: #333333;
+$brown: #27282d;
 $dark-brown: #08080c;
 
 //font-faces
@@ -82,14 +83,24 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // px to rem values e.g 1rem = 16px
+$size-4: 0.25rem;
+$size-8: 0.5rem;
+$size-10: 0.625rem;
+$size-11: 0.688rem;
+$size-12: 0.75rem;
 $size-16: 1rem;
 $size-18: 1.12rem;
 $size-20: 1.25rem;
 $size-22: 1.428rem; //22.85px
 $size-24: 1.5rem;
 $size-28: 1.75rem;
+$size-32: 2rem;
 $size-36: 2.25rem;
 $size-40: 2.5rem;
 $size-40: 2.875rem;
 $size-48: 3rem;
+$size-72: 4.5rem;
+$size-80: 5rem;
+$size-70: 4.375rem;
+$size-151: 9.438rem;
 $size-337: 21.063rem;

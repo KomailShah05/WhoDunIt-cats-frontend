@@ -1,0 +1,33 @@
+@import "../../../sass/partials/variables";
+
+.carousel {
+  &__carousel-section {
+    margin: 8rem 0 7rem 0;
+  }
+}
+
+.carousel-control-prev {
+  // font-family: $font-family-gochi-hand;
+  // font-weight: $font-weight-regular;
+  // font-size: $font-24;
+  // line-height: $line-height-28;
+  // background-color: inherit;
+  // border: 1px solid $white;
+}
+
+.carousel-control-next {
+  // font-family: $font-family-gochi-hand;
+  // font-weight: $font-weight-regular;
+  // font-size: $font-24;
+  // line-height: $line-height-28;
+  // background-color: inherit;
+  // background-color: $white;
+  // opacity: 1;
+  // color: $black;
+  // &:hover {
+  //     background-color: $white;
+  //     color: $black;
+  //     opacity: 1;
+
+  // }
+}

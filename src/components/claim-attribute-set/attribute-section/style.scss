@@ -1,0 +1,22 @@
+@import "../../../sass/partials/variables";
+
+.attribute {
+  padding: $size-151 $size-72 $size-80 $size-70;
+  > div {
+    border-right: 2px solid $brown;
+  }
+  div:not(:first-child) {
+    padding-left: $size-24;
+  }
+
+  div:last-child {
+    border: none;
+  }
+  .col-md-3 div:first-child {
+    justify-content: center;
+  }
+  &__min-width {
+    min-width: 77%;
+    padding-left: 0 !important;
+  }
+}

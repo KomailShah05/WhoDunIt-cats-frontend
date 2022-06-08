@@ -1,23 +1,37 @@
 // Routes Constants
 export const routes = {
   HOME: "/",
-  STORY_UPDATE: "/story-update",
+  STORY_RELEASE: "/story-release",
+  STORY_INTRO: "/story-intro",
+  CLUES: "/story-clues",
   LOGIN: "/login",
+  CLAIM_ATTRIBUTE: "/claim-attribute",
 };
 
 // Landing Page Constants
 export const eng_lang = {
   title: "WhoDunIt Cats?",
+  buy_nft: "Buy Nft",
+  eth: "ETH",
+  dollar: "$",
+  congratulation: "Congratulations!",
+  stay_updated: "Stay updated!",
+  view_on_open_sea: "View NFT on Opensea",
+  try_again: "Try Again",
+  transaction_failed: "Transaction Failed...",
+  insufficient_fund: "Insufficient Funds! ",
+  connect_to_metamask: "Connect  Metamask",
+
   buttonConstants: {
     join_hunt_text: "Join the hunt",
     subscribe_btn_text: "Subscribe to our Newsletter",
     read_story: "Read Story",
+    begin_hunt: "Begin Hunt",
   },
-  connect_to_metamask: "Connect  Metamask",
 
   header: {
     heading: "WhoDunIt Cats?",
-    tabs: " How it works?",
+    tabs: ["How it works?", "The Story", "Set Attributes"],
   },
   hero: {
     card_text:
@@ -47,6 +61,9 @@ export const eng_lang = {
     eight_line:
       "ante. Nulla at maecenas euismod et consequat nibh. Sit faucibus amet, vitae",
     last_line: "gravida id lectus quis.",
+  },
+  storyRelease: {
+    heading: "Now the hunt begins",
   },
   storyUpdate: {
     intro_heading: "How it All Started",
@@ -86,13 +103,35 @@ export const eng_lang = {
       "You have successfully obtained a WhoDunItCats NFT. The NFT has been transfered to your wallet.",
     trans_failed_content: "Eu sollicitudin risus nunc, scelerisque semper ac.",
   },
-  buy_nft: "Buy Nft",
-  eth: "ETH",
-  dollar: "$",
-  congratulation: "Congratulations!",
-  stay_updated: "Stay updated!",
-  view_on_open_sea: "View NFT on Opensea",
-  try_again: "Try Again",
-  transaction_failed: "Transaction Failed...",
-  insufficient_fund: "Insufficient Funds! ",
+  claim_attribute_set: {
+    section_one: {
+      title: "Select suspect traits",
+      height: "Height",
+      height_options: ["Select Height", "1'11", "1'14", "1'15"],
+      eyes: "Eyes",
+      eyes_options: ["Select Eyes", "black", "grey", "blue"],
+      glasses: "Glasses",
+      glasses_options: [
+        "Select Glasses",
+        "glasses 1",
+        "glasses 2",
+        "glasses 3",
+      ],
+      hats: "Hats",
+      hat_options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
+      clothes: "Clothes",
+      clothes_options: [
+        "Select Clothes",
+        "clothes 1",
+        "clothes 2",
+        "clothes 3",
+      ],
+    },
+    section_two: {
+      title: "Choose your suspect",
+    },
+    section_three: {
+      title: "Mint your Suspect",
+    },
+  },
 };

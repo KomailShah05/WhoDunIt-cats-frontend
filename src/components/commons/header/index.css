@@ -94,6 +94,13 @@
   }
 }
 
+.tabs {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
 @media screen and (max-width: 320px) {
   .tabs {
     width: 100%;
@@ -101,26 +108,26 @@
 }
 
 @media screen and (max-width: 992px) {
-  .tabs h6 a {
+  .tabs a {
     font-size: 1.5rem !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .tabs h6 a {
+  .tabs a {
     font-size: 1.375rem !important;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .tabs h6 a {
+  .tabs a {
     font-size: 1.125rem !important;
     margin-left: 1rem;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .tabs h6 a {
+  .tabs a {
     font-size: 0.625rem !important;
     margin-left: 0rem;
   }

@@ -1,11 +1,11 @@
 //libraries
 import React from "react";
-
+import { Link } from "react-router-dom";
 //styles
 import "./index.scss";
 
 //constants
-import { eng_lang } from "../../../lib/utills/constants";
+import { eng_lang, routes } from "../../../lib/utills/constants";
 
 //assets
 import { Underline } from "../../../assets";
@@ -24,10 +24,11 @@ const Intro = () => {
           <p>{eng_lang.storyUpdate.first_line}</p>
           <p>{eng_lang.storyUpdate.second_line}</p>
           <p>{eng_lang.storyUpdate.third_line}</p>
-
-          <button className="button-pos btn btn-primary button-style align-self-center">
-            {eng_lang.buttonConstants.read_story}
-          </button>
+          <Link to={routes.CLUES}>
+            <button className="button-pos btn btn-primary button-style align-self-center">
+              {eng_lang.buttonConstants.read_story}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

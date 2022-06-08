@@ -16,10 +16,10 @@ const HowItWorks = () => {
       <div className="row ps-lg-5 HowItWorks__margin-tp-btm">
         <div className="col-lg-5">
           <div className=" d-flex justify-content-center">
-            <img src={HowToExport} alt="HowToExport" />
+            <img className="cat-in-box" src={HowToExport} alt="HowToExport" />
           </div>
         </div>
-        <div className="col-lg-7 text-lg-start text-center HowItWorks__text-section">
+        <div className="col-lg-7 HowItWorks__text-section">
           <h2 className="text-white">{eng_lang.howItWorks.heading}</h2>
           <img className="underline" src={Underline} alt="Underline" />
           <p className="working-text">
