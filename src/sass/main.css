@@ -156,6 +156,13 @@ p {
   background: #e5e5e5;
 }
 
+@media screen and (max-width: 576px) {
+  .subscribe-btn {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
 /* // Extra large devices (large desktops, 1200px and up) */
 /* // Large devices (desktops, 992px and up) */
 /* // Medium devices (tablets, 768px and up) */

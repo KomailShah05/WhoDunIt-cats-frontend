@@ -130,6 +130,9 @@
     &__loading-wide {
       max-width: 60%;
     }
+    &__wide {
+      margin-top: 7.5rem;
+    }
   }
   /* Extereme smaal device */
   @media (max-width: 576px) {
