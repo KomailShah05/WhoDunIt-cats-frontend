@@ -14,9 +14,9 @@
     height: 39.938rem;
   }
 
-  @media screen and (max-width: $breakpoint-sm) {
+  @media screen and (max-width: $breakpoint-md) {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
  
 }
@@ -59,7 +59,7 @@
     align-items: center;
     justify-content: space-around;
   }
-  @media screen and (max-width: $breakpoint-sm) {
+  @media screen and (max-width: $breakpoint-md) {
     margin: 5rem 0 5rem 0;
   }
 }

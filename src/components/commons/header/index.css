@@ -138,16 +138,18 @@
   transition: all 0.4s ease-in-out;
 }
 
-.navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
-  display: none;
-}
-
-.navbar-toggler[aria-expanded=true]::after {
-  content: ">";
+.navbar-toggler[aria-expanded=true] {
+  margin-left: 2.5rem;
+  margin-top: 1rem;
 }
 
 .navbar {
   margin: 0;
   padding: 0;
+}
+
+.navbar-collapse {
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
 }
 /*# sourceMappingURL=index.css.map */

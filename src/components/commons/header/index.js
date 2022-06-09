@@ -34,44 +34,53 @@ const Header = () => {
       >
         <div className={`header-position ${scroll && "mt-0 scroll-animation"}`}>
           <h1
-            className={`text-white header__heading ${
+            className={`text-white header__heading  ${
               scroll && "header__scroll-heading "
             }`}
           >
             {eng_lang.title}
           </h1>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            anchor="bottom"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div className="flex-lg-row flex-column">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId"
+              aria-controls="navbarTogglerDemo01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="collapsibleNavId"
-          >
-            <div className="d-flex tabs">
-              <Link to={"/"} className="text-white ">
-                {eng_lang.header.tabs[0]}
-              </Link>
-              {url === routes.STORY_RELEASE ? (
-                <>
-                  {" "}
-                  <Link to={"/"} className="text-white ">
-                    {eng_lang.header.tabs[1]}
-                  </Link>
-                  <Link to={"/"} className="text-white ">
-                    {eng_lang.header.tabs[2]}
-                  </Link>
-                </>
-              ) : null}
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="collapsibleNavId"
+            >
+              <div className="d-flex tabs">
+                <ul className="navbar-nav ">
+                  <li className="nav-item">
+                    <Link to={"/"} className="text-white nav-link ">
+                      {eng_lang.header.tabs[0]}
+                    </Link>
+                  </li>
+                  {url === routes.STORY_RELEASE ? (
+                    <>
+                      {" "}
+                      <li className="nav-item">
+                        <Link to={"/"} className="text-white nav-link ">
+                          {eng_lang.header.tabs[1]}
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to={"/"} className="text-white nav-link ">
+                          {eng_lang.header.tabs[2]}
+                        </Link>
+                      </li>
+                    </>
+                  ) : null}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
