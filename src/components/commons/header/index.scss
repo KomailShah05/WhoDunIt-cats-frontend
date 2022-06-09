@@ -77,21 +77,13 @@
     width: 100%;
   }
       & a {
-      @media screen and (max-width: $breakpoint-lg) {
-        font-size: $font-24 !important; //24px
-        
-      }
-      @media screen and (max-width: $breakpoint-md) {
-        font-size: $font-22 !important; //20px
-      }
+     
+     
       @media screen and (max-width: $breakpoint-sm) {
-        font-size: $font-18 !important; //16px
+     
         margin-left: 1rem;
       }
-      @media screen and (max-width: $breakpoint-xs) {
-        font-size: $font-10 !important; //16px
-        margin-left: 0rem;
-      }
+     
     }
 }
 
@@ -156,7 +148,7 @@
       content: '.';
       display: block;
       height: 1px;
-      width: 280px;
+      width: 300px;
       margin: 0px auto;
       text-indent: -9999px;
       border-top: 1px solid $white;
