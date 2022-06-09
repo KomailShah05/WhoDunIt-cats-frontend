@@ -32,6 +32,19 @@ const Header = () => {
           scroll && "bg-dark "
         }`}
       >
+        <button
+          className={`navbar-toggler align-self-center justify-content-start me-5  ${
+            scroll && "mt-0 align-self-start"
+          }`}
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div className={`header-position ${scroll && "mt-0 scroll-animation"}`}>
           <h1
             className={`text-white header__heading  ${
@@ -40,46 +53,68 @@ const Header = () => {
           >
             {eng_lang.title}
           </h1>
-          <div className="flex-lg-row flex-column">
-            <button
-              className="navbar-toggler ms-2"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapsibleNavId"
-              aria-controls="navbarTogglerDemo01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="collapsibleNavId"
-            >
-              <div className="d-flex tabs">
-                <ul className="navbar-nav ">
+          <div className="d-flex tabs">
+            <ul className="navbar-nav w-100">
+              <li className="nav-item">
+                <Link to={"/"} className="text-white nav-link  ">
+                  {eng_lang.header.tabs[0]}
+                </Link>
+              </li>
+              {url === routes.STORY_RELEASE ? (
+                <>
+                  {" "}
                   <li className="nav-item">
                     <Link to={"/"} className="text-white nav-link ">
-                      {eng_lang.header.tabs[0]}
+                      {eng_lang.header.tabs[1]}
                     </Link>
                   </li>
-                  {url === routes.STORY_RELEASE ? (
-                    <>
-                      {" "}
-                      <li className="nav-item">
-                        <Link to={"/"} className="text-white nav-link ">
-                          {eng_lang.header.tabs[1]}
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link to={"/"} className="text-white nav-link ">
-                          {eng_lang.header.tabs[2]}
-                        </Link>
-                      </li>
-                    </>
-                  ) : null}
-                </ul>
+                  <li className="nav-item">
+                    <Link to={"/"} className="text-white nav-link ">
+                      {eng_lang.header.tabs[2]}
+                    </Link>
+                  </li>
+                </>
+              ) : null}
+            </ul>
+            <div
+              class="offcanvas offcanvas-start bg-dark justify-content-end"
+              id="collapsibleNavId"
+              tabIndex="-1"
+            >
+              <button
+                type="button"
+                class="btn-close text-reset align-self-end p-3"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+              <div className="offcanvas-header d-flex justify-content-center mb-2">
+                <h1 className="text-white">{eng_lang.title}</h1>
+              </div>
+              <div className="offcanvas-body">
+                <div className="d-flex tabs">
+                  <ul className="flex-column nav w-100 ">
+                    <li className="nav-item">
+                      <Link to={"/"} className="text-white ">
+                        {eng_lang.header.tabs[0]}
+                      </Link>
+                    </li>
+                    {url === routes.STORY_RELEASE ? (
+                      <>
+                        {" "}
+                        <li className="nav-item">
+                          <Link to={"/"} className="text-white  ">
+                            {eng_lang.header.tabs[1]}
+                          </Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to={"/"} className="text-white  ">
+                            {eng_lang.header.tabs[2]}
+                          </Link>
+                        </li>
+                      </>
+                    ) : null}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
