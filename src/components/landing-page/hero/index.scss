@@ -6,9 +6,9 @@
   background-repeat: no-repeat;
   height: 50.625rem;
   overflow-x: hidden;
-  @media screen and (max-width: $breakpoint-sm) {
+  @media screen and (max-width: $breakpoint-lg) {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -18,7 +18,7 @@
     margin-top: 15.625rem;
   }
   @media screen and (max-width: $breakpoint-sm) {
-    margin-top: 7.625rem;
+    margin-top: 10.625rem;
     padding: 3rem 0rem 2rem 0rem;
   }
   .hero-card {
@@ -27,8 +27,8 @@
     padding: 2.5rem;
     margin-right: 1rem;
     background: rgba(0, 0, 0, 0.65);
-    @media screen and (max-width: $breakpoint-sm) {
-      padding: 1.2rem;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 1.5rem;
       margin-right: auto;
       margin-left: auto;
     }
@@ -50,6 +50,14 @@
       font-size: $font-40;
       line-height: $line-height-48;
       width: 100%;
+      @media screen and (max-width: $breakpoint-md) {
+        font-size: $font-32;
+        line-height: $line-height-38;    
+      }
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: $font-28;
+        line-height: $line-height-24;    
+      }
     }
   }
 }
@@ -73,12 +81,18 @@
     }
     @media screen and  (max-width: $breakpoint-md) {
      width: 100%;
+     font-size: $font-20;
+     line-height: $line-height-20;
     }
   }
 }
 
 .story-release-heading {
   width: max-content;
+  @media screen and (max-width: $breakpoint-md) {
+    width: 100%;
+    
+  }
 }
 
 .underline {

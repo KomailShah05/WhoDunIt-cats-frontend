@@ -42,7 +42,7 @@ const StoryClues = () => {
             {eng_lang.story_clues.paragrapgh_line_2}
           </p>
           <img
-            src={brown_cat}
+            src={HeroImg}
             class="d-block w-100 carousel__max-height"
             alt="..."
           />
@@ -54,7 +54,7 @@ const StoryClues = () => {
             {eng_lang.story_clues.paragrapgh_line_2}
           </p>
           <img
-            src={Caseboard_Colored}
+            src={HeroImg}
             class="d-block w-100 carousel__max-height"
             alt="..."
           />
