@@ -60,7 +60,9 @@ const Header = () => {
                   {eng_lang.header.tabs[0]}
                 </Link>
               </li>
-              {url === routes.STORY_RELEASE ? (
+              {url === routes.STORY_RELEASE ||
+              url === routes.CLUES ||
+              url === routes.CLAIM_ATTRIBUTE ? (
                 <>
                   {" "}
                   <li className="nav-item">
@@ -98,7 +100,9 @@ const Header = () => {
                         {eng_lang.header.tabs[0]}
                       </Link>
                     </li>
-                    {url === routes.STORY_RELEASE ? (
+                    {url === routes.STORY_RELEASE ||
+                    url === routes.CLUES ||
+                    url === routes.CLAIM_ATTRIBUTE ? (
                       <>
                         {" "}
                         <li className="nav-item">

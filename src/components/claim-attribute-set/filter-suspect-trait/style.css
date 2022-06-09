@@ -1,26 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
-.who-did-it {
-  background: radial-gradient(70.9% 173.52% at 50% 6.19%, rgba(0, 0, 0, 0) 25.31%, #000000 100%), url(../../../assets/images/image_1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.filter__round-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-x: hidden;
+  padding: 0.25rem 0.75rem 0.25rem 0.688rem;
+  gap: 0.625rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  margin-right: 0.75rem;
+  border: 1px solid #871616;
 }
 
-@media screen and (max-width: 992px) {
-  .who-did-it img {
-    width: 100%;
-    height: 100%;
-  }
+.filter__round-btn.fill {
+  background: #871616;
 }

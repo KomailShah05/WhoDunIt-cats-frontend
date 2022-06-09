@@ -2,9 +2,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
-import LandingPage from "./pages/landing-page";
-import StoryUpdate from "./pages/story-update";
-import StoryCluesPage from "./pages/story-clues";
+import {
+  LandingPage,
+  StoryUpdate,
+  ClaimAttributeSet,
+  StoryCluesPage,
+} from "./pages";
 
 //components
 
@@ -22,6 +25,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path={routes.HOME} element={<LandingPage />} />
+        <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
+        <Route path={routes.CLAIM_ATTRIBUTE} element={<ClaimAttributeSet />} />
         <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
         <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
         <Route path={routes.CLUES} element={<StoryCluesPage />} />

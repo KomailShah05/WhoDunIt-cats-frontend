@@ -27,7 +27,7 @@
       font-size: 1.1rem;
       line-height: 1rem;
       img {
-        width: 1.5rem;
+        width: 1.2rem;
         margin-right: 0.75rem;
       }
     }
@@ -36,9 +36,13 @@
       font-size: 0.8rem;
       line-height: 0.25rem;
       img {
-        width: 1.5rem;
-        margin-right: 0.2rem;
+        width: 0.9rem;
+        margin-right: 0.4rem;
       }
     }
+  }
+  &__bg-tranparent {
+    background: transparent !important;
+    border: $size-1 solid $white !important;
   }
 }

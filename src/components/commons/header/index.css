@@ -191,12 +191,15 @@
 }
 
 .nav li::after {
-  content: '.';
+  content: ".";
   display: block;
   height: 1px;
-  width: 300px;
-  margin: 0px auto;
+  width: 100%;
+  margin: 0.5rem auto;
   text-indent: -9999px;
-  border-top: 1px solid #ffffff;
+  border-top: 2px dotted #cccccc;
 }
-/*# sourceMappingURL=index.css.map */
+
+.navbar-dark .navbar-toggler-icon {
+  background-size: 1.563rem 1.625rem;
+}

@@ -1,33 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
-.slider-section {
-  margin-top: 10.938rem;
+.carousel {
+  /* // Extra large devices (large desktops, 1200px and up) */
+  /* // Large devices (desktops, 992px and up) */
+  /* // Medium devices (tablets, 768px and up) */
+  /* Extereme smaal device */
 }
 
-.carousel-control-prev {
-  font-family: "Gochi Hand", cursive;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  background-color: inherit;
-  border: 1px solid #ffffff;
+.carousel__carousel-section {
+  margin: 10.938rem 0 5rem 0;
+  padding: 0 4.375rem 0 4.375rem;
 }
 
-.carousel-control-next {
-  font-family: "Gochi Hand", cursive;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  background-color: inherit;
-  background-color: #ffffff;
-  opacity: 1;
-  color: #000000;
+.carousel .carousel-item p:first-child {
+  margin-bottom: 2.5rem;
 }
 
-.carousel-control-next:hover {
-  background-color: #ffffff;
-  color: #000000;
-  opacity: 1;
+.carousel .carousel-control-next,
+.carousel .carousel-control-prev {
+  position: relative;
 }
-/*# sourceMappingURL=index.css.map */
+
+.carousel__spacing {
+  margin-top: 2.875rem;
+}
+
+.carousel__min-width {
+  min-width: 9%;
+}
+
+.carousel__max-height {
+  max-height: 45.563rem;
+}
+
+@media (max-width: 1200px) {
+  .carousel .carousel-item p:first-child br {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .carousel__carousel-section {
+    padding: 0 3rem 0 3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .carousel .carousel-item p:first-child {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel__carousel-section {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel__carousel-section {
+    margin: 7.938rem 0 1rem 0;
+  }
+  .carousel__min-width {
+    min-width: 26%;
+  }
+  .carousel__max-height {
+    max-height: 100%;
+  }
+  .carousel .carousel-item p:first-child {
+    font-size: 0.8rem !important;
+    text-align: left !important;
+  }
+}

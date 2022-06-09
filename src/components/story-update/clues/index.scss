@@ -1,30 +1,69 @@
 @import "../../../sass/partials/variables";
-.slider-section {
-    margin-top: 10.938rem;
-}
 
-.carousel-control-prev {
-    font-family: $font-family-gochi-hand;
-    font-weight: $font-weight-regular;
-    font-size: $font-24;
-    line-height: $line-height-28;
-    background-color: inherit;
-    border: 1px solid $white;
-}
+.carousel {
+  &__carousel-section {
+    margin: $size-175 0 $size-80 0;
+    padding: 0 $size-70 0 $size-70;
+  }
+  .carousel-item p:first-child {
+    margin-bottom: 2.5rem;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    position: relative;
+  }
 
-.carousel-control-next {
-    font-family: $font-family-gochi-hand;
-    font-weight: $font-weight-regular;
-    font-size: $font-24;
-    line-height: $line-height-28;
-    background-color: inherit;
-    background-color: $white;
-    opacity: 1;
-    color: $black;
-    &:hover {
-        background-color: $white;
-        color: $black;
-        opacity: 1;
-       
+  &__spacing {
+    margin-top: $size-40;
+  }
+  &__min-width {
+    min-width: 9%;
+  }
+  &__max-height {
+    max-height: 45.563rem;
+  }
+
+  /* // Extra large devices (large desktops, 1200px and up) */
+  @media (max-width: 1200px) {
+    .carousel-item p:first-child {
+      & br {
+        display: none;
+      }
     }
+  }
+  /* // Large devices (desktops, 992px and up) */
+  @media (max-width: 1000px) {
+    &__carousel-section {
+      padding: 0 $size-48 0 $size-48;
+    }
+  }
+  @media (max-width: 850px) {
+    .carousel-item p:first-child {
+      text-align: left !important;
+    }
+  }
+  /* // Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    &__carousel-section {
+      padding: 0 $size-32 0 $size-32;
+    }
+  }
+  /* Extereme smaal device */
+  @media (max-width: 576px) {
+    &__carousel-section {
+      margin: $size-127 0 $size-16 0;
+    }
+    &__min-width {
+      min-width: 26%;
+    }
+    &__max-height {
+      max-height: 100%;
+    }
+    .carousel-item p:first-child {
+      font-size: 0.8rem !important;
+      text-align: left !important;
+    }
+  }
+  @media (max-width: 300px) {
+  }
 }
