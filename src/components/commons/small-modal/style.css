@@ -142,6 +142,9 @@
   .sm-modal__wide, .sm-modal__loading-wide {
     max-width: 60%;
   }
+  .sm-modal__wide {
+    margin-top: 7.5rem;
+  }
 }
 
 @media (max-width: 576px) {

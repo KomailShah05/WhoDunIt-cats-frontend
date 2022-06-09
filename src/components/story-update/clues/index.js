@@ -11,7 +11,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./index.scss";
 
 //assets
-import { HeroImg, brown_cat, Caseboard_Colored } from "../../../assets";
+import { HeroImg } from "../../../assets";
 
 const StoryClues = () => {
   return (
