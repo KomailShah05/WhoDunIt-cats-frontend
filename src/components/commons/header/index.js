@@ -62,6 +62,7 @@ const Header = () => {
               </li>
               {url === routes.STORY_RELEASE ||
               url === routes.CLUES ||
+              url === routes.STORY_INTRO ||
               url === routes.CLAIM_ATTRIBUTE ? (
                 <>
                   {" "}
@@ -102,6 +103,7 @@ const Header = () => {
                     </li>
                     {url === routes.STORY_RELEASE ||
                     url === routes.CLUES ||
+                    url === routes.STORY_INTRO ||
                     url === routes.CLAIM_ATTRIBUTE ? (
                       <>
                         {" "}
