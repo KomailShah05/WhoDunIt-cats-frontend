@@ -42,7 +42,7 @@ const Header = () => {
           </h1>
           <div className="flex-lg-row flex-column">
             <button
-              className="navbar-toggler"
+              className="navbar-toggler ms-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapsibleNavId"

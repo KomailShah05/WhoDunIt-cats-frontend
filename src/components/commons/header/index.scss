@@ -96,7 +96,7 @@
 }
 .navbar-toggler {
   &[aria-expanded=true]{
-      margin-left: 2.5rem;
+      margin-left: 5rem !important;
       margin-top: 1rem;
     }
 }
@@ -108,4 +108,5 @@
 
 .navbar-collapse {
   flex-basis: content;
+  margin-left: 3rem;
 }

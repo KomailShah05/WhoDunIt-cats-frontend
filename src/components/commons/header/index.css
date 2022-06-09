@@ -139,7 +139,7 @@
 }
 
 .navbar-toggler[aria-expanded=true] {
-  margin-left: 2.5rem;
+  margin-left: 5rem !important;
   margin-top: 1rem;
 }
 
@@ -151,5 +151,6 @@
 .navbar-collapse {
   -ms-flex-preferred-size: content;
       flex-basis: content;
+  margin-left: 3rem;
 }
 /*# sourceMappingURL=index.css.map */
