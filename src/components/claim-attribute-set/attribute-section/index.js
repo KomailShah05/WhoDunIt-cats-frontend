@@ -4,18 +4,19 @@ import React from "react";
 // components
 import { FilterSuspectTrait, Select } from "..";
 
-// assets
+// constants
 import { eng_lang } from "../../../lib/utills/constants";
 
 // styles
 import "./style.scss";
 
 // assets
+import { CatOne, CatTwo, CatThree } from "../../../assets";
 
 const AttributeSection = () => {
   return (
-    <div className="row attribute">
-      <div className="col-md-3 d-flex flex-column align-items-center">
+    <div className="row attribute gx-0">
+      <div className=" col col-md-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
           index={1}
@@ -44,14 +45,23 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col-md-6">
+      <div className="col col-md-6 ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
-          fill={false}
+          fill={true}
         />
+        <div className="mt-4 p-0 d-flex flex-lg-row flex-column  align-items-center cats ">
+          <img src={CatOne} alt="cat" />
+          <img src={CatTwo} alt="cat" />
+          <img src={CatThree} alt="cat" />
+        </div>
+        <div className="mt-40 p-0 d-flex flex-lg-row flex-column cats ">
+          <img src={CatOne} alt="cat" />
+          <img src={CatTwo} alt="cat" />
+        </div>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-3  ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_three.title}
           index={3}

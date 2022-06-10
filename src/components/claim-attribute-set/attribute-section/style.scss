@@ -2,12 +2,13 @@
 
 .attribute {
   padding: $size-151 $size-72 $size-80 $size-70;
+ 
   > div {
     border-right: 2px solid $brown;
   }
-  div:not(:first-child) {
-    padding-left: $size-24;
-  }
+  // div:not(:first-child) {
+  //   // padding-left: $size-24;
+  // }
 
   div:last-child {
     border: none;
@@ -20,3 +21,17 @@
     padding-left: 0 !important;
   }
 }
+
+.cats {
+  > img{
+    margin-right: 30px;
+    &:first-of-type {
+      margin-left: 1.5rem; //24px
+    }
+    &:last-of-type {
+      margin-right: 1.688rem; //27px
+    }
+  }
+}
+
+
