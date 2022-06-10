@@ -15,8 +15,8 @@ import { CatOne, CatTwo, CatThree } from "../../../assets";
 
 const AttributeSection = () => {
   return (
-    <div className="row attribute gx-0">
-      <div className=" col col-md-3 d-flex flex-column align-items-center">
+    <div className="row flex-fill attribute gx-0 mx-auto">
+      <div className=" col col-md-4 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
           index={1}
@@ -45,7 +45,7 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col col-md-1 cats  ">
+      <div className="col col-md-6 cats   ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
@@ -61,14 +61,14 @@ const AttributeSection = () => {
           <img src={CatTwo} alt="cat" />
         </div>
       </div>
-      <div className="col-md-8 filter-sus">
+      <div className="col-md-3 filter-sus">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_three.title}
           index={3}
           fill={true}
         />
         <img className="selected-cat" src={CatOne} alt="cat" />
-        <div className="d-flex justify-content-between metadata-nft">
+        <div className="d-flex flex-fill justify-content-between metadata-nft">
           <p className="text-white">
             {eng_lang.claim_attribute_set.section_three.serial_number}
           </p>

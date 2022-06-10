@@ -2,7 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .attribute {
-  padding: 9.438rem 4.5rem 5rem 4.375rem;
+  padding-top: 9.438rem;
+  padding-right: 30rem;
+  padding-bottom: 9.438rem;
+  -ms-flex-wrap: inherit;
+      flex-wrap: inherit;
+  overflow-x: hidden;
 }
 
 .attribute > div {
@@ -42,7 +47,7 @@
 }
 
 .cats > div > img {
-  margin-right: 30px;
+  margin-right: 1.875rem;
   width: 14rem;
   height: 14rem;
   border-radius: 0.25rem;

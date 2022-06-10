@@ -1,8 +1,11 @@
 @import "../../../sass/partials/variables";
 
 .attribute {
-  padding: $size-151 $size-72 $size-80 $size-70;
- 
+  padding-top: $size-151;
+  padding-right: 30rem; //480px
+  padding-bottom: $size-151;
+  flex-wrap: inherit;
+  overflow-x: hidden;
   > div {
     border-right: 2px solid $brown;
   }
@@ -33,7 +36,7 @@
    > div {
     
     > img{
-      margin-right: 30px;
+      margin-right: $size-30;
       width: 14rem;
       height: 14rem;
       border-radius: $size-4;
