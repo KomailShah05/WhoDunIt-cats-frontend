@@ -4,18 +4,19 @@ import React from "react";
 // components
 import { FilterSuspectTrait, Select } from "..";
 
-// assets
+// constants
 import { eng_lang } from "../../../lib/utills/constants";
 
 // styles
 import "./style.scss";
 
 // assets
+import { CatOne, CatTwo, CatThree } from "../../../assets";
 
 const AttributeSection = () => {
   return (
-    <div className="row attribute">
-      <div className="col-md-3 d-flex flex-column align-items-center">
+    <div className="row attribute gx-0">
+      <div className=" col col-md-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
           index={1}
@@ -44,19 +45,49 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col-md-6">
+      <div className="col col-md-1 cats  ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
-          fill={false}
+          fill={true}
         />
+        <div className=" mt-4 p-0 d-flex flex-lg-row flex-column align-items-center  ">
+          <img src={CatOne} alt="cat" />
+          <img src={CatTwo} alt="cat" />
+          <img src={CatThree} alt="cat" />
+        </div>
+        <div className="mt-40 p-0 d-flex flex-lg-row flex-column ">
+          <img src={CatOne} alt="cat" />
+          <img src={CatTwo} alt="cat" />
+        </div>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-8 filter-sus">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_three.title}
           index={3}
-          fill={false}
+          fill={true}
         />
+        <img className="selected-cat" src={CatOne} alt="cat" />
+        <div className="d-flex justify-content-between metadata-nft">
+          <p className="text-white">
+            {eng_lang.claim_attribute_set.section_three.serial_number}
+          </p>
+          <p className="text-white">
+            {eng_lang.claim_attribute_set.section_three.serial_value}
+          </p>
+        </div>
+        <div className="d-flex justify-content-between metadata-nft">
+          <p className="text-white">
+            {eng_lang.claim_attribute_set.section_three.plank_number}
+          </p>
+          <p className="text-white">
+            {eng_lang.claim_attribute_set.section_three.plank_value}
+          </p>
+        </div>
+
+        <button className="btn btn-primary mint-btn">
+          {eng_lang.buttonConstants.mint_suspect}
+        </button>
       </div>
     </div>
   );

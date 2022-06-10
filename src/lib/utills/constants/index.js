@@ -27,6 +27,7 @@ export const eng_lang = {
     subscribe_btn_text: "Subscribe to our Newsletter",
     read_story: "Read Story",
     begin_hunt: "Begin Hunt",
+    mint_suspect: "Mint Suspect",
   },
 
   header: {
@@ -132,6 +133,10 @@ export const eng_lang = {
     },
     section_three: {
       title: "Mint your Suspect",
+      serial_number: "Serial Number",
+      serial_value: "0-5000",
+      plank_number: "Plank Number",
+      plank_value: "152374",
     },
   },
   story_clues: {

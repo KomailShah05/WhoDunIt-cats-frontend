@@ -9,21 +9,84 @@
   border-right: 2px solid #27282d;
 }
 
+.attribute div:first-child {
+  margin-left: 0;
+}
+
 .attribute div:not(:first-child) {
   padding-left: 1.5rem;
 }
 
 .attribute div:last-child {
   border: none;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .attribute .col-md-3 div:first-child {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .attribute__min-width {
   min-width: 77%;
   padding-left: 0 !important;
 }
+
+.cats {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.cats > div > img {
+  margin-right: 30px;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.25rem;
+}
+
+.cats > div > img:first-of-type {
+  margin-left: 0.5rem;
+}
+
+.selected-cat {
+  margin: 1.5rem 0 1rem 0.5rem;
+}
+
+.metadata-nft {
+  max-width: 14rem;
+  padding-left: 0.5rem !important;
+  margin-bottom: 0.75rem;
+}
+
+.metadata-nft p {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 19px;
+}
+
+.mint-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 0.3rem;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  width: 14rem;
+}
+
+.filter-sus {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+/*# sourceMappingURL=style.css.map */
