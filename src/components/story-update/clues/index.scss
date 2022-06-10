@@ -1,10 +1,14 @@
 @import "../../../sass/partials/variables";
 
 .carousel {
-  &__carousel-section {
-    margin: $size-175 0 $size-80 0;
-    padding: 0 $size-70 0 $size-70;
+  .carousel-item:last-child {
+    &.active {
+      + .btns-div {
+        display: none;
+      }
+    }
   }
+
   .carousel-item p:first-child {
     margin-bottom: 2.5rem;
   }
@@ -13,8 +17,13 @@
     position: relative;
   }
 
+  &__carousel-section {
+    margin: $size-175 0 $size-80 0;
+    padding: 0 $size-70 0 $size-70;
+  }
+
   &__spacing {
-    margin-top: $size-40;
+    margin-top: 32rem;
   }
   &__min-width {
     min-width: 9%;

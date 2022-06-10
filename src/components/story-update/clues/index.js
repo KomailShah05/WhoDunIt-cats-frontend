@@ -1,5 +1,6 @@
 //libraries
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import $ from "jquery";
 
 // components
 import { BlockButton } from "../../commons";
@@ -14,6 +15,36 @@ import "./index.scss";
 import { HeroImg } from "../../../assets";
 
 const StoryClues = () => {
+  const [hide, sethide] = useState(false);
+  const lastItem = useRef();
+  const [updateDom, setupdateDom] = useState(0);
+
+  // if ($(".carousel .carousel-inner .carousel-item:last").hasClass("active")) {
+  // $(".btn-nxt").hide();
+  // alert();
+  // $("#carouselExampleControls").carousel("pause");
+  // alert();
+  // sethide(true);
+  // } else {
+  // sethide(false);
+  // }
+
+  useEffect(() => {
+    const class_name = lastItem?.current?.classList[1];
+    if (class_name === "active") {
+      // alert();
+      sethide(true);
+    } else {
+      sethide(false);
+    }
+  }, [updateDom]);
+
+  console.log("hide****", hide);
+
+  const handleNext = () => {
+    setupdateDom(updateDom + 2);
+  };
+
   return (
     <div
       id="carouselExampleControls"
@@ -47,7 +78,7 @@ const StoryClues = () => {
             alt="..."
           />
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" ref={lastItem}>
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -59,29 +90,29 @@ const StoryClues = () => {
             alt="..."
           />
         </div>
-      </div>
-      <div className="d-flex justify-content-between carousel__spacing">
-        <BlockButton
-          showImg={false}
-          text={"Previous"}
-          imgPath={""}
-          name={"previous"}
-          handleModalName={""}
-          transparent_btn={true}
-          data_bs_target="#carouselExampleControls"
-          data_bs_slide="prev"
-        />
-        <div className="carousel__min-width">
+        <div className="d-flex justify-content-between carousel__spacing btns-div">
           <BlockButton
             showImg={false}
-            text={"Next"}
+            text={"Previous"}
             imgPath={""}
-            name={"next"}
-            handleModalName={""}
-            secondary={false}
+            name={"previous"}
+            handleModalName={handleNext}
+            transparent_btn={true}
             data_bs_target="#carouselExampleControls"
-            data_bs_slide="next"
+            data_bs_slide="prev"
           />
+          <div className={`carousel__min-width btn-nxt `}>
+            <BlockButton
+              showImg={false}
+              text={"Next"}
+              imgPath={""}
+              name={"next"}
+              handleModalName={handleNext}
+              secondary={false}
+              data_bs_target="#carouselExampleControls"
+              data_bs_slide="next"
+            />
+          </div>
         </div>
       </div>
     </div>
