@@ -6,8 +6,18 @@
   padding-bottom: $size-151;
   flex-wrap: inherit;
   overflow-x: hidden;
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding-right: 0;
+    flex-wrap: wrap;
+  }
   > div {
     border-right: 2px solid $brown;
+    @media screen and (max-width: $breakpoint-md) {
+      border-right: none;
+      margin-bottom: $size-10;
+      border-bottom: 2px solid $brown;
+    }
   }
 
   div:first-child {
@@ -42,6 +52,13 @@
       border-radius: $size-4;
       &:first-of-type {
         margin-left: 0.5rem; 
+      }
+
+      @media screen and (max-width: $breakpoint-md) {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
       }
       // &:last-of-type {
       //   margin-right: 1.688rem; //27px

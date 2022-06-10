@@ -15,7 +15,7 @@ import { CatOne, CatTwo, CatThree } from "../../../assets";
 
 const AttributeSection = () => {
   return (
-    <div className="row flex-fill attribute gx-0 mx-auto">
+    <div className="row  attribute gx-0 mx-auto">
       <div className=" col col-md-4 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
@@ -45,7 +45,7 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col col-md-6 cats   ">
+      <div className="col col-md-6 cats ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
@@ -56,7 +56,7 @@ const AttributeSection = () => {
           <img src={CatTwo} alt="cat" />
           <img src={CatThree} alt="cat" />
         </div>
-        <div className="mt-40 p-0 d-flex flex-lg-row flex-column ">
+        <div className="mt-40 p-0 d-flex flex-lg-row flex-column align-items-center  ">
           <img src={CatOne} alt="cat" />
           <img src={CatTwo} alt="cat" />
         </div>
