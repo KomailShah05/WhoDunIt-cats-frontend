@@ -6,15 +6,21 @@
   > div {
     border-right: 2px solid $brown;
   }
-  // div:not(:first-child) {
-  //   // padding-left: $size-24;
-  // }
+
+  div:first-child {
+    margin-left: 0;
+  }
+
+  div:not(:first-child) {
+    padding-left: $size-24;
+  }
 
   div:last-child {
     border: none;
+    justify-content: flex-start;
   }
   .col-md-3 div:first-child {
-    justify-content: center;
+    justify-content: flex-start;
   }
   &__min-width {
     min-width: 77%;
@@ -23,15 +29,47 @@
 }
 
 .cats {
-  > img{
-    margin-right: 30px;
-    &:first-of-type {
-      margin-left: 1.5rem; //24px
+   > div {
+    > img{
+      margin-right: 30px;
+      width: 27.8%;
+      height: auto;
+      border-radius: $size-4;
+      &:first-of-type {
+        margin-left: 0.5rem; 
+      }
+      // &:last-of-type {
+      //   margin-right: 1.688rem; //27px
+      // }
     }
-    &:last-of-type {
-      margin-right: 1.688rem; //27px
-    }
+   }
+}
+
+.selected-cat {
+  margin: 1.5rem 0 1rem 0.5rem;
+}
+
+.metadata-nft {
+  max-width: 14rem;
+  padding-left: 0.5rem !important;
+  margin-bottom: $size-12;
+  & p {
+    font-family: $font-family-gochi-hand;
+    font-weight: $font-weight-regular;
+    font-size: $font-16;
+    line-height: 19px;
   }
 }
+.mint-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: $size-32;
+  margin-left: 0.3rem;
+  font-family: $font-family-gochi-hand;
+  font-size: $size-24;
+  line-height: $size-28;
+  width: 14rem;
+}
+
 
 

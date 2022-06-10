@@ -4,7 +4,7 @@
   &__round-btn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: $size-4 $size-12 $size-4 $size-11;
     gap: $size-10;
