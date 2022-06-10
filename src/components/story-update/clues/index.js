@@ -1,6 +1,5 @@
 //libraries
-import React, { useState, useRef, useEffect } from "react";
-import $ from "jquery";
+import React from "react";
 
 // components
 import { BlockButton } from "../../commons";
@@ -15,46 +14,16 @@ import "./index.scss";
 import { HeroImg } from "../../../assets";
 
 const StoryClues = () => {
-  const [hide, sethide] = useState(false);
-  const lastItem = useRef();
-  const [updateDom, setupdateDom] = useState(0);
-
-  // if ($(".carousel .carousel-inner .carousel-item:last").hasClass("active")) {
-  // $(".btn-nxt").hide();
-  // alert();
-  // $("#carouselExampleControls").carousel("pause");
-  // alert();
-  // sethide(true);
-  // } else {
-  // sethide(false);
-  // }
-
-  useEffect(() => {
-    const class_name = lastItem?.current?.classList[1];
-    if (class_name === "active") {
-      // alert();
-      sethide(true);
-    } else {
-      sethide(false);
-    }
-  }, [updateDom]);
-
-  console.log("hide****", hide);
-
-  const handleNext = () => {
-    setupdateDom(updateDom + 2);
-  };
-
   return (
     <div
       id="carouselExampleControls"
-      class="carousel slide carousel__carousel-section"
+      className="carousel slide carousel__carousel-section"
       data-bs-ride="carousel"
       data-bs-wrap={false}
       data-bs-touch={true}
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+      <div className="carousel-inner">
+        <div className="carousel-item active">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -62,11 +31,11 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-        <div class="carousel-item">
+        <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -74,11 +43,11 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-        <div class="carousel-item" ref={lastItem}>
+        <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -86,34 +55,46 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-        <div className="d-flex justify-content-between carousel__spacing btns-div">
+        <section className="d-flex justify-content-between carousel__spacing">
           <BlockButton
             showImg={false}
             text={"Previous"}
             imgPath={""}
             name={"previous"}
-            handleModalName={handleNext}
+            handleModalName={() => {}}
             transparent_btn={true}
             data_bs_target="#carouselExampleControls"
             data_bs_slide="prev"
           />
-          <div className={`carousel__min-width btn-nxt `}>
+          <div className="carousel__min-width">
             <BlockButton
               showImg={false}
               text={"Next"}
               imgPath={""}
               name={"next"}
-              handleModalName={handleNext}
+              handleModalName={() => {}}
               secondary={false}
               data_bs_target="#carouselExampleControls"
               data_bs_slide="next"
             />
           </div>
-        </div>
+          <div className="carousel__min-width d-none">
+            <BlockButton
+              showImg={false}
+              text={"Insights"}
+              imgPath={""}
+              name={"next"}
+              handleModalName={() => {}}
+              secondary={false}
+              data_bs_target="#carouselExampleControls"
+              data_bs_slide="next"
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

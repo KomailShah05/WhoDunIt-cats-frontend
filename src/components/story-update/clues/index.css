@@ -8,8 +8,12 @@
   /* Extereme smaal device */
 }
 
-.carousel .carousel-item:last-child.active + .btns-div {
+.carousel .carousel-inner .carousel-item:last-of-type.active + .carousel__spacing .carousel__min-width {
   display: none;
+}
+
+.carousel .carousel-inner .carousel-item:last-of-type.active + .carousel__spacing .carousel__min-width.d-none {
+  display: block !important;
 }
 
 .carousel .carousel-item p:first-child {

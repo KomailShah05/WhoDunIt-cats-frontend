@@ -1,10 +1,19 @@
 @import "../../../sass/partials/variables";
 
 .carousel {
-  .carousel-item:last-child {
-    &.active {
-      + .btns-div {
-        display: none;
+  .carousel-inner {
+    .carousel-item {
+      &:last-of-type {
+        &.active {
+          + .carousel__spacing {
+            .carousel__min-width {
+              display: none;
+              &.d-none {
+                display: block !important;
+              }
+            }
+          }
+        }
       }
     }
   }
