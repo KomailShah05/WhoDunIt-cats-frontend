@@ -197,6 +197,10 @@
   border-top: 2px dotted #cccccc;
 }
 
+.offcanvas {
+  background-color: #0f1016;
+}
+
 .navbar-dark .navbar-toggler-icon {
   background-size: 1.563rem 1.625rem;
 }

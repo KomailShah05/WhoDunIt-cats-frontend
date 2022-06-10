@@ -80,7 +80,7 @@ const Header = () => {
               ) : null}
             </ul>
             <div
-              class="offcanvas offcanvas-start bg-dark justify-content-end"
+              class="offcanvas offcanvas-start  justify-content-end"
               id="collapsibleNavId"
               tabIndex="-1"
             >
