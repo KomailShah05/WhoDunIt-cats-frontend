@@ -1,16 +1,7 @@
 @import "../../../sass/partials/variables";
 
 .attribute {
-  padding-top: $size-151;
-  padding-right: 30rem; //480px
-  padding-bottom: $size-151;
-  flex-wrap: inherit;
-  overflow-x: hidden;
-
-  @media screen and (max-width: $breakpoint-md) {
-    padding-right: 0;
-    flex-wrap: wrap;
-  }
+  padding: $size-151 $size-72 $size-151 $size-80;
   > div {
     border-right: 2px solid $brown;
     @media screen and (max-width: $breakpoint-md) {
@@ -30,7 +21,7 @@
 
   div:last-child {
     border: none;
-    justify-content: flex-start;
+    justify-content: flex-center;
   }
   .col-md-3 div:first-child {
     justify-content: flex-start;
@@ -42,38 +33,17 @@
 }
 
 .cats {
-  width: min-content;
-   > div {
-    
-    > img{
-      margin-right: $size-30;
-      width: 14rem;
-      height: 14rem;
-      border-radius: $size-4;
-      &:first-of-type {
-        margin-left: 0.5rem; 
-      }
-
-      @media screen and (max-width: $breakpoint-md) {
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      // &:last-of-type {
-      //   margin-right: 1.688rem; //27px
-      // }
-    }
-   }
-}
-
-.selected-cat {
-  margin: 1.5rem 0 1rem 0.5rem;
+  flex-shrink: 0;
+  max-width: 14rem;
+  height: 14rem;
+  > img {
+    width: 100%;
+  }
 }
 
 .metadata-nft {
-  max-width: 14rem;
-  padding-left: 0.5rem !important;
+  max-width: 15.7rem;
+  margin-top: 32px;
   margin-bottom: $size-12;
   & p {
     font-family: $font-family-gochi-hand;
@@ -86,15 +56,23 @@
   display: flex;
   justify-content: center;
   margin-top: $size-32;
-  margin-left: 0.3rem;
+  margin-left: 1.5rem;
   font-family: $font-family-gochi-hand;
   font-size: $size-24;
   line-height: $size-28;
   width: 14rem;
 }
 
-.filter-sus {
-  width:min-content;
+.selected-cat {
+  margin-top: $size-30;
+  margin-left: $size-24;
+}
+
+.cats-section {
+  margin-right: $size-27;
+  max-height: 30rem;
+  overflow-y: auto;
+
 }
 
 
