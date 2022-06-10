@@ -35,10 +35,16 @@
   padding-left: 0 !important;
 }
 
+.cats {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .cats > div > img {
   margin-right: 30px;
-  width: 27.8%;
-  height: auto;
+  width: 14rem;
+  height: 14rem;
   border-radius: 0.25rem;
 }
 
@@ -76,5 +82,11 @@
   font-size: 1.5rem;
   line-height: 1.75rem;
   width: 14rem;
+}
+
+.filter-sus {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 /*# sourceMappingURL=style.css.map */

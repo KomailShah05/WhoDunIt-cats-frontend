@@ -45,13 +45,13 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col col-md-6 cats ">
+      <div className="col col-md-1 cats  ">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
           fill={true}
         />
-        <div className=" mt-4 p-0 d-flex flex-lg-row flex-column  align-items-center  ">
+        <div className=" mt-4 p-0 d-flex flex-lg-row flex-column align-items-center  ">
           <img src={CatOne} alt="cat" />
           <img src={CatTwo} alt="cat" />
           <img src={CatThree} alt="cat" />
@@ -61,7 +61,7 @@ const AttributeSection = () => {
           <img src={CatTwo} alt="cat" />
         </div>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-8 filter-sus">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_three.title}
           index={3}

@@ -29,11 +29,13 @@
 }
 
 .cats {
+  width: min-content;
    > div {
+    
     > img{
       margin-right: 30px;
-      width: 27.8%;
-      height: auto;
+      width: 14rem;
+      height: 14rem;
       border-radius: $size-4;
       &:first-of-type {
         margin-left: 0.5rem; 
@@ -71,5 +73,8 @@
   width: 14rem;
 }
 
+.filter-sus {
+  width:min-content;
+}
 
 
