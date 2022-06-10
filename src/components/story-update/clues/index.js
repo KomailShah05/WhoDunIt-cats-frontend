@@ -17,13 +17,13 @@ const StoryClues = () => {
   return (
     <div
       id="carouselExampleControls"
-      class="carousel slide carousel__carousel-section"
+      className="carousel slide carousel__carousel-section"
       data-bs-ride="carousel"
       data-bs-wrap={false}
       data-bs-touch={true}
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+      <div className="carousel-inner">
+        <div className="carousel-item active">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -31,11 +31,11 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-        <div class="carousel-item">
+        <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -43,11 +43,11 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-        <div class="carousel-item">
+        <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -55,34 +55,46 @@ const StoryClues = () => {
           </p>
           <img
             src={HeroImg}
-            class="d-block w-100 carousel__max-height"
+            className="d-block w-100 carousel__max-height"
             alt="..."
           />
         </div>
-      </div>
-      <div className="d-flex justify-content-between carousel__spacing">
-        <BlockButton
-          showImg={false}
-          text={"Previous"}
-          imgPath={""}
-          name={"previous"}
-          handleModalName={""}
-          transparent_btn={true}
-          data_bs_target="#carouselExampleControls"
-          data_bs_slide="prev"
-        />
-        <div className="carousel__min-width">
+        <section className="d-flex justify-content-between carousel__spacing">
           <BlockButton
             showImg={false}
-            text={"Next"}
+            text={"Previous"}
             imgPath={""}
-            name={"next"}
-            handleModalName={""}
-            secondary={false}
+            name={"previous"}
+            handleModalName={() => {}}
+            transparent_btn={true}
             data_bs_target="#carouselExampleControls"
-            data_bs_slide="next"
+            data_bs_slide="prev"
           />
-        </div>
+          <div className="carousel__min-width">
+            <BlockButton
+              showImg={false}
+              text={"Next"}
+              imgPath={""}
+              name={"next"}
+              handleModalName={() => {}}
+              secondary={false}
+              data_bs_target="#carouselExampleControls"
+              data_bs_slide="next"
+            />
+          </div>
+          <div className="carousel__min-width d-none">
+            <BlockButton
+              showImg={false}
+              text={"Insights"}
+              imgPath={""}
+              name={"next"}
+              handleModalName={() => {}}
+              secondary={false}
+              data_bs_target="#carouselExampleControls"
+              data_bs_slide="next"
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

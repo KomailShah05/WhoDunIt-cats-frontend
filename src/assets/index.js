@@ -17,6 +17,9 @@ import opensea from "./images/opensea.svg";
 import underline_vertical from "./images/Undeline-vertical.svg";
 import arrow_down from "./images/Vector-down.svg";
 import HeroImg from "./images/HeroImg.svg";
+import CatOne from "./images/cat-1.svg";
+import CatTwo from "./images/cat-2.svg";
+import CatThree from "./images/cat-3.svg";
 
 // exports
 export {
@@ -38,4 +41,7 @@ export {
   underline_vertical,
   arrow_down,
   HeroImg,
+  CatOne,
+  CatTwo,
+  CatThree,
 };

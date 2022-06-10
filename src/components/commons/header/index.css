@@ -63,7 +63,6 @@
 
 .header__scroll-heading {
   font-size: 2.5rem;
-  margin-left: 2.2rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -75,14 +74,12 @@
 @media screen and (max-width: 768px) {
   .header__scroll-heading {
     font-size: 1.75rem;
-    padding-right: 1.5rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .header__scroll-heading {
     font-size: 1.5rem;
-    margin-left: 3rem;
   }
 }
 
@@ -200,7 +197,10 @@
   border-top: 2px dotted #cccccc;
 }
 
+.offcanvas {
+  background-color: #0f1016;
+}
+
 .navbar-dark .navbar-toggler-icon {
   background-size: 1.563rem 1.625rem;
 }
-/*# sourceMappingURL=index.css.map */
