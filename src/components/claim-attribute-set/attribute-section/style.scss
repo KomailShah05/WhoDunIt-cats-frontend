@@ -17,6 +17,11 @@
 
   div:not(:first-child) {
     padding-left: $size-24;
+    & .cats-section {
+      & .cats:not(:first-child) {
+        padding-left: 0;
+      }
+    }
   }
 
   div:last-child {
@@ -32,14 +37,7 @@
   }
 }
 
-.cats {
-  flex-shrink: 0;
-  max-width: 14rem;
-  height: 14rem;
-  > img {
-    width: 100%;
-  }
-}
+
 
 .metadata-nft {
   max-width: 15.7rem;
@@ -69,9 +67,26 @@
 }
 
 .cats-section {
+  margin-left: $size-24;
   margin-right: $size-27;
   max-height: 30rem;
   overflow-y: auto;
+
+  & .col-md-4 {
+    flex-basis: 14rem;
+    &.cats {
+      margin-bottom: $size-40;
+      margin-right: $size-30;
+      & img {
+         object-fit: none;
+         height: 14rem;  
+         border-radius: 0.25rem;
+        }
+
+      }
+
+  }
+ 
 
 }
 

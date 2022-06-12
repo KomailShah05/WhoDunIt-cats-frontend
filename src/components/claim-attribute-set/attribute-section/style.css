@@ -25,6 +25,10 @@
   padding-left: 1.5rem;
 }
 
+.attribute div:not(:first-child) .cats-section .cats:not(:first-child) {
+  padding-left: 0;
+}
+
 .attribute div:last-child {
   border: none;
   -webkit-box-pack: flex-center;
@@ -41,17 +45,6 @@
 .attribute__min-width {
   min-width: 77%;
   padding-left: 0 !important;
-}
-
-.cats {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  max-width: 14rem;
-  height: 14rem;
-}
-
-.cats > img {
-  width: 100%;
 }
 
 .metadata-nft {
@@ -88,8 +81,26 @@
 }
 
 .cats-section {
+  margin-left: 1.5rem;
   margin-right: 1.688rem;
   max-height: 30rem;
   overflow-y: auto;
+}
+
+.cats-section .col-md-4 {
+  -ms-flex-preferred-size: 14rem;
+      flex-basis: 14rem;
+}
+
+.cats-section .col-md-4.cats {
+  margin-bottom: 2.875rem;
+  margin-right: 1.875rem;
+}
+
+.cats-section .col-md-4.cats img {
+  -o-object-fit: none;
+     object-fit: none;
+  height: 14rem;
+  border-radius: 0.25rem;
 }
 /*# sourceMappingURL=style.css.map */
