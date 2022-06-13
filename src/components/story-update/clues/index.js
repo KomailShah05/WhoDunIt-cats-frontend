@@ -41,7 +41,6 @@ const StoryClues = () => {
             alt="..."
           />
         </div>
-
         <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}

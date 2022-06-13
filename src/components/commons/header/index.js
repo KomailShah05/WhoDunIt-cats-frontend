@@ -43,7 +43,7 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`header-position ${scroll && "mt-0 scroll-animation"}`}>
           <h1
@@ -80,13 +80,13 @@ const Header = () => {
               ) : null}
             </ul>
             <div
-              class="offcanvas offcanvas-start  justify-content-end"
+              className="offcanvas offcanvas-start  justify-content-end"
               id="collapsibleNavId"
               tabIndex="-1"
             >
               <button
                 type="button"
-                class="btn-close text-reset align-self-end p-3"
+                className="btn-close text-reset align-self-end p-3"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>

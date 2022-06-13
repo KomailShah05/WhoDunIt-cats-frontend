@@ -8,6 +8,10 @@ export const routes = {
   CLAIM_ATTRIBUTE: "/claim-attribute",
 };
 
+export const api_routes = {
+  MINTED_COUNT: "nfts/count-minted",
+};
+
 // Landing Page Constants
 export const eng_lang = {
   title: "WhoDunIt Cats?",

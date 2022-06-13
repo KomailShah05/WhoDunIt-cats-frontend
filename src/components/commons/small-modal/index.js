@@ -35,20 +35,20 @@ const SmallPopup = () => {
   return (
     <>
       <div
-        class="modal fade sm-modal"
+        className="modal fade sm-modal"
         id="smallModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
         <div
-          class={`modal-dialog modal-dialog-centered ${
+          className={`modal-dialog modal-dialog-centered ${
             modalName === "loading"
               ? "sm-modal__loading-wide"
               : "sm-modal__wide"
           }`}
         >
-          <div class="modal-content sm-modal__bg-color">
+          <div className="modal-content sm-modal__bg-color">
             <div className="d-flex justify-content-center sm-modal__img-top">
               <img
                 src={
@@ -70,12 +70,12 @@ const SmallPopup = () => {
                 <div className="d-flex justify-content-end sm-modal__padding-sm">
                   <button
                     type="button"
-                    class="modal__btn-close"
+                    className="modal__btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body sm-modal__padding-body">
+                <div className="modal-body sm-modal__padding-body">
                   {modalName === "buy" && <BuyBody />}
                   {modalName === "congrats" && <CongratsBody />}
                   <BlockButton
