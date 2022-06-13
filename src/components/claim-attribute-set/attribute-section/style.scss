@@ -39,12 +39,6 @@
     }
   }
 
-  // .col-md-3 div: last {
-  //   @media screen and (max-width: $breakpoint-md) {
-  //     justify-content: flex-center;
-  //   }
-  // }
-
   &__min-width {
     min-width: 77%;
     padding-left: 0 !important;
@@ -102,7 +96,7 @@
 
 .suspects {
   justify-content: flex-start !important;
-  padding: $size-32 $size-27 92px $size-24;
+  padding: $size-32 $size-27 $size-92 $size-24;
   overflow-y: auto;
   max-height: 40rem;
   @media screen and (max-width: $breakpoint-md) {

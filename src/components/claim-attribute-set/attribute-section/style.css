@@ -131,7 +131,7 @@
   -webkit-box-pack: start !important;
       -ms-flex-pack: start !important;
           justify-content: flex-start !important;
-  padding: 2rem 1.688rem 92px 1.5rem;
+  padding: 2rem 1.688rem 5.75rem 1.5rem;
   overflow-y: auto;
   max-height: 40rem;
 }

@@ -16,7 +16,7 @@ import { CatOne } from "../../../assets";
 const AttributeSection = () => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
   return (
-    <div className="row attribute gx-0 ,x-auto">
+    <div className="row attribute gx-0 mx-auto">
       <div className=" col-md-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
