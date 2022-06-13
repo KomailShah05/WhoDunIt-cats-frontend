@@ -14,19 +14,7 @@ import "./style.scss";
 import { CatOne } from "../../../assets";
 
 const AttributeSection = () => {
-  const select_data = [
-    {
-      heading: "test",
-      options: [eng_lang.claim_attribute_set.section_one.height_options],
-    },
-    {
-      heading: "test ",
-      options: [eng_lang.claim_attribute_set.section_one.height_options],
-    },
-  ];
-  select_data.map((item, index) =>
-    console.log("item.heading,item.options", item.heading, item.options)
-  );
+  const selections = eng_lang.claim_attribute_set.section_one.select_data;
   return (
     <div className="row attribute gx-0 ,x-auto">
       <div className=" col-md-3 d-flex flex-column align-items-center">
@@ -36,26 +24,9 @@ const AttributeSection = () => {
           fill={true}
         />
         <div className="attribute__min-width">
-          <Select
-            heading={eng_lang.claim_attribute_set.section_one.height}
-            options={eng_lang.claim_attribute_set.section_one.height_options}
-          />
-          <Select
-            heading={eng_lang.claim_attribute_set.section_one.eyes}
-            options={eng_lang.claim_attribute_set.section_one.eyes_options}
-          />
-          <Select
-            heading={eng_lang.claim_attribute_set.section_one.glasses}
-            options={eng_lang.claim_attribute_set.section_one.glasses_options}
-          />
-          <Select
-            heading={eng_lang.claim_attribute_set.section_one.hats}
-            options={eng_lang.claim_attribute_set.section_one.hat_options}
-          />
-          <Select
-            heading={eng_lang.claim_attribute_set.section_one.clothes}
-            options={eng_lang.claim_attribute_set.section_one.clothes_options}
-          />
+          {selections.map((item) => (
+            <Select heading={item.attribute_name} options={item.options} />
+          ))}
         </div>
       </div>
       <div className="col-md-6">
