@@ -20,7 +20,7 @@
   font-weight: $font-weight-regular;
   font-size: $size-16;
   line-height: $size-24;
-  color: #cccccc;
+  color: $grey;
   background-image: url(../../../assets/images/Vector-down.svg);
   background-position: right 0.75rem center;
   background-size: $size-16 $size-12;
@@ -28,8 +28,12 @@
   appearance: none;
   margin: $size-4 0 $size-12 0;
   width: 100%;
-
   option {
     background-color: black;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    background-size: $size-10 $size-12;
+    background-position: right 0.32rem center;
   }
 }

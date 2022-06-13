@@ -111,25 +111,27 @@ export const eng_lang = {
   claim_attribute_set: {
     section_one: {
       title: "Select suspect traits",
-      height: "Height",
-      height_options: ["Select Height", "1'11", "1'14", "1'15"],
-      eyes: "Eyes",
-      eyes_options: ["Select Eyes", "black", "grey", "blue"],
-      glasses: "Glasses",
-      glasses_options: [
-        "Select Glasses",
-        "glasses 1",
-        "glasses 2",
-        "glasses 3",
-      ],
-      hats: "Hats",
-      hat_options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
-      clothes: "Clothes",
-      clothes_options: [
-        "Select Clothes",
-        "clothes 1",
-        "clothes 2",
-        "clothes 3",
+      select_data: [
+        {
+          attribute_name: "height",
+          options: ["Select Height", "1'11", "1'14", "1'15"],
+        },
+        {
+          attribute_name: "Eyes",
+          options: ["Select Eyes", "black", "grey", "blue"],
+        },
+        {
+          attribute_name: "Glasses",
+          options: ["Select Glasses", "glasses 1", "glasses 2", "glasses 3"],
+        },
+        {
+          attribute_name: "Hats",
+          options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
+        },
+        {
+          attribute_name: "Clothes",
+          options: ["Select Clothes", "clothes 1", "clothes 2", "clothes 3"],
+        },
       ],
     },
     section_two: {
