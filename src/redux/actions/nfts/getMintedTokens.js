@@ -15,6 +15,7 @@ const getMintedTokens = () => {
       if (response) dispatch(getMintedTokenSuccess(response.data.totalMinted));
     } catch (err) {
       console.log("err****", err);
+      dispatch(getMintedTokenFailure());
     }
   };
 };
@@ -24,6 +25,15 @@ const getMintedTokenSuccess = (totalMinted) => {
     dispatch({
       type: types.MINTED_NFTS_COUNT,
       payload: totalMinted,
+    });
+  };
+};
+
+const getMintedTokenFailure = () => {
+  return function (dispatch) {
+    dispatch({
+      type: types.MINTED_NFTS_COUNT,
+      payload: 0,
     });
   };
 };
