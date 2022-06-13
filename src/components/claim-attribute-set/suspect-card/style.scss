@@ -1,8 +1,13 @@
+@import "../../../sass/partials/variables";
+
 .card-size {
   max-width: 14rem;
-  margin-top: 2rem;
   padding-left: 0 !important;
   img {
+    margin-bottom: $size-40;
     width: 100%;
   }
+  img + img {
+    margin-right: $size-30;
+  } 
 }

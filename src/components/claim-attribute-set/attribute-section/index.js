@@ -64,7 +64,7 @@ const AttributeSection = () => {
           index={2}
           fill={true}
         />
-        <div className="row w-100 ">
+        <div className="row w-100 suspects ">
           <Card />
         </div>
       </div>

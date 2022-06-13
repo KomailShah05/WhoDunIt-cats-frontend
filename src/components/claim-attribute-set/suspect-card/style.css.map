@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,mGAAI;AACZ,OAAO,CAAC,uEAAI;AACZ,OAAO,CAAC,mFAAI;ADDZ,AAAA,UAAU,CAAC;EACT,SAAS,EAAE,KAAK;EAChB,YAAY,EAAE,YAAY;CAQ3B;;AAVD,AAGE,UAHQ,CAGR,GAAG,CAAC;EACF,aAAa,ECmGP,QAAQ;EDlGd,KAAK,EAAE,IAAI;CACZ;;AANH,AAOE,UAPQ,CAOR,GAAG,GAAG,GAAG,CAAC;EACR,YAAY,EC2FN,QAAQ;CD1Ff",
+    "sources": [
+        "style.scss",
+        "../../../sass/partials/_variables.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
