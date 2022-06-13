@@ -1,5 +1,7 @@
 //libraries
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 //pages
 import {
@@ -13,6 +15,7 @@ import {
 
 //constants
 import { routes } from "./lib/utills/constants";
+import { getMintedTokens } from "./redux/actions/nfts";
 
 //styles
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +24,13 @@ import "./sass/main.scss";
 //assets
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMintedTokens());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>

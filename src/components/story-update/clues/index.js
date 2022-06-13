@@ -1,11 +1,12 @@
 //libraries
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // components
 import { BlockButton } from "../../commons";
 
 // constants
-import { eng_lang } from "../../../lib/utills/constants";
+import { eng_lang, routes } from "../../../lib/utills/constants";
 
 //styles
 import "./index.scss";
@@ -14,6 +15,11 @@ import "./index.scss";
 import { HeroImg } from "../../../assets";
 
 const StoryClues = () => {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(routes.CLAIM_ATTRIBUTE);
+  };
+
   return (
     <div
       id="carouselExampleControls"
@@ -24,18 +30,6 @@ const StoryClues = () => {
     >
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <p className="text-center">
-            {eng_lang.story_clues.paragrapgh_line_1}
-            <br />
-            {eng_lang.story_clues.paragrapgh_line_2}
-          </p>
-          <img
-            src={HeroImg}
-            className="d-block w-100 carousel__max-height"
-            alt="..."
-          />
-        </div>
-        <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
             <br />
@@ -88,7 +82,7 @@ const StoryClues = () => {
               text={"Claim Attributes"}
               imgPath={""}
               name={""}
-              handleModalName={() => {}}
+              handleModalName={handleNavigation}
               secondary={false}
               data_bs_target=""
               data_bs_slide=""

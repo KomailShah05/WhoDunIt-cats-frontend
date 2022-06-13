@@ -20,9 +20,9 @@ const BlockButton = ({
   data_bs_dismiss,
 }) => {
   return (
-    <div class="d-grid gap-2 block">
+    <div className="d-grid gap-2 block">
       <button
-        class={`btn ${
+        className={`btn ${
           secondary
             ? "btn-secondary"
             : transparent_btn

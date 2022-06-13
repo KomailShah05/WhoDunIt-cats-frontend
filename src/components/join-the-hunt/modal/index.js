@@ -17,23 +17,23 @@ const PopUp = () => {
   return (
     <>
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered modal__wide">
-          <div class="modal-content modal__box">
+        <div className="modal-dialog modal-dialog-centered modal__wide">
+          <div className="modal-content modal__box">
             <div className="d-flex justify-content-end">
               <button
                 type="button"
-                class="modal__btn-close"
+                className="modal__btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body modal__padding-body row ">
+            <div className="modal-body modal__padding-body row ">
               <div className="col-md-5 modal__bg-img">
                 <img src={brown_cat} alt="brown_cat" />
               </div>

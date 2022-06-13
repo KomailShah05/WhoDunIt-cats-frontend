@@ -25,13 +25,21 @@
   position: relative;
 }
 
+.carousel .carousel-item-next,
+.carousel .carousel-item-prev,
+.carousel .carousel-item.active {
+  padding-bottom: 5rem;
+}
+
 .carousel__carousel-section {
   margin: 10.938rem 0 5rem 0;
   padding: 0 4.375rem 0 4.375rem;
 }
 
 .carousel__spacing {
-  margin-top: 32rem;
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .carousel__min-width {
