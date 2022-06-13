@@ -1,7 +1,7 @@
 @import "../../../sass/partials/variables";
 
 .attribute {
-  padding: $size-151 $size-72 $size-151 $size-80;
+  padding:  $size-151 $size-72 $size-80 $size-70;;
   > div {
     border-right: 2px solid $brown;
     @media screen and (max-width: $breakpoint-md) {
@@ -37,8 +37,6 @@
   }
 }
 
-
-
 .metadata-nft {
   max-width: 15.7rem;
   margin-top: 32px;
@@ -50,6 +48,7 @@
     line-height: 19px;
   }
 }
+
 .mint-btn {
   display: flex;
   justify-content: center;
@@ -69,18 +68,17 @@
 .cats-section {
   margin-left: $size-24;
   margin-right: $size-27;
-  max-height: 30rem;
+  // max-height: 50rem;
   overflow-y: auto;
-
   & .col-md-4 {
-    flex-basis: 14rem;
     &.cats {
+      min-width: 14rem;
       margin-bottom: $size-40;
-      margin-right: $size-30;
+      margin-right: $size-24;
       & img {
-         object-fit: none;
-         height: 14rem;  
-         border-radius: 0.25rem;
+        width: 100%;
+      
+        border-radius: 0.25rem;
         }
 
       }

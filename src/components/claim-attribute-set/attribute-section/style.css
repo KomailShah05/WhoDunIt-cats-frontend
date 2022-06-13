@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .attribute {
-  padding: 9.438rem 4.5rem 9.438rem 5rem;
+  padding: 9.438rem 4.5rem 5rem 4.375rem;
 }
 
 .attribute > div {
@@ -83,24 +83,17 @@
 .cats-section {
   margin-left: 1.5rem;
   margin-right: 1.688rem;
-  max-height: 30rem;
   overflow-y: auto;
 }
 
-.cats-section .col-md-4 {
-  -ms-flex-preferred-size: 14rem;
-      flex-basis: 14rem;
-}
-
 .cats-section .col-md-4.cats {
+  min-width: 14rem;
   margin-bottom: 2.875rem;
-  margin-right: 1.875rem;
+  margin-right: 1.5rem;
 }
 
 .cats-section .col-md-4.cats img {
-  -o-object-fit: none;
-     object-fit: none;
-  height: 14rem;
+  width: 100%;
   border-radius: 0.25rem;
 }
 /*# sourceMappingURL=style.css.map */
