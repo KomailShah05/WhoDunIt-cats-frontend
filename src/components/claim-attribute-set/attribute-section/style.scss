@@ -6,8 +6,8 @@
     border-right: 2px solid $brown;
     @media screen and (max-width: $breakpoint-md) {
       border-right: none;
-      margin-bottom: $size-10;
       border-bottom: 2px solid $brown;
+      padding-top: $size-27;
     }
   }
 
@@ -17,9 +17,8 @@
 
   div:not(:first-child) {
     padding-left: $size-24;
-   @media screen and (max-width: $breakpoint-md) {
+    @media screen and (max-width: $breakpoint-md) {
       padding-left: 0;
-    
    }
   }
 
@@ -105,7 +104,7 @@
   justify-content: flex-start !important;
   padding: $size-32 $size-27 92px $size-24;
   overflow-y: auto;
-  max-height: 50rem;
+  max-height: 40rem;
   @media screen and (max-width: $breakpoint-md) {
     justify-content: center !important;
     padding-right: 0;
