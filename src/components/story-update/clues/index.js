@@ -25,6 +25,7 @@ const StoryClues = () => {
       id="carouselExampleControls"
       className="carousel slide carousel__carousel-section"
       data-bs-ride="carousel"
+      data-bs-wrap={false}
       data-bs-touch={true}
     >
       <div className="carousel-inner">
@@ -40,18 +41,7 @@ const StoryClues = () => {
             alt="..."
           />
         </div>
-        <div className="carousel-item">
-          <p className="text-center">
-            {eng_lang.story_clues.paragrapgh_line_1}
-            <br />
-            {eng_lang.story_clues.paragrapgh_line_2}
-          </p>
-          <img
-            src={HeroImg}
-            className="d-block w-100 carousel__max-height"
-            alt="..."
-          />
-        </div>
+
         <div className="carousel-item">
           <p className="text-center">
             {eng_lang.story_clues.paragrapgh_line_1}
