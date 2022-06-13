@@ -2,7 +2,7 @@
 import React from "react";
 
 // components
-import { FilterSuspectTrait, Select } from "..";
+import { FilterSuspectTrait, Select, Card } from "..";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -11,9 +11,22 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./style.scss";
 
 // assets
-import { CatOne, CatTwo, CatThree } from "../../../assets";
+import { CatOne } from "../../../assets";
 
 const AttributeSection = () => {
+  const select_data = [
+    {
+      heading: "test",
+      options: [eng_lang.claim_attribute_set.section_one.height_options],
+    },
+    {
+      heading: "test ",
+      options: [eng_lang.claim_attribute_set.section_one.height_options],
+    },
+  ];
+  select_data.map((item, index) =>
+    console.log("item.heading,item.options", item.heading, item.options)
+  );
   return (
     <div className="row attribute gx-0 ,x-auto">
       <div className=" col-md-3 d-flex flex-column align-items-center">
@@ -45,28 +58,14 @@ const AttributeSection = () => {
           />
         </div>
       </div>
-      <div className="col-md-6 ">
+      <div className="col-md-6">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
           fill={true}
         />
-        <div className="row gx-0 p-0 mt-32 cats-section">
-          <div className="col-md-4 cats ">
-            <img src={CatOne} alt="cat" />
-          </div>
-          <div className="col-md-4 cats">
-            <img src={CatTwo} alt="cat" />
-          </div>
-          <div className="col-md-4 cats">
-            <img src={CatThree} alt="cat" />
-          </div>
-          <div className="col-md-4 cats">
-            <img src={CatOne} alt="cat" />
-          </div>
-          <div className="col-md-4 cats">
-            <img src={CatTwo} alt="cat" />
-          </div>
+        <div className="row w-100 ">
+          <Card />
         </div>
       </div>
       <div className="col-md-3">

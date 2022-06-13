@@ -1,7 +1,7 @@
 @import "../../../sass/partials/variables";
 
 .attribute {
-  padding:  $size-151 $size-72 $size-80 $size-70;;
+  padding: $size-151 $size-72 $size-80 $size-70;
   > div {
     border-right: 2px solid $brown;
     @media screen and (max-width: $breakpoint-md) {
@@ -77,15 +77,9 @@
       margin-right: $size-24;
       & img {
         width: 100%;
-      
+
         border-radius: 0.25rem;
-        }
-
       }
-
+    }
   }
- 
-
 }
-
-
