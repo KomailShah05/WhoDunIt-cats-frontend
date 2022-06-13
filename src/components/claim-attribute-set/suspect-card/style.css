@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .card-size {
+  position: relative;
   max-width: 14rem;
   padding-left: 0 !important;
 }
@@ -11,7 +12,44 @@
   width: 100%;
 }
 
+.card-size img:focus {
+  outline: 4px solid #871616;
+}
+
 .card-size img + img {
   margin-right: 1.875rem;
+}
+
+.card-size.unavailable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-45.45%, #000000), color-stop(95.45%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #000000 -45.45%, rgba(0, 0, 0, 0) 95.45%);
+}
+
+.card-size.unavailable img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.card-size.unavailable p {
+  position: absolute;
+  color: #ffffff;
+  z-index: 1;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 4px 12px 4px 12px;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 1.25rem;
+}
+
+.card-size.unavailable:hover p {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

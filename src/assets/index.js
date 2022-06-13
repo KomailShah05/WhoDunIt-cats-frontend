@@ -20,6 +20,8 @@ import HeroImg from "./images/HeroImg.svg";
 import CatOne from "./images/cat-1.svg";
 import CatTwo from "./images/cat-2.svg";
 import CatThree from "./images/cat-3.svg";
+import CatFour from "./images/cat-4.svg";
+import CatFive from "./images/cat-5.svg";
 
 // exports
 export {
@@ -44,4 +46,6 @@ export {
   CatOne,
   CatTwo,
   CatThree,
+  CatFour,
+  CatFive,
 };

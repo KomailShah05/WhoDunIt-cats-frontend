@@ -1,13 +1,46 @@
 @import "../../../sass/partials/variables";
 
 .card-size {
+  position: relative;
   max-width: 14rem;
   padding-left: 0 !important;
   img {
     margin-bottom: $size-40;
     width: 100%;
+    &:focus {
+      outline: 4px solid $maroon;
   }
+}
   img + img {
     margin-right: $size-30;
   } 
+
+  &.unavailable {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, $black -45.45%, rgba(0, 0, 0, 0) 95.45%);
+    & img {
+      filter: grayscale(100%);
+    }
+    & p {
+      position: absolute;
+      color: $white;
+      z-index: 1;
+      font-family: $font-family-gochi-hand;
+      font-size: $size-16;
+      line-height: $size-16;
+      padding: 4px 12px 4px 12px;
+      background-color: $black;
+      border: 2px solid $white;
+      border-radius: $size-20;
+    }
+
+    &:hover {
+      & p {
+         display: none;
+      }
+    }
+  }
 }
+
+
