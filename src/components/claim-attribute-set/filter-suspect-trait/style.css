@@ -28,3 +28,12 @@
 .filter__round-btn.fill {
   background: #871616;
 }
+
+@media screen and (max-width: 992px) {
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

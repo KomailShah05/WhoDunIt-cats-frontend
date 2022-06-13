@@ -41,3 +41,12 @@
 .custom-select option option {
   background-color: black;
 }
+
+@media screen and (max-width: 576px) {
+  .custom-select,
+  .custom-select option {
+    background-size: 0.625rem 0.75rem;
+    background-position: right 0.32rem center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
