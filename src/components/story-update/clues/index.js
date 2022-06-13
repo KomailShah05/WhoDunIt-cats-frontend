@@ -85,13 +85,13 @@ const StoryClues = () => {
           <div className="carousel__min-width d-none">
             <BlockButton
               showImg={false}
-              text={"Insights"}
+              text={"Claim Attributes"}
               imgPath={""}
-              name={"next"}
+              name={""}
               handleModalName={() => {}}
               secondary={false}
-              data_bs_target="#carouselExampleControls"
-              data_bs_slide="next"
+              data_bs_target=""
+              data_bs_slide=""
             />
           </div>
         </section>

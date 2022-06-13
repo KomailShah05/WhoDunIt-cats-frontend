@@ -41,14 +41,14 @@
 .attribute div:last-child {
   border: none;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .attribute .col-md-3 div:first-child {
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .attribute__min-width {
@@ -104,8 +104,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2rem;
   margin-left: 0.3rem;
   font-family: "Gochi Hand", cursive;
@@ -119,4 +119,3 @@
   width: -moz-min-content;
   width: min-content;
 }
-/*# sourceMappingURL=style.css.map */
