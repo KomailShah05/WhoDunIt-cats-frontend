@@ -8,9 +8,12 @@
   /* Extereme smaal device */
 }
 
-.carousel__carousel-section {
-  margin: 10.938rem 0 5rem 0;
-  padding: 0 4.375rem 0 4.375rem;
+.carousel .carousel-inner .carousel-item:last-of-type.active + .carousel__spacing .carousel__min-width {
+  display: none;
+}
+
+.carousel .carousel-inner .carousel-item:last-of-type.active + .carousel__spacing .carousel__min-width.d-none {
+  display: block !important;
 }
 
 .carousel .carousel-item p:first-child {
@@ -22,8 +25,13 @@
   position: relative;
 }
 
+.carousel__carousel-section {
+  margin: 10.938rem 0 5rem 0;
+  padding: 0 4.375rem 0 4.375rem;
+}
+
 .carousel__spacing {
-  margin-top: 2.875rem;
+  margin-top: 32rem;
 }
 
 .carousel__min-width {

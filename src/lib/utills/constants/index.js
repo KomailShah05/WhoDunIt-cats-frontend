@@ -145,4 +145,24 @@ export const eng_lang = {
     paragrapgh_line_2:
       "dui. Egestas elit nibh in eros dictum. Odio feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam.",
   },
+  stories: [
+    {
+      paragrapgh_line_1:
+        "Neque orci dui, sit libero diam magnis nunc et. Molestie diam gravida suspendisse hac aliquam elit. Et turpis placerat non turpis ",
+      paragrapgh_line_2:
+        "dui. Egestas elit nibh in eros dictum. Odio feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam.",
+    },
+    {
+      paragrapgh_line_1:
+        "Neque orci dui, sit libero diam magnis nunc et. Molestie diam gravida suspendisse hac aliquam elit. Et turpis placerat non turpis ",
+      paragrapgh_line_2:
+        "dui. Egestas elit nibh in eros dictum. Odio feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam.",
+    },
+    {
+      paragrapgh_line_1:
+        "Neque orci dui, sit libero diam magnis nunc et. Molestie diam gravida suspendisse hac aliquam elit. Et turpis placerat non turpis ",
+      paragrapgh_line_2:
+        "dui. Egestas elit nibh in eros dictum. Odio feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam.",
+    },
+  ],
 };
