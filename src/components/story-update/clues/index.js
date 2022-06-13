@@ -1,11 +1,12 @@
 //libraries
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // components
 import { BlockButton } from "../../commons";
 
 // constants
-import { eng_lang } from "../../../lib/utills/constants";
+import { eng_lang, routes } from "../../../lib/utills/constants";
 
 //styles
 import "./index.scss";
@@ -14,12 +15,16 @@ import "./index.scss";
 import { HeroImg } from "../../../assets";
 
 const StoryClues = () => {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate(routes.CLAIM_ATTRIBUTE);
+  };
+
   return (
     <div
       id="carouselExampleControls"
       className="carousel slide carousel__carousel-section"
       data-bs-ride="carousel"
-      data-bs-wrap={false}
       data-bs-touch={true}
     >
       <div className="carousel-inner">
@@ -88,7 +93,7 @@ const StoryClues = () => {
               text={"Claim Attributes"}
               imgPath={""}
               name={""}
-              handleModalName={() => {}}
+              handleModalName={handleNavigation}
               secondary={false}
               data_bs_target=""
               data_bs_slide=""
