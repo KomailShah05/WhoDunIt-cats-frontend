@@ -1,0 +1,9 @@
+.card-size {
+  max-width: 14rem;
+  margin-top: 2rem;
+  padding-left: 0 !important;
+}
+
+.card-size img {
+  width: 100%;
+}
