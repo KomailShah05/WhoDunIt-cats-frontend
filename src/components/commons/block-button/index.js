@@ -18,6 +18,7 @@ const BlockButton = ({
   transparent_btn,
   data_bs_toggle,
   data_bs_dismiss,
+  disable,
 }) => {
   return (
     <div className="d-grid gap-2 block">
@@ -36,6 +37,7 @@ const BlockButton = ({
         data-bs-toggle={data_bs_toggle}
         data-bs-dismiss={data_bs_dismiss}
         data-bs-slide={data_bs_slide}
+        disabled={disable}
       >
         {showImg && <img src={imgPath} alt={imgPath} />}
         {text}
