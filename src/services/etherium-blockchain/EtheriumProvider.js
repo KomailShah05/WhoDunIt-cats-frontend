@@ -1,34 +1,38 @@
-import { createContext, useCallback, useEffect, useState } from "react";
+// libraries
+import { createContext, useCallback } from "react";
+import { useDispatch } from "react-redux";
+
+// constants
+import { connectToMetaMask } from "./functions";
+import {
+  metaMaskWalletConnected,
+  walletConnectedFail,
+} from "../../redux/actions/blockchain";
+import { btnLoadingAction } from "../../redux/actions/nfts";
 
 export const EtheriumContext = createContext({});
 
 const EtheriumProvider = ({ children }) => {
-  const [walletConnected, setwalletConnected] = useState(false);
-  const [walletAddress, setwalletAddress] = useState(null);
+  const dispatch = useDispatch();
 
-  const connectToMetaMask = useCallback(() => {
-    // Asking if metamask is already nt or not
-    if (window.ethereum) {
-      // res[0] for fetching a first wallet
-      window.ethereum.request({ method: "eth_requestAccounts" }).then((res) => {
-        if (res?.length > 0) {
-          setwalletAddress(res[0]);
-          setwalletConnected(true);
-        }
-      });
-    } else {
-      alert("install metamask extension!!");
-      setwalletAddress(null);
-      setwalletConnected(false);
+  const walletConnection = useCallback(async () => {
+    try {
+      btnLoadingAction(true);
+      const resp = await connectToMetaMask();
+      if (resp?.length > 0) {
+        dispatch(metaMaskWalletConnected(resp[0]));
+      }
+    } catch (error) {
+      btnLoadingAction(false);
+      dispatch(walletConnectedFail());
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <EtheriumContext.Provider
       value={{
-        connectToMetaMask,
-        walletConnected,
-        walletAddress,
+        walletConnection,
       }}
     >
       {children}

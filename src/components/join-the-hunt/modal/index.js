@@ -14,11 +14,9 @@ import "./style.scss";
 // assets
 import { brown_cat, cat } from "../../../assets";
 
-const PopUp = ({ totalMinted }) => {
-  const { connectToMetaMask, walletConnected, walletAddress } =
-    useContext(EtheriumContext);
+const PopUp = ({ totalMinted, walletConnected, btnLoading }) => {
+  const { walletConnection } = useContext(EtheriumContext);
 
-  console.log("walletConnected", walletConnected);
   return (
     <>
       <div
@@ -80,10 +78,8 @@ const PopUp = ({ totalMinted }) => {
                     showImg={true}
                     text={eng_lang.connect_to_metamask}
                     imgPath={cat}
-                    handleClick={connectToMetaMask}
-                    // data_bs_toggle="modal"
-                    // data_bs_target="#smallModal"
-                    // data_bs_dismiss="modal"
+                    handleClick={walletConnection}
+                    disable={btnLoading}
                   />
                 )}
               </div>

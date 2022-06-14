@@ -21,7 +21,10 @@ import { PopUp } from "../../components/join-the-hunt";
 //assets
 
 const LandingPage = () => {
-  const { totalMinted } = useSelector((state) => state.nftsReducer);
+  const { totalMinted, btnLoading } = useSelector((state) => state.nftsReducer);
+  const { walletConnected } = useSelector(
+    (state) => state.metaMaskWalletReducer
+  );
 
   return (
     <>
@@ -30,7 +33,11 @@ const LandingPage = () => {
       <MintedSection totalMinted={totalMinted} />
       <HowItWorks />
       <WhoDidIt />
-      <PopUp totalMinted={totalMinted} />
+      <PopUp
+        totalMinted={totalMinted}
+        walletConnected={walletConnected}
+        btnLoading={btnLoading}
+      />
       <SmallPopup />
       <Footer />
     </>
