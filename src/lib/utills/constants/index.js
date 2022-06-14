@@ -113,7 +113,7 @@ export const eng_lang = {
       title: "Select suspect traits",
       select_data: [
         {
-          attribute_name: "height",
+          attribute_name: "Height",
           options: ["Select Height", "1'11", "1'14", "1'15"],
         },
         {
