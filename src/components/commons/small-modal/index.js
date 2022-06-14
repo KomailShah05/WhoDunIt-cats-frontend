@@ -89,7 +89,7 @@ const SmallPopup = () => {
                     }
                     imgPath={""}
                     name={modalName === "buy" ? "loading" : ""}
-                    handleModalName={modalName === "buy" && handleModalName}
+                    handleClick={modalName === "buy" && handleModalName}
                   />
                   {modalName === "congrats" && (
                     <div className="sm-modal__mg-btw-btns">
@@ -98,7 +98,7 @@ const SmallPopup = () => {
                         text={eng_lang.view_on_open_sea}
                         imgPath={opensea}
                         name={"opensea"}
-                        handleModalName={""}
+                        handleClick={""}
                         secondary={true}
                       />
                     </div>

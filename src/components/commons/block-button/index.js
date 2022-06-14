@@ -11,7 +11,7 @@ const BlockButton = ({
   text,
   imgPath,
   name,
-  handleModalName,
+  handleClick,
   secondary,
   data_bs_target,
   data_bs_slide,
@@ -31,7 +31,7 @@ const BlockButton = ({
         }  block__btn-text`}
         type="button"
         name={name}
-        onClick={handleModalName}
+        onClick={handleClick}
         data-bs-target={data_bs_target}
         data-bs-toggle={data_bs_toggle}
         data-bs-dismiss={data_bs_dismiss}
