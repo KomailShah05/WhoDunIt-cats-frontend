@@ -12,6 +12,7 @@ import {
 } from "./pages";
 
 //components
+import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
 
 //constants
 import { routes } from "./lib/utills/constants";
@@ -32,16 +33,21 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={routes.HOME} element={<LandingPage />} />
-        <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
-        <Route path={routes.CLAIM_ATTRIBUTE} element={<ClaimAttributeSet />} />
-        <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
-        <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
-        <Route path={routes.CLUES} element={<StoryCluesPage />} />
-      </Routes>
-    </BrowserRouter>
+    <EtheriumProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path={routes.HOME} element={<LandingPage />} />
+          <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
+          <Route
+            path={routes.CLAIM_ATTRIBUTE}
+            element={<ClaimAttributeSet />}
+          />
+          <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
+          <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
+          <Route path={routes.CLUES} element={<StoryCluesPage />} />
+        </Routes>
+      </BrowserRouter>
+    </EtheriumProvider>
   );
 };
 

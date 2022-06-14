@@ -32,6 +32,7 @@ export const eng_lang = {
     read_story: "Read Story",
     begin_hunt: "Begin Hunt",
     mint_suspect: "Mint Suspect",
+    continue_to_mint: "Continue To Mint",
   },
 
   header: {

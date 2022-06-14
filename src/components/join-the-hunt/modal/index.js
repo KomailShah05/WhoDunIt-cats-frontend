@@ -1,11 +1,12 @@
 // libraries
-import React from "react";
+import React, { useContext } from "react";
 
 // components
 import { BlockButton } from "../../commons";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 
 // style
 import "./style.scss";
@@ -13,7 +14,11 @@ import "./style.scss";
 // assets
 import { brown_cat, cat } from "../../../assets";
 
-const PopUp = () => {
+const PopUp = ({ totalMinted }) => {
+  const { connectToMetaMask, walletConnected, walletAddress } =
+    useContext(EtheriumContext);
+
+  console.log("walletConnected", walletConnected);
   return (
     <>
       <div
@@ -49,7 +54,7 @@ const PopUp = () => {
                   <div className="d-flex justify-content-between">
                     <p>{eng_lang.joint_the_hunt_modal.total_minted}</p>
                     <h5 className="text-white">
-                      5016{" "}
+                      {totalMinted || 0}{" "}
                       <span className="color-gray">
                         {eng_lang.joint_the_hunt_modal.of} 5000
                       </span>
@@ -60,14 +65,27 @@ const PopUp = () => {
                   </h5>
                   <p>{eng_lang.joint_the_hunt_modal.paragraph}</p>
                 </div>
-                <BlockButton
-                  showImg={true}
-                  text={eng_lang.connect_to_metamask}
-                  imgPath={cat}
-                  data_bs_toggle="modal"
-                  data_bs_target="#smallModal"
-                  data_bs_dismiss="modal"
-                />
+                {walletConnected ? (
+                  <BlockButton
+                    showImg={true}
+                    text={eng_lang.buttonConstants.continue_to_mint}
+                    imgPath={cat}
+                    handleClick={() => {}}
+                    data_bs_toggle="modal"
+                    data_bs_target="#smallModal"
+                    data_bs_dismiss="modal"
+                  />
+                ) : (
+                  <BlockButton
+                    showImg={true}
+                    text={eng_lang.connect_to_metamask}
+                    imgPath={cat}
+                    handleClick={connectToMetaMask}
+                    // data_bs_toggle="modal"
+                    // data_bs_target="#smallModal"
+                    // data_bs_dismiss="modal"
+                  />
+                )}
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 //libraries
 import React from "react";
+import { useSelector } from "react-redux";
 
 //pages
 
@@ -20,14 +21,16 @@ import { PopUp } from "../../components/join-the-hunt";
 //assets
 
 const LandingPage = () => {
+  const { totalMinted } = useSelector((state) => state.nftsReducer);
+
   return (
     <>
       <Header />
       <HeroSection />
-      <MintedSection />
+      <MintedSection totalMinted={totalMinted} />
       <HowItWorks />
       <WhoDidIt />
-      <PopUp />
+      <PopUp totalMinted={totalMinted} />
       <SmallPopup />
       <Footer />
     </>

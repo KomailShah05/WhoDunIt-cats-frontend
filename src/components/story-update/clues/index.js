@@ -59,7 +59,7 @@ const StoryClues = () => {
             text={"Previous"}
             imgPath={""}
             name={"previous"}
-            handleModalName={() => {}}
+            handleClick={() => {}}
             transparent_btn={true}
             data_bs_target="#carouselExampleControls"
             data_bs_slide="prev"
@@ -70,7 +70,7 @@ const StoryClues = () => {
               text={"Next"}
               imgPath={""}
               name={"next"}
-              handleModalName={() => {}}
+              handleClick={() => {}}
               secondary={false}
               data_bs_target="#carouselExampleControls"
               data_bs_slide="next"
@@ -82,7 +82,7 @@ const StoryClues = () => {
               text={"Claim Attributes"}
               imgPath={""}
               name={""}
-              handleModalName={handleNavigation}
+              handleClick={handleNavigation}
               secondary={false}
               data_bs_target=""
               data_bs_slide=""
