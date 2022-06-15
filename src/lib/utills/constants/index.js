@@ -11,6 +11,7 @@ export const routes = {
 export const api_routes = {
   MINTED_COUNT: "nfts/count-minted",
   NEW_NFT_MINTED: "nfts/mint",
+  ADD_USER_WALLET: "users/add-user-wallet",
 };
 
 // Landing Page Constants

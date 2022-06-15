@@ -20,6 +20,5 @@ function Toast() {
     />
   );
 }
-Q;
 export { notifySuccess, notfiFail };
 export default Toast;
