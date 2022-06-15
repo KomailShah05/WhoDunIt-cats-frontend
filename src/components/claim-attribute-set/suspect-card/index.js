@@ -26,7 +26,6 @@ const Card = () => {
         }`}
       >
         <div className="unavailable-text">
-          {" "}
           <p>unavailable</p>
         </div>
 
