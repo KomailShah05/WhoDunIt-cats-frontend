@@ -17,13 +17,13 @@ const EtheriumProvider = ({ children }) => {
 
   const walletConnection = useCallback(async () => {
     try {
-      btnLoadingAction(true);
+      dispatch(btnLoadingAction(true));
       const resp = await connectToMetaMask();
       if (resp?.length > 0) {
         dispatch(metaMaskWalletConnected(resp[0]));
       }
     } catch (error) {
-      btnLoadingAction(false);
+      dispatch(btnLoadingAction(false));
       dispatch(walletConnectedFail());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

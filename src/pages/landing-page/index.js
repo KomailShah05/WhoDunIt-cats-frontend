@@ -25,6 +25,7 @@ const LandingPage = () => {
   const { walletConnected } = useSelector(
     (state) => state.metaMaskWalletReducer
   );
+  console.log("btnLoading****", btnLoading);
 
   return (
     <>
