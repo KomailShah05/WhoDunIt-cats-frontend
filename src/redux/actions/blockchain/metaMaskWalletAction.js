@@ -15,10 +15,9 @@ const metaMaskWalletConnected = (walletAddress) => {
     try {
       const payload = {
         walletAddress,
-        nftTemplateUrl: "myurl/1",
       };
       // api call to mint new nft
-      const resp = await postRequest(api_routes.NEW_NFT_MINTED, payload);
+      const resp = await postRequest(api_routes.ADD_USER_WALLET, payload);
       if (resp) {
         dispatch(walletConnectedSuccess(walletAddress));
         dispatch(btnLoadingAction(false));
