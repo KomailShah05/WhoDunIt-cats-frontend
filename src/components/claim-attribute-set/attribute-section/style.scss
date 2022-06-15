@@ -65,6 +65,8 @@
   @media screen and (max-width: $breakpoint-lg) {
     max-width: 14rem;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media screen and (max-width: $breakpoint-sm) {
     flex-direction: column;
@@ -81,6 +83,11 @@
   font-size: $size-24;
   line-height: $size-28;
   width: 14rem;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
   @media screen and (max-width: $breakpoint-md) {
     margin-top: $size-16;

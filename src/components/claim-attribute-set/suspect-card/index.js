@@ -28,8 +28,16 @@ const Card = () => {
         <div className="unavailable-text">
           <p>Unavailable</p>
         </div>
-
         <img src={CatFour} alt="cat" tabIndex="0" />
+        <div className="overlay-on-hover text-center">
+          <p className="overlay-header">Unavailable</p>
+          <p className="overlay-description ">
+            If you want to see who <br /> purchase it
+          </p>
+          <button className="w-100 btn btn-primary opensea-btn">
+            View on opensea
+          </button>
+        </div>
       </div>
       <div
         className={`col-lg-4 col-md-6 card-size ${
@@ -43,7 +51,7 @@ const Card = () => {
         <div className="overlay-on-hover text-center">
           <p className="overlay-header">Unavailable</p>
           <p className="overlay-description ">
-            If you want to see who purchase it
+            If you want to see who <br /> purchase it
           </p>
           <button className="w-100 btn btn-primary opensea-btn">
             View on opensea

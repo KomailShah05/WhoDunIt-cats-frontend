@@ -42,7 +42,7 @@
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-45.45%, #000000), color-stop(95.45%, rgba(0, 0, 0, 0)));
   background-image: linear-gradient(180deg, #000000 -45.45%, rgba(0, 0, 0, 0) 95.45%);
   background-size: cover;
-  width: 100%;
+  width: 96%;
   z-index: 1;
 }
 
@@ -80,10 +80,20 @@
 .card-size.unavailable .overlay-on-hover {
   position: absolute;
   z-index: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   padding-left: 0 !important;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  height: 83%;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  background-color: rgba(0, 0, 0, 0.85);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,8 +107,6 @@
 }
 
 .card-size.unavailable .overlay-on-hover p.overlay-header {
-  position: absolute;
-  top: 67px;
   color: #ffffff;
   background: none;
   border: none;
@@ -106,21 +114,20 @@
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 .card-size.unavailable .overlay-on-hover p.overlay-description {
-  position: absolute;
   background: none;
   border: none;
-  top: 87px;
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
+  color: #ffffff;
 }
 
 .card-size.unavailable .overlay-on-hover .opensea-btn {
-  position: absolute;
-  top: 135px;
+  margin-top: 1rem;
   padding: 3px 24px 2px;
   max-width: 163px;
   font-family: "Gochi Hand", cursive;
@@ -128,3 +135,8 @@
   line-height: 1rem;
   color: #000000;
 }
+
+.card-size:hover .overlay-on-hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
