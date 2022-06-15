@@ -173,7 +173,6 @@
 @media screen and (max-width: 576px) {
   .suspects {
     --bs-gutter-x: 0 !important;
-    padding-right: 0.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
