@@ -26,7 +26,7 @@ const Header = () => {
   }, []);
 
   return (
-    <>
+    <div className="container-xl">
       <div
         className={` d-flex justify-content-end align-items-center fixed-top navbar navbar-dark navbar-light navbar-expand-lg ${
           scroll && "bg-dark "
@@ -126,7 +126,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

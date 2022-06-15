@@ -36,6 +36,7 @@ export const eng_lang = {
     begin_hunt: "Begin Hunt",
     mint_suspect: "Mint Suspect",
     continue_to_mint: "Continue To Mint",
+    view_on_open_sea: "View On Opensea",
   },
 
   header: {
@@ -140,6 +141,9 @@ export const eng_lang = {
     },
     section_two: {
       title: "Choose your suspect",
+      hover_heading: "Unavailable",
+      hover_descr_1: "If you want to see who",
+      hover_descr_2: "purchase it",
     },
     section_three: {
       title: "Mint your Suspect",

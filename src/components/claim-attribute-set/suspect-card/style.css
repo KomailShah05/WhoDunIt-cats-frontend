@@ -8,6 +8,7 @@
 }
 
 .card-size img {
+  display: block;
   margin-bottom: 2.875rem;
   width: 100%;
 }
@@ -21,6 +22,7 @@
 }
 
 .card-size.unavailable {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,6 +46,12 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 992px) {
+  .card-size.unavailable .unavailable-text {
+    width: 95%;
+  }
+}
+
 .card-size.unavailable .unavailable-text p {
   margin-left: auto;
   margin-right: auto;
@@ -60,3 +68,115 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+
+@media screen and (max-width: 576px) {
+  .card-size.unavailable .unavailable-text p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .unavailable-text p {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
+.card-size.unavailable .overlay-on-hover {
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding-left: 0 !important;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 94.8%;
+  height: 82.3%;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card-size.unavailable .overlay-on-hover {
+    width: 95%;
+    height: 83%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-size.unavailable .overlay-on-hover {
+    width: 100%;
+    height: 83%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover {
+    height: 80%;
+  }
+}
+
+.card-size.unavailable .overlay-on-hover p.overlay-header {
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.card-size.unavailable .overlay-on-hover p.overlay-description {
+  background: none;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover p.overlay-description {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
+.card-size.unavailable .overlay-on-hover .opensea-btn {
+  margin-top: 1rem;
+  padding: 3px 24px 2px;
+  width: 163px;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #000000;
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover .opensea-btn {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.card-size:hover .overlay-on-hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

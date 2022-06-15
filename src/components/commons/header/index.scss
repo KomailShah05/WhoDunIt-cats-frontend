@@ -43,17 +43,15 @@
 
   &__scroll-heading {
     font-size: $font-40; //40px
-   
+
     @media screen and (max-width: $breakpoint-lg) {
       font-size: $font-36; //36px
     }
     @media screen and (max-width: $breakpoint-md) {
       font-size: $font-28; //28px
-      
     }
     @media screen and (max-width: $breakpoint-sm) {
       font-size: $font-24; //24px
-    
     }
     @media screen and (max-width: $breakpoint-xs) {
       font-size: $font-20; //24px

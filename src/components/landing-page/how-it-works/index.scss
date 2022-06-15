@@ -4,19 +4,18 @@
   background-color: $bg-light-black;
   &__text-section {
     & h2 {
-      @media screen and (max-width: $breakpoint-lg ){
+      @media screen and (max-width: $breakpoint-lg) {
         font-size: $font-32;
         line-height: $line-height-48;
         text-align: center;
-      
       }
-      @media screen and (max-width: $breakpoint-sm ){
+      @media screen and (max-width: $breakpoint-sm) {
         font-size: $font-24;
-        line-height: $line-height-32;        
-      }    
+        line-height: $line-height-32;
+      }
     }
     & img {
-      @media screen and (max-width: $breakpoint-lg ){
+      @media screen and (max-width: $breakpoint-lg) {
         display: flex;
         justify-content: center;
       }
@@ -25,11 +24,11 @@
   & .working-text {
     font-size: $font-18;
     line-height: $line-height-32;
-    @media screen and (max-width: $breakpoint-lg ){
-     display: flex;
-     justify-content: center;
+    @media screen and (max-width: $breakpoint-lg) {
+      display: flex;
+      justify-content: center;
     }
-    @media screen and (max-width: $breakpoint-md ){
+    @media screen and (max-width: $breakpoint-md) {
       font-size: $font-16;
       line-height: $line-height-24;
       & br {
@@ -38,7 +37,7 @@
       margin-left: 1rem;
       margin-right: 1rem;
     }
-    @media screen and (max-width: $breakpoint-sm ){
+    @media screen and (max-width: $breakpoint-sm) {
       font-size: $font-14;
       line-height: $line-height-16;
     }
@@ -46,12 +45,11 @@
   &__margin-tp-btm {
     margin: 5.03rem 0 4.25rem 0;
     & .cat-in-box {
-      @media screen and (max-width: $breakpoint-md ){
+      @media screen and (max-width: $breakpoint-md) {
         width: 100%;
       }
-      @media screen and (max-width: $breakpoint-sm ){
+      @media screen and (max-width: $breakpoint-sm) {
         width: 100%;
-
       }
     }
   }
@@ -61,7 +59,7 @@
 .underline {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  @media screen and (max-width: $breakpoint-lg ){
+  @media screen and (max-width: $breakpoint-lg) {
     margin-left: auto;
     margin-right: auto;
   }

@@ -3,8 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .who-did-it {
   background: radial-gradient(70.9% 173.52% at 50% 6.19%, rgba(0, 0, 0, 0) 25.31%, #000000 100%), url(../../../assets/images/image_1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-x;
   background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,3 +23,4 @@
     height: 100%;
   }
 }
+/*# sourceMappingURL=index.css.map */
