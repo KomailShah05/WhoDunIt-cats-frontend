@@ -2,11 +2,11 @@
 import axios from "axios";
 
 // constants
-import { API_BASE_URL } from "../enviroments";
+import { API_BASE_URL, API_TIME_OUT } from "../enviroments";
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 1000,
+  timeout: API_TIME_OUT,
   headers: {
     Accept: "*/*",
   },

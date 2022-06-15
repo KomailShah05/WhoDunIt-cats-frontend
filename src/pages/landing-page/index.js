@@ -1,5 +1,6 @@
 //libraries
 import React from "react";
+import { useSelector } from "react-redux";
 
 //pages
 
@@ -20,14 +21,24 @@ import { PopUp } from "../../components/join-the-hunt";
 //assets
 
 const LandingPage = () => {
+  const { totalMinted, btnLoading } = useSelector((state) => state.nftsReducer);
+  const { walletConnected } = useSelector(
+    (state) => state.metaMaskWalletReducer
+  );
+  console.log("btnLoading****", btnLoading);
+
   return (
     <>
       <Header />
       <HeroSection />
-      <MintedSection />
+      <MintedSection totalMinted={totalMinted} />
       <HowItWorks />
       <WhoDidIt />
-      <PopUp />
+      <PopUp
+        totalMinted={totalMinted}
+        walletConnected={walletConnected}
+        btnLoading={btnLoading}
+      />
       <SmallPopup />
       <Footer />
     </>

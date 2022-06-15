@@ -10,6 +10,7 @@ export const routes = {
 
 export const api_routes = {
   MINTED_COUNT: "nfts/count-minted",
+  NEW_NFT_MINTED: "nfts/mint",
 };
 
 // Landing Page Constants
@@ -32,6 +33,7 @@ export const eng_lang = {
     read_story: "Read Story",
     begin_hunt: "Begin Hunt",
     mint_suspect: "Mint Suspect",
+    continue_to_mint: "Continue To Mint",
   },
 
   header: {

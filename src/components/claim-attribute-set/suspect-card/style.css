@@ -28,19 +28,29 @@
   display: flex;
   position: relative;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .card-size.unavailable img {
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .card-size.unavailable .unavailable-text {
   position: absolute;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-45.45%, #000000), color-stop(95.45%, rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(180deg, #000000 -45.45%, rgba(0, 0, 0, 0) 95.45%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(-45.45%, #000000),
+    color-stop(95.45%, rgba(0, 0, 0, 0))
+  );
+  background-image: linear-gradient(
+    180deg,
+    #000000 -45.45%,
+    rgba(0, 0, 0, 0) 95.45%
+  );
   background-size: cover;
   width: 100%;
   z-index: 1;
@@ -86,11 +96,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .card-size.unavailable .overlay-on-hover p.overlay-header {

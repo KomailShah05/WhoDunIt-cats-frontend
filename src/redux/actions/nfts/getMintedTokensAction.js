@@ -14,7 +14,6 @@ const getMintedTokens = () => {
       let response = await getRequest(api_routes.MINTED_COUNT);
       if (response) dispatch(getMintedTokenSuccess(response.data.totalMinted));
     } catch (err) {
-      console.log("err****", err);
       dispatch(getMintedTokenFailure());
     }
   };
