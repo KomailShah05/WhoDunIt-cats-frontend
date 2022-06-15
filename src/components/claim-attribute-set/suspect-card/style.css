@@ -42,8 +42,14 @@
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-45.45%, #000000), color-stop(95.45%, rgba(0, 0, 0, 0)));
   background-image: linear-gradient(180deg, #000000 -45.45%, rgba(0, 0, 0, 0) 95.45%);
   background-size: cover;
-  width: 96%;
+  width: 100%;
   z-index: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .card-size.unavailable .unavailable-text {
+    width: 95%;
+  }
 }
 
 .card-size.unavailable .unavailable-text p {
@@ -88,8 +94,8 @@
   left: 0;
   bottom: 0;
   right: 0;
-  width: 95%;
-  height: 83%;
+  width: 94.8%;
+  height: 82.3%;
   max-height: -webkit-min-content;
   max-height: -moz-min-content;
   max-height: min-content;
@@ -104,6 +110,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card-size.unavailable .overlay-on-hover {
+    width: 95%;
+    height: 83%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-size.unavailable .overlay-on-hover {
+    width: 100%;
+    height: 83%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover {
+    height: 80%;
+  }
 }
 
 .card-size.unavailable .overlay-on-hover p.overlay-header {
@@ -126,6 +152,13 @@
   color: #ffffff;
 }
 
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover p.overlay-description {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
 .card-size.unavailable .overlay-on-hover .opensea-btn {
   margin-top: 1rem;
   padding: 3px 24px 2px;
@@ -134,6 +167,13 @@
   font-size: 1rem;
   line-height: 1rem;
   color: #000000;
+}
+
+@media screen and (max-width: 320px) {
+  .card-size.unavailable .overlay-on-hover .opensea-btn {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 .card-size:hover .overlay-on-hover {
