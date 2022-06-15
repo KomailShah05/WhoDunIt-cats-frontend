@@ -37,7 +37,6 @@ const Card = () => {
         }`}
       >
         <div className="unavailable-text">
-          {" "}
           <p>unavailable</p>
         </div>
         <img src={CatFive} alt="cat" tabIndex="0" />

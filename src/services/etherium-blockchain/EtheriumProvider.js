@@ -2,6 +2,9 @@
 import { createContext, useCallback } from "react";
 import { useDispatch } from "react-redux";
 
+// components
+import { notfiFail } from "../../lib/helper/toast";
+
 // constants
 import { connectToMetaMask } from "./functions";
 import {
@@ -25,6 +28,7 @@ const EtheriumProvider = ({ children }) => {
     } catch (error) {
       dispatch(btnLoadingAction(false));
       dispatch(walletConnectedFail());
+      notfiFail(error.message);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

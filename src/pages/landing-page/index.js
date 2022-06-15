@@ -13,6 +13,7 @@ import {
   HowItWorks,
 } from "../../components/landing-page";
 import { PopUp } from "../../components/join-the-hunt";
+import Toast from "../../lib/helper/toast";
 
 //constants
 
@@ -22,7 +23,7 @@ import { PopUp } from "../../components/join-the-hunt";
 
 const LandingPage = () => {
   const { totalMinted, btnLoading } = useSelector((state) => state.nftsReducer);
-  const { walletConnected } = useSelector(
+  const { walletConnected, walletAddress } = useSelector(
     (state) => state.metaMaskWalletReducer
   );
 
@@ -37,9 +38,11 @@ const LandingPage = () => {
         totalMinted={totalMinted}
         walletConnected={walletConnected}
         btnLoading={btnLoading}
+        walletAddress={walletAddress}
       />
       <SmallPopup />
       <Footer />
+      <Toast />
     </>
   );
 };
