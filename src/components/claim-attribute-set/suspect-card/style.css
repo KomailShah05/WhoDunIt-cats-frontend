@@ -48,8 +48,4 @@
   border: 2px solid #ffffff;
   border-radius: 1.25rem;
 }
-
-.card-size.unavailable:hover p {
-  display: none;
-}
 /*# sourceMappingURL=style.css.map */

@@ -85,6 +85,18 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .metadata-nft {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .mint-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,6 +123,13 @@
   .mint-btn {
     margin-top: 1rem;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mint-btn {
+    font-size: 1.12rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -148,6 +167,13 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .suspects {
+    --bs-gutter-x: 0 !important;
+    padding-right: 0.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
