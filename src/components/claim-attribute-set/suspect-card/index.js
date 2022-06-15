@@ -25,7 +25,11 @@ const Card = () => {
           available === true && "unavailable"
         }`}
       >
-        <p>unavailable</p>
+        <div className="unavailable-text">
+          {" "}
+          <p>unavailable</p>
+        </div>
+
         <img src={CatFour} alt="cat" tabIndex="0" />
       </div>
       <div
@@ -33,7 +37,10 @@ const Card = () => {
           available === true && "unavailable"
         }`}
       >
-        <p>Unavailable</p>
+        <div className="unavailable-text">
+          {" "}
+          <p>unavailable</p>
+        </div>
         <img src={CatFive} alt="cat" tabIndex="0" />
       </div>
     </>
