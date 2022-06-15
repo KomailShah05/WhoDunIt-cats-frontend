@@ -162,7 +162,7 @@
 .card-size.unavailable .overlay-on-hover .opensea-btn {
   margin-top: 1rem;
   padding: 3px 24px 2px;
-  max-width: 163px;
+  width: 163px;
   font-family: "Gochi Hand", cursive;
   font-size: 1rem;
   line-height: 1rem;
