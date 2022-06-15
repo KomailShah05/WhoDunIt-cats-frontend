@@ -1,3 +1,6 @@
-import getMintedTokens from "./getMintedTokens";
+// imports
+import getMintedTokens from "./getMintedTokensAction";
+import btnLoadingAction from "./btnLoadingAction";
 
-export { getMintedTokens };
+// exports
+export { getMintedTokens, btnLoadingAction };

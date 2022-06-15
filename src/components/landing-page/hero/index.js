@@ -31,7 +31,6 @@ const HeroSection = () => {
                 className="btn btn-primary hero-card-btn join_hunt_text"
                 data-mdb-ripple-color="primary"
               >
-                {" "}
                 {eng_lang.buttonConstants.begin_hunt}
               </button>
             </Link>
@@ -42,7 +41,6 @@ const HeroSection = () => {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              {" "}
               {eng_lang.buttonConstants.join_hunt_text}
             </button>
           )}
