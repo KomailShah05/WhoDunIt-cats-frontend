@@ -16,7 +16,13 @@ import "./style.scss";
 // assets
 import { brown_cat, cat } from "../../../assets";
 
-const PopUp = ({ totalMinted, walletConnected, btnLoading, walletAddress }) => {
+const PopUp = ({
+  totalMinted,
+  walletConnected,
+  btnLoading,
+  walletAddress,
+  voucherLoading,
+}) => {
   const { walletConnection } = useContext(EtheriumContext);
   const dispatch = useDispatch();
   const handleVoucher = () => {
@@ -74,9 +80,10 @@ const PopUp = ({ totalMinted, walletConnected, btnLoading, walletAddress }) => {
                     text={eng_lang.buttonConstants.continue_to_mint}
                     imgPath={cat}
                     handleClick={handleVoucher}
-                    data_bs_toggle="modal"
-                    data_bs_target="#smallModal"
-                    data_bs_dismiss="modal"
+                    disable={voucherLoading}
+                    // data_bs_toggle="modal"
+                    // data_bs_target="#smallModal"
+                    // data_bs_dismiss="modal"
                   />
                 ) : (
                   <BlockButton

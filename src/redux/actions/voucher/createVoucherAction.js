@@ -4,9 +4,11 @@ import { postRequest } from "../../../services/axiosMethod";
 // action types
 import { types } from "../../types";
 
+// actions
+import { voucherLoading } from "./index";
+
 // constants
 import { api_routes } from "../../../lib/utills/constants";
-import { notfiFail } from "../../../lib/helper/toast";
 
 const createNewVoucher = (walletAddress) => {
   return async function (dispatch) {
@@ -14,33 +16,34 @@ const createNewVoucher = (walletAddress) => {
       const payload = {
         walletAddress,
       };
+      dispatch(voucherLoading(true));
       // api call to get total tokent minted
       let response = await postRequest(api_routes.CREATE_VOUCHER, payload);
-      console.log(api_routes.CREATE_VOUCHER, "  :", response);
       if (response) dispatch(createVoucherSuccess(response.data));
     } catch (err) {
-      console.log(api_routes.CREATE_VOUCHER, "  :", err);
-      dispatch(createVoucherFailure(err.message));
+      dispatch(createVoucherFailure());
     }
   };
 };
 
 const createVoucherSuccess = (voucher) => {
   return function (dispatch) {
-    // dispatch({
-    //   type: types.MINTED_NFTS_COUNT,
-    //   payload: totalMinted,
-    // });
+    dispatch({
+      type: types.CREATE_VOUCHER,
+      payload: voucher,
+    });
+    debugger;
+    dispatch(voucherLoading(false));
   };
 };
 
-const createVoucherFailure = (message) => {
+const createVoucherFailure = () => {
   return function (dispatch) {
-    notfiFail(message);
-    // dispatch({
-    //   type: types.MINTED_NFTS_COUNT,
-    //   payload: 0,
-    // });
+    dispatch({
+      type: types.CREATE_VOUCHER,
+      payload: {},
+    });
+    dispatch(voucherLoading(false));
   };
 };
 

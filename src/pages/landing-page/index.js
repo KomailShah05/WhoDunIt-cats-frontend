@@ -22,10 +22,11 @@ import Toast from "../../lib/helper/toast";
 //assets
 
 const LandingPage = () => {
-  const { totalMinted, btnLoading } = useSelector((state) => state.nftsReducer);
-  const { walletConnected, walletAddress } = useSelector(
-    (state) => state.metaMaskWalletReducer
-  );
+  const {
+    nftsReducer: { totalMinted, btnLoading },
+    voucherReducer: { voucherLoading, voucher },
+    metaMaskWalletReducer: { walletConnected, walletAddress },
+  } = useSelector((state) => state);
 
   return (
     <>
@@ -39,8 +40,9 @@ const LandingPage = () => {
         walletConnected={walletConnected}
         btnLoading={btnLoading}
         walletAddress={walletAddress}
+        voucherLoading={voucherLoading}
       />
-      <SmallPopup />
+      <SmallPopup voucher={voucher} />
       <Footer />
       <Toast />
     </>
