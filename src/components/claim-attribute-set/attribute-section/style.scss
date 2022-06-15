@@ -60,6 +60,11 @@
     max-width: none;
     padding-left: 0 !important;
   }
+  @media screen and (max-width:$breakpoint-sm) {
+    flex-direction: column;
+    
+    align-items: center;
+  }
 }
 
 .mint-btn {
@@ -80,6 +85,10 @@
   @media screen and (max-width: $breakpoint-md) {
     margin-top: $size-16;
     width: 100%;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+   font-size: $size-18;
+    line-height: $size-20;
   }
 }
 
@@ -108,4 +117,9 @@
     justify-content: center !important;
     padding-right: 0;
   }
+  @media screen and (max-width: $breakpoint-sm) {
+    --bs-gutter-x: 0 !important;
+    // padding-right: 0.4rem;
+  }
+
 }

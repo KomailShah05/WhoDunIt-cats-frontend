@@ -54,7 +54,7 @@ const AttributeSection = () => {
             {eng_lang.claim_attribute_set.section_three.serial_value}
           </p>
         </div>
-        <div className="d-flex justify-content-between metadata-nft">
+        <div className="d-flex justify-content-between  metadata-nft">
           <p className="text-white">
             {eng_lang.claim_attribute_set.section_three.plank_number}
           </p>
