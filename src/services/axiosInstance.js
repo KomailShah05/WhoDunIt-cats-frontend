@@ -3,6 +3,7 @@ import axios from "axios";
 
 // constants
 import { API_BASE_URL, API_TIME_OUT } from "../enviroments";
+import { notfiFail } from "../lib/helper/toast";
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
@@ -28,6 +29,9 @@ axiosInstance.interceptors.response.use(
     return response.data;
   },
   function (error) {
+    if (error.hasOwnProperty("message")) {
+      notfiFail(error.message);
+    }
     return Promise.reject(error);
   }
 );

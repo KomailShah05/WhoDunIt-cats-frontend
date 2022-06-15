@@ -19,7 +19,7 @@
     padding-left: $size-24;
     @media screen and (max-width: $breakpoint-md) {
       padding-left: 0;
-   }
+    }
   }
 
   div:last-child {
@@ -42,6 +42,12 @@
   &__min-width {
     min-width: 77%;
     padding-left: 0 !important;
+    @media screen and (max-width: $breakpoint-lg) {
+      min-width: 15.174rem; //242.79px, same as heading
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      min-width: 11.033rem; //179.53px, same as heading
+    }
   }
 }
 
@@ -56,13 +62,14 @@
     line-height: 19px;
   }
 
-  @media screen and (max-width:$breakpoint-lg) {
-    max-width: none;
-    padding-left: 0 !important;
+  @media screen and (max-width: $breakpoint-lg) {
+    max-width: 14rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  @media screen and (max-width:$breakpoint-sm) {
+  @media screen and (max-width: $breakpoint-sm) {
     flex-direction: column;
-    
     align-items: center;
   }
 }
@@ -78,28 +85,30 @@
   width: 14rem;
 
   @media screen and (max-width: $breakpoint-lg) {
-    margin-left: auto;
-    margin-right: auto;
-    
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
+
   @media screen and (max-width: $breakpoint-md) {
     margin-top: $size-16;
-    width: 100%;
   }
   @media screen and (max-width: $breakpoint-sm) {
-   font-size: $size-18;
+    font-size: $size-18;
     line-height: $size-20;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    width: 100%;
   }
 }
 
 .selected-cat {
   margin-top: $size-30;
-  margin-left: $size-24;
+
   @media screen and (max-width: $breakpoint-lg) {
-    margin-left: 0;
-    margin-right: $size-10;
-    padding-left: 0 !important;
-    width: 100%;
+    max-width: 14rem;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    max-width: 100%;
   }
 }
 
@@ -121,5 +130,4 @@
     --bs-gutter-x: 0 !important;
     // padding-right: 0.4rem;
   }
-
 }

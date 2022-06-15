@@ -6,6 +6,7 @@ import "./style.scss";
 
 // assets
 import { CatOne, CatTwo, CatThree, CatFour, CatFive } from "../../../assets";
+import { eng_lang } from "../../../lib/utills/constants";
 
 const Card = () => {
   const available = true;
@@ -26,10 +27,21 @@ const Card = () => {
         }`}
       >
         <div className="unavailable-text">
-          <p>unavailable</p>
+          <p>Unavailable</p>
         </div>
-
         <img src={CatFour} alt="cat" tabIndex="0" />
+        <div className="overlay-on-hover text-center">
+          <p className="overlay-header">
+            {eng_lang.claim_attribute_set.section_two.hover_heading}
+          </p>
+          <p className="overlay-description ">
+            {eng_lang.claim_attribute_set.section_two.hover_descr_1} <br />{" "}
+            {eng_lang.claim_attribute_set.section_two.hover_descr_2}
+          </p>
+          <button className="w-100 btn btn-primary opensea-btn">
+            {eng_lang.buttonConstants.view_on_open_sea}
+          </button>
+        </div>
       </div>
       <div
         className={`col-lg-4 col-md-6 card-size ${
@@ -37,10 +49,21 @@ const Card = () => {
         }`}
       >
         <div className="unavailable-text">
-          {" "}
-          <p>unavailable</p>
+          <p>{eng_lang.claim_attribute_set.section_two.hover_heading}</p>
         </div>
         <img src={CatFive} alt="cat" tabIndex="0" />
+        <div className="overlay-on-hover text-center">
+          <p className="overlay-header">
+            {eng_lang.claim_attribute_set.section_two.hover_heading}
+          </p>
+          <p className="overlay-description ">
+            {eng_lang.claim_attribute_set.section_two.hover_descr_1} <br />{" "}
+            {eng_lang.claim_attribute_set.section_two.hover_descr_2}
+          </p>
+          <button className="w-100 btn btn-primary opensea-btn">
+            {eng_lang.buttonConstants.view_on_open_sea}
+          </button>
+        </div>
       </div>
     </>
   );
