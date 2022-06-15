@@ -27,7 +27,7 @@ const Card = () => {
       >
         <div className="unavailable-text">
           {" "}
-          <p>unavailable</p>
+          <p>Unavailable</p>
         </div>
 
         <img src={CatFour} alt="cat" tabIndex="0" />
@@ -39,7 +39,16 @@ const Card = () => {
       >
         <div className="unavailable-text">
           {" "}
-          <p>unavailable</p>
+          <p>Unavailable</p>
+          <div className="overlay-on-hover text-center">
+            <p className="overlay-header">Unavailable</p>
+            <p className="overlay-description ">
+              If you want to see who purchase it
+            </p>
+            <button className="w-100 btn btn-primary opensea-btn">
+              View on opensea
+            </button>
+          </div>
         </div>
         <img src={CatFive} alt="cat" tabIndex="0" />
       </div>

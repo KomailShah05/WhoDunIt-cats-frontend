@@ -45,8 +45,12 @@ const AttributeSection = () => {
           index={3}
           fill={true}
         />
-        <img className="selected-cat" src={CatOne} alt="cat" />
-        <div className="d-flex justify-content-between metadata-nft">
+        <div className="d-flex justify-content-center justify-content-lg-start">
+          {" "}
+          <img className="selected-cat" src={CatOne} alt="cat" />
+        </div>
+
+        <div className="d-flex mx-auto justify-content-between metadata-nft">
           <p className="text-white">
             {eng_lang.claim_attribute_set.section_three.serial_number}
           </p>
@@ -54,7 +58,7 @@ const AttributeSection = () => {
             {eng_lang.claim_attribute_set.section_three.serial_value}
           </p>
         </div>
-        <div className="d-flex justify-content-between  metadata-nft">
+        <div className="d-flex mx-auto justify-content-between  metadata-nft">
           <p className="text-white">
             {eng_lang.claim_attribute_set.section_three.plank_number}
           </p>
@@ -63,7 +67,7 @@ const AttributeSection = () => {
           </p>
         </div>
 
-        <button className="btn btn-primary mint-btn">
+        <button className="btn btn-primary mint-btn mx-auto">
           {eng_lang.buttonConstants.mint_suspect}
         </button>
       </div>
