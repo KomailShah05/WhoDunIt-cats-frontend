@@ -1,5 +1,6 @@
 // libraries
 import React, { useContext } from "react";
+import { useDispatch } from "react-redux/es/exports";
 
 // components
 import { BlockButton } from "../../commons";
@@ -7,6 +8,7 @@ import { BlockButton } from "../../commons";
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
+import { createNewVoucher } from "../../../redux/actions/voucher";
 
 // style
 import "./style.scss";
@@ -14,9 +16,18 @@ import "./style.scss";
 // assets
 import { brown_cat, cat } from "../../../assets";
 
-const PopUp = ({ totalMinted, walletConnected, btnLoading }) => {
+const PopUp = ({
+  totalMinted,
+  walletConnected,
+  btnLoading,
+  walletAddress,
+  voucherLoading,
+}) => {
   const { walletConnection } = useContext(EtheriumContext);
-
+  const dispatch = useDispatch();
+  const handleVoucher = () => {
+    dispatch(createNewVoucher(walletAddress));
+  };
   return (
     <>
       <div
@@ -68,10 +79,11 @@ const PopUp = ({ totalMinted, walletConnected, btnLoading }) => {
                     showImg={true}
                     text={eng_lang.buttonConstants.continue_to_mint}
                     imgPath={cat}
-                    handleClick={() => {}}
-                    data_bs_toggle="modal"
-                    data_bs_target="#smallModal"
-                    data_bs_dismiss="modal"
+                    handleClick={handleVoucher}
+                    disable={voucherLoading}
+                    // data_bs_toggle="modal"
+                    // data_bs_target="#smallModal"
+                    // data_bs_dismiss="modal"
                   />
                 ) : (
                   <BlockButton

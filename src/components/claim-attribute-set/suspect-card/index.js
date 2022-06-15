@@ -54,7 +54,6 @@ const Card = () => {
         <img src={CatFive} alt="cat" tabIndex="0" />
         <div className="overlay-on-hover text-center">
           <p className="overlay-header">
-            {" "}
             {eng_lang.claim_attribute_set.section_two.hover_heading}
           </p>
           <p className="overlay-description ">
