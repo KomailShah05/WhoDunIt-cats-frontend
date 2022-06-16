@@ -28,6 +28,7 @@ const PopUp = ({
   const handleVoucher = () => {
     dispatch(createNewVoucher(walletAddress));
   };
+
   return (
     <>
       <div

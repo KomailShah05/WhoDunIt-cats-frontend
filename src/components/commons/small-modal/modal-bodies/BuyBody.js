@@ -1,13 +1,39 @@
 // libraries
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 // constants
 import { eng_lang } from "../../../../lib/utills/constants";
+import { createNewVoucher } from "../../../../redux/actions/voucher";
+import calculateTimeLeft from "../../../../lib/helper/functions/calculateTimeLeft";
 
 // assets
 import { golden, Undeline } from "../../../../assets";
 
-const BuyBody = () => {
+const BuyBody = ({ voucher, walletAddress }) => {
+  const dispatch = useDispatch();
+  const [minutes, setminutes] = useState(null);
+  const handleVoucher = () => {
+    dispatch(createNewVoucher(walletAddress));
+  };
+  useEffect(() => {
+    if (document.getElementById("smallModal").classList.contains("show")) {
+      const id = setTimeout(() => {
+        setminutes(calculateTimeLeft(voucher.expire_at));
+      }, 1000);
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+  });
+  useEffect(() => {
+    console.log("minutes", minutes);
+    if (minutes?.M === 0) {
+      handleVoucher();
+    }
+  }, [minutes]);
+
   return (
     <>
       <h2 className="text-white text-center">
@@ -19,7 +45,8 @@ const BuyBody = () => {
           <div className="d-flex flex-column align-items-end">
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
-              <img src={golden} alt={golden} /> 0.11 {eng_lang.eth}
+              <img src={golden} alt={golden} />{" "}
+              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>
@@ -33,7 +60,8 @@ const BuyBody = () => {
           <div className="d-flex flex-column align-items-end">
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
-              <img src={golden} alt={golden} /> 0.11 {eng_lang.eth}
+              <img src={golden} alt={golden} />{" "}
+              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>
