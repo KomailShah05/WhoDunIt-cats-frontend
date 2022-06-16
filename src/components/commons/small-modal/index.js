@@ -14,7 +14,7 @@ import "./style.scss";
 // assets
 import { Clipper, clipper_loading, success, opensea } from "../../../assets";
 
-const SmallPopup = () => {
+const SmallPopup = ({ walletAddress, voucher }) => {
   const [modalName, setmodalName] = useState("buy");
 
   // show different modal on button clicks
@@ -32,10 +32,22 @@ const SmallPopup = () => {
     if (modalName === "loading") setTimeout(showNextScreen, 5000);
   }, [modalName]);
 
+  const handleClose = () => {
+    var element = document.getElementById("smallModal");
+    element.classList.remove("d-block");
+    element.classList.remove("show");
+    document
+      .getElementsByClassName("modal-backdrop")[0]
+      .classList.remove("show");
+    document
+      .getElementsByClassName("modal-backdrop")[0]
+      .classList.remove("modal-backdrop");
+  };
+
   return (
     <>
       <div
-        className="modal fade sm-modal"
+        className={`modal fade sm-modal `}
         id="smallModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -72,12 +84,18 @@ const SmallPopup = () => {
                     <button
                       type="button"
                       className="modal__btn-close"
-                      data-bs-dismiss="modal"
+                      data-bs-dismiss="sm-modal"
                       aria-label="Close"
+                      onClick={handleClose}
                     ></button>
                   </div>
                   <div className="modal-body sm-modal__padding-body">
-                    {modalName === "buy" && <BuyBody />}
+                    {modalName === "buy" && (
+                      <BuyBody
+                        voucher={voucher}
+                        walletAddress={walletAddress}
+                      />
+                    )}
                     {modalName === "congrats" && <CongratsBody />}
                     <BlockButton
                       showImg={false}

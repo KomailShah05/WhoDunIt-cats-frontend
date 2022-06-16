@@ -41,8 +41,9 @@ const LandingPage = () => {
         btnLoading={btnLoading}
         walletAddress={walletAddress}
         voucherLoading={voucherLoading}
+        voucher={voucher}
       />
-      <SmallPopup voucher={voucher} />
+      <SmallPopup voucher={voucher} walletAddress={walletAddress} />
       <Footer />
       <Toast />
     </>

@@ -32,7 +32,9 @@ const createVoucherSuccess = (voucher) => {
       type: types.CREATE_VOUCHER,
       payload: voucher,
     });
-    debugger;
+    var element = document.getElementById("smallModal");
+    element.classList.add("d-block");
+    element.classList.add("show");
     dispatch(voucherLoading(false));
   };
 };
