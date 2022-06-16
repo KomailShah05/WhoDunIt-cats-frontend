@@ -28,10 +28,10 @@ const BuyBody = ({ voucher, walletAddress }) => {
     }
   });
   useEffect(() => {
-    console.log("minutes", minutes);
     if (minutes?.M === 0) {
       handleVoucher();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
 
   return (
