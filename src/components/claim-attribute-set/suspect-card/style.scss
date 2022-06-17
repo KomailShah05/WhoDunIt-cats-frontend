@@ -32,8 +32,8 @@
         $black -45.45%,
         rgba(0, 0, 0, 0) 95.45%
       );
-      background-size: cover;
-      width: 100%;
+
+      min-width: 100%;
       z-index: 1;
       @media screen and (max-width: $breakpoint-lg) {
         width: 95%;
@@ -116,8 +116,8 @@
       }
       & .opensea-btn {
         margin-top: $size-16;
-        padding: 3px 24px 2px;
-        width: 163px;
+        padding: $size-3 $size-16 $size-3;
+        max-width: 100%;
         font-family: $font-family-gochi-hand;
         font-size: $size-16;
         line-height: $size-16;
