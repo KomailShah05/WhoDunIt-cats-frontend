@@ -7,6 +7,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+html,
+body {
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -208,6 +213,21 @@ p {
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 82rem;
+  }
+  html,
+  body {
+    font-size: 25px;
+  }
+}
+
 /* // Large devices (desktops, 992px and up) */
 /* // Medium devices (tablets, 768px and up) */
 /* Extereme smaal device */
