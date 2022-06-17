@@ -2,7 +2,7 @@
 import React from "react";
 
 // components
-import { Header, Footer } from "../../components/commons";
+import { Header, Footer, SmallPopupCongrats } from "../../components/commons";
 import { AttributeSection } from "../../components/claim-attribute-set";
 
 const ClaimAttributeSet = () => {
@@ -10,6 +10,7 @@ const ClaimAttributeSet = () => {
     <>
       <Header />
       <AttributeSection />
+      <SmallPopupCongrats />
       <Footer />
     </>
   );

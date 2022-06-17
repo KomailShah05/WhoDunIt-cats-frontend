@@ -68,7 +68,11 @@ const AttributeSection = () => {
             </p>
           </div>
 
-          <button className="btn btn-primary mint-btn ">
+          <button
+            className="btn btn-primary mint-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#smallModalCongrats"
+          >
             {eng_lang.buttonConstants.mint_suspect}
           </button>
         </div>

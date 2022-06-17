@@ -148,6 +148,7 @@
 
 .selected-cat {
   margin-top: 1.875rem;
+  min-width: 14rem;
 }
 
 @media screen and (max-width: 992px) {
