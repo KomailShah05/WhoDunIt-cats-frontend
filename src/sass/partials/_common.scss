@@ -1,5 +1,10 @@
 @import "./variables";
 
+html,
+body {
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -138,7 +143,7 @@ p {
     background: $bg-light-grey;
   }
   @media screen and (max-width: $breakpoint-sm) {
-     font-size: $font-20;
+    font-size: $font-20;
     line-height: $line-height-24;
   }
 }
