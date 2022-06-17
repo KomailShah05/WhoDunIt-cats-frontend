@@ -70,6 +70,7 @@ const AttributeSection = () => {
 
           <button
             className="btn btn-primary mint-btn"
+            data-mdb-ripple-color="primary"
             data-bs-toggle="modal"
             data-bs-target="#smallModalCongrats"
           >

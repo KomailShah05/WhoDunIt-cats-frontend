@@ -102,6 +102,9 @@
   @media screen and (max-width: $breakpoint-xs) {
     width: 100%;
   }
+  &:hover {
+    background-color: $bg-light-grey;
+  }
 }
 
 .selected-cat {

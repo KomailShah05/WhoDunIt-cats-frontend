@@ -146,6 +146,10 @@
   }
 }
 
+.mint-btn:hover {
+  background-color: #e5e5e5;
+}
+
 .selected-cat {
   margin-top: 1.875rem;
   min-width: 14rem;
