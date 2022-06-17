@@ -38,7 +38,7 @@ const Card = () => {
             {eng_lang.claim_attribute_set.section_two.hover_descr_1} <br />{" "}
             {eng_lang.claim_attribute_set.section_two.hover_descr_2}
           </p>
-          <button className="w-100 btn btn-primary opensea-btn">
+          <button className="btn btn-primary opensea-btn me-1">
             {eng_lang.buttonConstants.view_on_open_sea}
           </button>
         </div>
@@ -60,7 +60,7 @@ const Card = () => {
             {eng_lang.claim_attribute_set.section_two.hover_descr_1} <br />{" "}
             {eng_lang.claim_attribute_set.section_two.hover_descr_2}
           </p>
-          <button className="w-100 btn btn-primary opensea-btn">
+          <button className=" btn btn-primary opensea-btn me-1">
             {eng_lang.buttonConstants.view_on_open_sea}
           </button>
         </div>

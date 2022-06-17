@@ -52,8 +52,16 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .attribute .col-lg-6 div {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  .attribute .col-md-6 div {
+  .attribute .col-lg-6 div {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -198,3 +206,4 @@
     --bs-gutter-x: 0 !important;
   }
 }
+/*# sourceMappingURL=style.css.map */

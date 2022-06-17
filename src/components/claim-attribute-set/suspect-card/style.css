@@ -41,8 +41,7 @@
   position: absolute;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-45.45%, #000000), color-stop(95.45%, rgba(0, 0, 0, 0)));
   background-image: linear-gradient(180deg, #000000 -45.45%, rgba(0, 0, 0, 0) 95.45%);
-  background-size: cover;
-  width: 100%;
+  min-width: 100%;
   z-index: 1;
 }
 
@@ -161,8 +160,8 @@
 
 .card-size.unavailable .overlay-on-hover .opensea-btn {
   margin-top: 1rem;
-  padding: 3px 24px 2px;
-  width: 163px;
+  padding: 0.125rem 1rem 0.125rem;
+  max-width: 100%;
   font-family: "Gochi Hand", cursive;
   font-size: 1rem;
   line-height: 1rem;
@@ -179,3 +178,4 @@
 .card-size:hover .overlay-on-hover {
   opacity: 1;
 }
+/*# sourceMappingURL=style.css.map */
