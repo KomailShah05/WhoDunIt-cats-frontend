@@ -38,22 +38,14 @@
           justify-content: center;
 }
 
-.attribute .col-md-3 div:first-child {
+.attribute .col-lg-3 div:first-child {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 @media screen and (max-width: 992px) {
-  .attribute .col-md-3 div:first-child {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .attribute .col-md-6 div {
+  .attribute .col-lg-3 div:first-child {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -198,3 +190,4 @@
     --bs-gutter-x: 0 !important;
   }
 }
+/*# sourceMappingURL=style.css.map */
