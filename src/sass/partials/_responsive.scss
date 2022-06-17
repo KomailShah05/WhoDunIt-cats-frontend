@@ -1,6 +1,22 @@
 @import "./variables";
 
 /* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 2000px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 82rem;
+  }
+
+  html,
+  body {
+    font-size: 25px;
+  }
+}
+
 @media (max-width: 1200px) {
 }
 /* // Large devices (desktops, 992px and up) */
