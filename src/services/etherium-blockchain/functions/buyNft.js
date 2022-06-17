@@ -1,12 +1,12 @@
 import { blc_func_name } from "../../../lib/utills/constants";
 
-const connectToMetaMask = () => {
+const buyNftMetaMask = (buyParameters) => {
   return new Promise((resolve, reject) => {
     // Asking if metamask is already nt or not
     if (window.ethereum) {
       // res[0] for fetching a first wallet
       window.ethereum
-        .request({ method: blc_func_name.ETH_REQUEST_ACCOUNTS })
+        .request({ method: blc_func_name.REDEEM, params: [buyParameters] })
         .then((res) => {
           resolve(res);
         })
@@ -20,4 +20,4 @@ const connectToMetaMask = () => {
   });
 };
 
-export default connectToMetaMask;
+export default buyNftMetaMask;

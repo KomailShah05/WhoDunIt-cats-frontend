@@ -8,6 +8,11 @@ export const routes = {
   CLAIM_ATTRIBUTE: "/claim-attribute",
 };
 
+export const blc_func_name = {
+  ETH_REQUEST_ACCOUNTS: "eth_requestAccounts",
+  REDEEM: "redeem",
+};
+
 export const api_routes = {
   MINTED_COUNT: "nfts/count-minted",
   NEW_NFT_MINTED: "nfts/mint",

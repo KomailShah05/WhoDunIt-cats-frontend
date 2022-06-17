@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 // components
 import { BlockButton } from "../../commons";
@@ -7,6 +7,7 @@ import { BuyBody, ProcessingBody, CongratsBody } from "./modal-bodies";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 
 // style
 import "./style.scss";
@@ -16,10 +17,11 @@ import { Clipper, clipper_loading, success, opensea } from "../../../assets";
 
 const SmallPopup = ({ walletAddress, voucher }) => {
   const [modalName, setmodalName] = useState("buy");
-
+  const { buyNft } = useContext(EtheriumContext);
   // show different modal on button clicks
-  const handleModalName = (e) => {
-    setmodalName(e.target.name);
+  const handleModalName = async (e) => {
+    // setmodalName(e.target.name);
+    buyNft(voucher.wallet_id, voucher, voucher.signature);
   };
 
   // After 5 seconds show next modal screen
