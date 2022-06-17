@@ -152,6 +152,8 @@ export const eng_lang = {
       plank_number: "Plank Number",
       plank_value: "152374",
     },
+    congrats_text_modal:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien ut diam in commodo bibendum et ac..",
   },
   story_clues: {
     paragrapgh_line_1:
