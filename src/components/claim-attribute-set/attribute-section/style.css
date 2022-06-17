@@ -38,30 +38,14 @@
           justify-content: center;
 }
 
-.attribute .col-md-3 div:first-child {
+.attribute .col-lg-3 div:first-child {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 @media screen and (max-width: 992px) {
-  .attribute .col-md-3 div:first-child {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .attribute .col-lg-6 div {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .attribute .col-lg-6 div {
+  .attribute .col-lg-3 div:first-child {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
