@@ -123,11 +123,19 @@ export const eng_lang = {
         },
         {
           attribute_name: "Eyes",
-          options: ["Select Eyes", "black", "grey", "blue"],
+          options: [
+            "Select Eyes",
+            "black",
+            "grey",
+            "blue",
+            "glasses 1",
+            "glasses 2",
+            "glasses 3",
+          ],
         },
         {
-          attribute_name: "Glasses",
-          options: ["Select Glasses", "glasses 1", "glasses 2", "glasses 3"],
+          attribute_name: "Skin",
+          options: ["Select Skin", "Furry", "Hairless"],
         },
         {
           attribute_name: "Hats",

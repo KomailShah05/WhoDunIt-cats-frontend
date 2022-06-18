@@ -71,8 +71,13 @@ const Header = () => {
                       {eng_lang.header.tabs[1]}
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link to={"/"} className="text-white nav-link ">
+                  <li
+                    className={`nav-item ${
+                      url === routes.CLAIM_ATTRIBUTE &&
+                      "text-decoration-underline"
+                    }`}
+                  >
+                    <Link to={"/"} className={`text-white nav-link`}>
                       {eng_lang.header.tabs[2]}
                     </Link>
                   </li>
