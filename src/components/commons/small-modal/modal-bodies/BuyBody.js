@@ -33,7 +33,6 @@ const BuyBody = ({ voucher, walletAddress }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
-
   return (
     <>
       <h2 className="text-white text-center">

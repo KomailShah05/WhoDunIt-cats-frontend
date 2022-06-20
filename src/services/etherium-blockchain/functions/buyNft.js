@@ -1,21 +1,22 @@
-import { blc_func_name } from "../../../lib/utills/constants";
-
-const buyNftMetaMask = (buyParameters) => {
+const buyNftMetaMask = (tokenInstance, walletAddress, voucherTrx) => {
   return new Promise((resolve, reject) => {
-    // Asking if metamask is already nt or not
-    if (window.ethereum) {
-      // res[0] for fetching a first wallet
-      window.ethereum
-        .request({ method: blc_func_name.REDEEM, params: [buyParameters] })
-        .then((res) => {
-          resolve(res);
+    try {
+      tokenInstance.methods
+        .redeem(walletAddress, voucherTrx.voucher, voucherTrx.signature)
+        .send({
+          from: walletAddress,
+          value: voucherTrx.voucher.minPrice.hex,
         })
-        .catch((err) => {
-          reject(err);
+        .on("receipt", (receipt) => {
+          console.log("receipt", receipt);
+          resolve(receipt);
+        })
+        .on("error", (error) => {
+          reject(error);
+          console.log("error", error);
         });
-    } else {
-      alert("install metamask extension!!");
-      reject("install metamask extension!!");
+    } catch (error) {
+      reject(error);
     }
   });
 };

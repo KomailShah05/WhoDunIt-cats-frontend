@@ -1,5 +1,6 @@
 // libraries
 import React, { useEffect, useState, useContext } from "react";
+import { useDispatch } from "react-redux";
 
 // components
 import { BlockButton } from "../../commons";
@@ -8,6 +9,7 @@ import { BuyBody, ProcessingBody, CongratsBody } from "./modal-bodies";
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
+import { buyErrorSolved } from "../../../redux/actions/buy-flow";
 
 // style
 import "./style.scss";
@@ -15,24 +17,25 @@ import "./style.scss";
 // assets
 import { Clipper, clipper_loading, success, opensea } from "../../../assets";
 
-const SmallPopup = ({ walletAddress, voucher }) => {
-  const [modalName, setmodalName] = useState("buy");
+const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
+  const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
+
+  const [modalName, setmodalName] = useState("buy");
+
   // show different modal on button clicks
   const handleModalName = async (e) => {
     // setmodalName(e.target.name);
     buyNft(voucher.wallet_id, voucher, voucher.signature);
   };
 
-  // After 5 seconds show next modal screen
-  const showNextScreen = () => {
-    setmodalName("congrats");
-  };
-
-  // show processing modal for 5 seconds
+  // show processing modal
   useEffect(() => {
-    if (modalName === "loading") setTimeout(showNextScreen, 5000);
-  }, [modalName]);
+    if (buyInProgress) setmodalName("loading");
+    else setmodalName("buy");
+
+    console.log("buyError", buyError);
+  }, [buyInProgress, buyError]);
 
   const handleClose = () => {
     var element = document.getElementById("smallModal");
@@ -44,6 +47,7 @@ const SmallPopup = ({ walletAddress, voucher }) => {
     document
       .getElementsByClassName("modal-backdrop")[0]
       .classList.remove("modal-backdrop");
+    dispatch(buyErrorSolved());
   };
 
   return (
@@ -88,6 +92,7 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                     data-bs-dismiss="sm-modal"
                     aria-label="Close"
                     onClick={handleClose}
+                    disabled={buyInProgress}
                   ></button>
                 </div>
                 <div className="modal-body sm-modal__padding-body">
@@ -107,6 +112,7 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                     imgPath={""}
                     name={modalName === "buy" ? "loading" : ""}
                     handleClick={modalName === "buy" && handleModalName}
+                    disable={buyInProgress}
                   />
                   {modalName === "congrats" && (
                     <div className="sm-modal__mg-btw-btns">

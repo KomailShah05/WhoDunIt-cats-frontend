@@ -1,4 +1,4 @@
-const blockchain_interfaces = [
+const BLOCKCHAIN_INTERFACES = [
   {
     inputs: [
       {
@@ -623,4 +623,4 @@ const blockchain_interfaces = [
     type: "function",
   },
 ];
-export default blockchain_interfaces;
+export default BLOCKCHAIN_INTERFACES;

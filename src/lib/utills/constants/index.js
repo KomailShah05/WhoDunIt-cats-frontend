@@ -31,7 +31,10 @@ export const eng_lang = {
   view_on_open_sea: "View NFT on Opensea",
   try_again: "Try Again",
   transaction_failed: "Transaction Failed...",
+  transaction_failed_evm: "Transaction has been reverted by the EVM",
   insufficient_fund: "Insufficient Funds! ",
+  contract_type_msg: "Transaction can be done by rinkeby etherium",
+  insufficient_fund_msg: "Not enough balance to proceed transaction.",
   connect_to_metamask: "Connect  Metamask",
 
   buttonConstants: {
