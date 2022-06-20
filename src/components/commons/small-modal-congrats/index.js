@@ -22,28 +22,6 @@ const SmallPopupCongrats = () => {
     setmodalName(e.target.name);
   };
 
-  // After 5 seconds show next modal screen
-  const showNextScreen = () => {
-    setmodalName("congrats");
-  };
-
-  // show processing modal for 5 seconds
-  useEffect(() => {
-    if (modalName === "loading") setTimeout(showNextScreen, 5000);
-  }, [modalName]);
-
-  const handleClose = () => {
-    var element = document.getElementById("smallModalCongrats");
-    element.classList.remove("d-block");
-    element.classList.remove("show");
-    document
-      .getElementsByClassName("modal-backdrop")[0]
-      .classList.remove("show");
-    document
-      .getElementsByClassName("modal-backdrop")[0]
-      .classList.remove("modal-backdrop");
-  };
-
   return (
     <>
       <div
@@ -62,9 +40,9 @@ const SmallPopupCongrats = () => {
               <button
                 type="button"
                 className="modal__btn-close"
-                data-bs-dismiss="sm-modal"
+                data-bs-dismiss="modal"
                 aria-label="Close"
-                onClick={handleClose}
+                // onClick={handleClose}
               ></button>
             </div>
             <div className="modal-body sm-modal__padding-body">

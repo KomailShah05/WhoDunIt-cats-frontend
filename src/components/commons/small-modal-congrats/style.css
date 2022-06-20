@@ -41,22 +41,10 @@
 .sm-modal__img-top {
   position: relative;
   bottom: 3.3rem;
-}
-
-@media (max-width: 2000px) {
-  .sm-modal__img-top {
-    bottom: 5rem !important;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .sm-modal__img-top {
-    bottom: 3.7rem !important;
-  }
+  z-index: -1;
 }
 
 .sm-modal__img-top img {
-  z-index: -1;
   max-width: 7.313rem;
   max-height: 5.25rem;
   position: absolute;
@@ -151,6 +139,13 @@
   }
 }
 
+@media (max-width: 2000px) {
+  .sm-modal__img-top {
+    position: relative;
+    bottom: 5.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .sm-modal__wide, .sm-modal__loading-wide {
     max-width: 60%;
@@ -180,10 +175,10 @@
   }
   .sm-modal__img-top {
     position: relative;
-    bottom: 3.5rem;
+    bottom: 3rem;
   }
   .sm-modal__img-top img {
-    max-width: 5.313rem;
+    max-width: 4.313rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

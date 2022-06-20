@@ -32,14 +32,8 @@
   &__img-top {
     position: relative;
     bottom: 3.3rem;
-    @media (max-width: $breakpoint-xxl) {
-      bottom: 5rem !important;
-    }
-    @media screen and (max-width: $breakpoint-sm) {
-      bottom: 3.7rem !important;
-    }
+    z-index: -1;
     img {
-      z-index: -1;
       max-width: 7.313rem; //117px
       max-height: 5.25rem; //84px
       position: absolute;
@@ -132,6 +126,12 @@
     }
   }
   /* // Medium devices (tablets, 768px and up) */
+  @media (max-width: 2000px) {
+    &__img-top {
+      position: relative;
+      bottom: 5.2rem;
+    }
+  }
   @media (max-width: 768px) {
     &__wide,
     &__loading-wide {
@@ -162,9 +162,9 @@
     }
     &__img-top {
       position: relative;
-      bottom: 3.5rem;
+      bottom: 3rem;
       img {
-        max-width: 5.313rem; //117px
+        max-width: 4.313rem; //117px
       }
     }
   }
