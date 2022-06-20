@@ -22,6 +22,8 @@ import CatTwo from "./images/cat-2.svg";
 import CatThree from "./images/cat-3.svg";
 import CatFour from "./images/cat-4.svg";
 import CatFive from "./images/cat-5.svg";
+import success_2 from "./images/Success_2.png";
+import success_3 from "./images/success_3.png";
 
 // exports
 export {
@@ -48,4 +50,6 @@ export {
   CatThree,
   CatFour,
   CatFive,
+  success_2,
+  success_3,
 };

@@ -33,7 +33,6 @@ const BuyBody = ({ voucher, walletAddress }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
-
   return (
     <>
       <h2 className="text-white text-center">
@@ -46,7 +45,7 @@ const BuyBody = ({ voucher, walletAddress }) => {
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
               <img src={golden} alt={golden} />{" "}
-              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
+              {voucher?.amountInEther?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>
@@ -61,7 +60,7 @@ const BuyBody = ({ voucher, walletAddress }) => {
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
               <img src={golden} alt={golden} />{" "}
-              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
+              {voucher?.amountInEther?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>
