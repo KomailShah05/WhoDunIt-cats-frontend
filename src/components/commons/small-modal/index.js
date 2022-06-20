@@ -1,47 +1,69 @@
 // libraries
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { useDispatch } from "react-redux";
 
 // components
 import { BlockButton } from "../../commons";
-import { BuyBody, ProcessingBody, CongratsBody } from "./modal-bodies";
+import {
+  BuyBody,
+  ProcessingBody,
+  CongratsBody,
+  ErrorBody,
+} from "./modal-bodies";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
+import { buyErrorSolved } from "../../../redux/actions/buy-flow";
 
 // style
 import "./style.scss";
 
 // assets
-import { Clipper, clipper_loading, success, opensea } from "../../../assets";
+import {
+  Clipper,
+  clipper_loading,
+  success,
+  opensea,
+  success_2,
+  success_3,
+} from "../../../assets";
 
-const SmallPopup = ({ walletAddress, voucher }) => {
-  const [modalName, setmodalName] = useState("buy");
+const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
+  const dispatch = useDispatch();
+  const { buyNft } = useContext(EtheriumContext);
+
+  const [modalName, setmodalName] = useState("congrats");
 
   // show different modal on button clicks
-  const handleModalName = (e) => {
-    setmodalName(e.target.name);
+  const handleModalName = async (e) => {
+    // setmodalName(e.target.name);
+    buyNft(voucher.wallet_id, voucher, voucher.signature);
   };
 
-  // After 5 seconds show next modal screen
-  const showNextScreen = () => {
-    setmodalName("congrats");
-  };
-
-  // show processing modal for 5 seconds
+  // show processing modal
   useEffect(() => {
-    if (modalName === "loading") setTimeout(showNextScreen, 5000);
-  }, [modalName]);
+    if (buyInProgress) {
+      setmodalName("loading");
+    } else if (buyError.error) {
+      setmodalName("error");
+    } else {
+      setmodalName("buy");
+    }
+  }, [buyInProgress, buyError]);
 
   const handleClose = () => {
-    var element = document.getElementById("smallModal");
-    element.classList.remove("d-block");
-    element.classList.remove("show");
+    dispatch(buyErrorSolved());
+
+    var element = document?.getElementById("smallModal");
+    element?.classList?.remove("d-block");
+    element?.classList?.remove("show");
     document
-      .getElementsByClassName("modal-backdrop")[0]
-      .classList.remove("show");
+      ?.getElementsByClassName("modal-backdrop")[0]
+      ?.classList?.remove("show");
     document
-      .getElementsByClassName("modal-backdrop")[0]
-      .classList.remove("modal-backdrop");
+      ?.getElementsByClassName("modal-backdrop")[0]
+      ?.classList?.remove("modal-backdrop");
   };
 
   return (
@@ -70,7 +92,11 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                     ? clipper_loading
                     : modalName === "congrats"
                     ? success
-                    : ""
+                    : modalName === "error"
+                    ? success_2
+                    : buyError.errorType === eng_lang.insufficient_fund
+                    ? success_3
+                    : Clipper
                 }
                 alt={Clipper}
                 className="sm-modal__cat-img "
@@ -86,13 +112,17 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                     data-bs-dismiss="sm-modal"
                     aria-label="Close"
                     onClick={handleClose}
+                    disabled={buyInProgress}
                   ></button>
                 </div>
                 <div className="modal-body sm-modal__padding-body">
                   {modalName === "buy" && (
                     <BuyBody voucher={voucher} walletAddress={walletAddress} />
                   )}
+                  {modalName === "error" && <ErrorBody buyError={buyError} />}
+
                   {modalName === "congrats" && <CongratsBody />}
+
                   <BlockButton
                     showImg={false}
                     text={
@@ -100,11 +130,18 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                         ? eng_lang.buttonConstants.subscribe_btn_text
                         : modalName === "buy"
                         ? eng_lang.buy_nft
-                        : ""
+                        : modalName === "error"
+                        ? eng_lang.try_again
+                        : "---"
                     }
                     imgPath={""}
                     name={modalName === "buy" ? "loading" : ""}
-                    handleClick={modalName === "buy" && handleModalName}
+                    handleClick={
+                      modalName === "buy" || modalName === "error"
+                        ? handleModalName
+                        : () => {}
+                    }
+                    disable={buyInProgress}
                   />
                   {modalName === "congrats" && (
                     <div className="sm-modal__mg-btw-btns">
@@ -113,7 +150,7 @@ const SmallPopup = ({ walletAddress, voucher }) => {
                         text={eng_lang.view_on_open_sea}
                         imgPath={opensea}
                         name={"opensea"}
-                        handleClick={""}
+                        handleClick={() => {}}
                         secondary={true}
                       />
                     </div>
