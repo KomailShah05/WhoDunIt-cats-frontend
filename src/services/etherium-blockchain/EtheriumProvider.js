@@ -82,35 +82,38 @@ const EtheriumProvider = ({ children }) => {
 
   const buyNft = useCallback(async () => {
     try {
-      //  diable buy button
+      // step -> 1 : diable buy button
       dispatch(buyInProgressAction(true));
 
+      // step -> 2 : check user is logged in with wallet
       const isUserLogin = await checkUserLogin();
 
-      // checking network name
+      // step -> 3 :  get network name
       const networkName = await networkDetails(web3);
 
-      // check if blockchain name is renkeby
+      // step -> 4 :  check if blockchain name is renkeby
       if (networkName !== WALLET_NAME) {
         notfiFail(eng_lang.contract_type_msg);
       }
 
+      // step -> 4 :  if network name is not rinkeyby or user not connected to metamask then return
       if (networkName !== WALLET_NAME || !isUserLogin) {
         dispatch(buyInProgressAction(false));
         return;
       }
-      // get account balance
+      //step -> 5 : get account balance
       const accBalance = await getAccountBalance(web3, walletAddress);
 
       if (accBalance) {
         const balance_eth = convertFromWei(web3, accBalance, "ether");
+        //step -> 6 : if account balance less than nft price than return
         if (balance_eth < voucher.amountInEther) {
           dispatch(insufficientBalanceAction());
           return;
         }
       }
 
-      //  network name must be rinkeby
+      //step -> 7 : buy nft
       const resp = await buyNftMetaMask(tokenInstance, walletAddress, voucher);
       if (resp) {
         dispatch(buyInProgressAction(false));
@@ -118,7 +121,6 @@ const EtheriumProvider = ({ children }) => {
     } catch (error) {
       dispatch(buyErrorAction(error));
       dispatch(buyInProgressAction(false));
-      // notfiFail(error.message);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [web3]);
