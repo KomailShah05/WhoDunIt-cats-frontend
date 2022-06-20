@@ -52,6 +52,7 @@ const EtheriumProvider = ({ children }) => {
 
   useEffect(() => {
     checkUserLogin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [web3]);
 
   const checkUserLogin = async () => {
