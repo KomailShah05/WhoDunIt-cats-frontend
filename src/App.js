@@ -21,6 +21,7 @@ import { getMintedTokens } from "./redux/actions/nfts";
 //styles
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./sass/main.scss";
+import { buyErrorSolved } from "./redux/actions/buy-flow";
 
 //assets
 
@@ -29,6 +30,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getMintedTokens());
+    dispatch(buyErrorSolved());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

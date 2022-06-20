@@ -1,7 +1,8 @@
 // libraries
-import { createContext, useCallback } from "react";
+import { createContext, useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Web3 from "web3/dist/web3.min";
+import storage from "redux-persist/lib/storage";
 
 // components
 import { notfiFail } from "../../lib/helper/toast";
@@ -13,6 +14,7 @@ import {
   networkDetails,
   getAccountBalance,
   convertFromWei,
+  getAccountAddress,
 } from "./functions";
 
 // actions
@@ -29,7 +31,7 @@ import {
 
 // constants
 import BLOCKCHAIN_INTERFACES from "../../lib/utills/constants/blockchain-interfaces";
-import { WALLET_ADDRESS } from "../../enviroments";
+import { WALLET_ADDRESS, WALLET_NAME } from "../../enviroments";
 import { eng_lang } from "../../lib/utills/constants";
 
 export const EtheriumContext = createContext({});
@@ -47,6 +49,19 @@ const EtheriumProvider = ({ children }) => {
     BLOCKCHAIN_INTERFACES,
     WALLET_ADDRESS
   );
+
+  useEffect(() => {
+    checkUserLogin();
+  }, [web3]);
+
+  const checkUserLogin = async () => {
+    const resp = await getAccountAddress(web3);
+    if (resp.length === 0) {
+      storage.removeItem("persist:root");
+      return false;
+    }
+    return true;
+  };
 
   // connect with metamask wallet
   const walletConnection = useCallback(async () => {
@@ -69,6 +84,20 @@ const EtheriumProvider = ({ children }) => {
       //  diable buy button
       dispatch(buyInProgressAction(true));
 
+      const isUserLogin = await checkUserLogin();
+
+      // checking network name
+      const networkName = await networkDetails(web3);
+
+      // check if blockchain name is renkeby
+      if (networkName !== WALLET_NAME) {
+        notfiFail(eng_lang.contract_type_msg);
+      }
+
+      if (networkName !== WALLET_NAME || !isUserLogin) {
+        dispatch(buyInProgressAction(false));
+        return;
+      }
       // get account balance
       const accBalance = await getAccountBalance(web3, walletAddress);
 
@@ -80,27 +109,13 @@ const EtheriumProvider = ({ children }) => {
         }
       }
 
-      // checking network name
-      const networkName = await networkDetails(web3);
-
       //  network name must be rinkeby
-      if (networkName === "rinkeby") {
-        const resp = await buyNftMetaMask(
-          tokenInstance,
-          walletAddress,
-          voucher
-        );
-        if (resp) {
-          console.log("resp******", resp);
-          dispatch(buyInProgressAction(false));
-        }
-      } else {
-        notfiFail(eng_lang.contract_type_msg);
+      const resp = await buyNftMetaMask(tokenInstance, walletAddress, voucher);
+      if (resp) {
+        dispatch(buyInProgressAction(false));
       }
     } catch (error) {
-      console.log("error*****", error);
       dispatch(buyErrorAction(error));
-
       dispatch(buyInProgressAction(false));
       // notfiFail(error.message);
     }

@@ -29,6 +29,7 @@ const buyReducer = (state = initialState, action) => {
           errorType: action.payload.errorType,
           errorMsg: action.payload.errorMsg,
         },
+        buyInProgress: false,
       };
     default:
       return state;

@@ -12,3 +12,6 @@ export const API_TIME_OUT = 10000;
 
 // BLOCKCHAIN WALLET ADDRESS
 export const WALLET_ADDRESS = "0x701D9e4ECC4Ee2f55482c0AcaBe86Fd0C807879f";
+
+// WALLET NAME
+export const WALLET_NAME = "rinkeby";

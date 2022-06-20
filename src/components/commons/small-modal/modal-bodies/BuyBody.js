@@ -45,7 +45,7 @@ const BuyBody = ({ voucher, walletAddress }) => {
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
               <img src={golden} alt={golden} />{" "}
-              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
+              {voucher?.amountInEther?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ const BuyBody = ({ voucher, walletAddress }) => {
             <h5 className="text-white">{eng_lang.dollar}200</h5>
             <p>
               <img src={golden} alt={golden} />{" "}
-              {voucher.eth_amount?.toFixed(2) || 0} {eng_lang.eth}
+              {voucher?.amountInEther?.toFixed(2) || 0} {eng_lang.eth}
             </p>
           </div>
         </div>

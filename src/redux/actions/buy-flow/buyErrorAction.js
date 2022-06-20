@@ -12,6 +12,7 @@ const buyErrorAction = (error) => {
           errorMsg: eng_lang.transaction_failed_evm,
         },
       });
+      return;
     }
     if (error?.code === 4001) {
       dispatch({
@@ -22,7 +23,16 @@ const buyErrorAction = (error) => {
           errorMsg: error.message,
         },
       });
+      return;
     }
+    dispatch({
+      type: types.BUY_ERROR,
+      payload: {
+        error: true,
+        errorType: eng_lang.transaction_failed,
+        errorMsg: "ERROR",
+      },
+    });
   };
 };
 
