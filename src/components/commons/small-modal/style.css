@@ -145,6 +145,12 @@
   .sm-modal__wide {
     margin-top: 7.5rem;
   }
+  .sm-modal__img-top {
+    bottom: 2.5rem;
+  }
+  .sm-modal__img-top img {
+    max-width: 5.25rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -167,7 +173,7 @@
   }
   .sm-modal__img-top {
     position: relative;
-    bottom: 3.5rem;
+    bottom: 1rem;
   }
   .sm-modal__img-top img {
     max-width: 5.313rem;

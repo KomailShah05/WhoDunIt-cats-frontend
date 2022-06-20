@@ -139,11 +139,11 @@ export const eng_lang = {
         },
         {
           attribute_name: "Hats",
-          options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
+          options: ["Select Hats", "Hats 1", "Hats 2", "Hats 3"],
         },
         {
-          attribute_name: "Clothes",
-          options: ["Select Clothes", "clothes 1", "clothes 2", "clothes 3"],
+          attribute_name: "Shirts",
+          options: ["Select Shirts", "shirts 1", "shirts 2", "shirts 3"],
         },
       ],
     },
