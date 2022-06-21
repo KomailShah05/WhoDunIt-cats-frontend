@@ -45,6 +45,9 @@
   &__min-width {
     min-width: 77%;
     padding-left: 0 !important;
+    @media (max-width: 2000px) {
+      min-width: 77%;
+    }
     @media screen and (max-width: $breakpoint-lg) {
       min-width: 15.174rem; //242.79px, same as heading
     }
@@ -114,7 +117,7 @@
     max-width: 14rem;
   }
   @media screen and (max-width: $breakpoint-sm) {
-    max-width: 100%;
+    min-width: 100%;
   }
 }
 
