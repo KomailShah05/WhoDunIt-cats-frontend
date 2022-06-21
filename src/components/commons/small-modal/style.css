@@ -47,7 +47,6 @@
   max-width: 7.313rem;
   max-height: 5.25rem;
   position: absolute;
-  top: 3%;
 }
 
 .sm-modal__btn-close {
@@ -145,6 +144,12 @@
   .sm-modal__wide {
     margin-top: 7.5rem;
   }
+  .sm-modal__img-top {
+    bottom: 1.5rem !important;
+  }
+  .sm-modal__img-top img {
+    max-width: 5.25rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -167,9 +172,10 @@
   }
   .sm-modal__img-top {
     position: relative;
-    bottom: 3.5rem;
   }
   .sm-modal__img-top img {
     max-width: 5.313rem;
+    top: 0.38rem;
   }
 }
+/*# sourceMappingURL=style.css.map */

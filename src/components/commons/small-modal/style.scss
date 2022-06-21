@@ -36,7 +36,6 @@
       max-width: 7.313rem; //117px
       max-height: 5.25rem; //84px
       position: absolute;
-      top: 3%;
     }
   }
 
@@ -133,6 +132,12 @@
     &__wide {
       margin-top: 7.5rem;
     }
+    &__img-top {
+      bottom: 1.5rem !important;
+      img {
+        max-width: 5.25rem; //84px
+      }
+    }
   }
   /* Extereme smaal device */
   @media (max-width: 576px) {
@@ -155,9 +160,10 @@
     }
     &__img-top {
       position: relative;
-      bottom: 3.5rem;
+
       img {
         max-width: 5.313rem; //117px
+        top: 0.38rem;
       }
     }
   }

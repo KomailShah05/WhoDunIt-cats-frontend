@@ -36,6 +36,7 @@ export const eng_lang = {
   contract_type_msg: "Transaction can be done by rinkeby etherium",
   insufficient_fund_msg: "Not enough balance to proceed transaction.",
   connect_to_metamask: "Connect  Metamask",
+  user_not_login: "User not connected wallet. Please login again.",
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",
@@ -147,11 +148,11 @@ export const eng_lang = {
         },
         {
           attribute_name: "Hats",
-          options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
+          options: ["Select Hats", "Hats 1", "Hats 2", "Hats 3"],
         },
         {
-          attribute_name: "Clothes",
-          options: ["Select Clothes", "clothes 1", "clothes 2", "clothes 3"],
+          attribute_name: "Shirts",
+          options: ["Select Shirts", "shirts 1", "shirts 2", "shirts 3"],
         },
       ],
     },

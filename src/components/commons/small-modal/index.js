@@ -21,19 +21,25 @@ import "./style.scss";
 
 // assets
 import {
-  Clipper,
+  ClipperPng,
   clipper_loading,
-  success,
+  success_1,
   opensea,
   success_2,
   success_3,
 } from "../../../assets";
 
-const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
+const SmallPopup = ({
+  walletAddress,
+  voucher,
+  buyInProgress,
+  buyError,
+  congrats,
+}) => {
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
 
-  const [modalName, setmodalName] = useState("congrats");
+  const [modalName, setmodalName] = useState("buy");
 
   // show different modal on button clicks
   const handleModalName = async (e) => {
@@ -47,6 +53,8 @@ const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
       setmodalName("loading");
     } else if (buyError.error) {
       setmodalName("error");
+    } else if (congrats) {
+      setmodalName("congrats");
     } else {
       setmodalName("buy");
     }
@@ -87,18 +95,18 @@ const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
               <img
                 src={
                   modalName === "buy"
-                    ? Clipper
+                    ? ClipperPng
                     : modalName === "loading"
                     ? clipper_loading
                     : modalName === "congrats"
-                    ? success
+                    ? success_1
                     : modalName === "error"
                     ? success_2
                     : buyError.errorType === eng_lang.insufficient_fund
                     ? success_3
-                    : Clipper
+                    : ClipperPng
                 }
-                alt={Clipper}
+                alt={ClipperPng}
                 className="sm-modal__cat-img "
               />
             </div>

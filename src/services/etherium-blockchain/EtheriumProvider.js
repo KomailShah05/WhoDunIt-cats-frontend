@@ -27,11 +27,16 @@ import {
   buyInProgressAction,
   buyErrorAction,
   insufficientBalanceAction,
+  newNftMinted,
 } from "../../redux/actions/buy-flow";
 
 // constants
 import BLOCKCHAIN_INTERFACES from "../../lib/utills/constants/blockchain-interfaces";
-import { WALLET_ADDRESS, WALLET_NAME } from "../../enviroments";
+import {
+  CONTRACT_ADDRESS,
+  WALLET_NAME,
+  WEB3_PROVIDER_URL,
+} from "../../enviroments";
 import { eng_lang } from "../../lib/utills/constants";
 
 export const EtheriumContext = createContext({});
@@ -42,12 +47,12 @@ const EtheriumProvider = ({ children }) => {
     voucherReducer: { voucher },
     metaMaskWalletReducer: { walletAddress },
   } = useSelector((state) => state);
-  const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+  const web3 = new Web3(Web3.givenProvider || WEB3_PROVIDER_URL);
 
   // initiate our web 3 with wallet address
   const tokenInstance = new web3.eth.Contract(
     BLOCKCHAIN_INTERFACES,
-    WALLET_ADDRESS
+    CONTRACT_ADDRESS
   );
 
   useEffect(() => {
@@ -88,6 +93,10 @@ const EtheriumProvider = ({ children }) => {
       // step -> 2 : check user is logged in with wallet
       const isUserLogin = await checkUserLogin();
 
+      if (!isUserLogin) {
+        notfiFail(eng_lang.user_not_login);
+      }
+
       // step -> 3 :  get network name
       const networkName = await networkDetails(web3);
 
@@ -116,9 +125,11 @@ const EtheriumProvider = ({ children }) => {
       //step -> 7 : buy nft
       const resp = await buyNftMetaMask(tokenInstance, walletAddress, voucher);
       if (resp) {
-        dispatch(buyInProgressAction(false));
+        // step -> 8 : call new nft mint on success response
+        dispatch(newNftMinted(walletAddress));
       }
     } catch (error) {
+      console.log("error*****", error);
       dispatch(buyErrorAction(error));
       dispatch(buyInProgressAction(false));
     }
