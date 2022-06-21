@@ -11,7 +11,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./style.scss";
 
 // assets
-import { CatOne } from "../../../assets";
+import { CatOnePng } from "../../../assets";
 
 const AttributeSection = () => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
@@ -48,7 +48,7 @@ const AttributeSection = () => {
           />
           <div className="d-flex justify-content-center justify-content-lg-start">
             {" "}
-            <img className="selected-cat" src={CatOne} alt="cat" />
+            <img className="selected-cat" src={CatOnePng} alt="cat" />
           </div>
 
           <div className="d-flex justify-content-between metadata-nft">
