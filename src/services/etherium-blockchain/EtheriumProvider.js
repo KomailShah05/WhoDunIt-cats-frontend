@@ -14,7 +14,6 @@ import {
   networkDetails,
   getAccountBalance,
   convertFromWei,
-  getAccountAddress,
 } from "./functions";
 
 // actions
@@ -58,15 +57,17 @@ const EtheriumProvider = ({ children }) => {
   useEffect(() => {
     checkUserLogin();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [web3]);
+  }, [window.ethereum]);
 
   const checkUserLogin = async () => {
-    const resp = await getAccountAddress(web3);
-    if (resp.length === 0) {
+    if (window.ethereum.selectedAddress) {
+      dispatch(metaMaskWalletConnected(window.ethereum.selectedAddress));
+      return true;
+    } else {
+      dispatch(walletConnectedFail());
       storage.removeItem("persist:root");
       return false;
     }
-    return true;
   };
 
   // connect with metamask wallet
