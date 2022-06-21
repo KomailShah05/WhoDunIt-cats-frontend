@@ -38,6 +38,12 @@
       position: absolute;
     }
   }
+  &__loading-cat-img {
+    top: -0.25rem;
+    @media (max-width: 2000px) {
+      top: 1.25rem !important;
+    }
+  }
 
   &__btn-close {
     box-sizing: content-box;

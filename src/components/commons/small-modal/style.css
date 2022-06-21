@@ -49,6 +49,16 @@
   position: absolute;
 }
 
+.sm-modal__loading-cat-img {
+  top: -0.25rem;
+}
+
+@media (max-width: 2000px) {
+  .sm-modal__loading-cat-img {
+    top: 1.25rem !important;
+  }
+}
+
 .sm-modal__btn-close {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;

@@ -32,6 +32,7 @@ import CatFivePng from "./images/cat-5.png";
 import success_1 from "./images/Success_1.png";
 import success_2 from "./images/Success_2.png";
 import success_3 from "./images/success_3.png";
+import blinking_cat from "./images/blinking-cat.gif";
 
 // exports
 export {
@@ -68,4 +69,5 @@ export {
   success_1,
   success_2,
   success_3,
+  blinking_cat,
 };
