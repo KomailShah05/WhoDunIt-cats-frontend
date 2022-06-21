@@ -43,7 +43,9 @@ const insufficientBalanceAction = (balance_eth, nftPrice) => {
       payload: {
         error: true,
         errorType: eng_lang.insufficient_fund,
-        errorMsg: `Nft price is ${nftPrice} and your balance ${balance_eth}`,
+        errorMsg: `Nft price is ${nftPrice?.toFixed(
+          4
+        )} and your balance ${balance_eth}`,
       },
     });
   };
