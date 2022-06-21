@@ -14,7 +14,6 @@ import {
   networkDetails,
   getAccountBalance,
   convertFromWei,
-  getAccountAddress,
 } from "./functions";
 
 // actions
@@ -58,15 +57,17 @@ const EtheriumProvider = ({ children }) => {
   useEffect(() => {
     checkUserLogin();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [web3]);
+  }, [window.ethereum]);
 
   const checkUserLogin = async () => {
-    const resp = await getAccountAddress(web3);
-    if (resp.length === 0) {
+    if (window.ethereum.selectedAddress) {
+      dispatch(metaMaskWalletConnected(window.ethereum.selectedAddress));
+      return true;
+    } else {
+      dispatch(walletConnectedFail());
       storage.removeItem("persist:root");
       return false;
     }
-    return true;
   };
 
   // connect with metamask wallet
@@ -117,7 +118,9 @@ const EtheriumProvider = ({ children }) => {
         const balance_eth = convertFromWei(web3, accBalance, "ether");
         //step -> 6 : if account balance less than nft price than return
         if (balance_eth < voucher.amountInEther) {
-          dispatch(insufficientBalanceAction());
+          dispatch(
+            insufficientBalanceAction(balance_eth, voucher.amountInEther)
+          );
           return;
         }
       }
@@ -127,10 +130,9 @@ const EtheriumProvider = ({ children }) => {
       if (resp) {
         // step -> 8 : call new nft mint on success response
         dispatch(newNftMinted(walletAddress, resp));
-        console.log("resp", resp);
       }
     } catch (error) {
-      console.log("error*****", error);
+      console.log("error", error);
       dispatch(buyErrorAction(error));
       dispatch(buyInProgressAction(false));
     }

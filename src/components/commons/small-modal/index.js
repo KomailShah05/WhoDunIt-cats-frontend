@@ -14,7 +14,10 @@ import {
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
-import { buyErrorSolved } from "../../../redux/actions/buy-flow";
+import {
+  buyErrorSolved,
+  resetTokenAndMint,
+} from "../../../redux/actions/buy-flow";
 import { showModalAction } from "../../../redux/actions/nfts";
 import { OPEN_SEA_URL } from "../../../enviroments";
 
@@ -66,9 +69,9 @@ const SmallPopup = ({
   const handleClose = () => {
     dispatch(buyErrorSolved());
     dispatch(showModalAction(""));
+    dispatch(resetTokenAndMint());
   };
 
-  console.log("tokenId", tokenId);
   const handleOpenSeaUrl = () => {
     window.open(`${OPEN_SEA_URL}${tokenId}`, "_blank");
   };

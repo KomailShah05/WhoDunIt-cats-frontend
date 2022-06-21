@@ -2,6 +2,7 @@ import { types } from "../../types";
 import { api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
 import { buyInProgressAction, newNftMintApiError, buyErrorSolved } from ".";
+import { getMintedTokens } from "../nfts";
 
 const newNftMinted = (walletAddress, respBlk) => {
   return async function (dispatch) {
@@ -35,6 +36,7 @@ const newNftMintedSuccess = (response, respBlk) => {
     });
     dispatch(buyErrorSolved());
     dispatch(buyInProgressAction(false));
+    dispatch(getMintedTokens());
   };
 };
 const newNftMintedFail = (error) => {

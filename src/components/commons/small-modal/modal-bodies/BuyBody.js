@@ -49,10 +49,10 @@ const BuyBody = ({ voucher, walletAddress }) => {
             </p>
           </div>
         </div>
-        <div className="d-flex justify-content-between">
+        {/* <div className="d-flex justify-content-between">
           <p>{eng_lang.buy_flow_modal.transaction_fee}</p>
           <h5 className="text-white">{eng_lang.dollar}200</h5>
-        </div>
+        </div> */}
         <img src={Undeline} alt="Undeline" className="w-100" />
         <div className="d-flex justify-content-between ">
           <p>{eng_lang.buy_flow_modal.total_price}</p>
