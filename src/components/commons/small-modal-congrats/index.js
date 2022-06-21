@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // components
 import { BlockButton } from "../../commons";
@@ -12,7 +12,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import "./style.scss";
 
 // assets
-import { success, opensea } from "../../../assets";
+import { success_1, opensea } from "../../../assets";
 
 const SmallPopupCongrats = () => {
   const [modalName, setmodalName] = useState("congrats");
@@ -34,7 +34,11 @@ const SmallPopupCongrats = () => {
         <div className={`modal-dialog modal-dialog-centered sm-modal__wide `}>
           <div className="modal-content sm-modal__bg-color">
             <div className="d-flex justify-content-center sm-modal__img-top">
-              <img src={success} alt={success} className="sm-modal__cat-img " />
+              <img
+                src={success_1}
+                alt={success_1}
+                className="sm-modal__cat-img "
+              />
             </div>
             <div className="d-flex justify-content-end sm-modal__padding-sm">
               <button

@@ -12,7 +12,7 @@ const Card = () => {
   const available = true;
   return (
     <>
-      <div className="col-lg-4 col-md-6 card-size">
+      <div className="col-lg-4 col-md-6 card-size skeleton">
         <img src={CatOne} alt="cat" tabIndex="0" />
       </div>
       <div className="col-lg-4 col-md-6 card-size">

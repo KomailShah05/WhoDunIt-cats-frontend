@@ -11,6 +11,19 @@
     &:focus {
       outline: 4px solid $maroon;
     }
+    &.skeleton {
+      opacity: 0.7;
+      animation: skeleton-loading 1s linear infinite alternate;
+    }
+    @keyframes skeleton-loading {
+      0% {
+        background-color: hsl(200, 20%, 70%);
+      }
+
+      100% {
+        background-color: hsl(200, 20%, 95%);
+      }
+    }
   }
   img + img {
     margin-right: $size-30;

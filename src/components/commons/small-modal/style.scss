@@ -36,7 +36,6 @@
       max-width: 7.313rem; //117px
       max-height: 5.25rem; //84px
       position: absolute;
-      top: 3%;
     }
   }
 
@@ -134,7 +133,7 @@
       margin-top: 7.5rem;
     }
     &__img-top {
-      bottom: 2.5rem;
+      bottom: 2rem !important;
       img {
         max-width: 5.25rem; //84px
       }
@@ -161,9 +160,9 @@
     }
     &__img-top {
       position: relative;
-      bottom: 1rem;
       img {
         max-width: 5.313rem; //117px
+        top: 0.4rem;
       }
     }
   }

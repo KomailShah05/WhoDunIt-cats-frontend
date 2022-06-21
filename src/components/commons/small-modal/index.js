@@ -21,9 +21,9 @@ import "./style.scss";
 
 // assets
 import {
-  Clipper,
+  ClipperPng,
   clipper_loading,
-  success,
+  success_1,
   opensea,
   success_2,
   success_3,
@@ -87,18 +87,18 @@ const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
               <img
                 src={
                   modalName === "buy"
-                    ? Clipper
+                    ? ClipperPng
                     : modalName === "loading"
                     ? clipper_loading
                     : modalName === "congrats"
-                    ? success
+                    ? success_1
                     : modalName === "error"
                     ? success_2
                     : buyError.errorType === eng_lang.insufficient_fund
                     ? success_3
-                    : Clipper
+                    : ClipperPng
                 }
-                alt={Clipper}
+                alt={ClipperPng}
                 className="sm-modal__cat-img "
               />
             </div>
