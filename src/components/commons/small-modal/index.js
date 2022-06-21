@@ -29,11 +29,17 @@ import {
   success_3,
 } from "../../../assets";
 
-const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
+const SmallPopup = ({
+  walletAddress,
+  voucher,
+  buyInProgress,
+  buyError,
+  congrats,
+}) => {
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
 
-  const [modalName, setmodalName] = useState("congrats");
+  const [modalName, setmodalName] = useState("buy");
 
   // show different modal on button clicks
   const handleModalName = async (e) => {
@@ -47,6 +53,8 @@ const SmallPopup = ({ walletAddress, voucher, buyInProgress, buyError }) => {
       setmodalName("loading");
     } else if (buyError.error) {
       setmodalName("error");
+    } else if (congrats) {
+      setmodalName("congrats");
     } else {
       setmodalName("buy");
     }

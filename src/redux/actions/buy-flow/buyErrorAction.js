@@ -49,6 +49,19 @@ const insufficientBalanceAction = () => {
   };
 };
 
+const newNftMintApiError = (error) => {
+  return function (dispatch) {
+    dispatch({
+      type: types.BUY_ERROR,
+      payload: {
+        error: true,
+        errorType: eng_lang.transaction_failed,
+        errorMsg: error?.response?.data?.error,
+      },
+    });
+  };
+};
+
 const buyErrorSolved = () => {
   return function (dispatch) {
     dispatch({
@@ -59,7 +72,16 @@ const buyErrorSolved = () => {
         errorMsg: "",
       },
     });
+    dispatch({
+      type: types.MINT_SUCCESFULL,
+      payload: false,
+    });
   };
 };
 
-export { insufficientBalanceAction, buyErrorAction, buyErrorSolved };
+export {
+  insufficientBalanceAction,
+  buyErrorAction,
+  buyErrorSolved,
+  newNftMintApiError,
+};
