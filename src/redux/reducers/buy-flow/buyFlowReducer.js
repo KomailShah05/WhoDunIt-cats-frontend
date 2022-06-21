@@ -7,6 +7,7 @@ const initialState = {
     errorType: "",
     errorMsg: "",
   },
+  congrats: false,
 };
 
 const buyReducer = (state = initialState, action) => {
@@ -30,6 +31,11 @@ const buyReducer = (state = initialState, action) => {
           errorMsg: action.payload.errorMsg,
         },
         buyInProgress: false,
+      };
+    case types.MINT_SUCCESFULL:
+      return {
+        ...state,
+        congrats: action.payload,
       };
     default:
       return state;

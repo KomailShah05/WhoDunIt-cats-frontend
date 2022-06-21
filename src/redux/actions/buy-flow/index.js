@@ -4,7 +4,9 @@ import {
   buyErrorAction,
   insufficientBalanceAction,
   buyErrorSolved,
+  newNftMintApiError,
 } from "./buyErrorAction";
+import newNftMinted from "./newNftMinted";
 
 export {
   buyInProgressAction,
@@ -12,4 +14,6 @@ export {
   buyErrorAction,
   insufficientBalanceAction,
   buyErrorSolved,
+  newNftMinted,
+  newNftMintApiError,
 };
