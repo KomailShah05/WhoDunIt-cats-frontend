@@ -36,14 +36,14 @@ const buyErrorAction = (error) => {
   };
 };
 
-const insufficientBalanceAction = () => {
+const insufficientBalanceAction = (balance_eth, nftPrice) => {
   return function (dispatch) {
     dispatch({
       type: types.BUY_ERROR,
       payload: {
         error: true,
         errorType: eng_lang.insufficient_fund,
-        errorMsg: eng_lang.insufficient_fund_msg,
+        errorMsg: `Nft price is ${nftPrice} and your balance ${balance_eth}`,
       },
     });
   };

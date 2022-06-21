@@ -2,6 +2,7 @@ import { types } from "../../types";
 import { api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
 import { buyInProgressAction, newNftMintApiError, buyErrorSolved } from ".";
+import { getMintedTokens } from "../nfts";
 
 const newNftMinted = (walletAddress, respBlk) => {
   return async function (dispatch) {

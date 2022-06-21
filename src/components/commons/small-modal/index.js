@@ -68,7 +68,6 @@ const SmallPopup = ({
     dispatch(showModalAction(""));
   };
 
-  console.log("tokenId", tokenId);
   const handleOpenSeaUrl = () => {
     window.open(`${OPEN_SEA_URL}${tokenId}`, "_blank");
   };
