@@ -142,6 +142,13 @@
   margin-bottom: 0.25rem;
 }
 
+@media (max-width: 1400px) {
+  .card-size.unavailable .overlay-on-hover p.overlay-header {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
 .card-size.unavailable .overlay-on-hover p.overlay-description {
   background: none;
   border: none;
@@ -149,6 +156,13 @@
   font-size: 0.75rem;
   line-height: 1rem;
   color: #ffffff;
+}
+
+@media (max-width: 1400px) {
+  .card-size.unavailable .overlay-on-hover p.overlay-description {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -168,10 +182,17 @@
   color: #000000;
 }
 
+@media (max-width: 1400px) {
+  .card-size.unavailable .overlay-on-hover .opensea-btn {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .card-size.unavailable .overlay-on-hover .opensea-btn {
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
   }
 }
 

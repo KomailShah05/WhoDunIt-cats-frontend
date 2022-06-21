@@ -101,6 +101,10 @@
         line-height: $size-16;
         font-weight: $font-weight-regular;
         margin-bottom: $size-4;
+        @media (max-width: 1400px) {
+          font-size: $size-14;
+          line-height: $size-16;
+        }
       }
       & p.overlay-description {
         background: none;
@@ -109,6 +113,10 @@
         font-size: $size-12;
         line-height: $size-16;
         color: $white;
+        @media (max-width: 1400px) {
+          font-size: $size-10;
+          line-height: $size-12;
+        }
         @media screen and (max-width: $breakpoint-xs) {
           font-size: $size-10;
           line-height: $size-12;
@@ -122,9 +130,13 @@
         font-size: $size-16;
         line-height: $size-16;
         color: $black;
+        @media (max-width: 1400px) {
+          font-size: $size-10;
+          line-height: $size-12;
+        }
         @media screen and (max-width: $breakpoint-xs) {
-          font-size: $size-12;
-          line-height: $size-16;
+          font-size: $size-12 !important;
+          line-height: $size-16 !important;
         }
       }
     }
