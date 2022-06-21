@@ -152,9 +152,9 @@
     &__wide {
       margin-top: 7.5rem;
     }
-    &__img-top {
-      bottom: 5rem !important;
-    }
+    // &__img-top {
+    //   bottom: 5rem !important;
+    // }
   }
   /* Extereme smaal device */
   @media (max-width: 576px) {
@@ -180,6 +180,7 @@
       bottom: 3.3rem !important;
       img {
         max-width: 4.313rem; //117px
+        top: 0.5rem;
       }
     }
   }

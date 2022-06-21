@@ -169,9 +169,6 @@
   .sm-modal__wide {
     margin-top: 7.5rem;
   }
-  .sm-modal__img-top {
-    bottom: 5rem !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -198,6 +195,7 @@
   }
   .sm-modal__img-top img {
     max-width: 4.313rem;
+    top: 0.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

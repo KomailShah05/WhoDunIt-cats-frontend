@@ -133,7 +133,7 @@
       margin-top: 7.5rem;
     }
     &__img-top {
-      bottom: 2rem !important;
+      bottom: 1.5rem !important;
       img {
         max-width: 5.25rem; //84px
       }
@@ -160,9 +160,10 @@
     }
     &__img-top {
       position: relative;
+
       img {
         max-width: 5.313rem; //117px
-        top: 0.4rem;
+        top: 0.38rem;
       }
     }
   }

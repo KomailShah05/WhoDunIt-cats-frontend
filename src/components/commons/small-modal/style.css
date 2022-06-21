@@ -145,7 +145,7 @@
     margin-top: 7.5rem;
   }
   .sm-modal__img-top {
-    bottom: 2rem !important;
+    bottom: 1.5rem !important;
   }
   .sm-modal__img-top img {
     max-width: 5.25rem;
@@ -175,7 +175,7 @@
   }
   .sm-modal__img-top img {
     max-width: 5.313rem;
-    top: 0.4rem;
+    top: 0.38rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
