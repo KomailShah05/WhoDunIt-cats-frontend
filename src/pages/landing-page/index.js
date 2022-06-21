@@ -23,7 +23,7 @@ import Toast from "../../lib/helper/toast";
 
 const LandingPage = () => {
   const {
-    nftsReducer: { totalMinted, btnLoading },
+    nftsReducer: { totalMinted, btnLoading, showModal },
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
     buyReducer: { buyInProgress, buyError, congrats },
@@ -43,6 +43,7 @@ const LandingPage = () => {
         walletAddress={walletAddress}
         voucherLoading={voucherLoading}
         voucher={voucher}
+        showModal={showModal}
       />
       <SmallPopup
         voucher={voucher}
@@ -50,6 +51,7 @@ const LandingPage = () => {
         buyInProgress={buyInProgress}
         buyError={buyError}
         congrats={congrats}
+        showModal={showModal}
       />
       <Footer />
       <Toast />

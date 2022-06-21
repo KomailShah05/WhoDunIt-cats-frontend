@@ -9,6 +9,7 @@ import { BlockButton } from "../../commons";
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 import { createNewVoucher } from "../../../redux/actions/voucher";
+import { showModalAction } from "../../../redux/actions/nfts";
 
 // style
 import "./style.scss";
@@ -22,17 +23,23 @@ const PopUp = ({
   btnLoading,
   walletAddress,
   voucherLoading,
+  showModal,
 }) => {
   const { walletConnection } = useContext(EtheriumContext);
   const dispatch = useDispatch();
   const handleVoucher = () => {
     dispatch(createNewVoucher(walletAddress));
   };
+  const handleModal = (modalName) => {
+    dispatch(showModalAction(modalName));
+  };
 
   return (
     <>
       <div
-        className="modal fade"
+        className={`modal fade ${
+          showModal === eng_lang.conncetToBuy && "show d-block"
+        }`}
         id="exampleModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -46,6 +53,7 @@ const PopUp = ({
                 className="modal__btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={() => handleModal("")}
               ></button>
             </div>
             <div className="modal-body modal__padding-body row ">

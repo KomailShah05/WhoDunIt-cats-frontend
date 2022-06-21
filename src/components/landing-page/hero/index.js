@@ -1,9 +1,11 @@
 // libraries
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 //constants
 import { eng_lang, routes } from "../../../lib/utills/constants";
+import { showModalAction } from "../../../redux/actions/nfts";
 
 // styles
 import "./index.scss";
@@ -12,7 +14,12 @@ import "./index.scss";
 import { Underline } from "../../../assets";
 
 const HeroSection = () => {
+  const dispatch = useDispatch();
   const url = window.location.pathname;
+
+  const handleModalOpen = () => {
+    dispatch(showModalAction("conncetToBuy"));
+  };
   return (
     <div className="hero">
       <div className="container d-md-flex hero-content justify-content-lg-end justify-content-center  text-white">
@@ -38,8 +45,9 @@ const HeroSection = () => {
             <button
               className="btn btn-primary hero-card-btn join_hunt_text"
               data-mdb-ripple-color="primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              // data-bs-toggle="modal"
+              // data-bs-target="#exampleModal"
+              onClick={handleModalOpen}
             >
               {eng_lang.buttonConstants.join_hunt_text}
             </button>

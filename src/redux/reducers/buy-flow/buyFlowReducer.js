@@ -31,6 +31,7 @@ const buyReducer = (state = initialState, action) => {
           errorMsg: action.payload.errorMsg,
         },
         buyInProgress: false,
+        congrats: false,
       };
     case types.MINT_SUCCESFULL:
       return {

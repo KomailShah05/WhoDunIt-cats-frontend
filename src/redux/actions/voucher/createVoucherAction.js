@@ -6,9 +6,10 @@ import { types } from "../../types";
 
 // actions
 import { voucherLoading } from "./index";
+import { showModalAction } from "../nfts";
 
 // constants
-import { api_routes } from "../../../lib/utills/constants";
+import { api_routes, eng_lang } from "../../../lib/utills/constants";
 
 const createNewVoucher = (walletAddress) => {
   return async function (dispatch) {
@@ -32,9 +33,7 @@ const createVoucherSuccess = (voucher) => {
       type: types.CREATE_VOUCHER,
       payload: voucher,
     });
-    var element = document.getElementById("smallModal");
-    element.classList.add("d-block");
-    element.classList.add("show");
+    dispatch(showModalAction(eng_lang.buyModal));
     dispatch(voucherLoading(false));
   };
 };
@@ -45,6 +44,8 @@ const createVoucherFailure = () => {
       type: types.CREATE_VOUCHER,
       payload: {},
     });
+    dispatch(showModalAction(eng_lang.conncetToBuy));
+
     dispatch(voucherLoading(false));
   };
 };
