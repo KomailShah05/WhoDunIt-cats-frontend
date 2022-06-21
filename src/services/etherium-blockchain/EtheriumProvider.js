@@ -126,7 +126,8 @@ const EtheriumProvider = ({ children }) => {
       const resp = await buyNftMetaMask(tokenInstance, walletAddress, voucher);
       if (resp) {
         // step -> 8 : call new nft mint on success response
-        dispatch(newNftMinted(walletAddress));
+        dispatch(newNftMinted(walletAddress, resp));
+        console.log("resp", resp);
       }
     } catch (error) {
       console.log("error*****", error);

@@ -3,22 +3,23 @@ import { api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
 import { buyInProgressAction, newNftMintApiError } from ".";
 
-const newNftMinted = (walletAddress) => {
+const newNftMinted = (walletAddress, respBlk) => {
   return async function (dispatch) {
     try {
       const payload = {
         walletAddress,
       };
+
       const resp = await postRequest(api_routes.NEW_NFT_MINTED, payload);
       if (resp) {
-        dispatch(newNftMintedSuccess(resp));
+        dispatch(newNftMintedSuccess(resp, respBlk));
       }
     } catch (error) {
       dispatch(newNftMintedFail(error));
     }
   };
 };
-const newNftMintedSuccess = (response) => {
+const newNftMintedSuccess = (response, respBlk) => {
   return function (dispatch) {
     dispatch({
       type: types.NEW_NFT_MINTED,
@@ -27,6 +28,10 @@ const newNftMintedSuccess = (response) => {
     dispatch({
       type: types.MINT_SUCCESFULL,
       payload: true,
+    });
+    dispatch({
+      type: types.TOKEN_ID,
+      payload: respBlk?.events?.Transfer?.returnValues?.tokenId,
     });
     dispatch(buyInProgressAction(false));
   };
@@ -40,6 +45,10 @@ const newNftMintedFail = (error) => {
     dispatch({
       type: types.MINT_SUCCESFULL,
       payload: false,
+    });
+    dispatch({
+      type: types.TOKEN_ID,
+      payload: "",
     });
     dispatch(buyInProgressAction(false));
     dispatch(newNftMintApiError(error));

@@ -13,6 +13,12 @@ export const API_TIME_OUT = 10000;
 // BLOCKCHAIN WALLET ADDRESS
 export const CONTRACT_ADDRESS = "0x4679ad22841935efdfb0157BB2e64bc2510C8e40";
 
+// BASE OPEN SEA URL
+export const BASE_OPEN_SEA_URL = "https://testnets.opensea.io/";
+
+// OPEN SEA URL
+export const OPEN_SEA_URL = `${BASE_OPEN_SEA_URL}assets/rinkeby/${CONTRACT_ADDRESS}/`;
+
 // WALLET NAME
 export const WALLET_NAME = "rinkeby";
 
