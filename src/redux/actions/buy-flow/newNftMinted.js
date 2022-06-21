@@ -35,6 +35,7 @@ const newNftMintedSuccess = (response, respBlk) => {
     });
     dispatch(buyErrorSolved());
     dispatch(buyInProgressAction(false));
+    dispatch(getMintedTokens());
   };
 };
 const newNftMintedFail = (error) => {
