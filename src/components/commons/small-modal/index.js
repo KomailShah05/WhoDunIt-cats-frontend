@@ -14,6 +14,7 @@ import {
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
+import { landinPageProps } from "../../../pages/landing-page";
 import {
   buyErrorSolved,
   resetTokenAndMint,
@@ -34,18 +35,18 @@ import {
   success_3,
 } from "../../../assets";
 
-const SmallPopup = ({
-  walletAddress,
-  voucher,
-  buyInProgress,
-  buyError,
-  congrats,
-  showModal,
-  tokenId,
-}) => {
+const SmallPopup = () => {
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
-
+  const {
+    walletAddress,
+    voucher,
+    buyInProgress,
+    buyError,
+    congrats,
+    showModal,
+    tokenId,
+  } = useContext(landinPageProps);
   const [modalName, setmodalName] = useState("loading");
 
   // show different modal on button clicks

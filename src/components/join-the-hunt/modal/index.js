@@ -8,6 +8,7 @@ import { BlockButton } from "../../commons";
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
+import { landinPageProps } from "../../../pages/landing-page";
 import { createNewVoucher } from "../../../redux/actions/voucher";
 import { showModalAction } from "../../../redux/actions/nfts";
 
@@ -17,15 +18,16 @@ import "./style.scss";
 // assets
 import { brown_cat, cat } from "../../../assets";
 
-const PopUp = ({
-  totalMinted,
-  walletConnected,
-  btnLoading,
-  walletAddress,
-  voucherLoading,
-  showModal,
-}) => {
+const PopUp = () => {
   const { walletConnection } = useContext(EtheriumContext);
+  const {
+    totalMinted,
+    walletConnected,
+    btnLoading,
+    walletAddress,
+    voucherLoading,
+    showModal,
+  } = useContext(landinPageProps);
   const dispatch = useDispatch();
   const handleVoucher = () => {
     dispatch(createNewVoucher(walletAddress));

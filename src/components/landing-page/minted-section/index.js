@@ -1,13 +1,15 @@
 // libraries
-import React from "react";
+import React, { useContext } from "react";
 
 //constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { landinPageProps } from "../../../pages/landing-page";
 
 //styles
 import "./index.scss";
 
-const MintedSection = ({ totalMinted }) => {
+const MintedSection = () => {
+  const { totalMinted } = useContext(landinPageProps);
   return (
     <section id="minted">
       <div className="container-xl">
