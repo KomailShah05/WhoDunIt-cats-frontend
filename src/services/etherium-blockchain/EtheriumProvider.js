@@ -130,10 +130,9 @@ const EtheriumProvider = ({ children }) => {
       if (resp) {
         // step -> 8 : call new nft mint on success response
         dispatch(newNftMinted(walletAddress, resp));
-        console.log("resp", resp);
       }
     } catch (error) {
-      console.log("error*****", error);
+      console.log("error", error);
       dispatch(buyErrorAction(error));
       dispatch(buyInProgressAction(false));
     }
