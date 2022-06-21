@@ -3,6 +3,7 @@ import { types } from "../../types";
 const initialState = {
   totalMinted: 0,
   btnLoading: false,
+  showModal: "",
 };
 
 const nftsReducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const nftsReducer = (state = initialState, action) => {
       return {
         ...state,
         btnLoading: action.payload,
+      };
+    case types.SHOW_MODAL:
+      return {
+        ...state,
+        showModal: action.payload,
       };
     default:
       return state;

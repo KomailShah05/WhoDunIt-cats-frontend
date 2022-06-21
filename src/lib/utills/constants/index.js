@@ -37,6 +37,8 @@ export const eng_lang = {
   insufficient_fund_msg: "Not enough balance to proceed transaction.",
   connect_to_metamask: "Connect  Metamask",
   user_not_login: "User not connected wallet. Please login again.",
+  conncetToBuy: "conncetToBuy",
+  buyModal: "buyModal",
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",

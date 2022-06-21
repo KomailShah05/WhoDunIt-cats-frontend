@@ -15,6 +15,7 @@ import {
 import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 import { buyErrorSolved } from "../../../redux/actions/buy-flow";
+import { showModalAction } from "../../../redux/actions/nfts";
 
 // style
 import "./style.scss";
@@ -35,6 +36,7 @@ const SmallPopup = ({
   buyInProgress,
   buyError,
   congrats,
+  showModal,
 }) => {
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
@@ -58,26 +60,19 @@ const SmallPopup = ({
     } else {
       setmodalName("buy");
     }
-  }, [buyInProgress, buyError]);
+  }, [buyInProgress, buyError, congrats]);
 
   const handleClose = () => {
     dispatch(buyErrorSolved());
-
-    var element = document?.getElementById("smallModal");
-    element?.classList?.remove("d-block");
-    element?.classList?.remove("show");
-    document
-      ?.getElementsByClassName("modal-backdrop")[0]
-      ?.classList?.remove("show");
-    document
-      ?.getElementsByClassName("modal-backdrop")[0]
-      ?.classList?.remove("modal-backdrop");
+    dispatch(showModalAction(""));
   };
 
   return (
     <>
       <div
-        className={`modal fade sm-modal `}
+        className={`modal fade sm-modal ${
+          showModal === eng_lang.buyModal && "show d-block"
+        }`}
         id="smallModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
