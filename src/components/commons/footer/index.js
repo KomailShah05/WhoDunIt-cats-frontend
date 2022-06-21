@@ -18,38 +18,37 @@ const Footer = () => {
         <div className="row align-items-center text-center text-lg-start">
           <div className="col-lg-5">
             <ul className="list-unstyled list">
-              <Link to={"/"}>
-                <li>{eng_lang.footer.terms_and_conditions}</li>
-              </Link>
-              <Link to={"/"}>
+              <li>
                 {" "}
-                <li>{eng_lang.footer.support_email}</li>
-              </Link>
-
+                <Link to={"/"}>{eng_lang.footer.terms_and_conditions} </Link>
+              </li>{" "}
+              <li>
+                <Link to={"/"}>{eng_lang.footer.support_email} </Link>
+              </li>
               <li className="list__copyrights">{eng_lang.footer.copyrights}</li>
             </ul>
           </div>
           <div className="col-lg-3 ">
             {" "}
             <ul className="list-unstyled list ">
-              <Link to={"/"}>
-                <li>
+              <li>
+                <Link to={"/"}>
                   <img src={TwitterIcon} alt="twitter" />
                   {eng_lang.footer.twitter}
-                </li>
-              </Link>
-              <Link to={"/"}>
-                <li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/"}>
                   <img src={DiscordIcon} alt="discord" />
                   {eng_lang.footer.discord}
-                </li>
-              </Link>
-              <Link to={"/"}>
-                <li>
+                </Link>
+              </li>
+              <li>
+                <Link to={"/"}>
                   <img src={InstagramIcon} alt="instagram" />
                   {eng_lang.footer.instagram}
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
           </div>
 

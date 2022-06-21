@@ -43,12 +43,12 @@
   margin-right: 1rem;
 }
 
-.list a li {
+.list li a {
   color: #ffffff;
 }
 
-.list a li:hover {
-  color: #999999;
+.list li a:hover {
+  color: #999999 !important;
 }
 
 @media screen and (max-width: 768px) {
