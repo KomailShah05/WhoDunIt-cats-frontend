@@ -26,7 +26,7 @@ const LandingPage = () => {
     nftsReducer: { totalMinted, btnLoading, showModal },
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
-    buyReducer: { buyInProgress, buyError, congrats },
+    buyReducer: { buyInProgress, buyError, congrats, tokenId },
   } = useSelector((state) => state);
 
   return (
@@ -52,6 +52,7 @@ const LandingPage = () => {
         buyError={buyError}
         congrats={congrats}
         showModal={showModal}
+        tokenId={tokenId}
       />
       <Footer />
       <Toast />

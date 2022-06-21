@@ -16,6 +16,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 import { buyErrorSolved } from "../../../redux/actions/buy-flow";
 import { showModalAction } from "../../../redux/actions/nfts";
+import { OPEN_SEA_URL } from "../../../enviroments";
 
 // style
 import "./style.scss";
@@ -37,6 +38,7 @@ const SmallPopup = ({
   buyError,
   congrats,
   showModal,
+  tokenId,
 }) => {
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
@@ -44,8 +46,7 @@ const SmallPopup = ({
   const [modalName, setmodalName] = useState("buy");
 
   // show different modal on button clicks
-  const handleModalName = async (e) => {
-    // setmodalName(e.target.name);
+  const handleModalName = () => {
     buyNft(voucher.wallet_id, voucher, voucher.signature);
   };
 
@@ -65,6 +66,11 @@ const SmallPopup = ({
   const handleClose = () => {
     dispatch(buyErrorSolved());
     dispatch(showModalAction(""));
+  };
+
+  console.log("tokenId", tokenId);
+  const handleOpenSeaUrl = () => {
+    window.open(`${OPEN_SEA_URL}${tokenId}`, "_blank");
   };
 
   return (
@@ -153,7 +159,7 @@ const SmallPopup = ({
                         text={eng_lang.view_on_open_sea}
                         imgPath={opensea}
                         name={"opensea"}
-                        handleClick={() => {}}
+                        handleClick={handleOpenSeaUrl}
                         secondary={true}
                       />
                     </div>

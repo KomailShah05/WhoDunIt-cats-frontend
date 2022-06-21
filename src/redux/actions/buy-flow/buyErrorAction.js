@@ -76,6 +76,10 @@ const buyErrorSolved = () => {
       type: types.MINT_SUCCESFULL,
       payload: false,
     });
+    dispatch({
+      type: types.TOKEN_ID,
+      payload: "",
+    });
   };
 };
 
