@@ -117,7 +117,9 @@ const EtheriumProvider = ({ children }) => {
         const balance_eth = convertFromWei(web3, accBalance, "ether");
         //step -> 6 : if account balance less than nft price than return
         if (balance_eth < voucher.amountInEther) {
-          dispatch(insufficientBalanceAction());
+          dispatch(
+            insufficientBalanceAction(balance_eth, voucher.amountInEther)
+          );
           return;
         }
       }
