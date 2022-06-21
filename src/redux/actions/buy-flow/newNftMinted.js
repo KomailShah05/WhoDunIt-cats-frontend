@@ -1,7 +1,7 @@
 import { types } from "../../types";
 import { api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
-import { buyInProgressAction, newNftMintApiError } from ".";
+import { buyInProgressAction, newNftMintApiError, buyErrorSolved } from ".";
 
 const newNftMinted = (walletAddress, respBlk) => {
   return async function (dispatch) {
@@ -33,6 +33,7 @@ const newNftMintedSuccess = (response, respBlk) => {
       type: types.TOKEN_ID,
       payload: respBlk?.events?.Transfer?.returnValues?.tokenId,
     });
+    dispatch(buyErrorSolved());
     dispatch(buyInProgressAction(false));
   };
 };

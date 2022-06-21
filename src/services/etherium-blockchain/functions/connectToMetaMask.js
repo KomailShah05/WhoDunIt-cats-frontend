@@ -17,6 +17,7 @@ const connectToMetaMask = () => {
       alert("install metamask extension!!");
       reject("install metamask extension!!");
       window.open("https://metamask.io/download/", "_blank");
+      window.location.reload();
     }
   });
 };

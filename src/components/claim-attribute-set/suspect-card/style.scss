@@ -12,9 +12,6 @@
       outline: 4px solid $maroon;
     }
   }
-  img + img {
-    margin-right: $size-30;
-  }
 
   &.unavailable {
     position: relative;

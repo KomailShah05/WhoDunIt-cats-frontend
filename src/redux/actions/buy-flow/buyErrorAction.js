@@ -72,6 +72,11 @@ const buyErrorSolved = () => {
         errorMsg: "",
       },
     });
+  };
+};
+
+const resetTokenAndMint = () => {
+  return function (dispatch) {
     dispatch({
       type: types.MINT_SUCCESFULL,
       payload: false,
@@ -82,10 +87,10 @@ const buyErrorSolved = () => {
     });
   };
 };
-
 export {
   insufficientBalanceAction,
   buyErrorAction,
   buyErrorSolved,
   newNftMintApiError,
+  resetTokenAndMint,
 };
