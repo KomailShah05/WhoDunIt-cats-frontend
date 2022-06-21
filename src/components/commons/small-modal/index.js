@@ -24,7 +24,7 @@ import "./style.scss";
 // assets
 import {
   ClipperPng,
-  clipper_loading,
+  blinking_cat,
   success_1,
   opensea,
   success_2,
@@ -43,7 +43,7 @@ const SmallPopup = ({
   const dispatch = useDispatch();
   const { buyNft } = useContext(EtheriumContext);
 
-  const [modalName, setmodalName] = useState("buy");
+  const [modalName, setmodalName] = useState("loading");
 
   // show different modal on button clicks
   const handleModalName = () => {
@@ -97,7 +97,7 @@ const SmallPopup = ({
                   modalName === "buy"
                     ? ClipperPng
                     : modalName === "loading"
-                    ? clipper_loading
+                    ? blinking_cat
                     : modalName === "congrats"
                     ? success_1
                     : modalName === "error"
@@ -107,7 +107,9 @@ const SmallPopup = ({
                     : ClipperPng
                 }
                 alt={ClipperPng}
-                className="sm-modal__cat-img "
+                className={`sm-modal__cat-img ${
+                  modalName === "loading" && "sm-modal__loading-cat-img"
+                }`}
               />
             </div>
             {modalName === "loading" && <ProcessingBody />}

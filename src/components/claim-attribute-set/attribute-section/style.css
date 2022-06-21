@@ -57,6 +57,12 @@
   padding-left: 0 !important;
 }
 
+@media (max-width: 2000px) {
+  .attribute__min-width {
+    min-width: 77%;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .attribute__min-width {
     min-width: 15.174rem;

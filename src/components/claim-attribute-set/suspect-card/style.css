@@ -17,10 +17,6 @@
   outline: 4px solid #871616;
 }
 
-.card-size img + img {
-  margin-right: 1.875rem;
-}
-
 .card-size.unavailable {
   position: relative;
   display: -webkit-box;
