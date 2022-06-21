@@ -102,11 +102,14 @@
   @media screen and (max-width: $breakpoint-xs) {
     width: 100%;
   }
+  &:hover {
+    background-color: $bg-light-grey;
+  }
 }
 
 .selected-cat {
   margin-top: $size-30;
-
+  min-width: 14rem;
   @media screen and (max-width: $breakpoint-lg) {
     max-width: 14rem;
   }

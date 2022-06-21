@@ -132,19 +132,27 @@ export const eng_lang = {
         },
         {
           attribute_name: "Eyes",
-          options: ["Select Eyes", "black", "grey", "blue"],
+          options: [
+            "Select Eyes",
+            "black",
+            "grey",
+            "blue",
+            "glasses 1",
+            "glasses 2",
+            "glasses 3",
+          ],
         },
         {
-          attribute_name: "Glasses",
-          options: ["Select Glasses", "glasses 1", "glasses 2", "glasses 3"],
+          attribute_name: "Skin",
+          options: ["Select Skin", "Furry", "Hairless"],
         },
         {
           attribute_name: "Hats",
-          options: ["Select hats", "Hats 1", "Hats 2", "Hats 3"],
+          options: ["Select Hats", "Hats 1", "Hats 2", "Hats 3"],
         },
         {
-          attribute_name: "Clothes",
-          options: ["Select Clothes", "clothes 1", "clothes 2", "clothes 3"],
+          attribute_name: "Shirts",
+          options: ["Select Shirts", "shirts 1", "shirts 2", "shirts 3"],
         },
       ],
     },
@@ -161,6 +169,8 @@ export const eng_lang = {
       plank_number: "Plank Number",
       plank_value: "152374",
     },
+    congrats_text_modal:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien ut diam in commodo bibendum et ac..",
   },
   story_clues: {
     paragrapgh_line_1:

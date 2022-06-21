@@ -40,7 +40,8 @@
 
 .sm-modal__img-top {
   position: relative;
-  bottom: 3.7rem;
+  bottom: 3.3rem;
+  z-index: -1;
 }
 
 .sm-modal__img-top img {
@@ -98,6 +99,14 @@
   margin: 0.5rem 0 1.5rem 0;
 }
 
+@media (max-width: 320px) {
+  .sm-modal__congrats-body-margin p {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+
 .sm-modal__congrats-body-margin h5 {
   margin-bottom: 1rem;
 }
@@ -110,12 +119,21 @@
   color: #cccccc;
 }
 
+@media (max-width: 1400px) {
+  .sm-modal__img-top {
+    bottom: 4.7rem !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .sm-modal__wide {
     max-width: 50%;
   }
   .sm-modal__loading-wide {
     max-width: 40%;
+  }
+  .sm-modal__img-top {
+    bottom: 4.5rem !important;
   }
 }
 
@@ -137,18 +155,19 @@
   }
 }
 
+@media (max-width: 2000px) {
+  .sm-modal__img-top {
+    position: relative;
+    bottom: 4.7rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .sm-modal__wide, .sm-modal__loading-wide {
     max-width: 60%;
   }
   .sm-modal__wide {
     margin-top: 7.5rem;
-  }
-  .sm-modal__img-top {
-    bottom: 1.5rem !important;
-  }
-  .sm-modal__img-top img {
-    max-width: 5.25rem;
   }
 }
 
@@ -172,10 +191,11 @@
   }
   .sm-modal__img-top {
     position: relative;
+    bottom: 3.3rem !important;
   }
   .sm-modal__img-top img {
-    max-width: 5.313rem;
-    top: 0.38rem;
+    max-width: 4.313rem;
+    top: 0.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
