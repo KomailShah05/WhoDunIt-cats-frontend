@@ -1,5 +1,5 @@
 //libraries
-import React from "react";
+import React, { createContext } from "react";
 import { useSelector } from "react-redux";
 
 //pages
@@ -21,6 +21,8 @@ import Toast from "../../lib/helper/toast";
 
 //assets
 
+export const landinPageProps = createContext();
+
 const LandingPage = () => {
   const {
     nftsReducer: { totalMinted, btnLoading, showModal },
@@ -31,31 +33,31 @@ const LandingPage = () => {
 
   return (
     <>
-      <Header />
-      <HeroSection />
-      <MintedSection totalMinted={totalMinted} />
-      <HowItWorks />
-      <WhoDidIt />
-      <PopUp
-        totalMinted={totalMinted}
-        walletConnected={walletConnected}
-        btnLoading={btnLoading}
-        walletAddress={walletAddress}
-        voucherLoading={voucherLoading}
-        voucher={voucher}
-        showModal={showModal}
-      />
-      <SmallPopup
-        voucher={voucher}
-        walletAddress={walletAddress}
-        buyInProgress={buyInProgress}
-        buyError={buyError}
-        congrats={congrats}
-        showModal={showModal}
-        tokenId={tokenId}
-      />
-      <Footer />
-      <Toast />
+      <landinPageProps.Provider
+        value={{
+          totalMinted,
+          walletConnected,
+          btnLoading,
+          walletAddress,
+          voucherLoading,
+          voucher,
+          buyInProgress,
+          buyError,
+          congrats,
+          showModal,
+          tokenId,
+        }}
+      >
+        <Header />
+        <HeroSection />
+        <MintedSection />
+        <HowItWorks />
+        <WhoDidIt />
+        <PopUp />
+        <SmallPopup />
+        <Footer />
+        <Toast />
+      </landinPageProps.Provider>
     </>
   );
 };
