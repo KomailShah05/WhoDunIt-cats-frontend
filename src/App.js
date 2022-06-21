@@ -21,7 +21,7 @@ import { getMintedTokens, showModalAction } from "./redux/actions/nfts";
 //styles
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./sass/main.scss";
-import { buyErrorSolved } from "./redux/actions/buy-flow";
+import { buyErrorSolved, resetTokenAndMint } from "./redux/actions/buy-flow";
 
 //assets
 
@@ -32,6 +32,7 @@ const App = () => {
     dispatch(getMintedTokens());
     dispatch(buyErrorSolved());
     dispatch(showModalAction(""));
+    dispatch(resetTokenAndMint());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

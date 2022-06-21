@@ -5,6 +5,7 @@ import {
   insufficientBalanceAction,
   buyErrorSolved,
   newNftMintApiError,
+  resetTokenAndMint,
 } from "./buyErrorAction";
 import newNftMinted from "./newNftMinted";
 
@@ -16,4 +17,5 @@ export {
   buyErrorSolved,
   newNftMinted,
   newNftMintApiError,
+  resetTokenAndMint,
 };
