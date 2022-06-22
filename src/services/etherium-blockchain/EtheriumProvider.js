@@ -42,7 +42,9 @@ export const EtheriumContext = createContext({});
 
 const EtheriumProvider = ({ children }) => {
   const dispatch = useDispatch();
-  const [account, setaccount] = useState(window.ethereum.selectedAddress);
+  const [account, setaccount] = useState(
+    window?.ethereum?.selectedAddress || null
+  );
 
   const {
     voucherReducer: { voucher },
@@ -51,7 +53,7 @@ const EtheriumProvider = ({ children }) => {
   const web3 = new Web3(Web3.givenProvider || WEB3_PROVIDER_URL);
 
   // detect account change event on metamask
-  window.ethereum.on("accountsChanged", function (accounts) {
+  window?.ethereum?.on("accountsChanged", function (accounts) {
     // checkUserLogin(accounts[0]);
     setaccount(accounts[0]);
   });
@@ -63,12 +65,13 @@ const EtheriumProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    checkUserLogin(window.ethereum.selectedAddress);
+    checkUserLogin(window?.ethereum?.selectedAddress);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window.ethereum]);
+  }, [window?.ethereum]);
 
   useEffect(() => {
     checkUserLogin(account);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account]);
 
   const checkUserLogin = async (account) => {
@@ -104,7 +107,9 @@ const EtheriumProvider = ({ children }) => {
       dispatch(buyInProgressAction(true));
 
       // step -> 2 : check user is logged in with wallet
-      const isUserLogin = await checkUserLogin(window.ethereum.selectedAddress);
+      const isUserLogin = await checkUserLogin(
+        window?.ethereum?.selectedAddress
+      );
 
       if (!isUserLogin) {
         notfiFail(eng_lang.user_not_login);
