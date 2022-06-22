@@ -16,7 +16,11 @@ import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
 
 //constants
 import { routes } from "./lib/utills/constants";
-import { getMintedTokens, showModalAction } from "./redux/actions/nfts";
+import {
+  getMintedTokens,
+  showModalAction,
+  btnLoadingAction,
+} from "./redux/actions/nfts";
 
 //styles
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -33,6 +37,8 @@ const App = () => {
     dispatch(buyErrorSolved());
     dispatch(showModalAction(""));
     dispatch(resetTokenAndMint());
+    dispatch(btnLoadingAction(false));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

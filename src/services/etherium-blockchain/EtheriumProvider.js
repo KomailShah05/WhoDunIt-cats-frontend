@@ -42,11 +42,17 @@ export const EtheriumContext = createContext({});
 
 const EtheriumProvider = ({ children }) => {
   const dispatch = useDispatch();
+
   const {
     voucherReducer: { voucher },
     metaMaskWalletReducer: { walletAddress },
   } = useSelector((state) => state);
   const web3 = new Web3(Web3.givenProvider || WEB3_PROVIDER_URL);
+
+  // detect account change event on metamask
+  window.ethereum.on("accountsChanged", function (accounts) {
+    checkUserLogin(accounts[0]);
+  });
 
   // initiate our web 3 with wallet address
   const tokenInstance = new web3.eth.Contract(
@@ -55,13 +61,13 @@ const EtheriumProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    checkUserLogin();
+    checkUserLogin(window.ethereum.selectedAddress);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.ethereum]);
 
-  const checkUserLogin = async () => {
-    if (window.ethereum.selectedAddress) {
-      dispatch(metaMaskWalletConnected(window.ethereum.selectedAddress));
+  const checkUserLogin = async (account) => {
+    if (account) {
+      dispatch(metaMaskWalletConnected(account));
       return true;
     } else {
       dispatch(walletConnectedFail());
@@ -92,7 +98,7 @@ const EtheriumProvider = ({ children }) => {
       dispatch(buyInProgressAction(true));
 
       // step -> 2 : check user is logged in with wallet
-      const isUserLogin = await checkUserLogin();
+      const isUserLogin = await checkUserLogin(window.ethereum.selectedAddress);
 
       if (!isUserLogin) {
         notfiFail(eng_lang.user_not_login);

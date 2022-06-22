@@ -10,7 +10,7 @@ import { eng_lang } from "../../../lib/utills/constants";
 import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 import { landinPageProps } from "../../../pages/landing-page";
 import { createNewVoucher } from "../../../redux/actions/voucher";
-import { showModalAction } from "../../../redux/actions/nfts";
+import { showModalAction, btnLoadingAction } from "../../../redux/actions/nfts";
 
 // style
 import "./style.scss";
@@ -34,6 +34,7 @@ const PopUp = () => {
   };
   const handleModal = (modalName) => {
     dispatch(showModalAction(modalName));
+    dispatch(btnLoadingAction(false));
   };
 
   return (
