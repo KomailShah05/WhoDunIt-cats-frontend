@@ -39,6 +39,7 @@ export const eng_lang = {
   user_not_login: "User not connected wallet. Please login again.",
   conncetToBuy: "conncetToBuy",
   buyModal: "buyModal",
+  totalNoOfMintToken: 5000,
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",
