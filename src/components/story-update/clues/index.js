@@ -12,7 +12,7 @@ import { eng_lang, routes } from "../../../lib/utills/constants";
 import "./index.scss";
 
 //assets
-import { HeroImg } from "../../../assets";
+import { HeroImgPng } from "../../../assets";
 
 const StoryClues = () => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const StoryClues = () => {
               {eng_lang.story_clues.paragrapgh_line_2}
             </p>
             <img
-              src={HeroImg}
+              src={HeroImgPng}
               className="d-block w-100 carousel__max-height"
               alt="..."
             />
@@ -49,7 +49,7 @@ const StoryClues = () => {
               {eng_lang.story_clues.paragrapgh_line_2}
             </p>
             <img
-              src={HeroImg}
+              src={HeroImgPng}
               className="d-block w-100 carousel__max-height"
               alt="..."
             />
