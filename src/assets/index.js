@@ -33,6 +33,7 @@ import success_1 from "./images/Success_1.png";
 import success_2 from "./images/Success_2.png";
 import success_3 from "./images/success_3.png";
 import blinking_cat from "./images/blinking-cat.gif";
+import error from "./images/error.png";
 
 // exports
 export {
@@ -70,4 +71,5 @@ export {
   success_2,
   success_3,
   blinking_cat,
+  error,
 };
