@@ -61,13 +61,17 @@ const Header = () => {
           <div className="d-flex tabs">
             <ul className="navbar-nav w-100">
               <li className="nav-item">
-                <Link to={"/"} className="text-white nav-link  ">
+                <a href="#howItWorks" className="text-white nav-link">
                   {eng_lang.header.tabs[0]}
-                </Link>
+                </a>
               </li>
               {totalMinted >= eng_lang.totalNoOfMintToken ? (
                 <>
-                  <li className="nav-item">
+                  <li
+                    className={`nav-item ${
+                      url === routes.CLUES && "text-decoration-underline"
+                    }`}
+                  >
                     <Link to={"/"} className="text-white nav-link ">
                       {eng_lang.header.tabs[1]}
                     </Link>
