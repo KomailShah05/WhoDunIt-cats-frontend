@@ -1,5 +1,5 @@
 // libraries
-import { createContext, useCallback, useEffect } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Web3 from "web3/dist/web3.min";
 import storage from "redux-persist/lib/storage";
@@ -42,6 +42,7 @@ export const EtheriumContext = createContext({});
 
 const EtheriumProvider = ({ children }) => {
   const dispatch = useDispatch();
+  const [account, setaccount] = useState(window.ethereum.selectedAddress);
 
   const {
     voucherReducer: { voucher },
@@ -51,7 +52,8 @@ const EtheriumProvider = ({ children }) => {
 
   // detect account change event on metamask
   window.ethereum.on("accountsChanged", function (accounts) {
-    checkUserLogin(accounts[0]);
+    // checkUserLogin(accounts[0]);
+    setaccount(accounts[0]);
   });
 
   // initiate our web 3 with wallet address
@@ -64,6 +66,10 @@ const EtheriumProvider = ({ children }) => {
     checkUserLogin(window.ethereum.selectedAddress);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.ethereum]);
+
+  useEffect(() => {
+    checkUserLogin(account);
+  }, [account]);
 
   const checkUserLogin = async (account) => {
     if (account) {
