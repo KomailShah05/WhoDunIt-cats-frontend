@@ -12,7 +12,7 @@ import { HowToExport, Underline } from "../../../assets";
 
 const HowItWorks = () => {
   return (
-    <section className="HowItWorks">
+    <section className="HowItWorks" id="howItWorks">
       <div className="container-xl">
         <div className="row ps-lg-5 HowItWorks__margin-tp-btm">
           <div className="col-lg-5">
