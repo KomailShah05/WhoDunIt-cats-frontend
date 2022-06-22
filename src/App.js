@@ -9,11 +9,12 @@ import {
   StoryUpdate,
   ClaimAttributeSet,
   StoryCluesPage,
+  Error,
 } from "./pages";
 
 //components
 import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
-import { Header, Footer } from "./components/commons";
+import { withHeaderAndFooter } from "./withHeaderAndFooter";
 
 //constants
 import { routes } from "./lib/utills/constants";
@@ -46,17 +47,25 @@ const App = () => {
   return (
     <EtheriumProvider>
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path={routes.HOME} element={<LandingPage />} />
-          <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
-          <Route path={routes.CLUES} element={<StoryCluesPage />} />
+          <Route
+            path={routes.HOME}
+            element={withHeaderAndFooter(<LandingPage />)}
+          />
+          <Route
+            path={routes.STORY_INTRO}
+            element={withHeaderAndFooter(<StoryUpdate />)}
+          />
+          <Route
+            path={routes.CLUES}
+            element={withHeaderAndFooter(<StoryCluesPage />)}
+          />
           <Route
             path={routes.CLAIM_ATTRIBUTE}
-            element={<ClaimAttributeSet />}
+            element={withHeaderAndFooter(<ClaimAttributeSet />)}
           />
+          <Route path="*" element={<Error />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </EtheriumProvider>
   );
