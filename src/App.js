@@ -49,7 +49,6 @@ const App = () => {
         <Header />
         <Routes>
           <Route path={routes.HOME} element={<LandingPage />} />
-          <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
           <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
           <Route path={routes.CLUES} element={<StoryCluesPage />} />
           <Route
