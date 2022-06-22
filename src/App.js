@@ -13,6 +13,7 @@ import {
 
 //components
 import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
+import { Header, Footer } from "./components/commons";
 
 //constants
 import { routes } from "./lib/utills/constants";
@@ -45,17 +46,18 @@ const App = () => {
   return (
     <EtheriumProvider>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path={routes.HOME} element={<LandingPage />} />
-          <Route path={routes.STORY_UPDATE} element={<StoryUpdate />} />
+          <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
+          <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
+          <Route path={routes.CLUES} element={<StoryCluesPage />} />
           <Route
             path={routes.CLAIM_ATTRIBUTE}
             element={<ClaimAttributeSet />}
           />
-          <Route path={routes.STORY_RELEASE} element={<LandingPage />} />
-          <Route path={routes.STORY_INTRO} element={<StoryUpdate />} />
-          <Route path={routes.CLUES} element={<StoryCluesPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </EtheriumProvider>
   );

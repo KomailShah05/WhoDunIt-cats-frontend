@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 //pages
 
 //components
-import { Header, Footer, SmallPopup } from "../../components/commons";
+import { SmallPopup } from "../../components/commons";
 import {
   HeroSection,
   MintedSection,
@@ -48,14 +48,12 @@ const LandingPage = () => {
           tokenId,
         }}
       >
-        <Header />
         <HeroSection />
         <MintedSection />
         <HowItWorks />
         <WhoDidIt />
         <PopUp />
         <SmallPopup />
-        <Footer />
         <Toast />
       </landinPageProps.Provider>
     </>

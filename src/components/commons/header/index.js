@@ -1,5 +1,6 @@
 // libraries
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 //constants
@@ -11,6 +12,10 @@ import "./index.scss";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const url = window.location.pathname;
+  const {
+    nftsReducer: { totalMinted },
+  } = useSelector((state) => state);
+
   const listenScrollEvent = () => {
     if (window.scrollY < 70) {
       return setScroll(false);
@@ -60,12 +65,8 @@ const Header = () => {
                   {eng_lang.header.tabs[0]}
                 </Link>
               </li>
-              {url === routes.STORY_RELEASE ||
-              url === routes.CLUES ||
-              url === routes.STORY_INTRO ||
-              url === routes.CLAIM_ATTRIBUTE ? (
+              {totalMinted >= eng_lang.totalNoOfMintToken ? (
                 <>
-                  {" "}
                   <li className="nav-item">
                     <Link to={"/"} className="text-white nav-link ">
                       {eng_lang.header.tabs[1]}
@@ -106,10 +107,7 @@ const Header = () => {
                         {eng_lang.header.tabs[0]}
                       </Link>
                     </li>
-                    {url === routes.STORY_RELEASE ||
-                    url === routes.CLUES ||
-                    url === routes.STORY_INTRO ||
-                    url === routes.CLAIM_ATTRIBUTE ? (
+                    {totalMinted >= eng_lang.totalNoOfMintToken ? (
                       <>
                         {" "}
                         <li className="nav-item">
