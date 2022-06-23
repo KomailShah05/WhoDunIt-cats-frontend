@@ -75,11 +75,8 @@ const MintedSection = () => {
           )}
         </div>
       </div>
-      {url === routes.WINNER_REVEAL && (
-        <>
-          <img src={walking_cats} alt="walking cats" className="walking-cats" />
-        </>
-      )}
+
+      <img src={walking_cats} alt="walking cats" className="walking-cats" />
     </section>
   );
 };
