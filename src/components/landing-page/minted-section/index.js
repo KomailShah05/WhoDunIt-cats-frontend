@@ -9,7 +9,12 @@ import { landinPageProps } from "../../../pages/landing-page";
 import "./index.scss";
 
 // Assets
-import { pixelated_cat, border, winner_avatar } from "../../../assets";
+import {
+  pixelated_cat,
+  border,
+  winner_avatar,
+  walking_cats,
+} from "../../../assets";
 
 const MintedSection = () => {
   const { totalMinted } = useContext(landinPageProps);
@@ -17,7 +22,9 @@ const MintedSection = () => {
   return (
     <section
       id="minted"
-      className={`${url === routes.WINNER_REVEAL && "minted-section-winner"}`}
+      className={`${
+        url === routes.WINNER_REVEAL && "minted-section-winner flex-column"
+      }`}
     >
       <div className="container-xl">
         <div className="d-flex justify-content-center align-items-center w-100">
@@ -38,7 +45,7 @@ const MintedSection = () => {
           {url === routes.WINNER_REVEAL && (
             <>
               <div className="winner-reveal">
-                <div className="d-flex flex-column align-items-center">
+                <div className="d-flex flex-column align-items-center winner-content">
                   <h2 className="solved-heading">
                     {eng_lang.winnerRevealLandingPage.heading}
                   </h2>
@@ -68,6 +75,11 @@ const MintedSection = () => {
           )}
         </div>
       </div>
+      {url === routes.WINNER_REVEAL && (
+        <>
+          <img src={walking_cats} alt="walking cats" className="walking-cats" />
+        </>
+      )}
     </section>
   );
 };

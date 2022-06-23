@@ -28,6 +28,7 @@ import error from "./images/error.png";
 import pixelated_cat from "./images/cat-pixelated.png";
 import border from "./images/border.png";
 import winner_avatar from "./images/winner-avatar.png";
+import walking_cats from "./images/walking-cats.png";
 
 // exports
 export {
@@ -60,4 +61,5 @@ export {
   pixelated_cat,
   border,
   winner_avatar,
+  walking_cats,
 };

@@ -22,7 +22,7 @@
 }
 
 .minted-section-winner {
-  height: 45rem !important;
+  height: 52rem !important;
 }
 
 .remaining-minted {
@@ -70,7 +70,7 @@
 
 .winner-reveal {
   position: absolute;
-  top: -7%;
+  top: -13%;
   z-index: 2;
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
@@ -80,7 +80,6 @@
 }
 
 .solved-heading {
-  margin-top: 100px;
   font-family: Arial;
   font-weight: $font-weight-bold;
   font-size: $size-34;
@@ -121,11 +120,21 @@
   font-size: $size-24;
   line-height: $size-28;
   padding: $size-8 $size-24;
-  border-radius: none;
+  border-radius: 0;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   &:hover {
-    background: $charcoal;
+    background: $maroon;
     color: $white;
   }
+}
+
+.walking-cats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.winner-content {
+  margin-top: $size-151;
 }
 /*# sourceMappingURL=index.css.map */
