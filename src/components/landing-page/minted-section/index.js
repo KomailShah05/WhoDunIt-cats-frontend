@@ -66,7 +66,12 @@ const MintedSection = () => {
                   <p className="winner-name">
                     {eng_lang.winnerRevealLandingPage.winner_name}
                   </p>
-                  <button className="btn whodunit-btn">
+                  <button
+                    className="btn whodunit-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#scrollModal"
+                    data-bs-dismiss="modal"
+                  >
                     {eng_lang.buttonConstants.who_dun_it}
                   </button>
                 </div>

@@ -25,6 +25,10 @@ import success_2 from "./images/Success_2.png";
 import success_3 from "./images/success_3.png";
 import blinking_cat from "./images/blinking-cat.gif";
 import error from "./images/error.png";
+import bg_cat from "./images/bg_cat.jpg";
+import group_1 from "./images/group_1.svg";
+import city_bg_Blue from "./images/city-bg-Blue.svg";
+import avatar from "./images/Avatar.svg";
 import pixelated_cat from "./images/cat-pixelated.png";
 import border from "./images/border.png";
 import winner_avatar from "./images/winner-avatar.png";
@@ -58,6 +62,10 @@ export {
   success_3,
   blinking_cat,
   error,
+  bg_cat,
+  group_1,
+  city_bg_Blue,
+  avatar,
   pixelated_cat,
   border,
   winner_avatar,
