@@ -37,6 +37,12 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  #minted .container-xl .winner-content {
+    margin-top: 5rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   #minted {
     height: 39.938rem;
@@ -116,7 +122,7 @@
 .winner-reveal {
   position: absolute;
   top: -13%;
-  z-index: 2;
+  z-index: 1;
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -136,6 +142,20 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .winner-reveal {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .winner-reveal {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+
 .solved-heading {
   font-family: Arial;
   font-weight: 600;
@@ -143,17 +163,24 @@
   line-height: 2.438rem;
 }
 
-@media screen and (max-width: 1200px) {
+.blur-cat-pos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 576px) {
   .blur-cat-pos {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    max-width: 50%;
+    max-height: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 2800px) {
   .blur-cat-pos {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
   }
 }
 
@@ -164,6 +191,20 @@
   font-size: 0.875rem;
   line-height: 1rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 2800px) {
+  .detective-heading {
+    margin-bottom: 0.25rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .detective-heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .winner-profile {
@@ -189,8 +230,6 @@
   background: #000000;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
-  font-size: 1.5rem !important;
-  line-height: 1.75rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -198,8 +237,29 @@
 }
 
 .whodunit-btn:hover {
-  background: #871616;
+  background: #333333;
   color: #ffffff;
+}
+
+@media screen and (max-width: 2800px) {
+  .whodunit-btn {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .whodunit-btn {
+    font-size: 1.5rem !important;
+    line-height: 1.75rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whodunit-btn {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
 }
 
 .walking-cats {
