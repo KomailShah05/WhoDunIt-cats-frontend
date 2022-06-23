@@ -52,6 +52,7 @@ export const eng_lang = {
     mint_suspect: "Mint Suspect",
     continue_to_mint: "Continue To Mint",
     view_on_open_sea: "View On Opensea",
+    who_dun_it: "Show me WhodunIt",
   },
 
   header: {
@@ -252,5 +253,7 @@ export const eng_lang = {
       "Tincidunt ornare enim elit ante dui vulputate. Massa sodales porttitor eu",
     case_lines:
       "at. Ornare adipiscing viverra phasellus velit sapien. Diam est vitae accumsan lobortis erat vulputate sit varius convallis. Vel eget in luctus parturient sit cum. Gravida placerat ac leo tellus, urna dolor posuere aenean. Amet lacus, nisl nisl enim, enim, integer augue dui. At a, sagittis lobortis netus turpis. In nec hendrerit ac, tincidunt ut. Integer volutpat commodo convallis congue tincidunt. Sit lectus vitae pellentesque in. Ac pulvinar rutrum pellentesque amet varius nec. Faucibus nunc convallis bibendum tortor urna feugiat odio mus eget. Cursus magna facilisi malesuada vestibulum sollicitudin sed eget ac. Enim molestie nibh netus ridiculus. Blandit sodales blandit orci purus est blandit. Nec et non sed elementum imperdiet turpis ultricies turpis aliquet.",
+    case_detective: "CASE DETECTIVE",
+    winner_name: "MrWorldWideWeb",
   },
 };

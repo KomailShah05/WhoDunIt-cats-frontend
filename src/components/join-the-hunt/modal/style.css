@@ -55,7 +55,7 @@
 }
 
 .modal__padding-body {
-  padding: 0 2.25rem 2.875rem 1.75rem;
+  padding: 0 2.25rem 2.5rem 1.75rem;
 }
 
 .modal__body-margin .justify-content-between:first-child {
@@ -63,7 +63,7 @@
 }
 
 .modal__body-margin .justify-content-between:nth-child(2) {
-  margin: 1.25rem 0 2.875rem 0;
+  margin: 1.25rem 0 2.5rem 0;
 }
 
 .modal__body-margin .text-white {
@@ -71,7 +71,7 @@
 }
 
 .modal__body-margin p:last-child {
-  margin-bottom: 2.875rem;
+  margin-bottom: 2.5rem;
 }
 
 .modal .color-gray {
@@ -143,3 +143,4 @@
     margin-bottom: 1.875rem;
   }
 }
+/*# sourceMappingURL=style.css.map */
