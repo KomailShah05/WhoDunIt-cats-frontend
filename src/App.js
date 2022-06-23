@@ -54,6 +54,10 @@ const App = () => {
             element={withHeaderAndFooter(<LandingPage />)}
           />
           <Route
+            path={routes.WINNER_REVEAL}
+            element={withHeaderAndFooter(<LandingPage />)}
+          />
+          <Route
             path={routes.STORY_INTRO}
             element={withHeaderAndFooter(<StoryUpdate />)}
           />

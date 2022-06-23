@@ -7,6 +7,7 @@ export const routes = {
   LOGIN: "/login",
   CLAIM_ATTRIBUTE: "/claim-attribute",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
+  WINNER_REVEAL: "/winner-reveal",
 };
 
 export const blc_func_name = {
@@ -227,5 +228,8 @@ export const eng_lang = {
         "ullamcorper. Fusce aliquam mauris commodo, faucibus velit mauris blandit.",
     },
     personal_info_text: "Personal Information We Collect",
+  },
+  winnerRevealLandingPage: {
+    heading: "MYSTERY SOLVED!",
   },
 };

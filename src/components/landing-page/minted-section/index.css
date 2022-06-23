@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 #minted {
+  position: relative;
   background: url(../../../assets/images/minted-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,5 +92,24 @@
   #minted .text-box {
     margin: 5rem 0 5rem 0;
   }
+}
+
+.winner-reveal {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: url(../../../assets/images/paper-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.solved-heading {
+  margin-top: 88px;
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 2.125rem;
+  line-height: 2.438rem;
 }
 /*# sourceMappingURL=index.css.map */
