@@ -15,7 +15,7 @@ import { success_1 } from "../../../assets";
 const ScrollingModal = () => {
   return (
     <div
-      className={`modal fade show d-block scroll-modal`}
+      className={`modal fade scroll-modal`}
       id="scrollModal"
       tabIndex="-1"
       aria-labelledby="exampleModalLabel"
