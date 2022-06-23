@@ -11,6 +11,34 @@
   .width-100 {
     width: 100% !important;
   }
+
+  // @media screen and (max-width: $breakpoint-xl) {
+  //   & .container-xl {
+  //     & .winner-content {
+
+  //     }
+  //   }
+  // }
+
+  @media (max-width: 2800px) {
+    & .container-xl {
+      & .winner-content {
+        margin-top: $size-191;
+        & h2.solved-heading {
+          font-size: $size-24 !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 2000px) {
+    & .container-xl {
+      & .winner-content {
+        margin-top: $size-92;
+      }
+    }
+  }
+
   @media screen and (max-width: $breakpoint-lg) {
     height: 39.938rem;
   }
@@ -22,7 +50,7 @@
 }
 
 .minted-section-winner {
-  height: 52rem !important;
+  height: 45rem !important;
 }
 
 .remaining-minted {
@@ -77,6 +105,12 @@
   background-position: center;
   height: 100%;
   width: 100%;
+  @media (max-width: 2800px) {
+    top: -25%;
+  }
+  @media (max-width: 2000px) {
+    top: -10%;
+  }
 }
 
 .solved-heading {
@@ -87,8 +121,14 @@
 }
 
 .blur-cat-pos {
-  margin-top: $size-32;
-  margin-bottom: $size-32;
+  @media screen and (max-width: $breakpoint-xl) {
+    margin-top: $size-32;
+    margin-bottom: $size-32;
+  }
+  @media screen and (max-width: $breakpoint-xxl) {
+    margin-top: $size-16;
+    margin-bottom: $size-16;
+  }
 }
 
 .detective-heading {
@@ -111,13 +151,16 @@
   line-height: $size-19;
   color: $charcoal;
   margin-bottom: $size-32;
+  @media (max-width: 2800px) {
+    margin-bottom: $size-16;
+  }
 }
 
 .whodunit-btn {
   background: $black;
   color: $white;
   font-family: $font-family-gochi-hand;
-  font-size: $size-24;
+  font-size: $size-24 !important;
   line-height: $size-28;
   padding: $size-8 $size-24;
   border-radius: 0;
@@ -125,6 +168,8 @@
   &:hover {
     background: $maroon;
     color: $white;
+  }
+  @media (max-width: 2800px) {
   }
 }
 
@@ -135,6 +180,6 @@
 }
 
 .winner-content {
-  margin-top: $size-151;
+  margin-top: $size-92;
 }
 /*# sourceMappingURL=index.css.map */
