@@ -1,0 +1,12 @@
+@import "../../../sass/partials/variables";
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
+    margin-top: $size-20;
+  }
+}

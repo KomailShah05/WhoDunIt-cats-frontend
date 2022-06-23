@@ -1,0 +1,68 @@
+@import "../../../sass/partials/variables";
+
+.scroll-modal {
+  &__bg-img {
+    background: url(../../../assets/images/bg_cat.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    max-height: 17.5rem;
+    max-width: 17.5rem;
+    border-radius: $size-4;
+    img {
+      width: 100%;
+    }
+  }
+  &__padding-body {
+    padding: 0 2.125rem 3rem 3rem;
+    &::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+      // border: 9px solid rgba(255, 255, 255, 0.5);
+      transform: rotate(90deg);
+      border-radius: 1rem;
+      z-index: 4;
+    }
+  }
+  &__modal-margin {
+    margin: 7.75rem auto;
+  }
+
+  &__body-margin {
+    .justify-content-between {
+      &:first-child {
+        margin: $size-24 0 $size-8 0;
+      }
+    }
+    .justify-content-between {
+      &:not(:first-child) {
+        margin: 0 0 $size-8 0;
+      }
+    }
+    .text-white {
+      margin-bottom: 0rem;
+    }
+  }
+  @media (max-width: 850px) {
+    &__bg-img {
+      max-height: 18.063rem;
+      max-width: 15.063rem;
+    }
+  }
+  @media (max-width: 768px) {
+    &__bg-img {
+      max-height: 14.063rem;
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+}

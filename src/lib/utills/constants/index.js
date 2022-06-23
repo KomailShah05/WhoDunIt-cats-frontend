@@ -28,6 +28,7 @@ export const eng_lang = {
   buy_nft: "Buy Nft",
   eth: "ETH",
   dollar: "$",
+  usd: "USD",
   congratulation: "Congratulations!",
   stay_updated: "Stay updated!",
   view_on_open_sea: "View NFT on Opensea",
@@ -231,5 +232,25 @@ export const eng_lang = {
   },
   winnerRevealLandingPage: {
     heading: "MYSTERY SOLVED!",
+    cat_no: "Cat#041992",
+    cat_name: "Cat Name",
+    eye: "Eye",
+    skin: "Skin",
+    height: "Height",
+    hat: "Hat",
+    shirt: "Shirt",
+    congrat: "Congratulations to",
+    worldWide: "MrWorldWideWeb",
+    mystery_text: "For solving the mystery and winning",
+    bounty: "bounty!",
+    case_deduction: "Case Deduction",
+    case_line_1:
+      "Magna sapien tincidunt felis felis. Quis ullamcorper ac tellus lorem lorem",
+    case_line_2:
+      "posuere egestas. Imperdiet habitant amet nulla cursus purus nulla.",
+    case_line_3:
+      "Tincidunt ornare enim elit ante dui vulputate. Massa sodales porttitor eu",
+    case_lines:
+      "at. Ornare adipiscing viverra phasellus velit sapien. Diam est vitae accumsan lobortis erat vulputate sit varius convallis. Vel eget in luctus parturient sit cum. Gravida placerat ac leo tellus, urna dolor posuere aenean. Amet lacus, nisl nisl enim, enim, integer augue dui. At a, sagittis lobortis netus turpis. In nec hendrerit ac, tincidunt ut. Integer volutpat commodo convallis congue tincidunt. Sit lectus vitae pellentesque in. Ac pulvinar rutrum pellentesque amet varius nec. Faucibus nunc convallis bibendum tortor urna feugiat odio mus eget. Cursus magna facilisi malesuada vestibulum sollicitudin sed eget ac. Enim molestie nibh netus ridiculus. Blandit sodales blandit orci purus est blandit. Nec et non sed elementum imperdiet turpis ultricies turpis aliquet.",
   },
 };
