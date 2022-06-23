@@ -6,6 +6,8 @@ export const routes = {
   CLUES: "/story-clues",
   LOGIN: "/login",
   CLAIM_ATTRIBUTE: "/claim-attribute",
+  TERMS_AND_CONDITIONS: "/terms-and-conditions",
+  WINNER_REVEAL: "/winner-reveal",
 };
 
 export const blc_func_name = {
@@ -201,4 +203,33 @@ export const eng_lang = {
         "dui. Egestas elit nibh in eros dictum. Odio feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam.",
     },
   ],
+  termsAndConditions: {
+    heading: "Terms and Conditions",
+    subtitle: "Last Updated: May 19, 2022",
+    paragraph_1_lines: {
+      line_1:
+        "Ultrices ultricies nibh cursus imperdiet. Sed cursus morbi imperdiet ipsum sed non. Sit mollis ipsum lobortis amet,",
+      line_2:
+        "imperdiet egestas. Diam egestas id sed nisl. Purus risus ornare massa ut. Cursus sit viverra augue aliquam tortor ut.",
+      line_3:
+        "Sed vulputate risus nisl in tempor. Faucibus commodo sagittis vestibulum sed. Eget ac libero cursus cursus arcu",
+      line_4: "faucibus facilisis imperdiet pretium.",
+    },
+    paragraph_2_lines: {
+      line_1:
+        "Ultricies in maecenas viverra rutrum orci, scelerisque eget arcu pellentesque. Vel a aliquet tincidunt mattis. Ut sit",
+      line_2:
+        "pharetra egestas gravida velit at malesuada semper. Lorem ut auctor et in. Nunc blandit eget mi amet vulputate sem",
+      line_3:
+        "ullamcorper fames at. Velit ac porta nunc, faucibus. Nulla suscipit vitae tellus arcu dui. Velit est habitant velit tortor",
+      line_4:
+        "tortor nulla. Enim, volutpat nunc adipiscing vulputate adipiscing nibh faucibus nisl. Dictum ac ut cras quam odio",
+      line_5:
+        "ullamcorper. Fusce aliquam mauris commodo, faucibus velit mauris blandit.",
+    },
+    personal_info_text: "Personal Information We Collect",
+  },
+  winnerRevealLandingPage: {
+    heading: "MYSTERY SOLVED!",
+  },
 };

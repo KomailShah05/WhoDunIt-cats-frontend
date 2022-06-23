@@ -11,7 +11,7 @@ export const API_BASE_URL = `${BASE_URL}api`;
 export const API_TIME_OUT = 10000;
 
 // BLOCKCHAIN WALLET ADDRESS
-export const CONTRACT_ADDRESS = "0x4Df95Db3EB28Af6bfde5509baC26E761ef886E9B";
+export const CONTRACT_ADDRESS = "0x8065a1164Ee844429DA992A89596bF72c1ec7b1e";
 
 // BASE OPEN SEA URL
 export const BASE_OPEN_SEA_URL = "https://testnets.opensea.io/";
