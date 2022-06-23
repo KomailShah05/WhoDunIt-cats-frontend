@@ -10,6 +10,7 @@ import {
   ClaimAttributeSet,
   StoryCluesPage,
   Error,
+  TermsAndConditionsPage,
 } from "./pages";
 
 //components
@@ -63,6 +64,10 @@ const App = () => {
           <Route
             path={routes.CLAIM_ATTRIBUTE}
             element={withHeaderAndFooter(<ClaimAttributeSet />)}
+          />
+          <Route
+            path={routes.TERMS_AND_CONDITIONS}
+            element={withHeaderAndFooter(<TermsAndConditionsPage />)}
           />
           <Route path="*" element={<Error />} />
         </Routes>
