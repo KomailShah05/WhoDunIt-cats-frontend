@@ -35,6 +35,10 @@
   }
 }
 
+.minted-section-winner {
+  height: 45rem !important;
+}
+
 .remaining-minted {
   font-size: 2rem;
   line-height: 2.358rem;
@@ -96,7 +100,7 @@
 
 .winner-reveal {
   position: absolute;
-  top: 0;
+  top: -7%;
   z-index: 2;
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
@@ -106,9 +110,54 @@
 }
 
 .solved-heading {
-  margin-top: 88px;
+  margin-top: 100px;
   font-family: Arial;
   font-weight: 600;
   font-size: 2.125rem;
   line-height: 2.438rem;
 }
+
+.blur-cat-pos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detective-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: Arial;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.winner-profile {
+  margin-bottom: 0.5rem;
+}
+
+.winner-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.188rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.whodunit-btn {
+  background: #000000;
+  color: #ffffff;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: none;
+  -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.whodunit-btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -8,11 +8,17 @@ import { landinPageProps } from "../../../pages/landing-page";
 //styles
 import "./index.scss";
 
+// Assets
+import { pixelated_cat, border, winner_avatar } from "../../../assets";
+
 const MintedSection = () => {
   const { totalMinted } = useContext(landinPageProps);
   const url = window.location.pathname;
   return (
-    <section id="minted">
+    <section
+      id="minted"
+      className={`${url === routes.WINNER_REVEAL && "minted-section-winner"}`}
+    >
       <div className="container-xl">
         <div className="d-flex justify-content-center align-items-center w-100">
           <div
@@ -36,6 +42,26 @@ const MintedSection = () => {
                   <h2 className="solved-heading">
                     {eng_lang.winnerRevealLandingPage.heading}
                   </h2>
+                  <img
+                    className="blur-cat-pos"
+                    src={pixelated_cat}
+                    alt="pixelated cat"
+                  />
+                  <img src={border} alt="border" className="border" />
+                  <h3 className="detective-heading">
+                    {eng_lang.winnerRevealLandingPage.case_detective}
+                  </h3>
+                  <img
+                    src={winner_avatar}
+                    alt="winner"
+                    className="winner-profile"
+                  />
+                  <p className="winner-name">
+                    {eng_lang.winnerRevealLandingPage.winner_name}
+                  </p>
+                  <button className="btn whodunit-btn">
+                    {eng_lang.buttonConstants.who_dun_it}
+                  </button>
                 </div>
               </div>
             </>

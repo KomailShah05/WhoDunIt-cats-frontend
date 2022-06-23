@@ -51,6 +51,7 @@ export const eng_lang = {
     mint_suspect: "Mint Suspect",
     continue_to_mint: "Continue To Mint",
     view_on_open_sea: "View On Opensea",
+    who_dun_it: "Show me WhodunIt",
   },
 
   header: {
@@ -231,5 +232,7 @@ export const eng_lang = {
   },
   winnerRevealLandingPage: {
     heading: "MYSTERY SOLVED!",
+    case_detective: "CASE DETECTIVE",
+    winner_name: "MrWorldWideWeb",
   },
 };
