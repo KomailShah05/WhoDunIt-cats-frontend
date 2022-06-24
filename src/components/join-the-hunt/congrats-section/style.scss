@@ -1,0 +1,14 @@
+@import "../../../sass/partials/variables";
+
+.congrats {
+  &__bg {
+    background: url(../../../assets/images/city-bg-Blue.svg) repeat-x center;
+    // background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $size-40 0;
+    margin: $size-40 0;
+  }
+}

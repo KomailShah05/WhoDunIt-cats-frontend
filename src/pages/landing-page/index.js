@@ -12,7 +12,7 @@ import {
   WhoDidIt,
   HowItWorks,
 } from "../../components/landing-page";
-import { PopUp } from "../../components/join-the-hunt";
+import { PopUp, ScrollingModal } from "../../components/join-the-hunt";
 import Toast from "../../lib/helper/toast";
 
 //constants
@@ -55,6 +55,7 @@ const LandingPage = () => {
         <PopUp />
         <SmallPopup />
         <Toast />
+        <ScrollingModal />
       </landinPageProps.Provider>
     </>
   );

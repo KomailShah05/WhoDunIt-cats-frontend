@@ -212,6 +212,10 @@ p {
   margin-top: 2.5rem;
 }
 
+.inter {
+  font-family: "Inter", sans-serif !important;
+}
+
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 2000px) {
   .container,
