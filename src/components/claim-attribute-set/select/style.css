@@ -2,50 +2,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .font-gouchi {
-  font-family: "Gochi Hand", cursive !important;
-  line-height: 1.5rem !important;
+  font-family: "Gochi Hand", cursive;
+  line-height: 1.5rem;
 }
 
 .font-gouchi:first-child {
-  margin-top: 1.5rem !important;
+  margin-top: 1.5rem;
 }
 
 .custom-select,
 .custom-select option {
-  padding: 0.75rem 1rem !important;
-  gap: 0.5rem !important;
-  border: 1px solid #dee2e6 !important;
-  border-radius: 0.25rem !important;
-  background-color: transparent !important;
-  font-family: "Inter" !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 1rem !important;
-  line-height: 1.5rem !important;
-  color: #cccccc !important;
-  background-image: url(../../../assets/images/Vector-down.svg) !important;
-  background-position: right 0.75rem center !important;
-  background-size: 1rem 0.75rem !important;
-  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
-  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out !important;
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
-  margin: 0.25rem 0 0.75rem 0 !important;
-  width: 100% !important;
+  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #cccccc;
+  background-image: url(../../../assets/images/Vector-down.svg);
+  background-position: right 0.75rem center;
+  background-size: 1rem 0.75rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0.25rem 0 0.75rem 0;
+  width: 100%;
 }
 
 .custom-select option,
 .custom-select option option {
-  background-color: black !important;
+  background-color: black;
 }
 
 @media screen and (max-width: 576px) {
   .custom-select,
   .custom-select option {
-    background-size: 0.625rem 0.75rem !important;
-    background-position: right 0.32rem center !important;
+    background-size: 0.625rem 0.75rem;
+    background-position: right 0.32rem center;
   }
 }
