@@ -214,9 +214,3 @@ p {
 .inter {
   font-family: $font-family-inter !important;
 }
-
-select {
-  -webkit-appearance: none !important; /* for webkit (safari, chrome) compatibility */
-  -moz-appearance: none !important; /* for firefox compatibility */
-  appearance: none !important;
-}
