@@ -1,7 +1,7 @@
 //libraries
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 //pages
 import {
@@ -18,7 +18,7 @@ import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
 import { withHeaderAndFooter } from "./withHeaderAndFooter";
 
 //constants
-import { routes } from "./lib/utills/constants";
+import { eng_lang, routes } from "./lib/utills/constants";
 import {
   getMintedTokens,
   showModalAction,
@@ -34,6 +34,9 @@ import { buyErrorSolved, resetTokenAndMint } from "./redux/actions/buy-flow";
 
 const App = () => {
   const dispatch = useDispatch();
+  const {
+    nftsReducer: { totalMinted },
+  } = useSelector((state) => state);
 
   useEffect(() => {
     dispatch(getMintedTokens());
@@ -53,26 +56,31 @@ const App = () => {
             path={routes.HOME}
             element={withHeaderAndFooter(<LandingPage />)}
           />
-          <Route
-            path={routes.WINNER_REVEAL}
-            element={withHeaderAndFooter(<LandingPage />)}
-          />
-          <Route
-            path={routes.STORY_INTRO}
-            element={withHeaderAndFooter(<StoryUpdate />)}
-          />
-          <Route
-            path={routes.CLUES}
-            element={withHeaderAndFooter(<StoryCluesPage />)}
-          />
-          <Route
-            path={routes.CLAIM_ATTRIBUTE}
-            element={withHeaderAndFooter(<ClaimAttributeSet />)}
-          />
-          <Route
-            path={routes.TERMS_AND_CONDITIONS}
-            element={withHeaderAndFooter(<TermsAndConditionsPage />)}
-          />
+          {totalMinted >= eng_lang.totalNoOfMintToken && (
+            <>
+              <Route
+                path={routes.STORY_INTRO}
+                element={withHeaderAndFooter(<StoryUpdate />)}
+              />
+              <Route
+                path={routes.CLAIM_ATTRIBUTE}
+                element={withHeaderAndFooter(<ClaimAttributeSet />)}
+              />
+              <Route
+                path={routes.CLUES}
+                element={withHeaderAndFooter(<StoryCluesPage />)}
+              />
+              <Route
+                path={routes.WINNER_REVEAL}
+                element={withHeaderAndFooter(<LandingPage />)}
+              />
+              <Route
+                path={routes.TERMS_AND_CONDITIONS}
+                element={withHeaderAndFooter(<TermsAndConditionsPage />)}
+              />
+            </>
+          )}
+
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
