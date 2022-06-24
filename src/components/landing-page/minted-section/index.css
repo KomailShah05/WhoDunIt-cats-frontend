@@ -22,12 +22,12 @@
   width: 100% !important;
 }
 
-@media (max-width: 2800px) {
+@media (min-width: 2000px) {
   #minted .container-xl .winner-content {
-    margin-top: 11.938rem;
+    margin-top: 5.75rem;
   }
   #minted .container-xl .winner-content h2.solved-heading {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
 }
 
@@ -126,33 +126,30 @@
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
   width: 100%;
 }
 
 @media (max-width: 2800px) {
   .winner-reveal {
-    top: -25%;
+    top: -10%;
   }
 }
 
 @media (max-width: 2000px) {
   .winner-reveal {
-    top: -10%;
+    top: -6%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-reveal {
-    width: 80%;
+    max-width: 80%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .winner-reveal {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+    max-width: 100%;
   }
 }
 
@@ -166,12 +163,12 @@
 .blur-cat-pos {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .blur-cat-pos {
     max-width: 50%;
-    max-height: 50%;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -230,6 +227,7 @@
   background: #000000;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
+  margin-bottom: 5rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -270,5 +268,21 @@
 
 .winner-content {
   margin-top: 5.75rem;
+}
+
+.border {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .border {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .border {
+    max-width: 50%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
