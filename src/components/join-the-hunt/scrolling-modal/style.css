@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .scroll-modal__bg-img {
-  background: url(../../../assets/images/bg_cat.jpg) no-repeat center;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +15,7 @@
 }
 
 .scroll-modal__bg-img img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .scroll-modal__padding-body {

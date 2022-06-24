@@ -4,13 +4,13 @@ import React from "react";
 import { eng_lang } from "../../../lib/utills/constants";
 
 // assets
-import { group_1 } from "../../../assets";
+import { CatThreePng } from "../../../assets";
 
 const NftDetails = () => {
   return (
     <div className="row">
       <div className="col-md-5 scroll-modal__bg-img">
-        <img src={group_1} alt="brown_cat" />
+        <img src={CatThreePng} alt="brown_cat" />
       </div>
       <div className="col-md-7 ps-md-5">
         <h3 className="text-white">
