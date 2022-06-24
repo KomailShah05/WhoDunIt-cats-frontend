@@ -107,10 +107,24 @@
           align-items: center;
 }
 
+@media screen and (max-width: 2800px) {
+  .card-size.unavailable .overlay-on-hover {
+    top: -1%;
+    left: -1%;
+    right: -1%;
+    width: 96%;
+    height: 86%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .card-size.unavailable .overlay-on-hover {
     width: 95%;
     height: 84%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
