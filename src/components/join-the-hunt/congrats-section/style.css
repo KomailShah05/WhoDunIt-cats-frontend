@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .congrats__bg {
-  background: url(../../../assets/images/city-bg-Blue.svg) repeat-x center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-8.43%, rgba(33, 35, 48, 0.4)), color-stop(200%, rgba(109, 113, 145, 0.4))), #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
+  background: linear-gradient(180deg, rgba(33, 35, 48, 0.4) -8.43%, rgba(109, 113, 145, 0.4) 200%), #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,5 +19,56 @@
           align-items: center;
   padding: 2.5rem 0;
   margin: 2.5rem 0;
+}
+
+.congrats .congrats-text {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .congrats .congrats-text {
+    font-size: 1.428rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .congrats .congrats-text {
+    font-size: 1rem;
+  }
+}
+
+.congrats .winner {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .congrats .winner {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .congrats .winner {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .congrats .mystery-solve-text {
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .congrats .mystery-solve-text {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

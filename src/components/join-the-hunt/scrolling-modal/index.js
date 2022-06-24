@@ -40,7 +40,7 @@ const ScrollingModal = () => {
             ></button>
           </div>
 
-          <div className="modal-body scroll-modal__padding-body  ">
+          <div className="modal-body scroll-modal__padding-body">
             <NftDetails />
             <CongratSection />
             <DescriptionSection />

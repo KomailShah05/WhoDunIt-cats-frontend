@@ -2,7 +2,12 @@
 
 .congrats {
   &__bg {
-    background: url(../../../assets/images/city-bg-Blue.svg) repeat-x center;
+    background: linear-gradient(
+        180deg,
+        rgba(33, 35, 48, 0.4) -8.43%,
+        rgba(109, 113, 145, 0.4) 200%
+      ),
+      #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
     // background-size: cover;
     display: flex;
     flex-direction: column;
@@ -10,5 +15,38 @@
     align-items: center;
     padding: $size-40 0;
     margin: $size-40 0;
+  }
+  & .congrats-text {
+    margin-bottom: $size-32;
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: $size-22;
+      line-height: $size-20;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: $size-16;
+    }
+  }
+  & .winner {
+    margin-top: $size-16;
+    margin-bottom: $size-32;
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: $size-16;
+      line-height: $size-20;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: $size-12;
+      line-height: $size-12;
+    }
+  }
+  & .mystery-solve-text {
+    @media screen and (max-width: $breakpoint-sm) {
+      padding: 0rem $size-16 0rem $size-16;
+      font-size: $size-16;
+      line-height: $size-20;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: $size-12;
+      line-height: $size-16;
+    }
   }
 }

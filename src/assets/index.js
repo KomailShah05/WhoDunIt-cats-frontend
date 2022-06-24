@@ -27,7 +27,7 @@ import blinking_cat from "./images/blinking-cat.gif";
 import error from "./images/error.png";
 import bg_cat from "./images/bg_cat.jpg";
 import group_1 from "./images/group_1.svg";
-import city_bg_Blue from "./images/city-bg-Blue.svg";
+import city_bg_Blue from "./images/city-bg-Blue.png";
 import avatar from "./images/Avatar.svg";
 import pixelated_cat from "./images/cat-pixelated.png";
 import border from "./images/border.png";

@@ -20,5 +20,27 @@
 .description p {
   text-align: center;
   margin-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .description p br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description p {
+    text-align: start;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .description p {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
