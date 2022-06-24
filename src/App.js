@@ -80,7 +80,6 @@ const App = () => {
               />
             </>
           )}
-
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
