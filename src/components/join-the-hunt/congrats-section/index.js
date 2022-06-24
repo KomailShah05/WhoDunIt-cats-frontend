@@ -12,12 +12,14 @@ import { avatar } from "../../../assets";
 const CongratSection = () => {
   return (
     <div className="congrats congrats__bg">
-      <h3 className="text-white">{eng_lang.winnerRevealLandingPage.congrat}</h3>
+      <h3 className="text-white congrats-text">
+        {eng_lang.winnerRevealLandingPage.congrat}
+      </h3>
       <img src={avatar} alt="avatar" />
-      <h6 className="text-white inter">
+      <h6 className="text-white inter winner">
         {eng_lang.winnerRevealLandingPage.worldWide}
       </h6>
-      <p>
+      <p className="mystery-solve-text">
         {eng_lang.winnerRevealLandingPage.mystery_text}
         <span className="text-white">
           {" "}

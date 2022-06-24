@@ -8,5 +8,20 @@
   p {
     text-align: center;
     margin-top: $size-20;
+    font-size: $size-16;
+    line-height: $size-24;
+    @media screen and (max-width: $breakpoint-lg) {
+      & br {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      text-align: start;
+      margin-top: $size-16;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: $size-12;
+      line-height: $size-20;
+    }
   }
 }

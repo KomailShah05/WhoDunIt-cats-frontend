@@ -90,7 +90,7 @@
   bottom: 0;
   right: 0;
   width: 94.8%;
-  height: 82.3%;
+  height: 84%;
   max-height: -webkit-min-content;
   max-height: -moz-min-content;
   max-height: min-content;
@@ -110,20 +110,20 @@
 @media screen and (max-width: 768px) {
   .card-size.unavailable .overlay-on-hover {
     width: 95%;
-    height: 83%;
+    height: 84%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .card-size.unavailable .overlay-on-hover {
     width: 100%;
-    height: 83%;
+    height: 85%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .card-size.unavailable .overlay-on-hover {
-    height: 80%;
+    height: 81%;
   }
 }
 
