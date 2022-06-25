@@ -2,8 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .terms-and-conditions {
-  margin-top: 11.938rem;
-  margin-bottom: 5.75rem;
+  padding: 11.938rem 17.5rem 20.5rem 17.5rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .terms-and-conditions {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .heading {
@@ -20,6 +26,31 @@
 }
 
 .paragraph {
-  margin-top: 1.5rem;
+  text-align-last: justify;
+}
+
+.paragraph p:last-child {
+  text-align-last: left;
+}
+
+.paragraph.personal-info-para {
+  text-align-last: justify;
+}
+
+.paragraph.personal-info-para p:last-child {
+  text-align-last: left;
+}
+
+@media screen and (max-width: 1400px) {
+  .paragraph {
+    text-align: start;
+  }
+  .paragraph p {
+    text-align: start;
+  }
+}
+
+.sub-heading {
+  margin-bottom: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
