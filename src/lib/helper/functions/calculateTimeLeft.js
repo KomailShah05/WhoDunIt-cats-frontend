@@ -1,5 +1,5 @@
 function calculateTimeLeft(startDate) {
-  const difference = +new Date(startDate) - +new Date();
+  const difference = +new Date(startDate * 1000) - +new Date();
   let timeLeft = {};
 
   if (difference > 0) {

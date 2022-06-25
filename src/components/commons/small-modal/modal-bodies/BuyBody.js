@@ -19,7 +19,7 @@ const BuyBody = ({ voucher, walletAddress }) => {
   useEffect(() => {
     if (document.getElementById("smallModal").classList.contains("show")) {
       const id = setTimeout(() => {
-        setminutes(calculateTimeLeft(voucher.expire_at));
+        setminutes(calculateTimeLeft(voucher.voucher.expire_at));
       }, 1000);
 
       return () => {
