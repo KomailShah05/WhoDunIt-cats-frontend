@@ -72,7 +72,10 @@ const Header = () => {
                       url === routes.CLUES && "text-decoration-underline"
                     }`}
                   >
-                    <Link to={"/"} className="text-white nav-link ">
+                    <Link
+                      to={routes.STORY_INTRO}
+                      className="text-white nav-link "
+                    >
                       {eng_lang.header.tabs[1]}
                     </Link>
                   </li>
@@ -82,7 +85,10 @@ const Header = () => {
                       "text-decoration-underline"
                     }`}
                   >
-                    <Link to={"/"} className={`text-white nav-link`}>
+                    <Link
+                      to={routes.CLAIM_ATTRIBUTE}
+                      className={`text-white nav-link`}
+                    >
                       {eng_lang.header.tabs[2]}
                     </Link>
                   </li>

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 //constants
-import { eng_lang } from "../../../lib/utills/constants";
+import { eng_lang, routes } from "../../../lib/utills/constants";
 
 //styles
 import "./index.scss";
@@ -20,7 +20,9 @@ const Footer = () => {
             <ul className="list-unstyled list">
               <li>
                 {" "}
-                <Link to={"/"}>{eng_lang.footer.terms_and_conditions} </Link>
+                <Link to={routes.TERMS_AND_CONDITIONS}>
+                  {eng_lang.footer.terms_and_conditions}{" "}
+                </Link>
               </li>{" "}
               <li>
                 <Link to={"/"}>{eng_lang.footer.support_email} </Link>
