@@ -74,12 +74,13 @@ const App = () => {
                 path={routes.WINNER_REVEAL}
                 element={withHeaderAndFooter(<LandingPage />)}
               />
-              <Route
-                path={routes.TERMS_AND_CONDITIONS}
-                element={withHeaderAndFooter(<TermsAndConditionsPage />)}
-              />
             </>
           )}
+          <Route
+            path={routes.TERMS_AND_CONDITIONS}
+            element={withHeaderAndFooter(<TermsAndConditionsPage />)}
+          />
+
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
