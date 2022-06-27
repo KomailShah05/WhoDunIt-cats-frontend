@@ -2,10 +2,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .faqs {
-  padding: 11.938rem 17.5rem 992px 17.5rem;
+  padding: 11.938rem 17.5rem 62rem 17.5rem;
+  position: relative;
+}
+
+@media screen and (max-width: 1400px) {
+  .faqs {
+    padding-left: 5.75rem;
+    padding-right: 5.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faqs {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .faq-heading {
   line-height: 2.5rem;
+}
+
+.faq-section {
+  margin-bottom: 2.5rem;
+  padding-left: 44px;
+  position: relative;
+}
+
+.faq-section::before {
+  content: url(../../assets/images/underline-sm.svg);
+  display: block;
+  max-width: 1.625rem;
+  max-height: 0.25rem;
+  margin-right: 1.12rem;
+  position: absolute;
+  left: 0;
+  font-size: 1.625rem;
+  line-height: 0.25rem;
+}
+
+.underline {
+  max-width: 1.625rem;
+  margin-right: 1.12rem;
+}
+
+.question {
+  margin-bottom: 0.25rem;
 }
 /*# sourceMappingURL=style.css.map */

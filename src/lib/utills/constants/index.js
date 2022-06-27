@@ -309,4 +309,26 @@ export const eng_lang = {
     case_detective: "CASE DETECTIVE",
     winner_name: "MrWorldWideWeb",
   },
+  FaqPage: {
+    heading: "faq",
+    questions_answers: [
+      {
+        question:
+          "Condimentum ipsum, suspendisse eget fusce ut porta nunc eleifend.?",
+        answer:
+          "Rhoncus nisi quis et, sit facilisis maecenas. Elit sagittis eget magna ligula vitae.",
+      },
+      {
+        question:
+          "Venenatis, et venenatis pellentesque tortor posuere arcu arcu viverra. Nulla orci eget arcu lorem dignissim feugiat scelerisque neque id.?",
+        answer:
+          "Mus ipsum, erat egestas in quam sagittis suspendisse. Orci nunc justo, sollicitudin est et lacus fermentum tellus commodo.",
+      },
+      {
+        question: "Dis at pellentesque eget lorem id nunc felis?",
+        answer:
+          "Libero lacus molestie malesuada faucibus habitant est gravida.",
+      },
+    ],
+  },
 };
