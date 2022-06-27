@@ -11,6 +11,7 @@ import {
   StoryCluesPage,
   Error,
   TermsAndConditionsPage,
+  FAQPage,
 } from "./pages";
 
 //components
@@ -79,6 +80,10 @@ const App = () => {
           <Route
             path={routes.TERMS_AND_CONDITIONS}
             element={withHeaderAndFooter(<TermsAndConditionsPage />)}
+          />
+          <Route
+            path={routes.FAQS}
+            element={withHeaderAndFooter(<FAQPage />)}
           />
 
           <Route path="*" element={<Error />} />

@@ -5,6 +5,7 @@ import StoryUpdate from "./story-update";
 import StoryCluesPage from "./story-clues";
 import Error from "./error";
 import TermsAndConditionsPage from "./terms-and-conditions";
+import FAQPage from "./faq-page";
 
 // exports
 export {
@@ -14,4 +15,5 @@ export {
   StoryCluesPage,
   Error,
   TermsAndConditionsPage,
+  FAQPage,
 };
