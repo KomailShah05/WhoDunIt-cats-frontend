@@ -7,6 +7,7 @@ export const routes = {
   LOGIN: "/login",
   CLAIM_ATTRIBUTE: "/claim-attribute",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
+  FAQS: "/faqs",
   WINNER_REVEAL: "/winner-reveal",
 };
 
