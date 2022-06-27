@@ -102,6 +102,7 @@ export const eng_lang = {
       "feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam aenean egestas.",
   },
   footer: {
+    faq: "FAQ",
     terms_and_conditions: "Terms and Conditions",
     support_email: "support@whodunitcats.com",
     stay_in_touch: "Stay in touch with us",

@@ -16,14 +16,16 @@ const Footer = () => {
     <section id="footer">
       <div className="container-xl">
         <div className="row align-items-center text-center text-lg-start">
-          <div className="col-lg-5">
+          <div className="col-lg-5 first-col">
             <ul className="list-unstyled list">
               <li>
-                {" "}
+                <Link to={routes.FAQS}>{eng_lang.footer.faq}</Link>
+              </li>
+              <li>
                 <Link to={routes.TERMS_AND_CONDITIONS}>
-                  {eng_lang.footer.terms_and_conditions}{" "}
+                  {eng_lang.footer.terms_and_conditions}
                 </Link>
-              </li>{" "}
+              </li>
               <li>
                 <Link to={"/"}>{eng_lang.footer.support_email} </Link>
               </li>

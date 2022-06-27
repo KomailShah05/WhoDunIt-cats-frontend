@@ -75,4 +75,14 @@
 .mb-2rem {
   margin-bottom: 2rem !important;
 }
+
+.first-col {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .first-col {
+    margin-top: 0;
+  }
+}
 /*# sourceMappingURL=index.css.map */

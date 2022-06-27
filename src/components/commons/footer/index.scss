@@ -23,6 +23,7 @@
   font-size: $font-16;
   line-height: $line-height-24;
   color: $white;
+
   &__copyrights {
     font-weight: $font-weight-regular;
     color: $dark-grey;
@@ -63,4 +64,11 @@
 
 .mb-2rem {
   margin-bottom: 2rem !important;
+}
+
+.first-col {
+  margin-top: 2rem;
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-top: 0;
+  }
 }
