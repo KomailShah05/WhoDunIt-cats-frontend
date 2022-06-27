@@ -20,6 +20,7 @@ export const api_routes = {
   NEW_NFT_MINTED: "nfts/mint",
   ADD_USER_WALLET: "users/add-user-wallet",
   CREATE_VOUCHER: "vouchers",
+  SUSPECT_CATS: "suspected-cats/all?page=",
 };
 
 // Landing Page Constants
@@ -43,6 +44,7 @@ export const eng_lang = {
   conncetToBuy: "conncetToBuy",
   buyModal: "buyModal",
   totalNoOfMintToken: 5000,
+  pageSize: "20",
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",

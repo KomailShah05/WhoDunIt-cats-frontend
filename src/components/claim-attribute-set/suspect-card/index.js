@@ -6,7 +6,7 @@ import "./style.scss";
 
 // assets
 import {
-  CatOnePng,
+  // CatOnePng,
   CatTwoPng,
   CatThreePng,
   CatFourPng,
@@ -14,13 +14,17 @@ import {
 } from "../../../assets";
 import { eng_lang } from "../../../lib/utills/constants";
 
-const Card = () => {
+const Card = ({ suspectedCats }) => {
   const unavailable = true;
   return (
     <>
-      <div className="col-lg-4 col-md-6 card-size">
-        <img src={CatOnePng} alt="cat" tabIndex="0" />
-      </div>
+      {suspectedCats?.length > 0 &&
+        suspectedCats?.map((cat, index) => (
+          <div key={index} className="col-lg-4 col-md-6 card-size">
+            <img src={cat?.imagePath} alt="cat" tabIndex="0" />
+          </div>
+        ))}
+
       <div className="col-lg-4 col-md-6 card-size">
         <img src={CatTwoPng} alt="cat" tabIndex="0" />
       </div>
