@@ -7,9 +7,18 @@
     padding-left: $size-92;
     padding-right: $size-92;
   }
+  @media screen and (max-width: $breakpoint-xl) {
+    padding-bottom: $size-92;
+  }
   @media screen and (max-width: $breakpoint-md) {
     padding-left: $size-48;
     padding-right: $size-48;
+    padding-bottom: $size-80;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-left: $size-24;
+    padding-right: $size-24;
+    padding-bottom: $size-48;
   }
 }
 
