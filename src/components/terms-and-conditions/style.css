@@ -16,6 +16,19 @@
   line-height: 2.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    line-height: 1.25rem;
+  }
+}
+
 .subtitle {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -23,6 +36,20 @@
   line-height: 1.75rem;
   color: #ffffff;
   margin-top: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .subtitle {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .subtitle {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+  }
 }
 
 .paragraph {
@@ -43,13 +70,17 @@
 
 @media screen and (max-width: 1400px) {
   .paragraph {
-    text-align: start;
+    text-align-last: start;
   }
   .paragraph p {
-    text-align: start;
+    text-align-last: start;
+  }
+  .paragraph br {
+    display: none;
   }
 }
 
 .sub-heading {
   margin-bottom: 1.5rem;
 }
+/*# sourceMappingURL=style.css.map */

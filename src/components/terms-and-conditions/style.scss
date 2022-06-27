@@ -9,6 +9,13 @@
 }
 .heading {
   line-height: $size-40;
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: $size-28;
+    line-height: $size-24;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    line-height: $size-20;
+  }
 }
 
 .subtitle {
@@ -18,6 +25,14 @@
   line-height: $size-28;
   color: $white;
   margin-top: $size-12;
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: $size-12;
+    line-height: $size-24;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    font-size: $size-10;
+    line-height: $size-20;
+  }
 }
 
 .paragraph {
@@ -25,6 +40,7 @@
   & p:last-child {
     text-align-last: left;
   }
+
   &.personal-info-para {
     text-align-last: justify;
     & p:last-child {
@@ -34,9 +50,12 @@
 
   @media screen and (max-width: $breakpoint-xlg) {
     & p {
-      text-align: start;
+      text-align-last: start;
     }
-    text-align: start;
+    text-align-last: start;
+    & br {
+      display: none;
+    }
   }
 }
 

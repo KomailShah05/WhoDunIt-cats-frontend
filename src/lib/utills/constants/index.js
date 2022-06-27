@@ -231,12 +231,56 @@ export const eng_lang = {
     },
     personal_info_text: "Personal Information We Collect",
     personal_info_paragraphs: {
-      para_1:
-        "Neque vel, mattis tristique nibh sagittis tortor. Bibendum eu euismod id pretium metus eu, in. Faucibus posuere leo morbi pulvinar in tincidunt. Amet, tortor, sagittis enim blandit pharetra, nulla viverra eget nam. Nulla pharetra, nisl in vel scelerisque sed vulputate orci. Eu diam ipsum lacus nascetur convallis. In semper posuere elit adipiscing condimentum velit dolor dui sociis. In nec, aliquam ultrices porttitor pellentesque consectetur. Id accumsan, orci neque, mattis. Ultricies ac et hac vel. Nisl fermentum tincidunt est cursus rutrum commodo mattis nullam pulvinar. Semper non, ultrices pharetra nisi ultrices justo, sed. Orci etiam velit eget arcu bibendum in habitant tellus.",
-      para_2:
-        "Aliquam sit libero orci dolor. Praesent consectetur velit in in sed eget pellentesque cursus sed. Eget cursus nullam id malesuada sagittis sit. Commodo neque, ac dui, quisque nascetur. Quam ut amet amet sit. Vitae lectus feugiat vitae dui, sed neque, arcu, arcu nulla. Dui scelerisque integer amet pretium blandit leo nec. Sed at pharetra volutpat sed aliquet. Augue scelerisque bibendum ut porta nulla in ornare pellentesque purus. Tincidunt ante scelerisque commodo non sollicitudin diam velit, vehicula. Egestas aliquet metus cras amet, vivamus ut. Odio viverra tellus sit eros, magna a ornare neque. Velit quam venenatis, pretium sapien. Et ullamcorper egestas quam viverra fringilla et. Fermentum sapien ullamcorper enim, adipiscing.",
-      para_3:
-        "Nibh eget sit euismod ultricies. Maecenas nec lectus maecenas a mi. Tortor, est odio sollicitudin venenatis consectetur. Malesuada eget porta aliquam viverra risus scelerisque ultrices sed. Suspendisse non sodales porta in. Sollicitudin arcu morbi lectus ultrices. Consectetur molestie elit odio cum. Enim nunc quam facilisi at amet, orci. Duis nec lectus duis cras ac non risus. Ut in non mi, vel cras bibendum varius. Porttitor porta in tempor lacus. Velit, amet molestie turpis est in elit maecenas. Scelerisque id mauris risus ipsum. Eu scelerisque sed nisi, ornare et. Enim fermentum, imperdiet tristique volutpat et. Ut tincidunt duis purus sed pellentesque ornare nibh. Dui, sit mattis dignissim sem faucibus dui aliquam amet elit. Sed nunc at vel, neque. Consequat eget adipiscing sit sit dui penatibus in. Sagittis diam magna ut amet nibh elit mauris. Amet viverra auctor vel proin erat.",
+      para_1: {
+        line_1:
+          "Neque vel, mattis tristique nibh sagittis tortor. Bibendum eu euismod id pretium metus eu, in. Faucibus posuere leo",
+        line_2:
+          "morbi pulvinar in tincidunt. Amet, tortor, sagittis enim blandit pharetra, nulla viverra eget nam. Nulla pharetra, nisl in",
+        line_3:
+          "vel scelerisque sed vulputate orci. Eu diam ipsum lacus nascetur convallis. In semper posuere elit adipiscing",
+        line_4:
+          "condimentum velit dolor dui sociis. In nec, aliquam ultrices porttitor pellentesque consectetur. Id accumsan, orci",
+        line_5:
+          "neque, mattis. Ultricies ac et hac vel. Nisl fermentum tincidunt est cursus rutrum commodo mattis nullam pulvinar.",
+        line_6:
+          "Semper non, ultrices pharetra nisi ultrices justo, sed. Orci etiam velit eget arcu bibendum in habitant tellus.",
+      },
+      para_2: {
+        line_1:
+          "Aliquam sit libero orci dolor. Praesent consectetur velit in in sed eget pellentesque cursus sed. Eget cursus nullam id",
+        line_2:
+          "malesuada sagittis sit. Commodo neque, ac dui, quisque nascetur. Quam ut amet amet sit. Vitae lectus feugiat vitae",
+        line_3:
+          "dui, sed neque, arcu, arcu nulla. Dui scelerisque integer amet pretium blandit leo nec. Sed at pharetra volutpat sed",
+        line_4:
+          "aliquet. Augue scelerisque bibendum ut porta nulla in ornare pellentesque purus. Tincidunt ante scelerisque",
+        line_5:
+          "commodo non sollicitudin diam velit, vehicula. Egestas aliquet metus cras amet, vivamus ut. Odio viverra tellus sit",
+        line_6:
+          "eros, magna a ornare neque. Velit quam venenatis, pretium sapien. Et ullamcorper egestas quam viverra fringilla et.",
+        line_7: "Fermentum sapien ullamcorper enim, adipiscing.",
+      },
+      para_3: {
+        line_1:
+          "Nibh eget sit euismod ultricies. Maecenas nec lectus maecenas a mi. Tortor, est odio sollicitudin venenatis",
+        line_2:
+          "consectetur. Malesuada eget porta aliquam viverra risus scelerisque ultrices sed. Suspendisse non sodales porta in.",
+        line_3:
+          "Sollicitudin arcu morbi lectus ultrices. Consectetur molestie elit odio cum. Enim nunc quam facilisi at amet, orci. Duis",
+        line_4:
+          "nec lectus duis cras ac non risus. Ut in non mi, vel cras bibendum varius. Porttitor porta in tempor lacus. Velit, amet",
+        line_5:
+          "molestie turpis est in elit maecenas. Scelerisque id mauris risus ipsum.",
+      },
+      para_4: {
+        line_1:
+          "Eu scelerisque sed nisi, ornare et. Enim fermentum, imperdiet tristique volutpat et. Ut tincidunt duis purus sed",
+        line_2:
+          "pellentesque ornare nibh. Dui, sit mattis dignissim sem faucibus dui aliquam amet elit. Sed nunc at vel, neque.",
+        line_3:
+          "Consequat eget adipiscing sit sit dui penatibus in. Sagittis diam magna ut amet nibh elit mauris. Amet viverra auctor",
+        line_4: "vel proin erat.",
+      },
     },
   },
   winnerRevealLandingPage: {
