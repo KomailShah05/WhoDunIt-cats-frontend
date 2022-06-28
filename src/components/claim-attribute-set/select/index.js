@@ -24,32 +24,21 @@ const Select = ({ heading, options }) => {
   return (
     <>
       <p className="text-white font-gouchi">{heading}</p>
-      {/* <select
-        className="form-select form-select-sm custom-select"
-        aria-label=".form-select-sm example"
-      >
-        {options?.length > 0 &&
-          options.map((item, index) => (
-            <>
-              <option value={item}>{item}</option>
-            </>
-          ))}
-      </select> */}
-
       <DropdownButton
         id="dropdown-dark-button"
         variant="info"
-        className="floatRight"
+        className=""
         onSelect={handleSelect}
         title={selected?.key || options[0]}
       >
-        {options.map((item, index) => {
-          return (
-            <Dropdown.Item key={index} eventKey={item}>
-              {item}
-            </Dropdown.Item>
-          );
-        })}
+        {options?.length > 0 &&
+          options.map((item, index) => {
+            return (
+              <Dropdown.Item key={index} eventKey={item}>
+                {item}
+              </Dropdown.Item>
+            );
+          })}
       </DropdownButton>
     </>
   );

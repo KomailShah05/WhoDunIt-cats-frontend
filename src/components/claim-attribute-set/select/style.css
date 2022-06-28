@@ -10,8 +10,11 @@
   margin-top: 1.5rem;
 }
 
-.custom-select,
-.custom-select option {
+.dropdown {
+  padding-left: 0 !important;
+}
+
+.dropdown button {
   padding: 0.75rem 1rem;
   gap: 0.5rem;
   border: 1px solid #dee2e6;
@@ -23,8 +26,10 @@
   font-size: 1rem;
   line-height: 1.5rem;
   color: #cccccc;
+  text-align: start;
   background-image: url(../../../assets/images/Vector-down.svg);
   background-position: right 0.75rem center;
+  background-repeat: no-repeat;
   background-size: 1rem 0.75rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -37,16 +42,33 @@
   width: 100%;
 }
 
-.custom-select option,
-.custom-select option option {
-  background-color: black;
+.dropdown button:hover {
+  background-color: #000000;
+  color: #cccccc;
+}
+
+.dropdown button:after {
+  display: none;
 }
 
 @media screen and (max-width: 576px) {
-  .custom-select,
-  .custom-select option {
+  .dropdown button {
     background-size: 0.625rem 0.75rem;
     background-position: right 0.32rem center;
   }
+}
+
+.dropdown-menu {
+  background-color: black;
+  padding: 0 !important;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #cccccc;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e5e5e5;
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
