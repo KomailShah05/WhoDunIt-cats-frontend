@@ -38,7 +38,6 @@ const AttributeSection = () => {
         Object.entries(payload).filter(([_, v]) => v != null)
       );
       setloading(true);
-      setselectedCat(null);
       const resp = await postRequest(
         `${api_routes.SUSPECT_CATS}${pageNumber}&pageSize=${eng_lang.pageSize}`,
         payload
@@ -69,6 +68,7 @@ const AttributeSection = () => {
 
   useEffect(() => {
     setpage(1);
+    setselectedCat(null);
     setpageNotCall(true);
     getSuspectedCats(1, []);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -122,6 +122,7 @@ const AttributeSection = () => {
           <CardSection
             suspectedCats={suspectedCats}
             setselectedCat={setselectedCat}
+            loading={loading}
           />
         </div>
       </div>

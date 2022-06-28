@@ -184,7 +184,7 @@
           justify-content: flex-start !important;
   padding: 2rem 1.688rem 5.75rem 1.5rem;
   overflow-y: auto;
-  max-height: 40rem;
+  max-height: 35rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -201,4 +201,3 @@
     --bs-gutter-x: 0 !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

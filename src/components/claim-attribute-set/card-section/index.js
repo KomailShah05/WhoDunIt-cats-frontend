@@ -2,6 +2,7 @@
 import React from "react";
 
 // components
+import { ReactSpinner } from "../../commons";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -12,7 +13,7 @@ import "./style.scss";
 
 // assets
 
-const CardSection = ({ suspectedCats, setselectedCat }) => {
+const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
   // store data of selected cat
   const handleSelectedCat = (cat) => {
     setselectedCat(cat);
@@ -64,6 +65,7 @@ const CardSection = ({ suspectedCats, setselectedCat }) => {
             );
           }
         })}
+      <ReactSpinner loading={loading} />
     </>
   );
 };
