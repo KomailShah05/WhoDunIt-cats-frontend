@@ -26,6 +26,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
   color: #cccccc;
+  background-color: #0f1016;
   text-align: start;
   background-image: url(../../../assets/images/Vector-down.svg);
   background-position: right 0.75rem center;
@@ -42,18 +43,26 @@
   width: 100%;
 }
 
-.dropdown button:hover {
-  background-color: #000000;
+.dropdown button.btn-dark:hover {
+  background-color: #0f1016;
+  color: #cccccc;
+  border: 1px solid #dee2e6;
+}
+
+.dropdown button.btn-dark.dropdown-toggle {
+  background-color: none;
+  border: 1px solid #dee2e6;
+}
+
+.dropdown button.btn-dark:focus {
+  background-color: #0f1016;
   color: #cccccc;
 }
 
-.dropdown button.btn-info:focus {
-  background-color: #000000;
-  color: #cccccc;
-}
-
-.dropdown button.btn-info:active {
+.dropdown button.btn-dark:active {
   outline: none;
+  background-color: #0f1016;
+  color: #cccccc;
 }
 
 .dropdown button:after {
@@ -74,6 +83,10 @@
 
 .dropdown-menu .dropdown-item {
   color: #cccccc;
+}
+
+.dropdown-menu .dropdown-item:active {
+  background-color: #0f1016;
 }
 
 .dropdown-menu .dropdown-item:hover {
