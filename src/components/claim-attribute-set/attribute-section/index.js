@@ -1,8 +1,8 @@
 // libraries
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // components
-import { FilterSuspectTrait, Select, Card } from "..";
+import { FilterSuspectTrait, Select, CardSection } from "..";
 
 // constants
 import { eng_lang, api_routes } from "../../../lib/utills/constants";
@@ -12,66 +12,80 @@ import { postRequest } from "../../../services/axiosMethod";
 import "./style.scss";
 
 // assets
-import { CatOnePng } from "../../../assets";
 
 const AttributeSection = () => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
-
+  const suspectSection = useRef();
   const [page, setpage] = useState(1);
+  const [pageNotCall, setpageNotCall] = useState(false);
   const [suspectedCats, setsuspectedCats] = useState([]);
-
-  console.log("suspectedCats*****", suspectedCats);
+  const [loading, setloading] = useState(false);
+  const [lenght, setlenght] = useState(eng_lang.pageSize);
+  const [selectedCat, setselectedCat] = useState(null);
+  const [selectedAttributes, setselectedAttributes] = useState({
+    height: null,
+    eyes: null,
+    skin: null,
+    hats: null,
+    shirts: null,
+  });
 
   // get suspected cat
-  const getSuspectedCats = async () => {
-    console.log("page", page);
+  const getSuspectedCats = async (pageNumber, previousSuspectedCats) => {
     try {
-      const payload = {
-        // height: "",
-        // eyes: "",
-        // skin: "",
-        // hats: "",
-        // shirts: "",
-      };
+      let payload = selectedAttributes;
+      payload = Object.fromEntries(
+        Object.entries(payload).filter(([_, v]) => v != null)
+      );
+      setloading(true);
+      setselectedCat(null);
       const resp = await postRequest(
-        `${api_routes.SUSPECT_CATS}${page}&pageSize=${eng_lang.pageSize}`,
+        `${api_routes.SUSPECT_CATS}${pageNumber}&pageSize=${eng_lang.pageSize}`,
         payload
       );
 
       if (resp) {
+        setloading(false);
+        setpageNotCall(false);
+        setlenght(resp?.data?.length);
         let tempArr = [];
-        tempArr = [...suspectedCats, ...resp?.data?.suspectedCats];
+        tempArr = [...previousSuspectedCats, ...resp?.data?.suspectedCats];
         setsuspectedCats(tempArr);
       }
     } catch (error) {
-      console.log(api_routes.SUSPECT_CATS, " error", error);
+      setloading(false);
+      setpageNotCall(false);
+      console.log(api_routes.SUSPECT_CATS, "error", error);
     }
-  };
-
-  // Call function when scroll reachec on bottom of screen
-  const handleScroll = async () => {
-    if (
-      Math.ceil(window.innerHeight + document.documentElement.scrollTop) <
-      document.documentElement.offsetHeight
-    )
-      return;
-    setpage(page + 1);
   };
 
   // call api on page state change
   useEffect(() => {
-    getSuspectedCats();
+    if (!pageNotCall) {
+      getSuspectedCats(page, suspectedCats);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
-  // add event listener on scroll
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    setpage(1);
+    setpageNotCall(true);
+    getSuspectedCats(1, []);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [selectedAttributes]);
+
+  const handleScrollEvent = (event) => {
+    const { scrollHeight, scrollTop, clientHeight } = event.target;
+    const scroll = scrollHeight - scrollTop - clientHeight;
+    if (scroll <= 4) {
+      // We are at the bottom
+      if (lenght === eng_lang.pageSize && loading === false) {
+        setpage(page + 1);
+      }
+    }
+  };
 
   return (
-    // <div className="container-xl">
     <div className="row attribute gx-0 mx-auto">
       <div className=" col-md-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
@@ -80,8 +94,17 @@ const AttributeSection = () => {
           fill={true}
         />
         <div className="attribute__min-width">
-          {selections.map((item) => (
-            <Select heading={item.attribute_name} options={item.options} />
+          {selections.map((item, index) => (
+            <Select
+              key={index}
+              index={index}
+              heading={item.attribute_name}
+              options={item.options}
+              element_name={item.element_name}
+              selectedAttributes={selectedAttributes}
+              setselectedAttributes={setselectedAttributes}
+              loading={loading}
+            />
           ))}
         </div>
       </div>
@@ -91,8 +114,15 @@ const AttributeSection = () => {
           index={2}
           fill={true}
         />
-        <div className="row w-100 suspects ">
-          <Card suspectedCats={suspectedCats} />
+        <div
+          ref={suspectSection}
+          className="row w-100 suspects"
+          onScroll={handleScrollEvent}
+        >
+          <CardSection
+            suspectedCats={suspectedCats}
+            setselectedCat={setselectedCat}
+          />
         </div>
       </div>
       <div className="col-md-3">
@@ -101,38 +131,43 @@ const AttributeSection = () => {
           index={3}
           fill={true}
         />
-        <div className="d-flex justify-content-center justify-content-lg-start">
-          <img className="selected-cat" src={CatOnePng} alt="cat" />
-        </div>
+        {selectedCat && (
+          <>
+            <div className="d-flex justify-content-center justify-content-lg-start">
+              <img
+                className="selected-cat"
+                src={selectedCat?.imagePath}
+                alt="cat"
+              />
+            </div>
 
-        <div className="d-flex justify-content-between metadata-nft">
-          <p className="text-white">
-            {eng_lang.claim_attribute_set.section_three.serial_number}
-          </p>
-          <p className="text-white">
-            {eng_lang.claim_attribute_set.section_three.serial_value}
-          </p>
-        </div>
-        <div className="d-flex  justify-content-between  metadata-nft">
-          <p className="text-white">
-            {eng_lang.claim_attribute_set.section_three.plank_number}
-          </p>
-          <p className="text-white">
-            {eng_lang.claim_attribute_set.section_three.plank_value}
-          </p>
-        </div>
-
-        <button
-          className="btn btn-primary mint-btn"
-          data-mdb-ripple-color="primary"
-          data-bs-toggle="modal"
-          data-bs-target="#smallModalCongrats"
-        >
-          {eng_lang.buttonConstants.mint_suspect}
-        </button>
+            <div className="d-flex justify-content-between metadata-nft">
+              <p className="text-white">
+                {eng_lang.claim_attribute_set.section_three.serial_number}
+              </p>
+              <p className="text-white">
+                {eng_lang.claim_attribute_set.section_three.serial_value}{" "}
+                {selectedCat?.index}
+              </p>
+            </div>
+            <div className="d-flex  justify-content-between  metadata-nft">
+              <p className="text-white">
+                {eng_lang.claim_attribute_set.section_three.plank_number}
+              </p>
+              <p className="text-white">{selectedCat?.plackNumber}</p>
+            </div>
+            <button
+              className="btn btn-primary mint-btn"
+              data-mdb-ripple-color="primary"
+              data-bs-toggle="modal"
+              data-bs-target="#smallModalCongrats"
+            >
+              {eng_lang.buttonConstants.mint_suspect}
+            </button>
+          </>
+        )}
       </div>
     </div>
-    // </div>
   );
 };
 

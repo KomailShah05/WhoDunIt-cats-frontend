@@ -1,5 +1,5 @@
 // libraries
-import React, { useState } from "react";
+import React from "react";
 
 // components
 
@@ -10,10 +10,27 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 // styles
 import "./style.scss";
 
-const Select = ({ heading, options }) => {
-  const [selected, setSelected] = useState({});
-  const handleSelect = (key, event) => {
-    setSelected({ key, value: event.target.value });
+const Select = ({
+  heading,
+  options,
+  element_name,
+  selectedAttributes,
+  setselectedAttributes,
+  loading,
+  index,
+}) => {
+  const handleSelect = (key) => {
+    if (options[0] === key) {
+      setselectedAttributes({
+        ...selectedAttributes,
+        [element_name]: null,
+      });
+      return;
+    }
+    setselectedAttributes({
+      ...selectedAttributes,
+      [element_name]: key,
+    });
   };
 
   return (
@@ -21,10 +38,12 @@ const Select = ({ heading, options }) => {
       <p className="text-white font-gouchi">{heading}</p>
       <DropdownButton
         id="dropdown-dark-button"
+        key={index}
         variant="dark"
         className=""
         onSelect={handleSelect}
-        title={selected?.key || options[0]}
+        title={selectedAttributes[element_name] || options[0]}
+        disabled={loading}
       >
         {options?.length > 0 &&
           options.map((item, index) => {
