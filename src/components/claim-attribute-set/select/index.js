@@ -21,7 +21,7 @@ const Select = ({ heading, options }) => {
       <p className="text-white font-gouchi">{heading}</p>
       <DropdownButton
         id="dropdown-dark-button"
-        variant="info"
+        variant="dark"
         className=""
         onSelect={handleSelect}
         title={selected?.key || options[0]}

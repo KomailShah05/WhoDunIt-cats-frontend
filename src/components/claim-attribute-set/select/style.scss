@@ -22,6 +22,7 @@
     font-size: $size-16;
     line-height: $size-24;
     color: $grey;
+    background-color: $bg-light-black;
     text-align: start;
     background-image: url(../../../assets/images/Vector-down.svg);
     background-position: right 0.75rem center;
@@ -31,17 +32,27 @@
     appearance: none;
     margin: $size-4 0 $size-12 0;
     width: 100%;
-    &:hover {
-      background-color: $black;
-      color: $grey;
+
+    &.btn-dark {
+      &:hover {
+        background-color: $bg-light-black;
+        color: $grey;
+        border: 1px solid #dee2e6;
+      }
+      &.dropdown-toggle {
+        background-color: none;
+        border: 1px solid #dee2e6;
+      }
     }
 
-    &.btn-info:focus {
-      background-color: $black;
+    &.btn-dark:focus {
+      background-color: $bg-light-black;
       color: $grey;
     }
-    &.btn-info:active {
+    &.btn-dark:active {
       outline: none;
+      background-color: $bg-light-black;
+      color: $grey;
     }
 
     &:after {
@@ -60,6 +71,9 @@
   padding: 0 !important;
   & .dropdown-item {
     color: $grey;
+    &:active {
+      background-color: $bg-light-black;
+    }
     &:hover {
       background-color: $bg-light-black;
       color: $black;
