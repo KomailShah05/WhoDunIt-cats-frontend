@@ -71,7 +71,7 @@ const SmallPopupCongrats = () => {
                   text={eng_lang.view_on_open_sea}
                   imgPath={opensea}
                   name={"opensea"}
-                  handleClick={""}
+                  handleClick={() => {}}
                   secondary={true}
                 />
               </div>
