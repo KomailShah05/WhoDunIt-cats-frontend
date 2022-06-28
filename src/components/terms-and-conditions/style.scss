@@ -1,11 +1,21 @@
 @import "../../sass/partials/variables";
 
 .terms-and-conditions {
-  margin-top: $size-191;
-  margin-bottom: $size-92;
+  padding: $size-191 $size-280 $size-328 $size-280;
+  @media screen and (max-width: $breakpoint-xlg) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 .heading {
   line-height: $size-40;
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: $size-28;
+    line-height: $size-24;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    line-height: $size-20;
+  }
 }
 
 .subtitle {
@@ -15,8 +25,40 @@
   line-height: $size-28;
   color: $white;
   margin-top: $size-12;
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: $size-12;
+    line-height: $size-24;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    font-size: $size-10;
+    line-height: $size-20;
+  }
 }
 
 .paragraph {
-  margin-top: $size-24;
+  text-align-last: justify;
+  & p:last-child {
+    text-align-last: left;
+  }
+
+  &.personal-info-para {
+    text-align-last: justify;
+    & p:last-child {
+      text-align-last: left;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-xlg) {
+    & p {
+      text-align-last: start;
+    }
+    text-align-last: start;
+    & br {
+      display: none;
+    }
+  }
+}
+
+.sub-heading {
+  margin-bottom: $size-24;
 }

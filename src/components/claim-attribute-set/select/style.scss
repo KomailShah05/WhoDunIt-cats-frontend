@@ -8,32 +8,61 @@
   }
 }
 
-.custom-select,
-.custom-select option {
-  padding: $size-12 $size-16;
-  gap: $size-8;
-  border: 1px solid #dee2e6;
-  border-radius: $size-4;
-  background-color: transparent;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: $font-weight-regular;
-  font-size: $size-16;
-  line-height: $size-24;
-  color: $grey;
-  background-image: url(../../../assets/images/Vector-down.svg);
-  background-position: right 0.75rem center;
-  background-size: $size-16 $size-12;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
-  margin: $size-4 0 $size-12 0;
-  width: 100%;
-  option {
-    background-color: black;
-  }
+.dropdown {
+  padding-left: 0 !important;
+  & button {
+    padding: $size-12 $size-16;
+    gap: $size-8;
+    border: 1px solid #dee2e6;
+    border-radius: $size-4;
+    background-color: transparent;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    font-size: $size-16;
+    line-height: $size-24;
+    color: $grey;
+    text-align: start;
+    background-image: url(../../../assets/images/Vector-down.svg);
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: $size-16 $size-12;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+    margin: $size-4 0 $size-12 0;
+    width: 100%;
+    &:hover {
+      background-color: $black;
+      color: $grey;
+    }
 
-  @media screen and (max-width: $breakpoint-sm) {
-    background-size: $size-10 $size-12;
-    background-position: right 0.32rem center;
+    &.btn-info:focus {
+      background-color: $black;
+      color: $grey;
+    }
+    &.btn-info:active {
+      outline: none;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      background-size: $size-10 $size-12;
+      background-position: right 0.32rem center;
+    }
+  }
+}
+
+.dropdown-menu {
+  background-color: black;
+  padding: 0 !important;
+  & .dropdown-item {
+    color: $grey;
+    &:hover {
+      background-color: $bg-light-black;
+      color: $black;
+    }
   }
 }

@@ -7,6 +7,7 @@ export const routes = {
   LOGIN: "/login",
   CLAIM_ATTRIBUTE: "/claim-attribute",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
+  FAQS: "/faqs",
   WINNER_REVEAL: "/winner-reveal",
 };
 
@@ -103,6 +104,7 @@ export const eng_lang = {
       "feugiat amet, diam eget cursus. Nec, vivamus arcu, amet leo aliquam aenean egestas.",
   },
   footer: {
+    faq: "FAQ",
     terms_and_conditions: "Terms and Conditions",
     support_email: "support@whodunitcats.com",
     stay_in_touch: "Stay in touch with us",
@@ -232,6 +234,58 @@ export const eng_lang = {
         "ullamcorper. Fusce aliquam mauris commodo, faucibus velit mauris blandit.",
     },
     personal_info_text: "Personal Information We Collect",
+    personal_info_paragraphs: {
+      para_1: {
+        line_1:
+          "Neque vel, mattis tristique nibh sagittis tortor. Bibendum eu euismod id pretium metus eu, in. Faucibus posuere leo",
+        line_2:
+          "morbi pulvinar in tincidunt. Amet, tortor, sagittis enim blandit pharetra, nulla viverra eget nam. Nulla pharetra, nisl in",
+        line_3:
+          "vel scelerisque sed vulputate orci. Eu diam ipsum lacus nascetur convallis. In semper posuere elit adipiscing",
+        line_4:
+          "condimentum velit dolor dui sociis. In nec, aliquam ultrices porttitor pellentesque consectetur. Id accumsan, orci",
+        line_5:
+          "neque, mattis. Ultricies ac et hac vel. Nisl fermentum tincidunt est cursus rutrum commodo mattis nullam pulvinar.",
+        line_6:
+          "Semper non, ultrices pharetra nisi ultrices justo, sed. Orci etiam velit eget arcu bibendum in habitant tellus.",
+      },
+      para_2: {
+        line_1:
+          "Aliquam sit libero orci dolor. Praesent consectetur velit in in sed eget pellentesque cursus sed. Eget cursus nullam id",
+        line_2:
+          "malesuada sagittis sit. Commodo neque, ac dui, quisque nascetur. Quam ut amet amet sit. Vitae lectus feugiat vitae",
+        line_3:
+          "dui, sed neque, arcu, arcu nulla. Dui scelerisque integer amet pretium blandit leo nec. Sed at pharetra volutpat sed",
+        line_4:
+          "aliquet. Augue scelerisque bibendum ut porta nulla in ornare pellentesque purus. Tincidunt ante scelerisque",
+        line_5:
+          "commodo non sollicitudin diam velit, vehicula. Egestas aliquet metus cras amet, vivamus ut. Odio viverra tellus sit",
+        line_6:
+          "eros, magna a ornare neque. Velit quam venenatis, pretium sapien. Et ullamcorper egestas quam viverra fringilla et.",
+        line_7: "Fermentum sapien ullamcorper enim, adipiscing.",
+      },
+      para_3: {
+        line_1:
+          "Nibh eget sit euismod ultricies. Maecenas nec lectus maecenas a mi. Tortor, est odio sollicitudin venenatis",
+        line_2:
+          "consectetur. Malesuada eget porta aliquam viverra risus scelerisque ultrices sed. Suspendisse non sodales porta in.",
+        line_3:
+          "Sollicitudin arcu morbi lectus ultrices. Consectetur molestie elit odio cum. Enim nunc quam facilisi at amet, orci. Duis",
+        line_4:
+          "nec lectus duis cras ac non risus. Ut in non mi, vel cras bibendum varius. Porttitor porta in tempor lacus. Velit, amet",
+        line_5:
+          "molestie turpis est in elit maecenas. Scelerisque id mauris risus ipsum.",
+      },
+      para_4: {
+        line_1:
+          "Eu scelerisque sed nisi, ornare et. Enim fermentum, imperdiet tristique volutpat et. Ut tincidunt duis purus sed",
+        line_2:
+          "pellentesque ornare nibh. Dui, sit mattis dignissim sem faucibus dui aliquam amet elit. Sed nunc at vel, neque.",
+        line_3:
+          "Consequat eget adipiscing sit sit dui penatibus in. Sagittis diam magna ut amet nibh elit mauris. Amet viverra auctor",
+        line_4: "vel proin erat.",
+      },
+    },
   },
   winnerRevealLandingPage: {
     heading: "MYSTERY SOLVED!",
@@ -257,5 +311,27 @@ export const eng_lang = {
       "at. Ornare adipiscing viverra phasellus velit sapien. Diam est vitae accumsan lobortis erat vulputate sit varius convallis. Vel eget in luctus parturient sit cum. Gravida placerat ac leo tellus, urna dolor posuere aenean. Amet lacus, nisl nisl enim, enim, integer augue dui. At a, sagittis lobortis netus turpis. In nec hendrerit ac, tincidunt ut. Integer volutpat commodo convallis congue tincidunt. Sit lectus vitae pellentesque in. Ac pulvinar rutrum pellentesque amet varius nec. Faucibus nunc convallis bibendum tortor urna feugiat odio mus eget. Cursus magna facilisi malesuada vestibulum sollicitudin sed eget ac. Enim molestie nibh netus ridiculus. Blandit sodales blandit orci purus est blandit. Nec et non sed elementum imperdiet turpis ultricies turpis aliquet.",
     case_detective: "CASE DETECTIVE",
     winner_name: "MrWorldWideWeb",
+  },
+  FaqPage: {
+    heading: "faq",
+    questions_answers: [
+      {
+        question:
+          "Condimentum ipsum, suspendisse eget fusce ut porta nunc eleifend.?",
+        answer:
+          "Rhoncus nisi quis et, sit facilisis maecenas. Elit sagittis eget magna ligula vitae.",
+      },
+      {
+        question:
+          "Venenatis, et venenatis pellentesque tortor posuere arcu arcu viverra. Nulla orci eget arcu lorem dignissim feugiat scelerisque neque id.?",
+        answer:
+          "Mus ipsum, erat egestas in quam sagittis suspendisse. Orci nunc justo, sollicitudin est et lacus fermentum tellus commodo.",
+      },
+      {
+        question: "Dis at pellentesque eget lorem id nunc felis?",
+        answer:
+          "Libero lacus molestie malesuada faucibus habitant est gravida.",
+      },
+    ],
   },
 };

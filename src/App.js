@@ -11,6 +11,7 @@ import {
   StoryCluesPage,
   Error,
   TermsAndConditionsPage,
+  FAQPage,
 } from "./pages";
 
 //components
@@ -63,10 +64,6 @@ const App = () => {
                 element={withHeaderAndFooter(<StoryUpdate />)}
               />
               <Route
-                path={routes.CLAIM_ATTRIBUTE}
-                element={withHeaderAndFooter(<ClaimAttributeSet />)}
-              />
-              <Route
                 path={routes.CLUES}
                 element={withHeaderAndFooter(<StoryCluesPage />)}
               />
@@ -74,12 +71,21 @@ const App = () => {
                 path={routes.WINNER_REVEAL}
                 element={withHeaderAndFooter(<LandingPage />)}
               />
-              <Route
-                path={routes.TERMS_AND_CONDITIONS}
-                element={withHeaderAndFooter(<TermsAndConditionsPage />)}
-              />
             </>
           )}
+          <Route
+            path={routes.CLAIM_ATTRIBUTE}
+            element={withHeaderAndFooter(<ClaimAttributeSet />)}
+          />
+          <Route
+            path={routes.TERMS_AND_CONDITIONS}
+            element={withHeaderAndFooter(<TermsAndConditionsPage />)}
+          />
+          <Route
+            path={routes.FAQS}
+            element={withHeaderAndFooter(<FAQPage />)}
+          />
+
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
