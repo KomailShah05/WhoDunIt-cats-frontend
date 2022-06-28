@@ -64,10 +64,6 @@ const App = () => {
                 element={withHeaderAndFooter(<StoryUpdate />)}
               />
               <Route
-                path={routes.CLAIM_ATTRIBUTE}
-                element={withHeaderAndFooter(<ClaimAttributeSet />)}
-              />
-              <Route
                 path={routes.CLUES}
                 element={withHeaderAndFooter(<StoryCluesPage />)}
               />
@@ -77,6 +73,10 @@ const App = () => {
               />
             </>
           )}
+          <Route
+            path={routes.CLAIM_ATTRIBUTE}
+            element={withHeaderAndFooter(<ClaimAttributeSet />)}
+          />
           <Route
             path={routes.TERMS_AND_CONDITIONS}
             element={withHeaderAndFooter(<TermsAndConditionsPage />)}
