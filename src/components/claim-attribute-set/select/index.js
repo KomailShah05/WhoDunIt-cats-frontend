@@ -11,11 +11,6 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 import "./style.scss";
 
 const Select = ({ heading, options }) => {
-  const list = [
-    { key: "Yellow", value: "yellow" },
-    { key: "Blue", value: "blue" },
-    { key: "Green", value: "green" },
-  ];
   const [selected, setSelected] = useState({});
   const handleSelect = (key, event) => {
     setSelected({ key, value: event.target.value });
