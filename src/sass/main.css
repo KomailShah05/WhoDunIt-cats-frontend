@@ -248,6 +248,15 @@ p {
   body {
     font-size: 25px;
   }
+  .mb-max-screen {
+    margin-bottom: 17rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .mb-max-screen {
+    margin-bottom: 17rem;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
