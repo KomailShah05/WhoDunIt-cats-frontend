@@ -45,7 +45,7 @@ export const eng_lang = {
   conncetToBuy: "conncetToBuy",
   buyModal: "buyModal",
   totalNoOfMintToken: 5000,
-  pageSize: "20",
+  pageSize: 7,
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",
@@ -139,10 +139,12 @@ export const eng_lang = {
       select_data: [
         {
           attribute_name: "Height",
+          element_name: "height",
           options: ["Select Height", "1'11", "1'14", "1'15"],
         },
         {
           attribute_name: "Eyes",
+          element_name: "eyes",
           options: [
             "Select Eyes",
             "black",
@@ -155,14 +157,17 @@ export const eng_lang = {
         },
         {
           attribute_name: "Skin",
+          element_name: "skin",
           options: ["Select Skin", "Furry", "Hairless"],
         },
         {
           attribute_name: "Hats",
+          element_name: "hats",
           options: ["Select Hats", "Hats 1", "Hats 2", "Hats 3"],
         },
         {
           attribute_name: "Shirts",
+          element_name: "shirts",
           options: ["Select Shirts", "shirts 1", "shirts 2", "shirts 3"],
         },
       ],
@@ -176,7 +181,7 @@ export const eng_lang = {
     section_three: {
       title: "Mint your Suspect",
       serial_number: "Serial Number",
-      serial_value: "0-5000",
+      serial_value: "1 -",
       plank_number: "Plank Number",
       plank_value: "152374",
     },

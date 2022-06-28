@@ -63,7 +63,7 @@ const SmallPopupCongrats = () => {
                 }
                 imgPath={""}
                 name={modalName === "buy" ? "loading" : ""}
-                handleClick={modalName === "buy" && handleModalName}
+                handleClick={modalName === "buy" ? handleModalName : () => {}}
               />
               <div className="sm-modal__mg-btw-btns">
                 <BlockButton
