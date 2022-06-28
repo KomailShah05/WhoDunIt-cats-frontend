@@ -86,7 +86,7 @@ const AttributeSection = () => {
   };
 
   return (
-    <div className="row attribute gx-0 mx-auto">
+    <div className="row attribute gx-0 mx-auto mb-max-screen">
       <div className=" col-md-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}

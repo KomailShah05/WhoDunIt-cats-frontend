@@ -16,7 +16,7 @@ const Intro = () => {
       <div className=" container text-center intro-content">
         <h2 className="text-white">{eng_lang.storyUpdate.intro_heading}</h2>
         <img className="underline-pos" src={Underline} alt="underline" />
-        <div className="d-flex flex-column justify-content-center">
+        <div className="d-flex flex-column justify-content-center mb-max-screen">
           <p>{eng_lang.storyUpdate.first_line}</p>
           <p>{eng_lang.storyUpdate.second_line}</p>
           <p>{eng_lang.storyUpdate.third_line}</p>
