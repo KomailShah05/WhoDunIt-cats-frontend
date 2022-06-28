@@ -20,6 +20,8 @@ const AttributeSection = () => {
   const [page, setpage] = useState(1);
   const [suspectedCats, setsuspectedCats] = useState([]);
 
+  console.log("suspectedCats*****", suspectedCats);
+
   // get suspected cat
   const getSuspectedCats = async () => {
     console.log("page", page);
