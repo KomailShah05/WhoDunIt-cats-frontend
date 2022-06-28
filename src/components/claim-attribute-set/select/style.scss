@@ -36,6 +36,14 @@
       color: $grey;
     }
 
+    &.btn-info:focus {
+      background-color: $black;
+      color: $grey;
+    }
+    &.btn-info:active {
+      outline: none;
+    }
+
     &:after {
       display: none;
     }

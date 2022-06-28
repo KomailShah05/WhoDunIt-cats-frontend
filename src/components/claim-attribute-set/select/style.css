@@ -47,6 +47,15 @@
   color: #cccccc;
 }
 
+.dropdown button.btn-info:focus {
+  background-color: #000000;
+  color: #cccccc;
+}
+
+.dropdown button.btn-info:active {
+  outline: none;
+}
+
 .dropdown button:after {
   display: none;
 }
