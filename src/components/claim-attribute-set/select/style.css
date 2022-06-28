@@ -78,7 +78,9 @@
 
 .dropdown-menu {
   background-color: black;
-  padding: 0 !important;
+  width: 100%;
+  padding-left: 1rem !important;
+  padding-right: 1rem;
 }
 
 .dropdown-menu .dropdown-item {
