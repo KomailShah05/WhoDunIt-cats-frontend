@@ -7,6 +7,7 @@ import {
   getAccountBalance,
   convertFromWei,
 } from "./utilityFunctions";
+import signTransaction from "./signTransaction";
 
 export {
   connectToMetaMask,
@@ -16,4 +17,5 @@ export {
   getAccountAddress,
   getAccountBalance,
   convertFromWei,
+  signTransaction,
 };

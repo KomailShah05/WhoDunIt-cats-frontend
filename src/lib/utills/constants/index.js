@@ -22,6 +22,7 @@ export const api_routes = {
   ADD_USER_WALLET: "users/add-user-wallet",
   CREATE_VOUCHER: "vouchers",
   SUSPECT_CATS: "suspected-cats/all?page=",
+  CLAIM_CAT: "suspected-cats/claim",
 };
 
 // Landing Page Constants

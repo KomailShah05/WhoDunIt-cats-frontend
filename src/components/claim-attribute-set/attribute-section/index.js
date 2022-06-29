@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 
 // components
 import { FilterSuspectTrait, Select, CardSection } from "..";
@@ -7,14 +7,16 @@ import { FilterSuspectTrait, Select, CardSection } from "..";
 // constants
 import { eng_lang, api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
+import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 
 // styles
 import "./style.scss";
 
 // assets
 
-const AttributeSection = () => {
+const AttributeSection = ({ btnLoading }) => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
+  const { personalSign } = useContext(EtheriumContext);
   const suspectSection = useRef();
   const [page, setpage] = useState(1);
   const [pageNotCall, setpageNotCall] = useState(false);
@@ -162,6 +164,8 @@ const AttributeSection = () => {
               data-mdb-ripple-color="primary"
               data-bs-toggle="modal"
               data-bs-target="#smallModalCongrats"
+              onClick={() => personalSign(selectedCat)}
+              disabled={btnLoading}
             >
               {eng_lang.buttonConstants.mint_suspect}
             </button>
