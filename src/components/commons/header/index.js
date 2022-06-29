@@ -61,7 +61,12 @@ const Header = () => {
           <div className="d-flex tabs">
             <ul className="navbar-nav w-100">
               <li className="nav-item">
-                <a href="#howItWorks" className="text-white nav-link">
+                <a
+                  href={`${
+                    url === routes.HOME ? "#howItWorks" : `${routes.HOME}`
+                  }`}
+                  className="text-white nav-link"
+                >
                   {eng_lang.header.tabs[0]}
                 </a>
               </li>
@@ -69,7 +74,9 @@ const Header = () => {
                 <>
                   <li
                     className={`nav-item ${
-                      url === routes.CLUES && "text-decoration-underline"
+                      url === routes.STORY_INTRO || url === routes.CLUES
+                        ? "text-decoration-underline"
+                        : "text-decoration-none"
                     }`}
                   >
                     <Link
@@ -113,7 +120,7 @@ const Header = () => {
                 <div className="d-flex tabs">
                   <ul className="flex-column nav w-100 ">
                     <li className="nav-item">
-                      <Link to={"/"} className="text-white ">
+                      <Link to={routes.HOME} className="text-white ">
                         {eng_lang.header.tabs[0]}
                       </Link>
                     </li>
@@ -121,7 +128,11 @@ const Header = () => {
                       <>
                         {" "}
                         <li className="nav-item">
-                          <Link to={"/"} className="text-white  ">
+                          <Link
+                            to={routes.STORY_INTRO}
+                            s
+                            className="text-white  "
+                          >
                             {eng_lang.header.tabs[1]}
                           </Link>
                         </li>
