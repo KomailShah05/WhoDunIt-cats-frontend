@@ -89,7 +89,7 @@ const AttributeSection = ({ btnLoading }) => {
 
   return (
     <div className="row attribute gx-0 mx-auto mb-max-screen">
-      <div className=" col-md-3 d-flex flex-column align-items-center">
+      <div className=" col-lg-3 d-flex flex-column align-items-center">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_one.title}
           index={1}
@@ -110,7 +110,7 @@ const AttributeSection = ({ btnLoading }) => {
           ))}
         </div>
       </div>
-      <div className="col-md-6">
+      <div className="col-lg-6">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_two.title}
           index={2}
@@ -128,7 +128,7 @@ const AttributeSection = ({ btnLoading }) => {
           />
         </div>
       </div>
-      <div className="col-md-3">
+      <div className="col-lg-3">
         <FilterSuspectTrait
           title={eng_lang.claim_attribute_set.section_three.title}
           index={3}
