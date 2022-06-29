@@ -120,24 +120,28 @@ const Header = () => {
                 <div className="d-flex tabs">
                   <ul className="flex-column nav w-100 ">
                     <li className="nav-item">
-                      <Link to={routes.HOME} className="text-white ">
+                      <a
+                        href={`${
+                          url === routes.HOME ? "#howItWorks" : `${routes.HOME}`
+                        }`}
+                        className="text-white"
+                      >
                         {eng_lang.header.tabs[0]}
-                      </Link>
+                      </a>
                     </li>
                     {totalMinted >= eng_lang.totalNoOfMintToken ? (
                       <>
                         {" "}
                         <li className="nav-item">
-                          <Link
-                            to={routes.STORY_INTRO}
-                            s
-                            className="text-white  "
-                          >
+                          <Link to={routes.STORY_INTRO} className="text-white">
                             {eng_lang.header.tabs[1]}
                           </Link>
                         </li>
                         <li className="nav-item">
-                          <Link to={"/"} className="text-white  ">
+                          <Link
+                            to={routes.CLAIM_ATTRIBUTE}
+                            className="text-white  "
+                          >
                             {eng_lang.header.tabs[2]}
                           </Link>
                         </li>
