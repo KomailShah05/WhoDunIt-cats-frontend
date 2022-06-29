@@ -114,6 +114,8 @@ const EtheriumProvider = ({ children }) => {
     try {
       // step -> 0 : check etherum login id
       if (!window?.ethereum?.selectedAddress) {
+        notfiFail(eng_lang.user_not_login);
+
         return {
           isUserLogin,
           networkName,
