@@ -59,7 +59,6 @@ const EtheriumProvider = ({ children }) => {
 
   // detect account change event on metamask
   window?.ethereum?.on("accountsChanged", function (accounts) {
-    // checkUserLogin(accounts[0]);
     setaccount(accounts[0]);
   });
 
