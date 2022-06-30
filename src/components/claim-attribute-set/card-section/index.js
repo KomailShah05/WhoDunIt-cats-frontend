@@ -23,17 +23,21 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
   };
   return (
     <>
+      {/* <div className="col-lg-4  skeleton">
+        <div className="empty-card-skeleton"></div>
+      </div> */}
       {suspectedCats?.length > 0 &&
         suspectedCats?.map((cat, index) => {
           if (cat?.isClaimed) {
             return (
               <div
                 key={index}
-                className={`col-lg-4 col-md-6 card-size unavailable`}
+                className={`col-lg-4 col-md-6 card-size unavailable `}
               >
                 <div className="unavailable-text">
                   <p>Unavailable</p>
                 </div>
+
                 <img src={cat?.imagePath} alt="cat" tabIndex="0" />
                 <div className="overlay-on-hover text-center">
                   <p className="overlay-header">
@@ -57,7 +61,7 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
             return (
               <div
                 key={index}
-                className={`col-lg-4 col-md-6 card-size`}
+                className={`col-lg-4 col-md-6 card-size `}
                 onClick={handleSelectedCat.bind(this, cat)}
               >
                 <img src={cat?.imagePath} alt="cat" tabIndex="0" />
