@@ -59,6 +59,7 @@ export const eng_lang = {
     continue_to_mint: "Continue To Mint",
     view_on_open_sea: "View On Opensea",
     who_dun_it: "Show me WhodunIt",
+    buy_on_open_sea: "Buy On Opensea Marketplace",
   },
 
   header: {
@@ -209,6 +210,8 @@ export const eng_lang = {
     },
     congrats_text_modal:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien ut diam in commodo bibendum et ac..",
+    error_heading: "Can’t choose killer",
+    error_body: "You need an NFT to participate",
   },
   story_clues: {
     paragrapgh_line_1:

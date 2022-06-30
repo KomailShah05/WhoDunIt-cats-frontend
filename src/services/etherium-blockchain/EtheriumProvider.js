@@ -113,15 +113,15 @@ const EtheriumProvider = ({ children }) => {
       accBalance = null;
     try {
       // step -> 0 : check etherum login id
-      if (window?.ethereum?.selectedAddress === null) {
-        notfiFail(eng_lang.user_not_login);
+      // if (window?.ethereum?.selectedAddress === null) {
+      //   notfiFail(eng_lang.user_not_login);
 
-        return {
-          isUserLogin,
-          networkName,
-          accBalance,
-        };
-      }
+      //   return {
+      //     isUserLogin,
+      //     networkName,
+      //     accBalance,
+      //   };
+      // }
 
       // step -> 1 : check user is logged in with wallet
       isUserLogin = await checkUserLogin(window?.ethereum?.selectedAddress);
@@ -206,11 +206,12 @@ const EtheriumProvider = ({ children }) => {
         return;
       }
 
-      const dataToSign = {
+      const dataToSign = JSON.stringify({
         nonce: Math.random(),
         owner: walletAddress,
         claim_attributes: claimNft?.index,
-      };
+      });
+
       const signature = await signTransaction(web3, dataToSign, walletAddress);
 
       if (signature) {
