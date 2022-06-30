@@ -2,22 +2,22 @@
 import { postRequest } from "../../../services/axiosMethod";
 
 // action types
-import { types } from "../../types";
+// import { types } from "../../types";
 
 // actions
-import { suspectBtnLoading } from ".";
+import { suspectBtnLoading, displayModalAction } from ".";
 
 // constants
-import { api_routes } from "../../../lib/utills/constants";
+import { api_routes, eng_lang } from "../../../lib/utills/constants";
 
-const claimNftAction = (walletAddress, signature, claimNft) => {
+const claimNftAction = (walletAddress, signature, claimNft, dataToSign) => {
   return async function (dispatch) {
     try {
       const payload = {
         walletAddress,
         id: claimNft?._id,
         signature,
-        message: "",
+        message: dataToSign,
       };
 
       // api call to get total tokent minted
@@ -32,21 +32,14 @@ const claimNftAction = (walletAddress, signature, claimNft) => {
 
 const claimNftSuccess = (nft) => {
   return function (dispatch) {
-    dispatch({
-      type: types.BUY_NFT,
-      payload: nft,
-    });
-
+    dispatch(displayModalAction(eng_lang.claim_nft));
     dispatch(suspectBtnLoading(false));
   };
 };
 
 const claimNftFail = () => {
   return function (dispatch) {
-    dispatch({
-      type: types.CREATE_VOUCHER,
-      payload: {},
-    });
+    dispatch(displayModalAction(eng_lang.dont_claim_nft));
     dispatch(suspectBtnLoading(false));
   };
 };

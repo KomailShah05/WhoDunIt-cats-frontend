@@ -20,6 +20,7 @@ const AttributeSection = ({ btnLoading }) => {
   const suspectSection = useRef();
   const [page, setpage] = useState(1);
   const [pageNotCall, setpageNotCall] = useState(false);
+  const [render, setrender] = useState(true);
   const [suspectedCats, setsuspectedCats] = useState([]);
   const [loading, setloading] = useState(false);
   const [lenght, setlenght] = useState(eng_lang.pageSize);
@@ -34,8 +35,11 @@ const AttributeSection = ({ btnLoading }) => {
 
   // get suspected cat
   const getSuspectedCats = async (pageNumber, previousSuspectedCats) => {
+    console.log("I am called");
     try {
       let payload = selectedAttributes;
+
+      // Removing null keys from object
       payload = Object.fromEntries(
         Object.entries(payload).filter(([_, v]) => v != null)
       );
@@ -72,7 +76,10 @@ const AttributeSection = ({ btnLoading }) => {
     setpage(1);
     setselectedCat(null);
     setpageNotCall(true);
-    getSuspectedCats(1, []);
+    setrender(false);
+    if (!render) {
+      getSuspectedCats(1, []);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAttributes]);
 
@@ -162,8 +169,8 @@ const AttributeSection = ({ btnLoading }) => {
             <button
               className="btn btn-primary mint-btn"
               data-mdb-ripple-color="primary"
-              data-bs-toggle="modal"
-              data-bs-target="#smallModalCongrats"
+              // data-bs-toggle="modal"
+              // data-bs-target="#smallModalCongrats"
               onClick={() => personalSign(selectedCat)}
               disabled={btnLoading}
             >

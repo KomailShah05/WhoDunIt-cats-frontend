@@ -9,12 +9,12 @@ import Toast from "../../lib/helper/toast";
 
 const ClaimAttributeSet = () => {
   const {
-    claimReducer: { btnLoading },
+    claimReducer: { btnLoading, displayModal },
   } = useSelector((state) => state);
   return (
     <>
       <AttributeSection btnLoading={btnLoading} />
-      <SmallPopupCongrats />
+      <SmallPopupCongrats displayModal={displayModal} />
       <Toast />
     </>
   );

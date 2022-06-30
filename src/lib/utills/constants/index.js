@@ -47,6 +47,8 @@ export const eng_lang = {
   buyModal: "buyModal",
   totalNoOfMintToken: 5000,
   pageSize: 7,
+  claim_nft: "nft claimed succesfully",
+  dont_claim_nft: "nft claimed unsuccesfully",
 
   buttonConstants: {
     join_hunt_text: "Join the hunt",

@@ -2,6 +2,7 @@ import { types } from "../../types";
 
 const initialState = {
   btnLoading: false,
+  displayModal: "",
 };
 
 const claimReducer = (state = initialState, action) => {
@@ -11,7 +12,11 @@ const claimReducer = (state = initialState, action) => {
         ...state,
         btnLoading: action.payload,
       };
-
+    case types.DISPAY_MODAL:
+      return {
+        ...state,
+        displayModal: action.payload,
+      };
     default:
       return state;
   }

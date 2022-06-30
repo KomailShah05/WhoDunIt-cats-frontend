@@ -1,5 +1,6 @@
 // libraries
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
 
 // components
 import { BlockButton } from "../../commons";
@@ -7,6 +8,7 @@ import CongratsBodyAttributes from "./modal-body/CongratsBodyAttributes";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { displayModalAction } from "../../../redux/actions/claim-attributes";
 
 // style
 import "./style.scss";
@@ -14,18 +16,16 @@ import "./style.scss";
 // assets
 import { success_1, opensea } from "../../../assets";
 
-const SmallPopupCongrats = () => {
-  const [modalName, setmodalName] = useState("congrats");
+const SmallPopupCongrats = ({ displayModal }) => {
+  const dispatch = useDispatch();
 
-  // show different modal on button clicks
-  const handleModalName = (e) => {
-    setmodalName(e.target.name);
+  const handleClose = () => {
+    dispatch(displayModalAction(""));
   };
-
   return (
     <>
       <div
-        className={`modal fade sm-modal `}
+        className={`modal fade sm-modal ${displayModal && "d-block show"}`}
         id="smallModalCongrats"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -46,24 +46,17 @@ const SmallPopupCongrats = () => {
                 className="modal__btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-                // onClick={handleClose}
+                onClick={handleClose}
               ></button>
             </div>
             <div className="modal-body sm-modal__padding-body">
               <CongratsBodyAttributes />
-
               <BlockButton
                 showImg={false}
-                text={
-                  modalName === "congrats"
-                    ? eng_lang.buttonConstants.subscribe_btn_text
-                    : modalName === "buy"
-                    ? eng_lang.buy_nft
-                    : ""
-                }
+                text={eng_lang.buttonConstants.subscribe_btn_text}
                 imgPath={""}
-                name={modalName === "buy" ? "loading" : ""}
-                handleClick={modalName === "buy" ? handleModalName : () => {}}
+                name={""}
+                handleClick={() => {}}
               />
               <div className="sm-modal__mg-btw-btns">
                 <BlockButton

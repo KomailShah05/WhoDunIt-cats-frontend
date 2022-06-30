@@ -113,7 +113,7 @@ const EtheriumProvider = ({ children }) => {
       accBalance = null;
     try {
       // step -> 0 : check etherum login id
-      if (!window?.ethereum?.selectedAddress) {
+      if (window?.ethereum?.selectedAddress === null) {
         notfiFail(eng_lang.user_not_login);
 
         return {
@@ -209,18 +209,18 @@ const EtheriumProvider = ({ children }) => {
       const dataToSign = {
         nonce: Math.random(),
         owner: walletAddress,
-        claim_attributes: {
-          jsonFilePath: claimNft?.jsonFilePath,
-        },
-        token_id: claimNft?.index,
+        claim_attributes: claimNft?.index,
       };
       const signature = await signTransaction(web3, dataToSign, walletAddress);
 
       if (signature) {
-        dispatch(claimNftAction(walletAddress, signature, claimNft));
+        dispatch(
+          claimNftAction(walletAddress, signature, claimNft, dataToSign)
+        );
       }
     } catch (error) {
       console.log("personalSign error", error);
+      notfiFail(error?.message);
       dispatch(suspectBtnLoading(false));
     }
   };
