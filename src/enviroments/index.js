@@ -19,6 +19,10 @@ export const BASE_OPEN_SEA_URL = "https://testnets.opensea.io/";
 // OPEN SEA URL
 export const OPEN_SEA_URL = `${BASE_OPEN_SEA_URL}assets/rinkeby/${CONTRACT_ADDRESS}/`;
 
+//OPEN SEA COLLECTION URL
+export const OPEN_SEA_COLLECTION =
+  "https://testnets.opensea.io/collection/whodunnit-cat-v3";
+
 // WALLET NAME
 export const WALLET_NAME = "rinkeby";
 

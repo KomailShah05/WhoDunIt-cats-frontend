@@ -2,7 +2,7 @@
 import { postRequest } from "../../../services/axiosMethod";
 
 // action types
-// import { types } from "../../types";
+import { types } from "../../types";
 
 // actions
 import { suspectBtnLoading, displayModalAction } from ".";
@@ -22,23 +22,35 @@ const claimNftAction = (walletAddress, signature, claimNft, dataToSign) => {
 
       // api call to get total tokent minted
       let response = await postRequest(api_routes.CLAIM_CAT, payload);
-      console.log("api response", response);
-      if (response) dispatch(claimNftSuccess(response.data));
+      console.log("api response");
+      if (response) dispatch(claimNftSuccess(response.data?.Nft));
     } catch (err) {
-      dispatch(claimNftFail());
+      dispatch(claimNftFail(err?.response?.data?.error));
     }
   };
 };
 
-const claimNftSuccess = (nft) => {
+const claimNftSuccess = (nftIndex) => {
   return function (dispatch) {
+    dispatch({
+      type: types.NFT_INDEX,
+      payload: nftIndex,
+    });
     dispatch(displayModalAction(eng_lang.claim_nft));
     dispatch(suspectBtnLoading(false));
   };
 };
 
-const claimNftFail = () => {
+const claimNftFail = (message) => {
   return function (dispatch) {
+    dispatch({
+      type: types.NFT_INDEX,
+      payload: 0,
+    });
+    dispatch({
+      type: types.ERROR_MSG,
+      payload: message,
+    });
     dispatch(displayModalAction(eng_lang.dont_claim_nft));
     dispatch(suspectBtnLoading(false));
   };

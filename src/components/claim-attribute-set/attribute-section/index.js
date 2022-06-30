@@ -14,7 +14,7 @@ import "./style.scss";
 
 // assets
 
-const AttributeSection = ({ btnLoading }) => {
+const AttributeSection = ({ btnLoading, callApi }) => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
   const { personalSign } = useContext(EtheriumContext);
   const suspectSection = useRef();
@@ -35,7 +35,6 @@ const AttributeSection = ({ btnLoading }) => {
 
   // get suspected cat
   const getSuspectedCats = async (pageNumber, previousSuspectedCats) => {
-    console.log("I am called");
     try {
       let payload = selectedAttributes;
 
@@ -81,7 +80,7 @@ const AttributeSection = ({ btnLoading }) => {
       getSuspectedCats(1, []);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedAttributes]);
+  }, [selectedAttributes, callApi]);
 
   const handleScrollEvent = (event) => {
     const { scrollHeight, scrollTop, clientHeight } = event.target;
