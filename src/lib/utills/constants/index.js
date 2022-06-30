@@ -23,6 +23,7 @@ export const api_routes = {
   CREATE_VOUCHER: "vouchers",
   SUSPECT_CATS: "suspected-cats/all?page=",
   CLAIM_CAT: "suspected-cats/claim",
+  WINNER_REVEAL: "suspected-cats/winner",
 };
 
 // Landing Page Constants

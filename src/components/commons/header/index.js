@@ -14,6 +14,7 @@ const Header = () => {
   const url = window.location.pathname;
   const {
     nftsReducer: { totalMinted },
+    // winnerReducer: { success },
   } = useSelector((state) => state);
 
   const listenScrollEvent = () => {
@@ -65,7 +66,7 @@ const Header = () => {
                   href={`${
                     url === routes.HOME ? "#howItWorks" : `${routes.HOME}`
                   }`}
-                  className="text-white nav-link"
+                  className={`text-white nav-link`}
                 >
                   {eng_lang.header.tabs[0]}
                 </a>
@@ -77,11 +78,11 @@ const Header = () => {
                       url === routes.STORY_INTRO || url === routes.CLUES
                         ? "text-decoration-underline"
                         : "text-decoration-none"
-                    }`}
+                    } `}
                   >
                     <Link
                       to={routes.STORY_INTRO}
-                      className="text-white nav-link "
+                      className={`text-white nav-link`}
                     >
                       {eng_lang.header.tabs[1]}
                     </Link>
@@ -140,7 +141,7 @@ const Header = () => {
                         <li className="nav-item">
                           <Link
                             to={routes.CLAIM_ATTRIBUTE}
-                            className="text-white  "
+                            className="text-white"
                           >
                             {eng_lang.header.tabs[2]}
                           </Link>

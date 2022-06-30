@@ -15,6 +15,9 @@ import {
 import { PopUp, ScrollingModal } from "../../components/join-the-hunt";
 import Toast from "../../lib/helper/toast";
 
+// actions-redux
+// import { getWinner } from "../../redux/actions/winner-reveal";
+
 //constants
 
 //styles
@@ -29,7 +32,13 @@ const LandingPage = () => {
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
     buyReducer: { buyInProgress, buyError, congrats, tokenId },
+    // winnerReducer: { success },
   } = useSelector((state) => state);
+
+  // useEffect(() => {
+  //   dispatch(getWinner());
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <>
