@@ -1,31 +1,48 @@
 // libraries
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
 
 // components
 import { BlockButton } from "../../commons";
-import CongratsBodyAttributes from "./modal-body/CongratsBodyAttributes";
+import { CongratsBodyAttributes, ErrorBodyAttributes } from "./modal-body";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { displayModalAction } from "../../../redux/actions/claim-attributes";
+import { OPEN_SEA_URL, OPEN_SEA_COLLECTION } from "../../../enviroments";
 
 // style
 import "./style.scss";
 
 // assets
-import { success_1, opensea } from "../../../assets";
+import { success_1, opensea, success_3 } from "../../../assets";
 
-const SmallPopupCongrats = () => {
-  const [modalName, setmodalName] = useState("congrats");
+const SmallPopupCongrats = ({
+  displayModal,
+  errMsg,
+  nftIndex,
+  callApi,
+  setCallApi,
+}) => {
+  const dispatch = useDispatch();
 
-  // show different modal on button clicks
-  const handleModalName = (e) => {
-    setmodalName(e.target.name);
+  const handleClose = () => {
+    dispatch(displayModalAction(""));
+    setCallApi(!callApi);
+  };
+
+  const handleOpenSeaUrl = () => {
+    window.open(`${OPEN_SEA_URL}${nftIndex}`, "_blank");
+  };
+
+  const openSeaCollectionUrl = () => {
+    window.open(`${OPEN_SEA_COLLECTION}`, "_blank");
   };
 
   return (
     <>
       <div
-        className={`modal fade sm-modal `}
+        className={`modal fade sm-modal ${displayModal && "d-block show"}`}
         id="smallModalCongrats"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -35,7 +52,9 @@ const SmallPopupCongrats = () => {
           <div className="modal-content sm-modal__bg-color">
             <div className="d-flex justify-content-center sm-modal__img-top">
               <img
-                src={success_1}
+                src={
+                  displayModal === eng_lang.claim_nft ? success_1 : success_3
+                }
                 alt={success_1}
                 className="sm-modal__cat-img "
               />
@@ -46,35 +65,43 @@ const SmallPopupCongrats = () => {
                 className="modal__btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-                // onClick={handleClose}
+                onClick={handleClose}
               ></button>
             </div>
             <div className="modal-body sm-modal__padding-body">
-              <CongratsBodyAttributes />
-
-              <BlockButton
-                showImg={false}
-                text={
-                  modalName === "congrats"
-                    ? eng_lang.buttonConstants.subscribe_btn_text
-                    : modalName === "buy"
-                    ? eng_lang.buy_nft
-                    : ""
-                }
-                imgPath={""}
-                name={modalName === "buy" ? "loading" : ""}
-                handleClick={modalName === "buy" ? handleModalName : () => {}}
-              />
-              <div className="sm-modal__mg-btw-btns">
-                <BlockButton
-                  showImg={true}
-                  text={eng_lang.view_on_open_sea}
-                  imgPath={opensea}
-                  name={"opensea"}
-                  handleClick={() => {}}
-                  secondary={true}
-                />
-              </div>
+              {displayModal === eng_lang.claim_nft ? (
+                <>
+                  <CongratsBodyAttributes />
+                  <BlockButton
+                    showImg={false}
+                    text={eng_lang.buttonConstants.subscribe_btn_text}
+                    imgPath={""}
+                    name={""}
+                    handleClick={() => {}}
+                  />
+                  <div className="sm-modal__mg-btw-btns">
+                    <BlockButton
+                      showImg={true}
+                      text={eng_lang.view_on_open_sea}
+                      imgPath={opensea}
+                      name={"opensea"}
+                      handleClick={handleOpenSeaUrl}
+                      secondary={true}
+                    />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <ErrorBodyAttributes errMsg={errMsg} />
+                  <BlockButton
+                    showImg={false}
+                    text={eng_lang.buttonConstants.buy_on_open_sea}
+                    imgPath={""}
+                    name={""}
+                    handleClick={openSeaCollectionUrl}
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>

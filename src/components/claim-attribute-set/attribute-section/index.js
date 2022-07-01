@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 
 // components
 import { FilterSuspectTrait, Select, CardSection } from "..";
@@ -7,17 +7,20 @@ import { FilterSuspectTrait, Select, CardSection } from "..";
 // constants
 import { eng_lang, api_routes } from "../../../lib/utills/constants";
 import { postRequest } from "../../../services/axiosMethod";
+import { EtheriumContext } from "../../../services/etherium-blockchain/EtheriumProvider";
 
 // styles
 import "./style.scss";
 
 // assets
 
-const AttributeSection = () => {
+const AttributeSection = ({ btnLoading, callApi }) => {
   const selections = eng_lang.claim_attribute_set.section_one.select_data;
+  const { personalSign } = useContext(EtheriumContext);
   const suspectSection = useRef();
   const [page, setpage] = useState(1);
   const [pageNotCall, setpageNotCall] = useState(false);
+  const [render, setrender] = useState(true);
   const [suspectedCats, setsuspectedCats] = useState([]);
   const [loading, setloading] = useState(false);
   const [lenght, setlenght] = useState(eng_lang.pageSize);
@@ -34,6 +37,8 @@ const AttributeSection = () => {
   const getSuspectedCats = async (pageNumber, previousSuspectedCats) => {
     try {
       let payload = selectedAttributes;
+
+      // Removing null keys from object
       payload = Object.fromEntries(
         Object.entries(payload).filter(([_, v]) => v != null)
       );
@@ -54,6 +59,7 @@ const AttributeSection = () => {
     } catch (error) {
       setloading(false);
       setpageNotCall(false);
+      setlenght(0);
       console.log(api_routes.SUSPECT_CATS, "error", error);
     }
   };
@@ -70,9 +76,12 @@ const AttributeSection = () => {
     setpage(1);
     setselectedCat(null);
     setpageNotCall(true);
-    getSuspectedCats(1, []);
+    setrender(false);
+    if (!render) {
+      getSuspectedCats(1, []);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedAttributes]);
+  }, [selectedAttributes, callApi]);
 
   const handleScrollEvent = (event) => {
     const { scrollHeight, scrollTop, clientHeight } = event.target;
@@ -157,16 +166,16 @@ const AttributeSection = () => {
               </p>
               <p className="text-white">{selectedCat?.plackNumber}</p>
             </div>
-            <div className="d-flex justify-content-center">
-              <button
-                className="btn btn-primary mint-btn"
-                data-mdb-ripple-color="primary"
-                data-bs-toggle="modal"
-                data-bs-target="#smallModalCongrats"
-              >
-                {eng_lang.buttonConstants.mint_suspect}
-              </button>
-            </div>
+            <button
+              className="btn btn-primary mint-btn"
+              data-mdb-ripple-color="primary"
+              // data-bs-toggle="modal"
+              // data-bs-target="#smallModalCongrats"
+              onClick={() => personalSign(selectedCat)}
+              disabled={btnLoading}
+            >
+              {eng_lang.buttonConstants.mint_suspect}
+            </button>
           </>
         )}
       </div>

@@ -13,13 +13,13 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <Provider store={configureStore().store}>
-      <PersistGate loading={null} persistor={configureStore().persistor}>
-        <App />
-      </PersistGate>
-    </Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={configureStore().store}>
+    <PersistGate loading={null} persistor={configureStore().persistor}>
+      <App />
+    </PersistGate>
+  </Provider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

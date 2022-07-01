@@ -25,6 +25,10 @@ import {
   showModalAction,
   btnLoadingAction,
 } from "./redux/actions/nfts";
+import {
+  displayModalAction,
+  suspectBtnLoading,
+} from "./redux/actions/claim-attributes";
 
 //styles
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -45,6 +49,9 @@ const App = () => {
     dispatch(showModalAction(""));
     dispatch(resetTokenAndMint());
     dispatch(btnLoadingAction(false));
+    dispatch(displayModalAction(""));
+    dispatch(suspectBtnLoading(false));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -2,7 +2,6 @@
 import React from "react";
 
 // components
-import { ReactSpinner } from "../../commons";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -23,10 +22,6 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
   };
   return (
     <>
-      {/* <div className="col-lg-4 col-md-6 card-size skeleton">
-        <div className="empty-card-skeleton"></div>
-      </div> */}
-
       {suspectedCats?.length > 0 &&
         suspectedCats?.map((cat, index) => {
           if (cat?.isClaimed) {
@@ -70,7 +65,29 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
             );
           }
         })}
-      <ReactSpinner loading={loading} />
+
+      {loading && (
+        <>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+          <div className="col-lg-4 col-md-6 card-size skeleton">
+            <div className="empty-card-skeleton"></div>
+          </div>
+        </>
+      )}
     </>
   );
 };
