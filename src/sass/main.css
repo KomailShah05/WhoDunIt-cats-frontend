@@ -163,10 +163,44 @@ p {
   background: #000000 !important;
 }
 
+.mas {
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  background-color: #871616;
+  position: absolute;
+  overflow: hidden;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 24px 6px 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.sub-btn-container {
+  max-width: 24.438rem;
+}
+
 .subscribe-btn {
   padding: 10px 24px 6px 24px;
   border-radius: 0px;
-  max-width: 24.438rem;
+  width: 100%;
   font-family: "Gochi Hand", cursive;
   font-weight: 400;
   font-size: 1.5rem;
@@ -192,6 +226,13 @@ p {
   .subscribe-btn {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subscribe-btn {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -308,6 +349,12 @@ p {
 
 /* // Large devices (desktops, 992px and up) */
 /* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .sub-btn-container {
+    margin: auto;
+  }
+}
+
 /* Extereme smaal device */
 @media (max-width: 576px) {
   h5 {

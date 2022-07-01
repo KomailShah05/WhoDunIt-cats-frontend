@@ -157,25 +157,40 @@ p {
   color: $col;
 }
 
-// .mas {
-//   position: absolute;
-//   color: #000;
-//   text-align: center;
-//   font-family: $font-family-gochi-hand;
-//   font-weight: $font-weight-regular;
-//   font-size: $font-24;
-//   line-height: $line-height-28;
-//   background-color: $white;
-//   position: absolute;
-//   margin-top: 17px;
-//   overflow: hidden;
-//   font-weight: bold;
-// }
+.mas {
+  position: absolute;
+  color: $white;
+  text-align: center;
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-24;
+  line-height: $line-height-28;
+  background-color: $maroon;
+  position: absolute;
+  overflow: hidden;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 24px 6px 24px;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $font-20;
+    line-height: $line-height-24;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $font-18;
+    line-height: $line-height-20;
+  }
+}
+
+.sub-btn-container {
+  max-width: 24.438rem; //391px
+}
 
 .subscribe-btn {
   padding: 10px 24px 6px 24px;
   border-radius: 0px;
-  max-width: 24.438rem; //391px
+  width: 100%;
+  // max-width: 24.438rem; //391px
   font-family: $font-family-gochi-hand;
   font-weight: $font-weight-regular;
   font-size: $font-24;
@@ -200,6 +215,10 @@ p {
   @media screen and (max-width: $breakpoint-sm) {
     font-size: $font-20;
     line-height: $line-height-24;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $font-18;
+    line-height: $line-height-20;
   }
 }
 
