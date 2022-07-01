@@ -163,26 +163,120 @@ p {
   background: #000000 !important;
 }
 
-.subscribe-btn {
-  background: #ffffff;
-  padding: 10px 24px 6px 24px;
-  border-radius: 0px;
-  max-width: 24.438rem;
+.mas {
+  position: absolute;
+  color: #ffffff;
+  text-align: center;
   font-family: "Gochi Hand", cursive;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.75rem;
+  background-color: #871616;
+  position: absolute;
+  overflow: hidden;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 24px 6px 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.sub-btn-container {
+  max-width: 24.438rem;
+}
+
+.subscribe-btn {
+  padding: 10px 24px 6px 24px;
+  border-radius: 0px;
+  width: 100%;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  background: #ffffff;
+  -webkit-mask: url("../../assets/images/mask.png");
+  mask: url("../../assets/images/mask.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
   color: #000000;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
 }
 
 .subscribe-btn:hover {
-  background: #e5e5e5;
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
 }
 
 @media screen and (max-width: 576px) {
   .subscribe-btn {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subscribe-btn {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
 }
 
@@ -255,6 +349,12 @@ p {
 
 /* // Large devices (desktops, 992px and up) */
 /* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .sub-btn-container {
+    margin: auto;
+  }
+}
+
 /* Extereme smaal device */
 @media (max-width: 576px) {
   h5 {

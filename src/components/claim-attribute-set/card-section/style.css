@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .empty-card-skeleton {
   --card: linear-gradient(to bottom, #313131 100%, transparent 0%);
-  --card-height: 14rem;
+  --card-height: 12rem;
   --avatar: radial-gradient(
     circle 40px at center,
     #2a2a2a 100%,
@@ -27,12 +27,13 @@
   --button-2-position: 124px 260px;
   --blur-width: 200px;
   --blur-size: var(--blur-width) var(--card-height);
+  margin-right: 2.5rem;
 }
 
 .empty-card-skeleton:empty::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 12rem;
   height: 12rem;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -42,6 +43,41 @@
   background-position: -150% 0, var(--avatar-position), var(--title-position), var(--subtitle-position), var(--button-1-position), var(--button-2-position), 0 0;
   background-repeat: no-repeat;
   animation: loading 2s infinite linear alternate-reverse;
+}
+
+@media screen and (max-width: 1500px) {
+  .empty-card-skeleton:empty::after {
+    width: 9rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .empty-card-skeleton:empty::after {
+    width: 7rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .empty-card-skeleton:empty::after {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .empty-card-skeleton:empty::after {
+    width: 7rem;
+    --title-width: 50px;
+    --subtitle-width: 80px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .empty-card-skeleton {
+    margin-right: 0;
+  }
 }
 
 @-webkit-keyframes loading {
@@ -60,6 +96,10 @@
   position: relative;
   max-width: 14rem;
   padding-left: 0 !important;
+}
+
+.card-size .empty-card-skeleton {
+  margin-bottom: 2.5rem;
 }
 
 .card-size img {

@@ -59,6 +59,7 @@ const AttributeSection = ({ btnLoading, callApi }) => {
     } catch (error) {
       setloading(false);
       setpageNotCall(false);
+      setlenght(0);
       console.log(api_routes.SUSPECT_CATS, "error", error);
     }
   };

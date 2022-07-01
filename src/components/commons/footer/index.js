@@ -62,12 +62,18 @@ const Footer = () => {
                 {eng_lang.footer.stay_in_touch}
               </li>
               <li className="width-100">
-                <button
-                  className="subscribe-btn"
-                  data-mdb-ripple-color="primary"
-                >
-                  {eng_lang.buttonConstants.subscribe_btn_text}
-                </button>
+                <div className="sub-btn-container position-relative ">
+                  <span className="mas">
+                    {eng_lang.buttonConstants.subscribe_btn_text}
+                  </span>
+                  <button
+                    className="subscribe-btn"
+                    data-mdb-ripple-color="primary"
+                    name="Hover"
+                  >
+                    {eng_lang.buttonConstants.subscribe_btn_text}
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
