@@ -89,7 +89,6 @@
 }
 
 .btn.hero-card-btn {
-  margin-top: 2.125rem;
   background: #ffffff;
   color: #000000;
   padding: 10px 24px 6px 24px;
@@ -112,6 +111,13 @@
     width: 100%;
     font-size: 1.25rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-mas {
+    width: 100%;
+    padding: 10px 24px 6px;
   }
 }
 

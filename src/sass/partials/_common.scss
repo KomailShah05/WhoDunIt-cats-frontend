@@ -71,6 +71,17 @@ p {
   color: $dark-grey;
 }
 
+// mixin for the button hover animation
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
 // scroll bar styling
 
 ::-webkit-scrollbar {
@@ -97,20 +108,50 @@ p {
   color: $white;
 }
 
+.mas {
+  position: absolute;
+  color: $white;
+  text-align: center;
+  font-family: $font-family-gochi-hand;
+  font-weight: $font-weight-regular;
+  font-size: $font-24;
+  line-height: $line-height-28;
+  background-color: $maroon;
+  position: absolute;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 10px 24px 6px;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $font-20;
+    line-height: $line-height-24;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $font-18;
+    line-height: $line-height-20;
+  }
+}
+
 .btn {
   &.btn-primary {
-    background: $white;
-    color: $black;
-    padding: 10px 24px 6px 24px;
+    padding: 10px 24px 6px;
     border-radius: 0px;
     border: none;
+    @include button(
+      $white,
+      "../../assets/images/mask.png",
+      7100%,
+      100%,
+      none,
+      $black
+    );
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+
     &:hover {
-      background: $bg-light-grey;
-    }
-    &:focus,
-    &:active {
-      box-shadow: none;
-      outline: none !important;
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
     }
   }
   &.btn-secondary {
@@ -146,15 +187,6 @@ p {
 
 .bg-dark {
   background: $black !important;
-}
-@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
-  background: $bcolor;
-  -webkit-mask: url($url);
-  mask: url($url);
-  -webkit-mask-size: $x1 $y1;
-  mask-size: $x1 $y1;
-  border: $bor;
-  color: $col;
 }
 
 .mas-sub {
@@ -308,6 +340,10 @@ p {
 
 .mt-32 {
   margin-top: $size-32;
+}
+
+.mt-34 {
+  margin-top: $size-34;
 }
 
 .mt-40 {

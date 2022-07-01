@@ -41,12 +41,17 @@ const HeroSection = () => {
 
             {totalMinted >= eng_lang.totalNoOfMintToken ? (
               <Link to={routes.STORY_INTRO}>
-                <button
-                  className="btn btn-primary hero-card-btn join_hunt_text"
-                  data-mdb-ripple-color="primary"
-                >
-                  {eng_lang.buttonConstants.begin_hunt}
-                </button>
+                <div className="btn-container position-relative mt-34">
+                  <span className="mas hero-mas">
+                    {eng_lang.buttonConstants.begin_hunt}
+                  </span>
+                  <button
+                    className="btn btn-primary hero-card-btn join_hunt_text"
+                    data-mdb-ripple-color="primary"
+                  >
+                    {eng_lang.buttonConstants.begin_hunt}
+                  </button>
+                </div>
               </Link>
             ) : (
               <button

@@ -167,7 +167,7 @@ const AttributeSection = ({ btnLoading, callApi }) => {
               <p className="text-white">{selectedCat?.plackNumber}</p>
             </div>
             <button
-              className="btn btn-primary mint-btn"
+              className="btn btn-primary mint-btn mx-auto"
               data-mdb-ripple-color="primary"
               // data-bs-toggle="modal"
               // data-bs-target="#smallModalCongrats"
