@@ -30,6 +30,9 @@
 }
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  .sub-btn-container {
+    margin: auto;
+  }
 }
 /* Extereme smaal device */
 @media (max-width: 576px) {
