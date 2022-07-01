@@ -65,6 +65,7 @@ const Footer = () => {
                 <button
                   className="subscribe-btn"
                   data-mdb-ripple-color="primary"
+                  name="Hover"
                 >
                   {eng_lang.buttonConstants.subscribe_btn_text}
                 </button>
