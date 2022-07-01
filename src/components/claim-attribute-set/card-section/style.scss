@@ -74,6 +74,11 @@
       width: 12rem;
       height: 12rem;
     }
+    @media screen and (max-width: 280px) {
+      width: 7rem;
+      --title-width: 50px;
+      --subtitle-width: 80px;
+    }
   }
   @media screen and (max-width: $breakpoint-lg) {
     margin-right: 0;

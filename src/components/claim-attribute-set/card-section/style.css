@@ -66,6 +66,14 @@
   }
 }
 
+@media screen and (max-width: 280px) {
+  .empty-card-skeleton:empty::after {
+    width: 7rem;
+    --title-width: 50px;
+    --subtitle-width: 80px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .empty-card-skeleton {
     margin-right: 0;
