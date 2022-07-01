@@ -33,6 +33,7 @@ import pixelated_cat from "./images/cat-pixelated.png";
 import border from "./images/border.png";
 import winner_avatar from "./images/winner-avatar.png";
 import walking_cats from "./images/walking-cats.png";
+import minted_bg from "./images/minted-bg.png";
 
 // exports
 export {
@@ -70,4 +71,5 @@ export {
   border,
   winner_avatar,
   walking_cats,
+  minted_bg,
 };
