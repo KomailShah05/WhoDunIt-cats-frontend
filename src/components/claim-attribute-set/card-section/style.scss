@@ -2,7 +2,7 @@
 
 .empty-card-skeleton {
   --card: linear-gradient(to bottom, #313131 100%, transparent 0%);
-  --card-height: 14rem;
+  --card-height: 12rem;
 
   --avatar: radial-gradient(
     circle 40px at center,
@@ -31,11 +31,12 @@
 
   --blur-width: 200px;
   --blur-size: var(--blur-width) var(--card-height);
+  margin-right: $size-40;
 
   &:empty::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 12rem;
     height: 12rem;
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
@@ -61,6 +62,26 @@
       var(--button-2-position), 0 0;
     background-repeat: no-repeat;
     animation: loading 2s infinite linear alternate-reverse;
+    @media screen and (max-width: 1500px) {
+      width: 9rem;
+      height: 12rem;
+    }
+    @media screen and (max-width: $breakpoint-xl) {
+      width: 7rem;
+      height: 12rem;
+    }
+    @media screen and (max-width: $breakpoint-lg) {
+      width: 12rem;
+      height: 12rem;
+    }
+    @media screen and (max-width: 280px) {
+      width: 7rem;
+      --title-width: 50px;
+      --subtitle-width: 80px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-right: 0;
   }
 }
 
@@ -76,6 +97,10 @@
   position: relative;
   max-width: 14rem;
   padding-left: 0 !important;
+
+  & .empty-card-skeleton {
+    margin-bottom: $size-40;
+  }
 
   img {
     display: block;

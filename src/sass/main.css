@@ -164,7 +164,6 @@ p {
 }
 
 .subscribe-btn {
-  background: #ffffff;
   padding: 10px 24px 6px 24px;
   border-radius: 0px;
   max-width: 24.438rem;
@@ -172,17 +171,71 @@ p {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.75rem;
+  background: #ffffff;
+  -webkit-mask: url("../../assets/images/mask.png");
+  mask: url("../../assets/images/mask.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
   color: #000000;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
 }
 
 .subscribe-btn:hover {
-  background: #e5e5e5;
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
 }
 
 @media screen and (max-width: 576px) {
   .subscribe-btn {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
 }
 
