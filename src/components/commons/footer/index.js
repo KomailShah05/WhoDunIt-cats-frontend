@@ -63,7 +63,7 @@ const Footer = () => {
               </li>
               <li className="width-100">
                 <div className="sub-btn-container position-relative ">
-                  <span className="mas">
+                  <span className="mas-sub">
                     {eng_lang.buttonConstants.subscribe_btn_text}
                   </span>
                   <button

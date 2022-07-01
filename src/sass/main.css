@@ -163,7 +163,7 @@ p {
   background: #000000 !important;
 }
 
-.mas {
+.mas-sub {
   position: absolute;
   color: #ffffff;
   text-align: center;
@@ -180,14 +180,14 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  .mas {
+  .mas-sub {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .mas {
+  .mas-sub {
     font-size: 1.125rem;
     line-height: 1.25rem;
   }
