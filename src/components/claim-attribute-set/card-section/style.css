@@ -59,6 +59,14 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .empty-card-skeleton:empty::after {
+    width: 6rem;
+    height: 8rem;
+    --avatar-position: 12px 12px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .empty-card-skeleton:empty::after {
     width: 12rem;
@@ -304,3 +312,4 @@
 .card-size:hover .overlay-on-hover {
   opacity: 1;
 }
+/*# sourceMappingURL=style.css.map */

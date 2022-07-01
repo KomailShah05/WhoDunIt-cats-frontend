@@ -70,6 +70,12 @@
       width: 7rem;
       height: 12rem;
     }
+    @media screen and (max-width: 1024px) {
+      width: 6rem;
+      height: 8rem;
+
+      --avatar-position: 12px 12px;
+    }
     @media screen and (max-width: $breakpoint-lg) {
       width: 12rem;
       height: 12rem;
