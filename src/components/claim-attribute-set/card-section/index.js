@@ -23,9 +23,16 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
   };
   return (
     <>
-      {/* <div className="col-lg-4 skeleton">
+      {/* <div className="col-lg-4 col-md-6 card-size skeleton">
+        <div className="empty-card-skeleton"></div>
+      </div>
+      <div className="col-lg-4 col-md-6 card-size skeleton">
+        <div className="empty-card-skeleton"></div>
+      </div>
+      <div className="col-lg-4 col-md-6 card-size skeleton">
         <div className="empty-card-skeleton"></div>
       </div> */}
+
       {suspectedCats?.length > 0 &&
         suspectedCats?.map((cat, index) => {
           if (cat?.isClaimed) {
