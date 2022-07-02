@@ -39,7 +39,7 @@ const HeroSection = () => {
             ) : null}
             <p>{eng_lang.hero.card_text}</p>
 
-            {totalMinted >= eng_lang.totalNoOfMintToken ? (
+            {totalMinted >= 100000 ? (
               <Link to={routes.STORY_INTRO}>
                 <div className="btn-container position-relative mt-34">
                   <span className="mas hero-mas">

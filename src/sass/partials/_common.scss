@@ -155,19 +155,32 @@ p {
     }
   }
   &.btn-secondary {
-    background: $charcoal;
-    color: $white;
+    // background: $charcoal;
+    // color: $white;
     padding: 10px 24px 6px 24px;
     border-radius: 0px;
     border: none;
+    @include button(
+      $charcoal,
+      "../../assets/images/mask.png",
+      7100%,
+      100%,
+      none,
+      $white
+    );
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+
     &:hover {
-      opacity: 0.8;
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
     }
-  }
-  &:focus,
-  &:active {
-    box-shadow: none;
-    outline: none !important;
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: none !important;
+    }
   }
 }
 
@@ -300,6 +313,10 @@ p {
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
+}
+
+.mas-block {
+  width: 100%;
 }
 
 .mt-16 {

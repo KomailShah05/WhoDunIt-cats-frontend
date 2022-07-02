@@ -78,6 +78,7 @@ const SmallPopupCongrats = ({
                     imgPath={""}
                     name={""}
                     handleClick={() => {}}
+                    className="w-100"
                   />
                   <div className="sm-modal__mg-btw-btns">
                     <BlockButton
@@ -87,6 +88,7 @@ const SmallPopupCongrats = ({
                       name={"opensea"}
                       handleClick={handleOpenSeaUrl}
                       secondary={true}
+                      className="w-100"
                     />
                   </div>
                 </>

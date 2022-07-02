@@ -63,7 +63,7 @@ const SmallPopup = () => {
     } else if (congrats) {
       setmodalName("congrats");
     } else {
-      setmodalName("buy");
+      setmodalName("congrats");
     }
   }, [buyInProgress, buyError, congrats]);
 
