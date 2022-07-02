@@ -54,13 +54,18 @@ const HeroSection = () => {
                 </div>
               </Link>
             ) : (
-              <button
-                className="btn btn-primary hero-card-btn join_hunt_text"
-                data-mdb-ripple-color="primary"
-                onClick={handleModalOpen}
-              >
-                {eng_lang.buttonConstants.join_hunt_text}
-              </button>
+              <div className="btn-container position-relative mt-34">
+                <span className="mas hero-mas">
+                  {eng_lang.buttonConstants.join_hunt_text}
+                </span>
+                <button
+                  className="btn btn-primary hero-card-btn join_hunt_text"
+                  data-mdb-ripple-color="primary"
+                  onClick={handleModalOpen}
+                >
+                  {eng_lang.buttonConstants.join_hunt_text}
+                </button>
+              </div>
             )}
           </div>
         </div>
