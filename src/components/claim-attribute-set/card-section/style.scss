@@ -235,7 +235,6 @@
         }
       }
       & .opensea-btn {
-        margin-top: $size-16;
         padding: $size-3 $size-16 $size-3;
         max-width: 100%;
         font-family: $font-family-gochi-hand;
@@ -257,5 +256,32 @@
     & .overlay-on-hover {
       opacity: 1;
     }
+  }
+}
+
+.view-container {
+  margin-top: $size-16;
+  margin-right: 1.2rem;
+  @media screen and (max-width: $breakpoint-md) {
+    margin-right: 0;
+  }
+}
+
+.mas-view {
+  position: absolute;
+  margin-top: 0.3rem;
+  background: $maroon;
+  color: $white;
+  padding: $size-3 $size-16 $size-3;
+  font-family: $font-family-gochi-hand;
+  font-size: $size-16;
+  line-height: $size-16;
+  @media (max-width: 1400px) {
+    font-size: $size-10;
+    line-height: $size-12;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    font-size: $size-12 !important;
+    line-height: $size-16 !important;
   }
 }

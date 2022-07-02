@@ -88,5 +88,9 @@
     font-size: 0.8rem !important;
     text-align: left !important;
   }
+  .carousel .mas-next {
+    max-width: inherit;
+    max-height: inherit;
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -111,6 +111,30 @@
   }
 }
 
+.mas-mint {
+  width: 90%;
+}
+
+@media screen and (max-width: 992px) {
+  .mas-mint {
+    max-width: 14rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mas-mint {
+    font-size: 1.12rem;
+    line-height: 1.25rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mas-mint {
+    width: 100%;
+  }
+}
+
 .mint-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,23 +143,24 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2rem;
-  margin-left: 1.5rem;
   font-family: "Gochi Hand", cursive;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  width: 14rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
   .mint-btn {
     margin-left: auto !important;
     margin-right: auto !important;
+    width: 14rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .mint-btn {
     margin-top: 1rem;
+    width: 14rem;
   }
 }
 
@@ -150,10 +175,6 @@
   .mint-btn {
     width: 100%;
   }
-}
-
-.mint-btn:hover {
-  background-color: #e5e5e5;
 }
 
 .selected-cat {

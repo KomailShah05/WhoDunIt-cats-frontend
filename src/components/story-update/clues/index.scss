@@ -90,6 +90,10 @@
       font-size: 0.8rem !important;
       text-align: left !important;
     }
+    .mas-next {
+      max-width: inherit;
+      max-height: inherit;
+    }
   }
   @media (max-width: 300px) {
   }

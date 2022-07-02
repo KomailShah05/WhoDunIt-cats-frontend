@@ -109,7 +109,7 @@ p {
 }
 
 .mas {
-  position: absolute;
+  position: absolute !important;
   color: $white;
   text-align: center;
   font-family: $font-family-gochi-hand;

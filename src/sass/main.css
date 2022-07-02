@@ -107,7 +107,7 @@ p {
 }
 
 .mas {
-  position: absolute;
+  position: absolute !important;
   color: #ffffff;
   text-align: center;
   font-family: "Gochi Hand", cursive;

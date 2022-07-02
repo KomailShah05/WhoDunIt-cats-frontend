@@ -286,7 +286,6 @@
 }
 
 .card-size.unavailable .overlay-on-hover .opensea-btn {
-  margin-top: 1rem;
   padding: 0.125rem 1rem 0.125rem;
   max-width: 100%;
   font-family: "Gochi Hand", cursive;
@@ -311,5 +310,41 @@
 
 .card-size:hover .overlay-on-hover {
   opacity: 1;
+}
+
+.view-container {
+  margin-top: 1rem;
+  margin-right: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .view-container {
+    margin-right: 0;
+  }
+}
+
+.mas-view {
+  position: absolute;
+  margin-top: 0.3rem;
+  background: #871616;
+  color: #ffffff;
+  padding: 0.125rem 1rem 0.125rem;
+  font-family: "Gochi Hand", cursive;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 1400px) {
+  .mas-view {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mas-view {
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

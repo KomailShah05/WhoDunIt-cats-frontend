@@ -62,7 +62,7 @@ const Footer = () => {
                 {eng_lang.footer.stay_in_touch}
               </li>
               <li className="width-100">
-                <div className="sub-btn-container position-relative  ">
+                <div className="sub-btn-container position-relative mx-md-auto  ">
                   <span className="mas-sub">
                     {eng_lang.buttonConstants.subscribe_btn_text}
                   </span>

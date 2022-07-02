@@ -166,16 +166,19 @@ const AttributeSection = ({ btnLoading, callApi }) => {
               </p>
               <p className="text-white">{selectedCat?.plackNumber}</p>
             </div>
-            <button
-              className="btn btn-primary mint-btn mx-auto"
-              data-mdb-ripple-color="primary"
-              // data-bs-toggle="modal"
-              // data-bs-target="#smallModalCongrats"
-              onClick={() => personalSign(selectedCat)}
-              disabled={btnLoading}
-            >
-              {eng_lang.buttonConstants.mint_suspect}
-            </button>
+            <div className="btn-container position-relative">
+              <span className="mas mas-mint mx-md-auto">
+                {eng_lang.buttonConstants.mint_suspect}
+              </span>
+              <button
+                className="btn btn-primary mint-btn mx-auto"
+                data-mdb-ripple-color="primary"
+                onClick={() => personalSign(selectedCat)}
+                disabled={btnLoading}
+              >
+                {eng_lang.buttonConstants.mint_suspect}
+              </button>
+            </div>
           </>
         )}
       </div>
