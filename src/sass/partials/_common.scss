@@ -155,8 +155,6 @@ p {
     }
   }
   &.btn-secondary {
-    // background: $charcoal;
-    // color: $white;
     padding: 10px 24px 6px 24px;
     border-radius: 0px;
     border: none;
@@ -317,6 +315,15 @@ p {
 
 .mas-block {
   width: 100%;
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 1.1rem;
+    line-height: 1rem;
+  }
+  @media screen and (max-width: 370px) {
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
+    font-size: 0.8rem;
+    line-height: 0.25rem;
+  }
 }
 
 .mt-16 {

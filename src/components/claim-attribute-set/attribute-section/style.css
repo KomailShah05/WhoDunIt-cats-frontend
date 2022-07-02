@@ -117,20 +117,44 @@
 
 @media screen and (max-width: 992px) {
   .mas-mint {
-    max-width: 14rem;
+    width: 14rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
 @media screen and (max-width: 576px) {
   .mas-mint {
-    font-size: 1.12rem;
-    line-height: 1.25rem;
-    margin: 0;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
   }
 }
 
 @media screen and (max-width: 320px) {
   .mas-mint {
+    width: 100%;
+  }
+}
+
+.mint-btn-container {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .mint-btn-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mint-btn-container {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mint-btn-container {
     width: 100%;
   }
 }
@@ -142,7 +166,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
   font-family: "Gochi Hand", cursive;
   font-size: 1.5rem;
   line-height: 1.75rem;
@@ -151,16 +174,13 @@
 
 @media screen and (max-width: 992px) {
   .mint-btn {
-    margin-left: auto !important;
-    margin-right: auto !important;
     width: 14rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .mint-btn {
-    margin-top: 1rem;
-    width: 14rem;
+    max-width: 14rem;
   }
 }
 
