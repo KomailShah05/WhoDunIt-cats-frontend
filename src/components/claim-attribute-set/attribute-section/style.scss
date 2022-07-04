@@ -80,23 +80,52 @@
   }
 }
 
-.mint-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: $size-32;
-  margin-left: 1.5rem;
-  font-family: $font-family-gochi-hand;
-  font-size: $size-24;
-  line-height: $size-28;
-  width: 14rem;
-
+.mas-mint {
+  width: 90%;
   @media screen and (max-width: $breakpoint-lg) {
+    width: 14rem;
     margin-left: auto !important;
     margin-right: auto !important;
   }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: $size-16 !important;
+    line-height: $size-16 !important;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    width: 100%;
+  }
+}
 
+.mint-btn-container {
+  margin-top: $size-32;
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (max-width: $breakpoint-md) {
     margin-top: $size-16;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    width: 100%;
+  }
+}
+
+.mint-btn {
+  display: flex;
+  justify-content: center;
+
+  // margin-left: 1.5rem;
+  font-family: $font-family-gochi-hand;
+  font-size: $size-24;
+  line-height: $size-28;
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 14rem;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    max-width: 14rem;
   }
   @media screen and (max-width: $breakpoint-sm) {
     font-size: $size-18;
@@ -104,9 +133,6 @@
   }
   @media screen and (max-width: $breakpoint-xs) {
     width: 100%;
-  }
-  &:hover {
-    background-color: $bg-light-grey;
   }
 }
 

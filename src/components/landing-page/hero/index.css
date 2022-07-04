@@ -2,10 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .hero {
-  background-image: url(../../../assets/images/HeroImg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 50.625rem;
   overflow-x: hidden;
 }
@@ -93,7 +89,6 @@
 }
 
 .btn.hero-card-btn {
-  margin-top: 2.125rem;
   background: #ffffff;
   color: #000000;
   padding: 10px 24px 6px 24px;
@@ -119,6 +114,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .hero-mas {
+    width: 100%;
+    padding: 10px 24px 6px;
+  }
+}
+
 .story-release-heading {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -134,3 +136,4 @@
 .underline {
   margin: 24px 0px 24px 0px;
 }
+/*# sourceMappingURL=index.css.map */

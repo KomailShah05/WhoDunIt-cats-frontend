@@ -45,12 +45,17 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
                     <br />{" "}
                     {eng_lang.claim_attribute_set.section_two.hover_descr_2}
                   </p>
-                  <button
-                    className="btn btn-primary opensea-btn me-1"
-                    onClick={handleOpenSeaUrl.bind(this, cat.index)}
-                  >
-                    {eng_lang.buttonConstants.view_on_open_sea}
-                  </button>
+                  <div className="btn-container position-relative view-container ">
+                    <span className=" mas-view">
+                      {eng_lang.buttonConstants.view_on_open_sea}
+                    </span>
+                    <button
+                      className="btn btn-primary opensea-btn me-1"
+                      onClick={handleOpenSeaUrl.bind(this, cat.index)}
+                    >
+                      {eng_lang.buttonConstants.view_on_open_sea}
+                    </button>
+                  </div>
                 </div>
               </div>
             );
