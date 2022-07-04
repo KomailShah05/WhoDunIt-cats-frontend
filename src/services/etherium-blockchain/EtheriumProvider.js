@@ -112,15 +112,15 @@ const EtheriumProvider = ({ children }) => {
       accBalance = null;
     try {
       // step -> 0 : check etherum login id
-      // if (window?.ethereum?.selectedAddress === null) {
-      //   notfiFail(eng_lang.user_not_login);
+      if (window?.ethereum?.selectedAddress === null) {
+        notfiFail(eng_lang.user_not_login);
 
-      //   return {
-      //     isUserLogin,
-      //     networkName,
-      //     accBalance,
-      //   };
-      // }
+        return {
+          isUserLogin,
+          networkName,
+          accBalance,
+        };
+      }
 
       // step -> 1 : check user is logged in with wallet
       isUserLogin = await checkUserLogin(window?.ethereum?.selectedAddress);
@@ -139,7 +139,10 @@ const EtheriumProvider = ({ children }) => {
       }
 
       //step -> 5 : get account balance
-      accBalance = await getAccountBalance(web3, walletAddress);
+      accBalance = await getAccountBalance(
+        web3,
+        window?.ethereum?.selectedAddress
+      );
     } catch (error) {
       console.log("userDetails error:", error);
     }

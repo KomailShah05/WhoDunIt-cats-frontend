@@ -31,7 +31,6 @@ import {
 } from "./redux/actions/claim-attributes";
 
 //styles
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "./sass/main.scss";
 import { buyErrorSolved, resetTokenAndMint } from "./redux/actions/buy-flow";
 
