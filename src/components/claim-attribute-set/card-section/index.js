@@ -2,6 +2,7 @@
 import React from "react";
 
 // components
+import { CardSkeleton } from "..";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -73,24 +74,13 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
 
       {loading && (
         <>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
-          <div className="col-lg-4 col-md-6 card-size skeleton">
-            <div className="empty-card-skeleton"></div>
-          </div>
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
         </>
       )}
     </>
