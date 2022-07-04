@@ -12,14 +12,6 @@
     width: 100% !important;
   }
 
-  // @media screen and (max-width: $breakpoint-xl) {
-  //   & .container-xl {
-  //     & .winner-content {
-
-  //     }
-  //   }
-  // }
-
   @media (min-width: 2000px) {
     & .container-xl {
       & .winner-content {
@@ -269,6 +261,14 @@
   }
   @media screen and (max-width: $breakpoint-xs) {
     display: none;
+  }
+}
+
+.react-parallax {
+  & .react-parallax-bgimage {
+    @media screen and (max-width: $breakpoint-md) {
+      height: auto !important;
+    }
   }
 }
 /*# sourceMappingURL=index.css.map */
