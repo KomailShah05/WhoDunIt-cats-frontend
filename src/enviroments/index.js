@@ -28,3 +28,9 @@ export const WALLET_NAME = "rinkeby";
 
 // WEB 3 PROVIDER URL
 export const WEB3_PROVIDER_URL = "ws://localhost:8545";
+
+// Open sea api url
+export const API_URL_OPEN_SEA = "https://testnets-api.opensea.io/";
+
+// OPEN SEA REFRESH API BASE URL
+export const OPEN_SEA_REFRESH_API = `${API_URL_OPEN_SEA}api/v1/asset/${CONTRACT_ADDRESS}/`;

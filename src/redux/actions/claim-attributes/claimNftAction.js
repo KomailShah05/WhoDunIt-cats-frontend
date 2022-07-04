@@ -1,3 +1,6 @@
+// libraries
+import axios from "axios";
+
 // axios methods
 import { postRequest } from "../../../services/axiosMethod";
 
@@ -9,6 +12,7 @@ import { suspectBtnLoading, displayModalAction } from ".";
 
 // constants
 import { api_routes, eng_lang } from "../../../lib/utills/constants";
+import { OPEN_SEA_REFRESH_API } from "../../../enviroments";
 
 const claimNftAction = (walletAddress, signature, claimNft, dataToSign) => {
   return async function (dispatch) {
@@ -22,8 +26,16 @@ const claimNftAction = (walletAddress, signature, claimNft, dataToSign) => {
 
       // api call to get total tokent minted
       let response = await postRequest(api_routes.CLAIM_CAT, payload);
-      console.log("api response");
-      if (response) dispatch(claimNftSuccess(response.data?.Nft));
+
+      if (response) {
+        let openSeaResponse = await axios.get(
+          `${OPEN_SEA_REFRESH_API}${response.data?.Nft}/?force_update=true`
+        );
+
+        if (openSeaResponse) {
+          dispatch(claimNftSuccess(response.data?.Nft));
+        }
+      }
     } catch (err) {
       dispatch(claimNftFail(err?.response?.data?.error));
     }
