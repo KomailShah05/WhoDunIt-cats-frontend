@@ -24,16 +24,16 @@ const Intro = () => {
           <p>{eng_lang.storyUpdate.first_line}</p>
           <p>{eng_lang.storyUpdate.second_line}</p>
           <p>{eng_lang.storyUpdate.third_line}</p>
-          <Link to={routes.CLUES}>
-            <div className="btn-container position-relative mt-84">
+          <div className="btn-container position-relative mt-84">
+            <Link to={routes.CLUES}>
               <span className="mas mas-story">
                 {eng_lang.buttonConstants.read_story}
               </span>
               <button className="button-pos btn btn-primary button-style align-self-center">
                 {eng_lang.buttonConstants.read_story}
               </button>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
