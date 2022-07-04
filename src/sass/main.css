@@ -106,37 +106,78 @@ p {
   color: #ffffff;
 }
 
+.mas {
+  position: absolute !important;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  background-color: #871616;
+  position: absolute;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 10px 24px 6px;
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mas {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
+
 .btn.btn-primary {
-  background: #ffffff;
-  color: #000000;
-  padding: 10px 24px 6px 24px;
+  padding: 10px 24px 6px;
   border-radius: 0px;
   border: none;
+  background: #ffffff;
+  -webkit-mask: url("../../assets/images/mask.png");
+  mask: url("../../assets/images/mask.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
 }
 
 .btn.btn-primary:hover {
-  background: #e5e5e5;
-}
-
-.btn.btn-primary:focus, .btn.btn-primary:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none !important;
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
 }
 
 .btn.btn-secondary {
-  background: #333333;
-  color: #ffffff;
   padding: 10px 24px 6px 24px;
   border-radius: 0px;
   border: none;
+  background: #333333;
+  -webkit-mask: url("../../assets/images/mask.png");
+  mask: url("../../assets/images/mask.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
 }
 
 .btn.btn-secondary:hover {
-  opacity: 0.8;
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
 }
 
-.btn:focus, .btn:active {
+.btn.btn-secondary:focus, .btn.btn-secondary:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none !important;
@@ -163,7 +204,7 @@ p {
   background: #000000 !important;
 }
 
-.mas {
+.mas-sub {
   position: absolute;
   color: #ffffff;
   text-align: center;
@@ -180,14 +221,14 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  .mas {
+  .mas-sub {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .mas {
+  .mas-sub {
     font-size: 1.125rem;
     line-height: 1.25rem;
   }
@@ -280,6 +321,25 @@ p {
   }
 }
 
+.mas-block {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .mas-block {
+    font-size: 1.1rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .mas-block {
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
+    font-size: 0.8rem;
+    line-height: 0.25rem;
+  }
+}
+
 .mt-16 {
   margin-top: 1rem;
 }
@@ -318,6 +378,10 @@ p {
 
 .mt-32 {
   margin-top: 2rem;
+}
+
+.mt-34 {
+  margin-top: 2.125rem;
 }
 
 .mt-40 {
@@ -399,3 +463,4 @@ p {
     padding: 0.625rem 0.2rem 0.375rem 0.2rem;
   }
 }
+/*# sourceMappingURL=main.css.map */

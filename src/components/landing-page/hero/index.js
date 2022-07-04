@@ -12,7 +12,7 @@ import { landinPageProps } from "../../../pages/landing-page";
 import "./index.scss";
 
 //assets
-import { Underline } from "../../../assets";
+import { Underline, HeroImgPng } from "../../../assets";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
@@ -39,21 +39,31 @@ const HeroSection = () => {
 
           {totalMinted >= eng_lang.totalNoOfMintToken ? (
             <Link to={routes.STORY_INTRO}>
+              <div className="btn-container position-relative mt-34">
+                <span className="mas hero-mas">
+                  {eng_lang.buttonConstants.begin_hunt}
+                </span>
+                <button
+                  className="btn btn-primary hero-card-btn join_hunt_text"
+                  data-mdb-ripple-color="primary"
+                >
+                  {eng_lang.buttonConstants.begin_hunt}
+                </button>
+              </div>
+            </Link>
+          ) : (
+            <div className="btn-container position-relative mt-34">
+              <span className="mas hero-mas">
+                {eng_lang.buttonConstants.join_hunt_text}
+              </span>
               <button
                 className="btn btn-primary hero-card-btn join_hunt_text"
                 data-mdb-ripple-color="primary"
+                onClick={handleModalOpen}
               >
-                {eng_lang.buttonConstants.begin_hunt}
+                {eng_lang.buttonConstants.join_hunt_text}
               </button>
-            </Link>
-          ) : (
-            <button
-              className="btn btn-primary hero-card-btn join_hunt_text"
-              data-mdb-ripple-color="primary"
-              onClick={handleModalOpen}
-            >
-              {eng_lang.buttonConstants.join_hunt_text}
-            </button>
+            </div>
           )}
         </div>
       </div>
