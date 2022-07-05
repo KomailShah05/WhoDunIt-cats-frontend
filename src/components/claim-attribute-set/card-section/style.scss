@@ -142,10 +142,11 @@
         font-size: $size-16;
         line-height: $size-16;
         color: $black;
-        @media screen and (max-width: 1250px) {
-          font-size: 0.625rem !important;
-          line-height: 0.75rem !important;
+        @media screen and (max-width: 1400px) {
+          font-size: $size-8 !important;
+          line-height: $size-8 !important;
         }
+
         @media (max-width: 1200px) {
           font-size: $size-8;
           line-height: $size-8;
@@ -192,7 +193,7 @@
   }
 
   @media screen and (max-width: $breakpoint-lg) {
-    margin-top: 0.45rem !important;
+    margin-top: 0.4rem !important;
     margin-right: 0 !important;
   }
   @media screen and (max-width: 1250px) {
@@ -203,22 +204,25 @@
   @media screen and (max-width: $breakpoint-xs) {
     margin-top: 0.323rem !important;
   }
-  @media (max-width: 1500px) {
+  @media screen and (max-width: 1500px) {
     padding: $size-3 $size-16 $size-3;
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+    margin-right: 0.2rem;
+    margin-top: 0 !important;
   }
 
-  @media (max-width: 1400px) {
-    font-size: $size-10;
-    line-height: $size-12;
+  @media (max-width: $breakpoint-xlg) {
+    font-size: $size-8 !important;
+    line-height: $size-8 !important;
+    margin-top: 0.3rem !important;
   }
-  @media (max-width: 1200px) {
-    font-size: $size-8;
-    line-height: $size-8;
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 0.5rem !important;
   }
   @media screen and (max-width: $breakpoint-xs) {
     font-size: $size-12 !important;
     line-height: $size-16 !important;
+    margin-top: 0.5rem !important;
   }
 }

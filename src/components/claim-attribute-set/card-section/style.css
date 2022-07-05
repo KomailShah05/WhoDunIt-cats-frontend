@@ -195,10 +195,10 @@
   color: #000000;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1400px) {
   .card-size.unavailable .overlay-on-hover .opensea-btn {
-    font-size: 0.625rem !important;
-    line-height: 0.75rem !important;
+    font-size: 0.5rem !important;
+    line-height: 0.5rem !important;
   }
 }
 
@@ -257,7 +257,7 @@
 
 @media screen and (max-width: 992px) {
   .mas-view {
-    margin-top: 0.45rem !important;
+    margin-top: 0.4rem !important;
     margin-right: 0 !important;
   }
 }
@@ -275,25 +275,27 @@
   }
 }
 
-@media (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
   .mas-view {
     padding: 0.125rem 1rem 0.125rem;
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+    margin-right: 0.2rem;
+    margin-top: 0 !important;
   }
 }
 
 @media (max-width: 1400px) {
   .mas-view {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 0.5rem !important;
+    line-height: 0.5rem !important;
+    margin-top: 0.3rem !important;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .mas-view {
-    font-size: 0.5rem;
-    line-height: 0.5rem;
+    margin-top: 0.5rem !important;
   }
 }
 
@@ -301,6 +303,7 @@
   .mas-view {
     font-size: 0.75rem !important;
     line-height: 1rem !important;
+    margin-top: 0.5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
