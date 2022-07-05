@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 370px) {
-  .block__btn-text {
-    font-size: 0.8rem;
-    line-height: 0.25rem;
-  }
   .block__btn-text .btn-img {
     width: 0.9rem;
     margin-right: 0.4rem;
@@ -56,5 +52,20 @@
 .block__bg-tranparent {
   background: transparent !important;
   border: 0.063rem solid #ffffff !important;
+}
+
+@media screen and (max-width: 576px) {
+  .block__bg-tranparent.mas-block {
+    font-size: 1.1rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mas-block {
+    font-size: 1.1rem !important;
+    line-height: 1rem !important;
+    padding: 10px 12px 3px 12px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -125,8 +125,8 @@
 
 @media screen and (max-width: 576px) {
   .mas-mint {
-    font-size: 1rem !important;
-    line-height: 1rem !important;
+    font-size: 1.12rem !important;
+    line-height: 1.25rem !important;
   }
 }
 

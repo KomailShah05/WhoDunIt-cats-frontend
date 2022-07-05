@@ -88,8 +88,8 @@
     margin-right: auto !important;
   }
   @media screen and (max-width: $breakpoint-sm) {
-    font-size: $size-16 !important;
-    line-height: $size-16 !important;
+    font-size: 1.12rem !important;
+    line-height: 1.25rem !important;
   }
   @media screen and (max-width: $breakpoint-xs) {
     width: 100%;

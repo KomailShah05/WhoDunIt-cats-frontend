@@ -92,6 +92,10 @@
   }
 }
 
+.hero-mas {
+  padding: 10px 24px 6px 24px !important;
+}
+
 .btn.hero-card-btn {
   background: #ffffff;
   color: #000000;

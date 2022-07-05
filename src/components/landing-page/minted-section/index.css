@@ -28,6 +28,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #minted {
+    background: url(../../../assets/images/minted-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto !important;
+  }
+}
+
 @media screen and (max-width: 576px) {
   #minted .container-xl .winner-content h2.solved-heading {
     font-size: 1.5rem;
@@ -338,7 +348,8 @@
 
 @media screen and (max-width: 768px) {
   .react-parallax .react-parallax-bgimage {
-    height: auto !important;
+    display: none;
+    heoght: auto;
   }
 }
 /*# sourceMappingURL=index.css.map */
