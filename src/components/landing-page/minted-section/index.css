@@ -335,4 +335,10 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .react-parallax .react-parallax-bgimage {
+    height: auto !important;
+  }
+}
 /*# sourceMappingURL=index.css.map */
