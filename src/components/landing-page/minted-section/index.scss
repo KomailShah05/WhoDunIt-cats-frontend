@@ -1,9 +1,7 @@
 @import "../../../sass/partials/variables";
 #minted {
   position: relative;
-  // background: url(../../../assets/images/minted-bg.svg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +19,14 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    background: url(../../../assets/images/minted-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto !important;
   }
   @media screen and (max-width: $breakpoint-sm) {
     & .container-xl {
@@ -267,7 +273,8 @@
 .react-parallax {
   & .react-parallax-bgimage {
     @media screen and (max-width: $breakpoint-md) {
-      height: auto !important;
+      display: none;
+      heoght: auto;
     }
   }
 }
