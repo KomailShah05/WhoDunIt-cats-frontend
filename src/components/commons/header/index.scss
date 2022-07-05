@@ -66,6 +66,9 @@
   line-height: $line-height-24;
   & a {
     margin-left: 2rem;
+    &:hover {
+      color: $dark-grey !important;
+    }
   }
 
   @media screen and (max-width: $breakpoint-xs) {
