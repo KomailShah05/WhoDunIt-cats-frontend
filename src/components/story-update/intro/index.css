@@ -32,9 +32,11 @@ body {
   margin-bottom: 5.25rem;
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 576px) {
   .mas-story {
-    padding: 10px 18px 6px !important;
+    padding: 10px 24px 6px;
+    font-size: 1.5rem !important;
+    line-height: 1.75rem !important;
   }
 }
 /*# sourceMappingURL=index.css.map */
