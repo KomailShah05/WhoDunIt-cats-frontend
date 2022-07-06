@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .hero {
+  background-image: url(../../../assets/images/HeroImg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 50.625rem;
   overflow-x: hidden;
 }
@@ -136,4 +140,3 @@
 .underline {
   margin: 24px 0px 24px 0px;
 }
-/*# sourceMappingURL=index.css.map */

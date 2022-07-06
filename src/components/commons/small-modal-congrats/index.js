@@ -1,5 +1,5 @@
 // libraries
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 // components
@@ -39,6 +39,14 @@ const SmallPopupCongrats = ({
     window.open(`${OPEN_SEA_COLLECTION}`, "_blank");
   };
 
+  useEffect(() => {
+    if (displayModal) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [displayModal]);
   return (
     <>
       <div

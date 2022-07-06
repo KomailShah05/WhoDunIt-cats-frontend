@@ -77,6 +77,15 @@ const SmallPopup = () => {
     window.open(`${OPEN_SEA_URL}${tokenId}`, "_blank");
   };
 
+  useEffect(() => {
+    if (showModal === eng_lang.buyModal) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showModal]);
+
   return (
     <>
       <div
