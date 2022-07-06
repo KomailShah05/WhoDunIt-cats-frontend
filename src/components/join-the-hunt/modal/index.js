@@ -1,5 +1,5 @@
 // libraries
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch } from "react-redux/es/exports";
 
 // components
@@ -36,6 +36,14 @@ const PopUp = () => {
     dispatch(showModalAction(modalName));
     dispatch(btnLoadingAction(false));
   };
+  useEffect(() => {
+    if (showModal === eng_lang.conncetToBuy) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showModal]);
 
   return (
     <>

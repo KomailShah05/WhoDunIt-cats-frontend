@@ -47,7 +47,7 @@ export const eng_lang = {
   conncetToBuy: "conncetToBuy",
   buyModal: "buyModal",
   totalNoOfMintToken: 5000,
-  pageSize: 7,
+  pageSize: 9,
   claim_nft: "nft claimed succesfully",
   dont_claim_nft: "nft claimed unsuccesfully",
 

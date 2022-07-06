@@ -201,24 +201,41 @@ const EtheriumProvider = ({ children }) => {
 
       // step -> 2 : Check User Details
       const { isUserLogin, networkName } = await userDetails();
+      let loginResponse;
+      if (!isUserLogin) {
+        loginResponse = await walletConnection();
+      }
+      if (!isUserLogin && loginResponse) {
+        const { networkName } = await userDetails();
+        // step -> 3 :  if network name is not rinkeyby or user not connected to metamask then return
+        if (networkName !== WALLET_NAME) {
+          dispatch(suspectBtnLoading(false));
+          return;
+        }
+      }
 
       // step -> 3 :  if network name is not rinkeyby or user not connected to metamask then return
-      if (networkName !== WALLET_NAME || !isUserLogin) {
+      if (isUserLogin && networkName !== WALLET_NAME) {
         dispatch(suspectBtnLoading(false));
         return;
       }
 
       const dataToSign = JSON.stringify({
         nonce: Math.random(),
-        owner: walletAddress,
+        owner: walletAddress || window?.ethereum?.selectedAddress,
         claim_attributes: claimNft?.index,
       });
 
-      const signature = await signTransaction(web3, dataToSign, walletAddress);
+      const signature = await signTransaction(web3, dataToSign);
 
       if (signature) {
         dispatch(
-          claimNftAction(walletAddress, signature, claimNft, dataToSign)
+          claimNftAction(
+            window?.ethereum?.selectedAddress,
+            signature,
+            claimNft,
+            dataToSign
+          )
         );
       }
     } catch (error) {
