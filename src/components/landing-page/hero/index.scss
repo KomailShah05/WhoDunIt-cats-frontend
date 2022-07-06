@@ -63,6 +63,16 @@
   }
 }
 
+.hero-mas {
+  padding: 10px 24px 6px 24px !important;
+  font-size: $font-24;
+  line-height: $line-height-28;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-bottom: 9px !important;
+    padding-top: 12px !important;
+  }
+}
 .btn {
   &.hero-card-btn {
     background: $white;
@@ -76,9 +86,7 @@
     font-weight: $font-weight-regular;
     border: 0;
     outline: 0;
-    &:hover {
-      background: $bg-light-grey;
-    }
+
     @media screen and (max-width: $breakpoint-md) {
       width: 100%;
       font-size: $font-20;

@@ -66,34 +66,29 @@ const StoryClues = () => {
               data_bs_slide="prev"
             />
             <div className="carousel__min-width">
-              <div className="btn-container position-relative">
-                <span className="mas mas-next">Next</span>
-                <BlockButton
-                  showImg={false}
-                  text={"Next"}
-                  imgPath={""}
-                  name={"next"}
-                  handleClick={() => {}}
-                  secondary={false}
-                  data_bs_target="#carouselExampleControls"
-                  data_bs_slide="next"
-                />
-              </div>
+              <BlockButton
+                showImg={false}
+                text={"Next"}
+                imgPath={""}
+                name={"next"}
+                handleClick={() => {}}
+                secondary={false}
+                data_bs_target="#carouselExampleControls"
+                data_bs_slide="next"
+              />
             </div>
+
             <div className="carousel__min-width d-none">
-              <div className="btn-container position-relative">
-                <span className="mas ">Claim Attributes</span>
-                <BlockButton
-                  showImg={false}
-                  text={"Claim Attributes"}
-                  imgPath={""}
-                  name={""}
-                  handleClick={handleNavigation}
-                  secondary={false}
-                  data_bs_target=""
-                  data_bs_slide=""
-                />
-              </div>
+              <BlockButton
+                showImg={false}
+                text={"Claim Attributes"}
+                imgPath={""}
+                name={""}
+                handleClick={handleNavigation}
+                secondary={false}
+                data_bs_target=""
+                data_bs_slide=""
+              />
             </div>
           </section>
         </div>

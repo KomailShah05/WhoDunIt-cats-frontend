@@ -195,10 +195,17 @@
   color: #000000;
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .card-size.unavailable .overlay-on-hover .opensea-btn {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 0.5rem !important;
+    line-height: 0.5rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-size.unavailable .overlay-on-hover .opensea-btn {
+    font-size: 0.5rem;
+    line-height: 0.5rem;
   }
 }
 
@@ -226,7 +233,7 @@
 
 .mas-view {
   position: absolute;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
   background: #871616;
   color: #ffffff;
   padding: 0.125rem 1rem 0.125rem;
@@ -235,10 +242,60 @@
   line-height: 1rem;
 }
 
+@media screen and (max-width: 2560px) {
+  .mas-view {
+    margin-top: 0.325rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mas-view {
+    margin-top: 0 !important;
+    margin-right: 0.155rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mas-view {
+    margin-top: 0.4rem !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .mas-view {
+    font-size: 0.625rem !important;
+    line-height: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mas-view {
+    margin-top: 0.323rem !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .mas-view {
+    padding: 0.125rem 1rem 0.125rem;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+    margin-right: 0.2rem;
+    margin-top: 0 !important;
+  }
+}
+
 @media (max-width: 1400px) {
   .mas-view {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 0.5rem !important;
+    line-height: 0.5rem !important;
+    margin-top: 0.3rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .mas-view {
+    margin-top: 0.5rem !important;
   }
 }
 
@@ -246,5 +303,6 @@
   .mas-view {
     font-size: 0.75rem !important;
     line-height: 1rem !important;
+    margin-top: 0.5rem !important;
   }
 }

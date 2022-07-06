@@ -123,15 +123,9 @@ p {
 
 @media screen and (max-width: 576px) {
   .mas {
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .mas {
-    font-size: 1.125rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -325,16 +319,9 @@ p {
   width: 100%;
 }
 
-@media screen and (max-width: 576px) {
-  .mas-block {
-    font-size: 1.1rem;
-    line-height: 1rem;
-  }
-}
-
 @media screen and (max-width: 370px) {
   .mas-block {
-    padding: 0.625rem 0.2rem 0.375rem 0.2rem;
+    padding: 0.625rem 0.2rem 0.375rem 0.2rem !important;
     font-size: 0.8rem;
     line-height: 0.25rem;
   }
