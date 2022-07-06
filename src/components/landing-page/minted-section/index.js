@@ -2,6 +2,9 @@
 import React, { useContext } from "react";
 import { Parallax } from "react-parallax";
 
+// components
+// import WalkingCats from "../walking-cats";
+
 //constants
 import { eng_lang, routes } from "../../../lib/utills/constants";
 import { landinPageProps } from "../../../pages/landing-page";
@@ -86,6 +89,7 @@ const MintedSection = () => {
 
         <img src={walking_cats} alt="walking cats" className="walking-cats" />
       </div>
+      {/* <WalkingCats /> */}
     </Parallax>
   );
 };
