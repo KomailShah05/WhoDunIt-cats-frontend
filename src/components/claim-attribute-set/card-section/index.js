@@ -51,7 +51,7 @@ const CardSection = ({ suspectedCats, setselectedCat, loading }) => {
                     </span>
                     <button
                       className="btn btn-primary opensea-btn me-1"
-                      onClick={handleOpenSeaUrl.bind(this, cat.index)}
+                      onClick={handleOpenSeaUrl.bind(this, cat?.nft)}
                     >
                       {eng_lang.buttonConstants.view_on_open_sea}
                     </button>
