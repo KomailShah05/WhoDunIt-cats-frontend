@@ -156,7 +156,7 @@ const AttributeSection = ({ btnLoading, callApi }) => {
                 {eng_lang.claim_attribute_set.section_three.serial_number}
               </p>
               <p className="text-white">
-                {eng_lang.claim_attribute_set.section_three.serial_value}{" "}
+                {/* {eng_lang.claim_attribute_set.section_three.serial_value}{" "} */}
                 {selectedCat?.index}
               </p>
             </div>
