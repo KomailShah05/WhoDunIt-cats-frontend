@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Parallax } from "react-parallax";
 
 // components
-// import WalkingCats from "../walking-cats";
+import WalkingCats from "../walking-cats";
 
 //constants
 import { eng_lang, routes } from "../../../lib/utills/constants";
@@ -17,7 +17,7 @@ import {
   pixelated_cat,
   border,
   winner_avatar,
-  walking_cats,
+  // walking_cats,
   minted_bg,
 } from "../../../assets";
 
@@ -87,9 +87,9 @@ const MintedSection = () => {
           </div>
         </div>
 
-        <img src={walking_cats} alt="walking cats" className="walking-cats" />
+        {/* <img src={walking_cats} alt="walking cats" className="walking-cats" /> */}
       </div>
-      {/* <WalkingCats /> */}
+      <WalkingCats />
     </Parallax>
   );
 };
