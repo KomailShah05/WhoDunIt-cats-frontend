@@ -96,6 +96,9 @@ const EtheriumProvider = ({ children }) => {
       const resp = await connectToMetaMask();
       if (resp?.length > 0) {
         dispatch(metaMaskWalletConnected(resp[0]));
+      } else {
+        dispatch(btnLoadingAction(false));
+        dispatch(walletConnectedFail());
       }
     } catch (error) {
       dispatch(btnLoadingAction(false));
