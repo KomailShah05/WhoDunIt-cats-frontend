@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 
 // components
 import { FilterSuspectTrait, Select, CardSection } from "..";
+import { ReactSpinner } from "..";
 
 // constants
 import { eng_lang, api_routes } from "../../../lib/utills/constants";
@@ -141,45 +142,52 @@ const AttributeSection = ({ btnLoading, callApi }) => {
           index={3}
           fill={true}
         />
-        {selectedCat && (
-          <>
-            <div className="d-flex justify-content-center justify-content-lg-start">
-              <img
-                className="selected-cat"
-                src={selectedCat?.imagePath}
-                alt="cat"
-              />
-            </div>
+        {selectedCat && btnLoading ? (
+          <div className="d-flex justify-content-center align-items-center mt-4">
+            <ReactSpinner loading={btnLoading} />
+          </div>
+        ) : (
+          selectedCat &&
+          !btnLoading && (
+            <>
+              <div className="d-flex justify-content-center justify-content-lg-start">
+                <img
+                  className="selected-cat"
+                  src={selectedCat?.imagePath}
+                  alt="cat"
+                />
+              </div>
 
-            <div className="d-flex justify-content-between metadata-nft">
-              <p className="text-white">
-                {eng_lang.claim_attribute_set.section_three.serial_number}
-              </p>
-              <p className="text-white">
-                {/* {eng_lang.claim_attribute_set.section_three.serial_value}{" "} */}
-                {selectedCat?.index}
-              </p>
-            </div>
-            <div className="d-flex  justify-content-between  metadata-nft">
-              <p className="text-white">
-                {eng_lang.claim_attribute_set.section_three.plank_number}
-              </p>
-              <p className="text-white">{selectedCat?.plackNumber}</p>
-            </div>
-            <div className="btn-container mint-btn-container d-flex justify-content-center position-relative mx-auto">
-              <span className="mas mas-mint">
-                {eng_lang.buttonConstants.mint_suspect}
-              </span>
-              <button
-                className="btn btn-primary mint-btn "
-                data-mdb-ripple-color="primary"
-                onClick={() => personalSign(selectedCat)}
-                disabled={btnLoading}
-              >
-                {eng_lang.buttonConstants.mint_suspect}
-              </button>
-            </div>
-          </>
+              <div className="d-flex justify-content-between metadata-nft">
+                <p className="text-white">
+                  {eng_lang.claim_attribute_set.section_three.serial_number}
+                </p>
+                <p className="text-white">
+                  {/* {eng_lang.claim_attribute_set.section_three.serial_value}{" "} */}
+                  {selectedCat?.index}
+                </p>
+              </div>
+              <div className="d-flex  justify-content-between  metadata-nft">
+                <p className="text-white">
+                  {eng_lang.claim_attribute_set.section_three.plank_number}
+                </p>
+                <p className="text-white">{selectedCat?.plackNumber}</p>
+              </div>
+              <div className="btn-container mint-btn-container d-flex justify-content-center position-relative mx-auto">
+                <span className="mas mas-mint">
+                  {eng_lang.buttonConstants.mint_suspect}
+                </span>
+                <button
+                  className="btn btn-primary mint-btn "
+                  data-mdb-ripple-color="primary"
+                  onClick={() => personalSign(selectedCat)}
+                  disabled={btnLoading}
+                >
+                  {eng_lang.buttonConstants.mint_suspect}
+                </button>
+              </div>
+            </>
+          )
         )}
       </div>
     </div>
