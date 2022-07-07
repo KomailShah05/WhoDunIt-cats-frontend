@@ -65,7 +65,7 @@ export const eng_lang = {
 
   header: {
     heading: "WhoDunIt Cats?",
-    tabs: ["How it works?", "The Story", "Set Attributes"],
+    tabs: ["How it works?", "The Story", "Set Traits"],
   },
   hero: {
     card_text:
