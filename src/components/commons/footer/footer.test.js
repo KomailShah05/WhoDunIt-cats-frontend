@@ -1,10 +1,9 @@
+// libraries
 import { render } from "@testing-library/react";
-
-import { unmountComponentAtNode } from "react-dom";
 import { MemoryRouter as Router } from "react-router-dom";
-import Footer from ".";
 
-let container = null;
+// components
+import Footer from ".";
 
 test("footer renders with no props", () => {
   render(
