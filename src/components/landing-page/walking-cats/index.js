@@ -1,260 +1,124 @@
 // libraries
-import React, { useEffect, useState } from "react";
-import gsap from "gsap";
+import React, { useEffect } from "react";
 
 // styles
 import "./style.scss";
 
+// assets
+import { cat1, cat2, cat3, cat4, cat5 } from "../../../assets";
+
 const WalkingCats = () => {
-  const config = {
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/open-peeps-sheet.png",
-    rows: 15,
-    cols: 7,
-  };
-
-  // UTILS
-
-  const randomRange = (min, max) => min + Math.random() * (max - min);
-
-  const randomIndex = (array) => randomRange(0, array.length) | 0;
-
-  const removeFromArray = (array, i) => array.splice(i, 1)[0];
-
-  const removeItemFromArray = (array, item) =>
-    removeFromArray(array, array.indexOf(item));
-
-  const removeRandomFromArray = (array) =>
-    removeFromArray(array, randomIndex(array));
-
-  const getRandomFromArray = (array) => array[randomIndex(array) | 0];
-
-  // TWEEN FACTORIES
-
-  const resetPeep = ({ stage, peep }) => {
-    const direction = Math.random() > 0.5 ? 1 : -1;
-    // using an ease function to skew random to lower values to help hide that peeps have no legs
-    const offsetY = 100 - 250 * gsap.parseEase("power2.in")(Math.random());
-    const startY = stage.height - peep.height + offsetY;
-    let startX;
-    let endX;
-
-    if (direction === 1) {
-      startX = -peep.width;
-      endX = stage.width;
-      peep.scaleX = 1;
-    } else {
-      startX = stage.width + peep.width;
-      endX = 0;
-      peep.scaleX = -1;
+  const marqueeArr = document.querySelectorAll(".marquee");
+  marqueeArr.forEach((marquee) => {
+    const marqueeRow = marquee.querySelector(".marquee__row");
+    const marqueeItem = marqueeRow.querySelector(".marquee__item");
+    const cloneNum = Number(marqueeItem?.getAttributeNode("data-clone").value);
+    for (let i = 1; i < cloneNum; i++) {
+      const clone = marqueeItem.cloneNode(true);
+      marqueeRow.appendChild(clone);
+    }
+    for (let i = 0; i < 2; i++) {
+      const clone = marqueeRow.cloneNode(true);
+      marquee.appendChild(clone);
     }
 
-    peep.x = startX;
-    peep.y = startY;
-    peep.anchorY = startY;
-
-    return {
-      startX,
-      startY,
-      endX,
+    const marqueeMove = (dir) => {
+      const rows = marquee.querySelectorAll(".marquee__row");
+      const rowWidth = rows[0].getBoundingClientRect().width;
+      let currentX = Number(
+        getComputedStyle(marquee).getPropertyValue("--pos-x")
+      );
+      let newX = 0;
+      switch (dir) {
+        case "left":
+          newX = currentX ? currentX - 1 : -rowWidth;
+          newX < -2 * rowWidth && (newX = -rowWidth);
+          break;
+        default:
+          newX = currentX ? currentX + 1 : -rowWidth;
+          newX > 0 && (newX = -rowWidth);
+      }
+      marquee.style.setProperty("--pos-x", newX);
     };
-  };
 
-  const normalWalk = ({ peep, props }) => {
-    const { startY, endX } = props;
+    let speed = Number(marquee.getAttributeNode("data-speed").value);
+    let direction = "left";
+    let marqueeInterval = setInterval(marqueeMove, speed, direction);
+    marquee.onmouseenter = () => {
+      clearInterval(marqueeInterval);
+    };
+    marquee.onmousemove = () => {
+      clearInterval(marqueeInterval);
+    };
+    marquee.onmouseleave = () => {
+      clearInterval(marqueeInterval);
+      marqueeInterval = setInterval(marqueeMove, speed, direction);
+    };
 
-    const xDuration = 10;
-    const yDuration = 0.25;
-
-    const tl = gsap.timeline();
-    tl.timeScale(randomRange(0.5, 1.5));
-    tl.to(
-      peep,
-      {
-        duration: xDuration,
-        x: endX,
-        ease: "none",
-      },
-      0
-    );
-    tl.to(
-      peep,
-      {
-        duration: yDuration,
-        repeat: xDuration / yDuration,
-        yoyo: true,
-        y: startY - 10,
-      },
-      0
-    );
-
-    return tl;
-  };
-
-  const walks = [normalWalk];
-
-  // CLASSES
-
-  class Peep {
-    constructor({ image, rect }) {
-      this.image = image;
-      this.setRect(rect);
-
-      this.x = 0;
-      this.y = 0;
-      this.anchorY = 0;
-      this.scaleX = 1;
-      this.walk = null;
-    }
-
-    setRect(rect) {
-      this.rect = rect;
-      this.width = rect[2];
-      this.height = rect[3];
-
-      this.drawArgs = [this.image, ...rect, 0, 0, this.width, this.height];
-    }
-
-    render(ctx) {
-      ctx.save();
-      ctx.translate(this.x, this.y);
-      ctx.scale(this.scaleX, 1);
-      ctx.drawImage(...this.drawArgs);
-      ctx.restore();
-    }
-  }
-
-  // MAIN
-
-  const img = document.createElement("img");
-  // img.onload = init;
-  img.src = config.src;
-
-  // const canvas = document?.querySelector("#canvas");
-  // const ctx = canvas?.getContext("2d");
-  const [canvas, setcanvas] = useState(null);
-  const [ctx, setctx] = useState(null);
-
-  const stage = {
-    width: 0,
-    height: 0,
-  };
-
-  const allPeeps = [];
-  const availablePeeps = [];
-  const crowd = [];
-
-  function init() {
-    if (canvas) {
-      createPeeps();
-
-      // resize also (re)populates the stage
-
-      resize();
-      gsap.ticker.add(render);
-      window.addEventListener("resize", resize);
-    }
-  }
+    let posY = 0;
+    const changeDir = () => {
+      clearInterval(marqueeInterval);
+      let scrollTop = document.documentElement.scrollTop;
+      direction = scrollTop > posY ? "right" : "left";
+      marqueeMove(direction);
+      marqueeMove(direction);
+      marqueeInterval = setInterval(marqueeMove, speed, direction);
+      posY = scrollTop;
+    };
+    window.addEventListener("scroll", changeDir);
+  });
 
   useEffect(() => {
-    if (canvas) {
-      init();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [canvas]);
-
-  useEffect(() => {
-    setcanvas(document.querySelector("#canvas"));
-    setctx(document.querySelector("#canvas")?.getContext("2d"));
+    updateViewportWidth();
+    window.addEventListener("resize", updateViewportWidth);
   }, []);
 
-  function createPeeps() {
-    const { rows, cols } = config;
-    const { naturalWidth: width, naturalHeight: height } = img;
-    const total = rows * cols;
-    const rectWidth = width / rows;
-    const rectHeight = height / cols;
-
-    for (let i = 0; i < total; i++) {
-      allPeeps.push(
-        new Peep({
-          image: img,
-          rect: [
-            (i % rows) * rectWidth,
-            ((i / rows) | 0) * rectHeight,
-            rectWidth,
-            rectHeight,
-          ],
-        })
-      );
-    }
+  function updateViewportWidth() {
+    document.documentElement.style.setProperty("--viewport", window.innerWidth);
   }
 
-  function resize() {
-    stage.width = canvas?.clientWidth;
-    stage.height = canvas?.clientHeight;
-
-    canvas.width = stage?.width * devicePixelRatio;
-    canvas.height = stage?.height * devicePixelRatio;
-
-    crowd.forEach((peep) => {
-      peep.walk.kill();
-    });
-
-    crowd.length = 0;
-    availablePeeps.length = 0;
-    availablePeeps.push(...allPeeps);
-
-    initCrowd();
-    return 0;
-  }
-
-  function initCrowd() {
-    while (availablePeeps.length) {
-      // setting random tween progress spreads the peeps out
-      addPeepToCrowd().walk.progress(Math.random());
-    }
-  }
-
-  function addPeepToCrowd() {
-    const peep = removeRandomFromArray(availablePeeps);
-    const walk = getRandomFromArray(walks)({
-      peep,
-      props: resetPeep({
-        peep,
-        stage,
-      }),
-    }).eventCallback("onComplete", () => {
-      removePeepFromCrowd(peep);
-      addPeepToCrowd();
-    });
-
-    peep.walk = walk;
-
-    crowd.push(peep);
-    crowd.sort((a, b) => a.anchorY - b.anchorY);
-
-    return peep;
-  }
-
-  function removePeepFromCrowd(peep) {
-    removeItemFromArray(crowd, peep);
-    availablePeeps.push(peep);
-  }
-
-  function render() {
-    const widthTemp = canvas.width;
-
-    canvas.width = widthTemp;
-    ctx.save();
-    ctx.scale(devicePixelRatio, devicePixelRatio);
-
-    crowd.forEach((peep) => {
-      peep.render(ctx);
-    });
-
-    ctx.restore();
-  }
-  return <canvas id="canvas" className="canvas-cats"></canvas>;
+  return (
+    <>
+      <div className="marquee marquee--nezuko" data-speed="50">
+        <div className="marquee__row marquee__row--nezuko">
+          <div className="flex gap-2">
+            <div className="grid grid-cols-3 grid-rows-3 py-20 gap-2 ">
+              <img
+                src={cat1}
+                className="row-start-1 row-span-2 col-start-1 animate-float"
+                alt="cat"
+              />
+              <img
+                src={cat2}
+                className="row-start-2 row-span-2 col-start-2 animate-float-2  odd-card "
+                alt="cat"
+              />
+              <img
+                src={cat3}
+                className="row-start-1 row-span-2 col-start-3 animate-float"
+                alt="cat"
+              />
+              <img
+                src={cat4}
+                className="row-start-1 row-span-2 col-start-4 animate-float-2  odd-card"
+                alt="cat"
+              />
+              <img
+                src={cat5}
+                className="row-start-2 row-span-2 col-start-5 animate-float "
+                alt="cat"
+              />
+              <img
+                src={cat5}
+                className="row-start-2 row-span-2 col-start-5 animate-float odd-card"
+                alt="cat"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default WalkingCats;

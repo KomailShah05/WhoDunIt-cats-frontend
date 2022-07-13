@@ -7,11 +7,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 35.938rem;
 }
 
@@ -130,13 +130,13 @@
   #minted .text-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+        justify-content: space-around;
   }
 }
 
@@ -285,7 +285,7 @@
   padding: 0.5rem 1.5rem;
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
 .whodunit-btn:hover {
@@ -343,5 +343,12 @@
 @media screen and (max-width: 320px) {
   .border {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .react-parallax .react-parallax-bgimage {
+    display: none;
+    heoght: auto;
   }
 }

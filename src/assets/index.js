@@ -35,6 +35,11 @@ import winner_avatar from "./images/winner-avatar.png";
 import walking_cats from "./images/walking-cats.png";
 import minted_bg from "./images/minted-bg.png";
 import cat_crowd from "./images/Cat_Crowd.png";
+import cat1 from "./images/cat1.png";
+import cat2 from "./images/cat2.png";
+import cat3 from "./images/cat3.png";
+import cat4 from "./images/cat4.png";
+import cat5 from "./images/cat5.png";
 
 // exports
 export {
@@ -74,4 +79,9 @@ export {
   walking_cats,
   minted_bg,
   cat_crowd,
+  cat1,
+  cat2,
+  cat3,
+  cat4,
+  cat5,
 };
