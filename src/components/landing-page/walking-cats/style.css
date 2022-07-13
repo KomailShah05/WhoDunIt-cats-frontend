@@ -1,4 +1,62 @@
-.canvas-cats {
-  width: 100%;
-  margin-top: -30%;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.content {
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  margin: 50px 0 20px;
+  font-family: roboto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.marquee {
+  --pos-x: 0;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  margin-top: -9%;
+}
+
+.marquee__row {
+  --translateX: calc(var(--pos-x) * 1px);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translateX(var(--translateX));
+          transform: translateX(var(--translateX));
+}
+
+.marquee--text {
+  background-color: #89ff91;
+}
+
+.marquee__item--text {
+  margin: 0;
+  font-size: 65px;
+  margin: 0.2em 0.4em;
+}
+
+.marquee__item--nezuko {
+  --height: calc(100px + 50px * ((var(--viewport) - 375) / 1065));
+  height: var(--height);
+  margin: calc(0.1 * var(--height)) calc(0.3 * var(--height));
 }

@@ -1,9 +1,20 @@
+// libraries
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import combineReducers from "../redux/reducers";
-
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+
+// reducers
+import combineReducers from "../redux/reducers";
+
+//// PERSISTANT STORAGE WITH AES ENCRYPTION
+// The Advanced Encryption Standard (AES) is
+// a symmetric block cipher chosen by the U.S.
+// government to protect classified information.
+// AES is implemented in software and hardware
+// throughout the world to encrypt sensitive data.
+// It is essential for government computer security,
+// cybersecurity and electronic data protection.
 
 const persistConfig = {
   key: "root",
