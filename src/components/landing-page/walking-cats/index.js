@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import "./style.scss";
 
 // assets
-import { walking_cats } from "../../../assets";
+import { cat1, cat2, cat3, cat4, cat5 } from "../../../assets";
 
 const WalkingCats = () => {
   const marqueeArr = document.querySelectorAll(".marquee");
@@ -79,14 +79,41 @@ const WalkingCats = () => {
 
   return (
     <>
-      <div class="marquee marquee--nezuko" data-speed="25">
-        <div class="marquee__row marquee__row--nezuko">
-          <div class="grid grid-cols-3 grid-rows-3 py-20 gap-2">
-            <img
-              src={walking_cats}
-              className="row-start-1 row-span-2 col-start-1 animate-float"
-              alt="cat"
-            />
+      <div className="marquee marquee--nezuko" data-speed="50">
+        <div className="marquee__row marquee__row--nezuko">
+          <div className="flex gap-2">
+            <div className="grid grid-cols-3 grid-rows-3 py-20 gap-2 ">
+              <img
+                src={cat1}
+                className="row-start-1 row-span-2 col-start-1 animate-float"
+                alt="cat"
+              />
+              <img
+                src={cat2}
+                className="row-start-2 row-span-2 col-start-2 animate-float-2  odd-card "
+                alt="cat"
+              />
+              <img
+                src={cat3}
+                className="row-start-1 row-span-2 col-start-3 animate-float"
+                alt="cat"
+              />
+              <img
+                src={cat4}
+                className="row-start-1 row-span-2 col-start-4 animate-float-2  odd-card"
+                alt="cat"
+              />
+              <img
+                src={cat5}
+                className="row-start-2 row-span-2 col-start-5 animate-float "
+                alt="cat"
+              />
+              <img
+                src={cat5}
+                className="row-start-2 row-span-2 col-start-5 animate-float odd-card"
+                alt="cat"
+              />
+            </div>
           </div>
         </div>
       </div>

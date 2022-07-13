@@ -279,34 +279,3 @@
   }
 }
 /*# sourceMappingURL=index.css.map */
-
-.animate-float {
-  -webkit-animation: float 4s ease-in-out infinite;
-  animation: float 4s ease-in-out infinite;
-}
-.animate-float-2 {
-  -webkit-animation: float 3s ease-in-out infinite;
-  animation: float 3s ease-in-out infinite;
-}
-@-webkit-keyframes float {
-  0% {
-    transform: translatey(0);
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  to {
-    transform: translatey(0);
-  }
-}
-@keyframes float {
-  0% {
-    transform: translatey(0);
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  to {
-    transform: translatey(0);
-  }
-}
