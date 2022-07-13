@@ -60,3 +60,67 @@ p {
   height: var(--height);
   margin: calc(0.1 * var(--height)) calc(0.3 * var(--height));
 }
+
+.row-start-2 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+.col-start-1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-start-1 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+}
+
+.col-start-2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.animate-float {
+  -webkit-animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  -webkit-animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+  50% {
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+  }
+  to {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+  50% {
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+  }
+  to {
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+}
