@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 
 // components
 import { FilterSuspectTrait, Select, CardSection } from "..";
-import { ReactSpinner } from "..";
+import { ReactSpinner, CardSkeleton } from "..";
 
 // constants
 import { eng_lang, api_routes } from "../../../lib/utills/constants";
@@ -143,8 +143,8 @@ const AttributeSection = ({ btnLoading, callApi }) => {
           fill={true}
         />
         {selectedCat && btnLoading ? (
-          <div className="d-flex justify-content-center align-items-center mt-4">
-            <ReactSpinner loading={btnLoading} />
+          <div className="d-flex justify-content-center justify-content-lg-start mt-4 ">
+            <CardSkeleton wide={true} />
           </div>
         ) : (
           selectedCat &&
