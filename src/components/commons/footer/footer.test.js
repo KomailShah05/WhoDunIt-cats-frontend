@@ -5,10 +5,12 @@ import { MemoryRouter as Router } from "react-router-dom";
 // components
 import Footer from ".";
 
-test("footer renders with no props", () => {
-  render(
-    <Router>
-      <Footer />
-    </Router>
-  );
+describe("footer", () => {
+  test(" renders successfully", () => {
+    render(
+      <Router>
+        <Footer />
+      </Router>
+    );
+  });
 });
