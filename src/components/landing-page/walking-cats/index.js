@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import "./style.scss";
 
 // assets
-import { walking_cats, cat1, cat2, cat3, cat4, cat5 } from "../../../assets";
+import { cat1, cat2, cat3, cat4, cat5 } from "../../../assets";
 
 const WalkingCats = () => {
   const marqueeArr = document.querySelectorAll(".marquee");
