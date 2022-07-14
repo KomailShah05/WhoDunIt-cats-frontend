@@ -6,7 +6,7 @@ import { Parallax } from "react-parallax";
 import WalkingCats from "../walking-cats";
 
 //constants
-import { eng_lang, routes } from "../../../lib/utills/constants";
+import { eng_lang } from "../../../lib/utills/constants";
 import { landinPageProps } from "../../../pages/landing-page";
 
 //styles
@@ -21,21 +21,20 @@ import {
 } from "../../../assets";
 
 const MintedSection = () => {
-  const { totalMinted } = useContext(landinPageProps);
-  const url = window.location.pathname;
+  const { totalMinted, winner } = useContext(landinPageProps);
+  // const url = window.location.pathname;
   return (
     <Parallax bgImage={minted_bg} strength={300}>
       <div
         id="minted"
         className={`${
-          url === routes.WINNER_REVEAL && "minted-section-winner flex-column"
+          winner?.killerCat?.isWinner === true &&
+          "minted-section-winner flex-column"
         }`}
       >
         <div className="container-xl">
           <div className="d-flex justify-content-center align-items-center w-100">
-            <div
-              className={`text-box ${url === routes.WINNER_REVEAL && "d-none"}`}
-            >
+            <div className={`text-box ${winner?.success === true && "d-none"}`}>
               <h2 className="text-white text-capitalize">
                 {eng_lang.mintedSection.total_Minted}
               </h2>
@@ -47,7 +46,7 @@ const MintedSection = () => {
                 </span>
               </p>
             </div>
-            {url === routes.WINNER_REVEAL && (
+            {winner?.success === true && (
               <>
                 <div className="winner-reveal">
                   <div className="d-flex flex-column align-items-center winner-content">
