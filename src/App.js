@@ -29,6 +29,7 @@ import {
   displayModalAction,
   suspectBtnLoading,
 } from "./redux/actions/claim-attributes";
+import { voucherLoading } from "./redux/actions/voucher";
 
 //styles
 import "./sass/main.scss";
@@ -50,6 +51,7 @@ const App = () => {
     dispatch(btnLoadingAction(false));
     dispatch(displayModalAction(""));
     dispatch(suspectBtnLoading(false));
+    dispatch(voucherLoading(false));
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
