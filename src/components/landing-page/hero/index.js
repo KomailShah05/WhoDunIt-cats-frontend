@@ -12,7 +12,7 @@ import { landinPageProps } from "../../../pages/landing-page";
 import "./index.scss";
 
 //assets
-import { Underline, HeroImgPng } from "../../../assets";
+import { Underline } from "../../../assets";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
