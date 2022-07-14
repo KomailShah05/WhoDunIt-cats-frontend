@@ -1,6 +1,6 @@
 // libraries
 import React, { useContext, useEffect } from "react";
-import { useDispatch } from "react-redux/es/exports";
+import { useDispatch } from "react-redux";
 
 // components
 import { BlockButton } from "../../commons";
