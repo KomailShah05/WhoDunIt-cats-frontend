@@ -22,7 +22,7 @@ const NftDetails = () => {
         <div className="scroll-modal__body-margin">
           <div className="d-flex justify-content-between ">
             <p>{eng_lang.winnerRevealLandingPage.cat_name}</p>
-            <h5 className="text-white">Furry Cat</h5>
+            <h5 className="text-white">{winner?.killerCat.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.eye}</p>
