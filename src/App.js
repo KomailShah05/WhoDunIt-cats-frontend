@@ -72,12 +72,12 @@ const App = () => {
                 path={routes.CLUES}
                 element={withHeaderAndFooter(<StoryCluesPage />)}
               />
-              <Route
-                path={routes.WINNER_REVEAL}
-                element={withHeaderAndFooter(<LandingPage />)}
-              />
             </>
           )}
+          <Route
+            path={routes.WINNER_REVEAL}
+            element={withHeaderAndFooter(<LandingPage />)}
+          />
           <Route
             path={routes.CLAIM_ATTRIBUTE}
             element={withHeaderAndFooter(<ClaimAttributeSet />)}

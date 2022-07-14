@@ -7,7 +7,7 @@ import metaMaskWalletReducer from "./blockchain/metaMaskWalletReducer";
 import voucherReducer from "./voucher/voucherReducer";
 import buyReducer from "./buy-flow/buyFlowReducer";
 import claimReducer from "./claim-attributes/claimReducer";
-// import winnerReducer from "./winner-reveal/winnerReducer";
+import winnerReducer from "./winner-reveal/winnerReducer";
 
 export default combineReducers({
   nftsReducer,
@@ -15,4 +15,5 @@ export default combineReducers({
   voucherReducer,
   buyReducer,
   claimReducer,
+  winnerReducer,
 });
