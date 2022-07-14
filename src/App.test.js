@@ -1,9 +1,17 @@
-// libraries
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import configureStore from "./redux/store";
+import { Provider } from "react-redux";
 
-// components
-import App from ".";
+import App from "./App";
 
-test("App renders successfully", () => {
-  render(<App />);
+test("renders learn react link", () => {
+  render(
+    <Provider store={configureStore().store}>
+      <App />
+    </Provider>
+  );
+  expect(screen.getByText("Terms and Conditions").closest("a")).toHaveAttribute(
+    "href",
+    "/terms-and-conditions"
+  );
 });
