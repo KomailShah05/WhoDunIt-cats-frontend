@@ -17,7 +17,6 @@ import {
   pixelated_cat,
   border,
   winner_avatar,
-  // walking_cats,
   minted_bg,
 } from "../../../assets";
 
@@ -86,8 +85,6 @@ const MintedSection = () => {
             )}
           </div>
         </div>
-
-        {/* <img src={walking_cats} alt="walking cats" className="walking-cats" /> */}
       </div>
       <WalkingCats />
     </Parallax>

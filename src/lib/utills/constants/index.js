@@ -65,7 +65,7 @@ export const eng_lang = {
 
   header: {
     heading: "WhoDunIt Cats?",
-    tabs: ["How it works?", "The Story", "Set Attributes"],
+    tabs: ["How it works?", "The Story", "Set Traits"],
   },
   hero: {
     card_text:
@@ -212,7 +212,7 @@ export const eng_lang = {
     congrats_text_modal:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien ut diam in commodo bibendum et ac..",
     error_heading: "Can’t choose killer",
-    error_body: "You need an NFT to participate",
+    error_body: "Network Error",
   },
   story_clues: {
     paragrapgh_line_1:
