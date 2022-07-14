@@ -1,13 +1,15 @@
 import { types } from "../../types";
 
-const initialState = {};
+const initialState = {
+  winner: {},
+};
 
 const winnerReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.WINNER_REVEAL:
       return {
         ...state,
-        state: action.payload,
+        winner: action.payload,
       };
 
     default:

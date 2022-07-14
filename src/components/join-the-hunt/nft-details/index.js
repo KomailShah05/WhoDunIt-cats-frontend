@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { landinPageProps } from "../../../pages/landing-page";
 
 // assets
 import { CatThreePng } from "../../../assets";
 
 const NftDetails = () => {
+  const { winner } = useContext(landinPageProps);
   return (
     <div className="row">
       <div className="col-md-5 scroll-modal__bg-img">
-        <img src={CatThreePng} alt="brown_cat" />
+        <img src={winner?.killerCat.imagePath} alt="brown_cat" />
       </div>
       <div className="col-md-7 ps-md-5">
         <h3 className="text-white">
           {eng_lang.winnerRevealLandingPage.cat_no}
+          <span>{winner?.killerCat.plackNumber}</span>
         </h3>
         <div className="scroll-modal__body-margin">
           <div className="d-flex justify-content-between ">
@@ -23,23 +26,23 @@ const NftDetails = () => {
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.eye}</p>
-            <h5 className="text-white">Brown</h5>
+            <h5 className="text-white">{winner?.killerCat.eyes}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.skin}</p>
-            <h5 className="text-white">Skiny Brown</h5>
+            <h5 className="text-white">{winner?.killerCat.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.height}</p>
-            <h5 className="text-white">1’10’</h5>
+            <h5 className="text-white">{winner?.killerCat.height}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.hat}</p>
-            <h5 className="text-white">Nil</h5>
+            <h5 className="text-white">{winner?.killerCat.hats}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.shirt}</p>
-            <h5 className="text-white">White</h5>
+            <h5 className="text-white">{winner?.killerCat.shirts}</h5>
           </div>
         </div>
       </div>
