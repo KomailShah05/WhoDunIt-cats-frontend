@@ -14,7 +14,7 @@ const Header = () => {
   const url = window.location.pathname;
   const {
     nftsReducer: { totalMinted },
-    winnerReducer: { winner },
+    winnerReducer: { isWinner },
   } = useSelector((state) => state);
 
   const listenScrollEvent = () => {
@@ -96,7 +96,7 @@ const Header = () => {
                     <Link
                       to={routes.CLAIM_ATTRIBUTE}
                       className={`text-white nav-link ${
-                        winner?.success === true && "d-none"
+                        isWinner === true && "d-none"
                       } `}
                     >
                       {eng_lang.header.tabs[2]}
@@ -142,7 +142,7 @@ const Header = () => {
                         </li>
                         <li
                           className={`nav-item ${
-                            winner?.success === true && "d-none"
+                            isWinner === true && "d-none"
                           }`}
                         >
                           <Link

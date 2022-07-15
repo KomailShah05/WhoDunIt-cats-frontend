@@ -21,11 +21,11 @@ import {
 } from "../../../assets";
 
 const MintedSection = () => {
-  const { totalMinted, winner } = useContext(landinPageProps);
+  const { totalMinted, isWinner } = useContext(landinPageProps);
   // const url = window.location.pathname;
   return (
     <>
-      {winner?.success === true && (
+      {isWinner === true && (
         <>
           <div className="winner-reveal">
             <div className="d-flex flex-column align-items-center winner-content">
@@ -65,18 +65,16 @@ const MintedSection = () => {
         <div
           id="minted"
           className={`${
-            winner?.success === true && "minted-section-winner flex-column"
+            isWinner === true && "minted-section-winner flex-column"
           }`}
         >
           <div className="container-xl">
             <div
               className={`d-flex justify-content-center align-items-center w-100 ${
-                winner?.success === true && "winner-mobile"
+                isWinner === true && "winner-mobile"
               } `}
             >
-              <div
-                className={`text-box ${winner?.success === true && "d-none"}`}
-              >
+              <div className={`text-box ${isWinner === true && "d-none"}`}>
                 <h2 className="text-white text-capitalize">
                   {eng_lang.mintedSection.total_Minted}
                 </h2>

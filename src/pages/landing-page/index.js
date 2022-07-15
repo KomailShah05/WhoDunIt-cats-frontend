@@ -34,7 +34,7 @@ const LandingPage = () => {
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
     buyReducer: { buyInProgress, buyError, congrats, tokenId },
-    winnerReducer: { winner },
+    winnerReducer: { isWinner, winnerData },
   } = useSelector((state) => state);
 
   useEffect(() => {
@@ -59,7 +59,8 @@ const LandingPage = () => {
           congrats,
           showModal,
           tokenId,
-          winner,
+          isWinner,
+          winnerData,
         }}
       >
         <HeroSection />
