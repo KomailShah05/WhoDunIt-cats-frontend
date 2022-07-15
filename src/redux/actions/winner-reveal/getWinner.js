@@ -15,7 +15,7 @@ const getWinnerAction = () => {
       if (response) dispatch(saveWinnerStatus(response));
       console.log(response);
     } catch (err) {
-      console.log("error: ", err);
+      dispatch(saveWinnerFail());
     }
   };
 };
@@ -25,6 +25,15 @@ const saveWinnerStatus = (success) => {
     dispatch({
       type: types.WINNER_REVEAL,
       payload: success,
+    });
+  };
+};
+
+const saveWinnerFail = () => {
+  return function (dispatch) {
+    dispatch({
+      type: types.WINNER_REVEAL,
+      payload: {},
     });
   };
 };

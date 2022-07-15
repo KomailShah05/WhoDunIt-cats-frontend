@@ -77,7 +77,7 @@ const App = () => {
               />
             </>
           )}
-          {winner?.success === false &&
+          {winner?.success === true &&
             totalMinted >= eng_lang.totalNoOfMintToken && (
               <Route
                 path={routes.CLAIM_ATTRIBUTE}
