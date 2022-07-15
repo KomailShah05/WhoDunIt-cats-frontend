@@ -126,6 +126,7 @@
 
 .winner-reveal {
   position: absolute;
+
   z-index: 1;
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
@@ -143,7 +144,10 @@
   @media (max-width: 2000px) {
     top: 70%;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: 1800px) {
+    top: 115%;
+  }
+  @media (max-width: 1500px) {
     top: 125%;
   }
   @media (max-width: $breakpoint-lg) {
@@ -158,7 +162,11 @@
   @media screen and (max-width: $breakpoint-sm) {
     max-width: 100%;
     background-size: contain;
-    top: 40% !important;
+    top: 35% !important;
+  }
+
+  @media screen and (max-width: 380px) {
+    top: 28% !important;
   }
   @media screen and (max-width: $breakpoint-xs) {
     top: 30% !important;

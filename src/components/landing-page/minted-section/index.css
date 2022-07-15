@@ -171,7 +171,13 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
+  .winner-reveal {
+    top: 115%;
+  }
+}
+
+@media (max-width: 1500px) {
   .winner-reveal {
     top: 125%;
   }
@@ -194,7 +200,13 @@
   .winner-reveal {
     max-width: 100%;
     background-size: contain;
-    top: 40% !important;
+    top: 35% !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .winner-reveal {
+    top: 28% !important;
   }
 }
 
