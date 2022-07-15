@@ -1,6 +1,6 @@
 //libraries
-import React, { createContext } from "react";
-import { useSelector } from "react-redux";
+import React, { createContext, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 //pages
 
@@ -16,7 +16,7 @@ import { PopUp, ScrollingModal } from "../../components/join-the-hunt";
 import Toast from "../../lib/helper/toast";
 
 // actions-redux
-// import { getWinner } from "../../redux/actions/winner-reveal";
+import { getWinnerAction } from "../../redux/actions/winner-reveal";
 
 //constants
 
@@ -27,18 +27,19 @@ import Toast from "../../lib/helper/toast";
 export const landinPageProps = createContext();
 
 const LandingPage = () => {
+  const dispatch = useDispatch();
   const {
     nftsReducer: { totalMinted, btnLoading, showModal },
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
     buyReducer: { buyInProgress, buyError, congrats, tokenId },
-    // winnerReducer: { success },
+    winnerReducer: { winner },
   } = useSelector((state) => state);
 
-  // useEffect(() => {
-  //   dispatch(getWinner());
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    dispatch(getWinnerAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -55,6 +56,7 @@ const LandingPage = () => {
           congrats,
           showModal,
           tokenId,
+          winner,
         }}
       >
         <HeroSection />

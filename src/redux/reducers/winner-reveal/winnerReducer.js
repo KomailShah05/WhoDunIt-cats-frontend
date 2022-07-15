@@ -1,7 +1,7 @@
 import { types } from "../../types";
 
 const initialState = {
-  success: false,
+  winner: {},
 };
 
 const winnerReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const winnerReducer = (state = initialState, action) => {
     case types.WINNER_REVEAL:
       return {
         ...state,
-        success: action.payload,
+        winner: action.payload,
       };
 
     default:
