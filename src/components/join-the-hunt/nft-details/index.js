@@ -20,17 +20,13 @@ const NftDetails = () => {
             : `Cat#${winnerData?.killerCat?.plackNumber}`}
         </h3>
         <div className="scroll-modal__body-margin">
-          <div className="d-flex justify-content-between ">
-            <p>{eng_lang.winnerRevealLandingPage.cat_name}</p>
+          <div className="d-flex justify-content-between">
+            <p>{eng_lang.winnerRevealLandingPage.skin}</p>
             <h5 className="text-white">{winnerData?.killerCat?.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.eye}</p>
             <h5 className="text-white">{winnerData?.killerCat?.eyes}</h5>
-          </div>
-          <div className="d-flex justify-content-between">
-            <p>{eng_lang.winnerRevealLandingPage.skin}</p>
-            <h5 className="text-white">{winnerData?.killerCat?.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.height}</p>
