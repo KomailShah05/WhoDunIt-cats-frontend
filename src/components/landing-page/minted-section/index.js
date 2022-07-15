@@ -26,8 +26,8 @@ const MintedSection = () => {
   return (
     <>
       {isWinner === true && (
-        <>
-          <div className="winner-reveal">
+        <div className="position-relative overflow-visible ">
+          <div className="winner-reveal ">
             <div className="d-flex flex-column align-items-center winner-content">
               <h2 className="solved-heading">
                 {eng_lang.winnerRevealLandingPage.heading}
@@ -59,7 +59,7 @@ const MintedSection = () => {
               </button>
             </div>
           </div>
-        </>
+        </div>
       )}
       <Parallax bgImage={minted_bg} strength={300}>
         <div
