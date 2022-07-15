@@ -16,7 +16,7 @@ const NftDetails = () => {
       <div className="col-md-7 ps-md-5">
         <h3 className="text-white">
           {winner?.killerCat?.plackNumber.toString().length === 5
-            ? `Cat#${winner.killerCat.plackNumber}`
+            ? `Cat#0${winner.killerCat.plackNumber}`
             : `Cat#${winner.killerCat.plackNumber}`}
         </h3>
         <div className="scroll-modal__body-margin">
