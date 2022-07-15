@@ -17,6 +17,7 @@ import Toast from "../../lib/helper/toast";
 
 // actions-redux
 import { getWinnerAction } from "../../redux/actions/winner-reveal";
+import { eng_lang } from "../../lib/utills/constants";
 
 //constants
 
@@ -37,7 +38,9 @@ const LandingPage = () => {
   } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getWinnerAction());
+    if (totalMinted >= eng_lang.totalNoOfMintToken) {
+      dispatch(getWinnerAction());
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
