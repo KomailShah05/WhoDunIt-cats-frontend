@@ -7,42 +7,42 @@ import { landinPageProps } from "../../../pages/landing-page";
 // assets
 
 const NftDetails = () => {
-  const { winner } = useContext(landinPageProps);
+  const { winnerData } = useContext(landinPageProps);
   return (
     <div className="row">
       <div className="col-md-5 scroll-modal__bg-img">
-        <img src={winner?.killerCat?.imagePath} alt="brown_cat" />
+        <img src={winnerData?.killerCat?.imagePath} alt="brown_cat" />
       </div>
       <div className="col-md-7 ps-md-5">
         <h3 className="text-white">
-          {winner?.killerCat?.plackNumber.toString().length === 5
-            ? `Cat#0${winner?.killerCat?.plackNumber}`
-            : `Cat#${winner?.killerCat?.plackNumber}`}
+          {winnerData?.killerCat?.plackNumber.toString().length === 5
+            ? `Cat#0${winnerData?.killerCat?.plackNumber}`
+            : `Cat#${winnerData?.killerCat?.plackNumber}`}
         </h3>
         <div className="scroll-modal__body-margin">
           <div className="d-flex justify-content-between ">
             <p>{eng_lang.winnerRevealLandingPage.cat_name}</p>
-            <h5 className="text-white">{winner?.killerCat?.skin}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.eye}</p>
-            <h5 className="text-white">{winner?.killerCat?.eyes}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.eyes}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.skin}</p>
-            <h5 className="text-white">{winner?.killerCat?.skin}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.skin}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.height}</p>
-            <h5 className="text-white">{winner?.killerCat?.height}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.height}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.hat}</p>
-            <h5 className="text-white">{winner?.killerCat?.hats}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.hats}</h5>
           </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.shirt}</p>
-            <h5 className="text-white">{winner?.killerCat?.shirts}</h5>
+            <h5 className="text-white">{winnerData?.killerCat?.shirts}</h5>
           </div>
         </div>
       </div>

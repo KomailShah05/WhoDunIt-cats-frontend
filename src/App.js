@@ -41,7 +41,7 @@ const App = () => {
   const dispatch = useDispatch();
   const {
     nftsReducer: { totalMinted },
-    winnerReducer: { winner },
+    winnerReducer: { isWinner },
   } = useSelector((state) => state);
 
   useEffect(() => {
@@ -77,13 +77,12 @@ const App = () => {
               />
             </>
           )}
-          {winner?.success === true &&
-            totalMinted >= eng_lang.totalNoOfMintToken && (
-              <Route
-                path={routes.CLAIM_ATTRIBUTE}
-                element={withHeaderAndFooter(<ClaimAttributeSet />)}
-              />
-            )}
+          {isWinner !== true && totalMinted >= eng_lang.totalNoOfMintToken && (
+            <Route
+              path={routes.CLAIM_ATTRIBUTE}
+              element={withHeaderAndFooter(<ClaimAttributeSet />)}
+            />
+          )}
 
           <Route
             path={routes.TERMS_AND_CONDITIONS}
