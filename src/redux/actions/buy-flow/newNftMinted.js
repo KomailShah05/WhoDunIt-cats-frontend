@@ -8,7 +8,7 @@ import {
 } from ".";
 import { getMintedTokens } from "../nfts";
 
-const newNftMinted = (walletAddress, respBlk) => {
+const newNftMinted = (respBlk) => {
   return async function (dispatch) {
     // try {
     //   const payload = {
