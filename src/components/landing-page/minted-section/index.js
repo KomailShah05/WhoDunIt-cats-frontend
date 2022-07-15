@@ -65,12 +65,15 @@ const MintedSection = () => {
         <div
           id="minted"
           className={`${
-            winner?.killerCat?.isWinner === true &&
-            "minted-section-winner flex-column"
+            winner?.success === true && "minted-section-winner flex-column"
           }`}
         >
           <div className="container-xl">
-            <div className="d-flex justify-content-center align-items-center w-100 winner-mobile">
+            <div
+              className={`d-flex justify-content-center align-items-center w-100 ${
+                winner?.success === true && "winner-mobile"
+              } `}
+            >
               <div
                 className={`text-box ${winner?.success === true && "d-none"}`}
               >
