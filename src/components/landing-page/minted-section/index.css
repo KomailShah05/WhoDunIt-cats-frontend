@@ -173,13 +173,7 @@
 
 @media (max-width: 1800px) {
   .winner-reveal {
-    top: 115%;
-  }
-}
-
-@media (max-width: 1500px) {
-  .winner-reveal {
-    top: 125%;
+    top: 100%;
   }
 }
 
@@ -192,7 +186,7 @@
 @media screen and (max-width: 768px) {
   .winner-reveal {
     max-width: 80%;
-    top: 45% !important;
+    top: 30% !important;
   }
 }
 
