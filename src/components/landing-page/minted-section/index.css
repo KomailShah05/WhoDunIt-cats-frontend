@@ -148,7 +148,6 @@
 
 .winner-reveal {
   position: absolute;
-  top: -13%;
   z-index: 1;
   background: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
@@ -158,19 +157,36 @@
 
 @media (max-width: 2800px) {
   .winner-reveal {
-    top: -10%;
+    top: 105%;
+  }
+  .winner-reveal .solved-heading {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (max-width: 2000px) {
   .winner-reveal {
-    top: -6%;
+    top: 70%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .winner-reveal {
+    top: 125%;
+  }
+}
+
+@media (max-width: 992px) {
+  .winner-reveal {
+    top: 29% !important;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-reveal {
     max-width: 80%;
+    top: 45% !important;
   }
 }
 
@@ -178,18 +194,13 @@
   .winner-reveal {
     max-width: 100%;
     background-size: contain;
+    top: 40% !important;
   }
 }
 
 @media screen and (max-width: 320px) {
   .winner-reveal {
-    top: -12%;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  .winner-reveal {
-    top: -15%;
+    top: 30% !important;
   }
 }
 
@@ -350,6 +361,12 @@
   .react-parallax .react-parallax-bgimage {
     display: none;
     heoght: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .winner-mobile {
+    margin-bottom: 50em;
   }
 }
 /*# sourceMappingURL=index.css.map */
