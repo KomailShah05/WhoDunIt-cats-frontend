@@ -33,6 +33,9 @@ import { voucherLoading } from "./redux/actions/voucher";
 
 //styles
 import "./sass/main.scss";
+
+// Redux Actions
+import { getWinnerAction } from "./redux/actions/winner-reveal";
 import { buyErrorSolved, resetTokenAndMint } from "./redux/actions/buy-flow";
 
 //assets
@@ -53,7 +56,9 @@ const App = () => {
     dispatch(displayModalAction(""));
     dispatch(suspectBtnLoading(false));
     dispatch(voucherLoading(false));
-
+    if (totalMinted >= eng_lang.totalNoOfMintToken) {
+      dispatch(getWinnerAction());
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
