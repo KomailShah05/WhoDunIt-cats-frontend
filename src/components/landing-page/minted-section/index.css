@@ -192,6 +192,12 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .winner-reveal {
+    top: -4em;
+  }
+}
+
 @media screen and (max-width: 380px) {
   .winner-reveal {
     top: -4.5em;

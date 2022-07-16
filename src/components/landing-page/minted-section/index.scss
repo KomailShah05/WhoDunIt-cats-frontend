@@ -157,6 +157,9 @@
   @media screen and (max-width: $breakpoint-xs) {
     top: -4em;
   }
+  @media screen and (max-width: 400px) {
+    top: -4em;
+  }
   @media screen and (max-width: 380px) {
     top: -4.5em;
   }
