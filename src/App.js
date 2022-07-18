@@ -33,6 +33,9 @@ import { voucherLoading } from "./redux/actions/voucher";
 
 //styles
 import "./sass/main.scss";
+
+// Redux Actions
+import { getWinnerAction } from "./redux/actions/winner-reveal";
 import { buyErrorSolved, resetTokenAndMint } from "./redux/actions/buy-flow";
 
 //assets
@@ -41,6 +44,7 @@ const App = () => {
   const dispatch = useDispatch();
   const {
     nftsReducer: { totalMinted },
+    winnerReducer: { isWinner },
   } = useSelector((state) => state);
 
   useEffect(() => {
@@ -52,7 +56,9 @@ const App = () => {
     dispatch(displayModalAction(""));
     dispatch(suspectBtnLoading(false));
     dispatch(voucherLoading(false));
-
+    if (totalMinted >= eng_lang.totalNoOfMintToken) {
+      dispatch(getWinnerAction());
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -74,16 +80,15 @@ const App = () => {
                 path={routes.CLUES}
                 element={withHeaderAndFooter(<StoryCluesPage />)}
               />
-              <Route
-                path={routes.WINNER_REVEAL}
-                element={withHeaderAndFooter(<LandingPage />)}
-              />
             </>
           )}
-          <Route
-            path={routes.CLAIM_ATTRIBUTE}
-            element={withHeaderAndFooter(<ClaimAttributeSet />)}
-          />
+          {isWinner !== true && totalMinted >= eng_lang.totalNoOfMintToken && (
+            <Route
+              path={routes.CLAIM_ATTRIBUTE}
+              element={withHeaderAndFooter(<ClaimAttributeSet />)}
+            />
+          )}
+
           <Route
             path={routes.TERMS_AND_CONDITIONS}
             element={withHeaderAndFooter(<TermsAndConditionsPage />)}

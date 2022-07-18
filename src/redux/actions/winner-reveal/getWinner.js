@@ -7,15 +7,14 @@ import { types } from "../../types";
 // constants
 import { api_routes } from "../../../lib/utills/constants";
 
-const getWinner = () => {
+const getWinnerAction = () => {
   return async function (dispatch) {
     try {
       // api call to get total tokent minted
       let response = await getRequest(api_routes.WINNER_REVEAL);
-      if (response) dispatch(saveWinnerStatus(response.data.success));
-      console.log(response.data.success);
+      if (response) dispatch(saveWinnerStatus(response));
     } catch (err) {
-      console.log("error: ", err.response.status);
+      dispatch(saveWinnerFail());
     }
   };
 };
@@ -26,7 +25,25 @@ const saveWinnerStatus = (success) => {
       type: types.WINNER_REVEAL,
       payload: success,
     });
+    dispatch({
+      type: types.WINNER_STATUS,
+      payload: true,
+    });
   };
 };
 
-export default getWinner;
+const saveWinnerFail = () => {
+  return function (dispatch) {
+    dispatch({
+      type: types.WINNER_REVEAL,
+      payload: {},
+    });
+
+    dispatch({
+      type: types.WINNER_STATUS,
+      payload: false,
+    });
+  };
+};
+
+export default getWinnerAction;

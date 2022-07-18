@@ -320,8 +320,8 @@ export const eng_lang = {
   },
   winnerRevealLandingPage: {
     heading: "MYSTERY SOLVED!",
-    cat_no: "Cat#041992",
-    cat_name: "Cat Name",
+    cat_no: "Cat#0",
+    // cat_name: "Cat Name",
     eye: "Eye",
     skin: "Skin",
     height: "Height",

@@ -289,6 +289,12 @@
   .mas-view {
     font-size: 0.5rem !important;
     line-height: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+}
+
+@media (max-width: 1158px) {
+  .mas-view {
     margin-top: 0.3rem !important;
   }
 }
@@ -306,3 +312,4 @@
     margin-top: 0.5rem !important;
   }
 }
+/*# sourceMappingURL=style.css.map */

@@ -16,8 +16,8 @@ import { Underline } from "../../../assets";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
-  const { totalMinted } = useContext(landinPageProps);
-  const url = window.location.pathname;
+  const { totalMinted, isWinner } = useContext(landinPageProps);
+  // const url = window.location.pathname;
 
   const handleModalOpen = () => {
     dispatch(showModalAction("conncetToBuy"));
@@ -26,9 +26,7 @@ const HeroSection = () => {
   return (
     <div className="hero">
       <div className="container d-md-flex hero-content justify-content-lg-end justify-content-center  text-white">
-        <div
-          className={`hero-card ${url === routes.WINNER_REVEAL && "d-none"}`}
-        >
+        <div className={`hero-card ${isWinner === true && "d-none"}`}>
           {totalMinted >= eng_lang.totalNoOfMintToken ? (
             <div className="story-release-heading">
               <h1>{eng_lang.storyRelease.heading}</h1>
