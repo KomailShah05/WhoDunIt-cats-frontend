@@ -102,9 +102,7 @@ describe("Hero section", () => {
           <landinPageProps.Provider
             value={{
               totalMinted: 5000,
-              winner: {
-                success: true,
-              },
+              isWinner: true,
             }}
           >
             <HeroSection />

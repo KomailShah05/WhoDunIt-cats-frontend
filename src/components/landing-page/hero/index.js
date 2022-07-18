@@ -26,7 +26,10 @@ const HeroSection = () => {
   return (
     <div className="hero">
       <div className="container d-md-flex hero-content justify-content-lg-end justify-content-center  text-white">
-        <div className={`hero-card ${isWinner === true && "d-none"}`}>
+        <div
+          className={`hero-card ${isWinner === true && "d-none"}`}
+          data-testid="hero-card"
+        >
           {totalMinted >= eng_lang.totalNoOfMintToken ? (
             <div className="story-release-heading">
               <h1>{eng_lang.storyRelease.heading}</h1>
