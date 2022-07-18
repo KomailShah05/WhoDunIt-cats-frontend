@@ -377,13 +377,25 @@
 @media screen and (max-width: 768px) {
   .react-parallax .react-parallax-bgimage {
     display: none;
-    heoght: auto;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-mobile {
-    margin-bottom: 50em;
+    margin-bottom: 50em !important;
+  }
+  .mb-4em {
+    margin-bottom: 4em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .winner-mobile {
+    margin-bottom: 40em !important;
+  }
+  .mb-4em {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -297,14 +297,26 @@
   & .react-parallax-bgimage {
     @media screen and (max-width: $breakpoint-md) {
       display: none;
-      heoght: auto;
+      height: auto;
     }
   }
 }
 
 @media screen and (max-width: $breakpoint-md) {
   .winner-mobile {
-    margin-bottom: 50em;
+    margin-bottom: 50em !important;
+  }
+  .mb-4em {
+    margin-bottom: 4em;
   }
 }
+@media screen and (max-width: $breakpoint-sm) {
+  .winner-mobile {
+    margin-bottom: 40em !important;
+  }
+  .mb-4em {
+    margin-bottom: 0;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
