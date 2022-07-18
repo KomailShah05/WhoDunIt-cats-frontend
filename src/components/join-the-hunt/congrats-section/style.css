@@ -2,21 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .congrats__bg {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-8.43%, rgba(33, 35, 48, 0.4)), color-stop(200%, rgba(109, 113, 145, 0.4))), #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
-  background: linear-gradient(180deg, rgba(33, 35, 48, 0.4) -8.43%, rgba(109, 113, 145, 0.4) 200%), #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(-8.43%, rgba(33, 35, 48, 0.4)),
+      color-stop(200%, rgba(109, 113, 145, 0.4))
+    ),
+    #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
+  background: linear-gradient(
+      180deg,
+      rgba(33, 35, 48, 0.4) -8.43%,
+      rgba(109, 113, 145, 0.4) 200%
+    ),
+    #08080c url(../../../assets/images/city-bg-Blue.png) repeat-x center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 2.5rem 0;
   margin: 2.5rem 0;
 }
@@ -71,3 +83,25 @@
     line-height: 1rem;
   }
 }
+
+.winner-profile-modal {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.winner-profile-modal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+  .winner-profile-modal {
+    max-width: 2.75rem;
+    max-height: 2.75rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

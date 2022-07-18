@@ -50,3 +50,21 @@
     }
   }
 }
+
+.winner-profile-modal {
+  max-width: 4rem; // 64px
+  max-height: 4rem; // 64px
+  border-radius: 50%;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    max-width: 2.75rem;
+    max-height: 2.75rem;
+  }
+}

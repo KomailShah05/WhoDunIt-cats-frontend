@@ -149,7 +149,7 @@
 .winner-reveal {
   position: absolute;
   z-index: 1;
-  background: url(../../../assets/images/paper-bg.png);
+  background-image: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -157,7 +157,7 @@
 
 @media (max-width: 2800px) {
   .winner-reveal {
-    top: 105%;
+    top: -4em;
   }
   .winner-reveal .solved-heading {
     font-size: 1.5rem;
@@ -167,46 +167,46 @@
 
 @media (max-width: 2000px) {
   .winner-reveal {
-    top: 70%;
-  }
-}
-
-@media (max-width: 1800px) {
-  .winner-reveal {
-    top: 100%;
-  }
-}
-
-@media (max-width: 992px) {
-  .winner-reveal {
-    top: 29% !important;
+    top: -2em;
+    background-size: contain;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-reveal {
     max-width: 80%;
-    top: 30% !important;
+    margin-left: 4rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .winner-reveal {
     max-width: 100%;
-    background-size: contain;
-    top: 35% !important;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .winner-reveal {
-    top: 28% !important;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .winner-reveal {
-    top: 30% !important;
+    top: -4em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .winner-reveal {
+    top: -4em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .winner-reveal {
+    top: -4.5em;
+  }
+}
+
+@media (max-width: 280px) {
+  .winner-reveal {
+    top: -5em;
   }
 }
 
@@ -277,6 +277,17 @@
 
 .winner-profile {
   margin-bottom: 0.5rem;
+  max-width: 2.75rem;
+  max-height: 2.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.winner-profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .winner-name {
