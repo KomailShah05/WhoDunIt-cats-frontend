@@ -1,0 +1,13 @@
+.canvas-cats {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 576px) {
+  .canvas-cats {
+    position: relative;
+    margin-top: -30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
