@@ -15,7 +15,6 @@ import {
   getAccountBalance,
   convertFromWei,
   signTransaction,
-  getTotalMinted,
 } from "./functions";
 
 // actions
@@ -68,11 +67,6 @@ const EtheriumProvider = ({ children }) => {
     BLOCKCHAIN_INTERFACES,
     CONTRACT_ADDRESS
   );
-
-  useEffect(() => {
-    getTotalMinted(tokenInstance, walletAddress);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     checkUserLogin(window?.ethereum?.selectedAddress);
@@ -260,7 +254,6 @@ const EtheriumProvider = ({ children }) => {
         walletConnection,
         buyNft,
         personalSign,
-        getTotalMinted,
       }}
     >
       {children}
