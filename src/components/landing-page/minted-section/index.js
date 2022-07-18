@@ -13,16 +13,10 @@ import { landinPageProps } from "../../../pages/landing-page";
 import "./index.scss";
 
 // Assets
-import {
-  pixelated_cat,
-  border,
-  winner_avatar,
-  minted_bg,
-} from "../../../assets";
+import { pixelated_cat, border, minted_bg } from "../../../assets";
 
 const MintedSection = () => {
-  const { totalMinted, isWinner } = useContext(landinPageProps);
-  // const url = window.location.pathname;
+  const { totalMinted, isWinner, winnerData } = useContext(landinPageProps);
   return (
     <>
       {isWinner === true && (
@@ -41,13 +35,11 @@ const MintedSection = () => {
               <h3 className="detective-heading">
                 {eng_lang.winnerRevealLandingPage.case_detective}
               </h3>
-              <img
-                src={winner_avatar}
-                alt="winner"
-                className="winner-profile"
-              />
+              <div className="winner-profile">
+                <img src={winnerData?.winner?.profile_img_url} alt="winner" />
+              </div>
               <p className="winner-name">
-                {eng_lang.winnerRevealLandingPage.winner_name}
+                {winnerData?.winner?.user?.username}
               </p>
               <button
                 className="btn whodunit-btn"
