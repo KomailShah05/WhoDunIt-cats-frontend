@@ -217,6 +217,9 @@
     line-height: $size-8 !important;
     margin-top: 0.5rem !important;
   }
+  @media (max-width: 1158px) {
+    margin-top: 0.3rem !important;
+  }
   @media (max-width: $breakpoint-lg) {
     margin-top: 0.5rem !important;
   }
