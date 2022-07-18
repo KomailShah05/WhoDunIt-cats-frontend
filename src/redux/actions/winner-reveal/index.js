@@ -1,5 +1,5 @@
 // imports
-import getWinner from "./getWinner";
+import getWinnerAction from "./getWinner";
 
 // exports
-export { getWinner };
+export { getWinnerAction };

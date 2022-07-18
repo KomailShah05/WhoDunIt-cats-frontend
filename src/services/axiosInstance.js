@@ -29,8 +29,9 @@ axiosInstance.interceptors.response.use(
     return response.data;
   },
   function (error) {
-    if (error.hasOwnProperty("message")) {
-      notfiFail(error.message);
+    if (error.hasOwnProperty("message") || error.hasOwnProperty("response")) {
+      notfiFail(error.response?.data?.error || error.message);
+      console.log(error);
     }
     return Promise.reject(error);
   }
