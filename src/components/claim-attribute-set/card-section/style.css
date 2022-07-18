@@ -248,6 +248,12 @@
   }
 }
 
+@media screen and (max-width: 1800px) {
+  .mas-view {
+    margin-top: 0.3rem !important;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .mas-view {
     margin-top: 0 !important;
@@ -312,4 +318,3 @@
     margin-top: 0.5rem !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

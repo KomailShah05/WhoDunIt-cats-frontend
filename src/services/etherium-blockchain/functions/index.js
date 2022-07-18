@@ -1,7 +1,7 @@
 import connectToMetaMask from "./connectToMetaMask";
 import buyNftMetaMask from "./buyNft";
 import networkDetails from "./networkDetails";
-import getTotalMinted from "./getTotalMinted";
+
 import {
   convertToWei,
   getAccountAddress,
@@ -19,5 +19,4 @@ export {
   getAccountBalance,
   convertFromWei,
   signTransaction,
-  getTotalMinted,
 };
