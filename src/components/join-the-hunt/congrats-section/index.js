@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
+import { landinPageProps } from "../../../pages/landing-page";
 
 // styles
 import "./style.scss";
 
 // assets
-import { avatar } from "../../../assets";
 
 const CongratSection = () => {
+  const { winnerData } = useContext(landinPageProps);
   return (
     <div className="congrats congrats__bg">
       <h3 className="text-white congrats-text">
         {eng_lang.winnerRevealLandingPage.congrat}
       </h3>
-      <img src={avatar} alt="avatar" />
+      <div className="winner-profile-modal">
+        <img src={winnerData?.winner?.profile_img_url} alt="avatar" />
+      </div>
       <h6 className="text-white inter winner">
-        {eng_lang.winnerRevealLandingPage.worldWide}
+        {winnerData?.winner?.user?.username}
       </h6>
       <p className="mystery-solve-text">
         {eng_lang.winnerRevealLandingPage.mystery_text}

@@ -71,4 +71,25 @@
     line-height: 1rem;
   }
 }
+
+.winner-profile-modal {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.winner-profile-modal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+  .winner-profile-modal {
+    max-width: 2.75rem;
+    max-height: 2.75rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

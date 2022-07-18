@@ -217,6 +217,16 @@
 
 .winner-profile {
   margin-bottom: $size-8;
+  max-width: 2.75rem; // 44px
+  max-height: 2.75rem; // 44px
+  border-radius: 50%;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .winner-name {
