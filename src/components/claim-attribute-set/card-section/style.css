@@ -293,6 +293,12 @@
   }
 }
 
+@media (max-width: 1158px) {
+  .mas-view {
+    margin-top: 0.3rem !important;
+  }
+}
+
 @media (max-width: 992px) {
   .mas-view {
     margin-top: 0.5rem !important;
