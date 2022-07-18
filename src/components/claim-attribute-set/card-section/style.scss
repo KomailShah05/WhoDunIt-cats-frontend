@@ -186,6 +186,10 @@
   @media screen and (max-width: $breakpoint-4k) {
     margin-top: 0.325rem !important;
   }
+
+  @media screen and (max-width: 1800px) {
+    margin-top: 0.3rem !important;
+  }
   // ipad screen issue
   @media screen and (max-width: 1024px) {
     margin-top: 0 !important;
