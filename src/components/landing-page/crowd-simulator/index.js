@@ -158,12 +158,7 @@ const CrowdSimulator = () => {
     }
   }
 
-  useEffect(() => {
-    if (canvas) {
-      init();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [canvas]);
+  init();
 
   useEffect(() => {
     setcanvas(document.querySelector("#canvas"));
