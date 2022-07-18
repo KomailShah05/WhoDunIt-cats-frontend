@@ -113,9 +113,9 @@ describe("Hero section", () => {
 
     //   Act
     // ...nothing
-    const outputElement = screen.getByTestId("hero-card");
 
     //   Assert
+    const outputElement = screen.getByTestId("hero-card");
     expect(outputElement).toHaveClass("d-none");
   });
 });
