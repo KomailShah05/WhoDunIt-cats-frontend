@@ -305,38 +305,66 @@
   }
 }
 
-.whodunit-btn {
+.whodunit-btn-container {
+  margin-bottom: 5rem;
+}
+
+.btn.whodunit-btn {
   background: #000000;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
-  margin-bottom: 5rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
-.whodunit-btn:hover {
-  background: #333333;
-  color: #ffffff;
-}
-
 @media screen and (max-width: 2800px) {
-  .whodunit-btn {
+  .btn.whodunit-btn {
     font-size: 1rem !important;
     line-height: 1rem !important;
   }
 }
 
 @media screen and (max-width: 2000px) {
-  .whodunit-btn {
+  .btn.whodunit-btn {
     font-size: 1.5rem !important;
     line-height: 1.75rem !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .whodunit-btn {
+  .btn.whodunit-btn {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+.mas-whodunit {
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  background: #871616;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 2800px) {
+  .mas-whodunit {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .mas-whodunit {
+    font-size: 1.5rem !important;
+    line-height: 1.75rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mas-whodunit {
     font-size: 1rem !important;
     line-height: 1rem !important;
   }

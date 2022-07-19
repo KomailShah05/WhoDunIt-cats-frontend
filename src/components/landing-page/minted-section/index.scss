@@ -241,18 +241,39 @@
   }
 }
 
-.whodunit-btn {
+.whodunit-btn-container {
+  margin-bottom: $size-80;
+}
+
+.btn.whodunit-btn {
   background: $black;
   color: $white;
   font-family: $font-family-gochi-hand;
-  margin-bottom: $size-80;
+
   padding: $size-8 $size-24;
   border-radius: 0;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-  &:hover {
-    background: $charcoal;
-    color: $white;
+
+  @media screen and (max-width: 2800px) {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
   }
+  @media screen and (max-width: $breakpoint-xxl) {
+    font-size: $size-24 !important;
+    line-height: $size-28 !important;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: $size-16 !important;
+    line-height: $size-16 !important;
+  }
+}
+
+.mas-whodunit {
+  padding: $size-8 $size-24 !important;
+  border-radius: 0;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  background: $maroon;
+  color: $white;
 
   @media screen and (max-width: 2800px) {
     font-size: 1rem !important;
