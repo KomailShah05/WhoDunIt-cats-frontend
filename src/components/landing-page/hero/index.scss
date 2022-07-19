@@ -17,9 +17,12 @@
 
 .hero-content {
   margin-top: 19.875rem;
+  @media screen and (max-width: 2000px) {
+    padding-bottom: 3rem;
+  }
   @media screen and (max-width: $breakpoint-md) {
     margin-top: 15.625rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
   @media screen and (max-width: $breakpoint-sm) {
     margin-top: 10.625rem;
