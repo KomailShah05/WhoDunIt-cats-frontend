@@ -165,10 +165,16 @@
   }
 }
 
+@media screen and (max-width: 4000px) {
+  .winner-reveal {
+    top: -3em;
+    background-size: contain !important;
+  }
+}
+
 @media (max-width: 2000px) {
   .winner-reveal {
     top: -2em;
-    background-size: contain;
   }
 }
 
@@ -319,10 +325,17 @@
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
-@media screen and (max-width: 2800px) {
+@media screen and (max-width: 3900px) {
   .btn.whodunit-btn {
     font-size: 1rem !important;
     line-height: 1rem !important;
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .btn.whodunit-btn {
+    margin-bottom: 0rem;
   }
 }
 
@@ -345,14 +358,13 @@
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-  background: #871616;
-  color: #ffffff;
 }
 
-@media screen and (max-width: 2800px) {
+@media screen and (max-width: 3900px) {
   .mas-whodunit {
     font-size: 1rem !important;
     line-height: 1rem !important;
+    padding: 0.5rem 1.5rem !important;
   }
 }
 
