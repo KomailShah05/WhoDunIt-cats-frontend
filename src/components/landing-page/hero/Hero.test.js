@@ -5,7 +5,8 @@ import { MemoryRouter as Router } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
 // components
-import HeroSection from ".";
+import { HeroSection } from "..";
+import { PopUp } from "../../join-the-hunt";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -117,5 +118,35 @@ describe("Hero section", () => {
     //   Assert
     const outputElement = screen.getByTestId("hero-card");
     expect(outputElement).toHaveClass("d-none");
+  });
+  test('Clicking on "Join the hunt" button connect metamask popup will be open', async () => {
+    //Arrange
+    const { container } = render(
+      <Router>
+        <Provider store={configureStore().store}>
+          <landinPageProps.Provider
+            value={{
+              totalMinted: 12,
+              isWinner: false,
+            }}
+          >
+            <HeroSection />
+            <PopUp />
+          </landinPageProps.Provider>
+        </Provider>
+      </Router>
+    );
+
+    //   Act
+    const button = screen.getByTestId("join-hunt");
+    userEvent.click(button);
+
+    //   Assert
+    const outputElement = await screen.findByTestId(
+      "metamask-modal",
+      {},
+      { timeout: 3000 }
+    );
+    expect(outputElement).toBeInTheDocument();
   });
 });
