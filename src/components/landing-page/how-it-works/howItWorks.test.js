@@ -31,4 +31,22 @@ describe("How It Works section", () => {
     });
     expect(headingText).toBeInTheDocument();
   });
+
+  test("If the component successfully renders with the underline image for heading", () => {
+    //Arrange
+    render(
+      <Router>
+        <Provider store={configureStore().store}>
+          <landinPageProps.Provider
+            value={{ totalMinted: 5000, winner: false }}
+          >
+            <HowItWorks />
+          </landinPageProps.Provider>
+        </Provider>
+      </Router>
+    );
+    //   Assert
+    const image = screen.getByAltText("Underline");
+    expect(image).toBeInTheDocument();
+  });
 });
