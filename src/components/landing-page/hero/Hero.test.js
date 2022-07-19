@@ -6,6 +6,7 @@ import userEvent from "@testing-library/user-event";
 
 // components
 import { HeroSection } from "..";
+import { PopUp } from "../../join-the-hunt";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -118,28 +119,34 @@ describe("Hero section", () => {
     const outputElement = screen.getByTestId("hero-card");
     expect(outputElement).toHaveClass("d-none");
   });
-  test("Winner is reveal then hero card should be hidden", () => {
+  test('Clicking on "Join the hunt" button connect metamask popup will be open', async () => {
     //Arrange
-    render(
+    const { container } = render(
       <Router>
         <Provider store={configureStore().store}>
           <landinPageProps.Provider
             value={{
-              totalMinted: 5000,
-              isWinner: true,
+              totalMinted: 12,
+              isWinner: false,
             }}
           >
             <HeroSection />
+            <PopUp />
           </landinPageProps.Provider>
         </Provider>
       </Router>
     );
 
     //   Act
-    // ...nothing
+    const button = screen.getByTestId("join-hunt");
+    userEvent.click(button);
 
     //   Assert
-    const outputElement = screen.getByTestId("hero-card");
-    expect(outputElement).toHaveClass("d-none");
+    const outputElement = await screen.findByTestId(
+      "metamask-modal",
+      {},
+      { timeout: 3000 }
+    );
+    expect(outputElement).toBeInTheDocument();
   });
 });

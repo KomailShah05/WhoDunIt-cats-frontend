@@ -55,6 +55,7 @@ const PopUp = () => {
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
+        data-testid="metamask-modal"
       >
         <div className="modal-dialog modal-dialog-centered modal__wide">
           <div className="modal-content modal__box">

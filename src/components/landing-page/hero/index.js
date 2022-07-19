@@ -61,6 +61,7 @@ const HeroSection = () => {
                 className="btn btn-primary hero-card-btn join_hunt_text"
                 data-mdb-ripple-color="primary"
                 onClick={handleModalOpen}
+                data-testid="join-hunt"
               >
                 {eng_lang.buttonConstants.join_hunt_text}
               </button>
