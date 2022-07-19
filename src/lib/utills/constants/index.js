@@ -324,6 +324,7 @@ export const eng_lang = {
     heading: "MYSTERY SOLVED!",
     cat_no: "Cat#0",
     // cat_name: "Cat Name",
+    plack_number: "Plack Number",
     eye: "Eye",
     skin: "Skin",
     height: "Height",
