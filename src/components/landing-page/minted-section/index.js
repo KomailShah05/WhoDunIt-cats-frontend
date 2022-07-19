@@ -40,7 +40,9 @@ const MintedSection = () => {
                 <img src={winnerData?.winner?.profile_img_url} alt="winner" />
               </div>
               <p className="winner-name">
-                {winnerData?.winner?.user?.username}
+                {winnerData?.winner?.user?.username !== null
+                  ? winnerData?.winner?.user?.username
+                  : "Unnamed"}
               </p>
               <button
                 className="btn whodunit-btn"

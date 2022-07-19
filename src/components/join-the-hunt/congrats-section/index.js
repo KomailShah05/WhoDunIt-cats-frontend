@@ -20,7 +20,9 @@ const CongratSection = () => {
         <img src={winnerData?.winner?.profile_img_url} alt="avatar" />
       </div>
       <h6 className="text-white inter winner">
-        {winnerData?.winner?.user?.username}
+        {winnerData?.winner?.user?.username !== null
+          ? winnerData?.winner?.user?.username
+          : "Unnamed"}
       </h6>
       <p className="mystery-solve-text">
         {eng_lang.winnerRevealLandingPage.mystery_text}
