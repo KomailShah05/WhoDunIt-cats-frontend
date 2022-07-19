@@ -14,7 +14,7 @@ const getClaimedAmountAction = () => {
       let response = await getRequest(api_routes.CLAIMED_COUNT);
       response && dispatch(getClaimedAmountSuccess(response.data.totalClaimed));
     } catch (err) {
-      console.log(err);
+      dispatch(getClaimedFailure());
     }
   };
 };
@@ -28,13 +28,13 @@ const getClaimedAmountSuccess = (totalClaimed) => {
   };
 };
 
-// const getMintedTokenFailure = () => {
-//   return function (dispatch) {
-//     dispatch({
-//       type: types.MINTED_NFTS_COUNT,
-//       payload: 0,
-//     });
-//   };
-// };
+const getClaimedFailure = () => {
+  return function (dispatch) {
+    dispatch({
+      type: types.CLAIM_NFT_AMOUNT,
+      payload: 0,
+    });
+  };
+};
 
 export default getClaimedAmountAction;
