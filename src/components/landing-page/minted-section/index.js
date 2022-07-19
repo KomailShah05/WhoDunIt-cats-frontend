@@ -44,14 +44,19 @@ const MintedSection = () => {
                   ? winnerData?.winner?.user?.username
                   : "Unnamed"}
               </p>
-              <button
-                className="btn whodunit-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#scrollModal"
-                data-bs-dismiss="modal"
-              >
-                {eng_lang.buttonConstants.who_dun_it}
-              </button>
+              <div className="position-relative whodunit-btn-container">
+                <span className="mas mas-whodunit">
+                  {eng_lang.buttonConstants.who_dun_it}
+                </span>
+                <button
+                  className="btn whodunit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#scrollModal"
+                  data-bs-dismiss="modal"
+                >
+                  {eng_lang.buttonConstants.who_dun_it}
+                </button>
+              </div>
             </div>
           </div>
         </div>
