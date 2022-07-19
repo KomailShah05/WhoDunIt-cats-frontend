@@ -5,7 +5,7 @@ import { MemoryRouter as Router } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
 // components
-import HeroSection from ".";
+import { HeroSection } from "..";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -94,6 +94,30 @@ describe("Hero section", () => {
     expect(link).toHaveAttribute("href", "/story-intro");
   });
 
+  test("Winner is reveal then hero card should be hidden", () => {
+    //Arrange
+    render(
+      <Router>
+        <Provider store={configureStore().store}>
+          <landinPageProps.Provider
+            value={{
+              totalMinted: 5000,
+              isWinner: true,
+            }}
+          >
+            <HeroSection />
+          </landinPageProps.Provider>
+        </Provider>
+      </Router>
+    );
+
+    //   Act
+    // ...nothing
+
+    //   Assert
+    const outputElement = screen.getByTestId("hero-card");
+    expect(outputElement).toHaveClass("d-none");
+  });
   test("Winner is reveal then hero card should be hidden", () => {
     //Arrange
     render(
