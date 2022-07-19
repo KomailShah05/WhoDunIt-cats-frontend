@@ -71,7 +71,7 @@ const MintedSection = () => {
                 <h2 className="text-white text-capitalize">
                   {eng_lang.mintedSection.total_Minted}
                 </h2>
-                <p className="minted-text">
+                <p data-testid="totalMinted" className="minted-text">
                   {totalMinted || 0}
                   <br />
                   <span className="remaining-minted">
