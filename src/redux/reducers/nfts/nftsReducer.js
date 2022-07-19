@@ -2,6 +2,7 @@ import { types } from "../../types";
 
 const initialState = {
   totalMinted: 0,
+  totalClaimed: 0,
   btnLoading: false,
   showModal: "",
 };
@@ -12,6 +13,11 @@ const nftsReducer = (state = initialState, action) => {
       return {
         ...state,
         totalMinted: action.payload,
+      };
+    case types.CLAIM_NFT_AMOUNT:
+      return {
+        ...state,
+        totalClaimed: action.payload,
       };
     case types.CONNECT_WALLET_BTN_LOADING:
       return {
