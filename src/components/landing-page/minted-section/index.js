@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { Parallax } from "react-parallax";
 
 // components
-import WalkingCats from "../walking-cats";
+// import WalkingCats from "../walking-cats";
+import CrowdSimulator from "../crowd-simulator";
 
 //constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -22,7 +23,7 @@ const MintedSection = () => {
       {isWinner === true && (
         <div className="position-relative overflow-visible ">
           <div className="winner-reveal ">
-            <div className="d-flex flex-column align-items-center winner-content">
+            <div className="d-flex flex-column align-items-center winner-content ">
               <h2 className="solved-heading">
                 {eng_lang.winnerRevealLandingPage.heading}
               </h2>
@@ -62,7 +63,7 @@ const MintedSection = () => {
         >
           <div className="container-xl">
             <div
-              className={`d-flex justify-content-center align-items-center w-100 ${
+              className={`d-flex justify-content-center align-items-center w-100 mb-4em ${
                 isWinner === true && "winner-mobile"
               } `}
             >
@@ -81,7 +82,8 @@ const MintedSection = () => {
             </div>
           </div>
         </div>
-        <WalkingCats />
+        {/* <WalkingCats /> */}
+        <CrowdSimulator />
       </Parallax>
     </>
   );
