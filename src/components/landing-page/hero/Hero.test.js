@@ -1,7 +1,5 @@
 // libraries
-import { render, screen } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { MemoryRouter as Router } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 // components
@@ -10,22 +8,16 @@ import { PopUp } from "../../join-the-hunt";
 
 // constants
 import { eng_lang } from "../../../lib/utills/constants";
-import configureStore from "../../../redux/store";
 import { landinPageProps } from "../../../pages/landing-page";
+import { renderWithProviders } from "../../../lib/utills/unit-tests-jest/test-utills";
 
 describe("Hero section", () => {
   test("If minted value is 5000 then show Now the hunt begins heading", () => {
     //Arrange
-    render(
-      <Router>
-        <Provider store={configureStore().store}>
-          <landinPageProps.Provider
-            value={{ totalMinted: 5000, winner: false }}
-          >
-            <HeroSection />
-          </landinPageProps.Provider>
-        </Provider>
-      </Router>
+    renderWithProviders(
+      <landinPageProps.Provider value={{ totalMinted: 5000, winner: false }}>
+        <HeroSection />
+      </landinPageProps.Provider>
     );
 
     //   Act
@@ -40,21 +32,17 @@ describe("Hero section", () => {
 
   test("If minted value is less than 5000 then there should not any text Now the hunt begins heading", () => {
     //Arrange
-    render(
-      <Router>
-        <Provider store={configureStore().store}>
-          <landinPageProps.Provider
-            value={{
-              totalMinted: 10,
-              winner: {
-                success: false,
-              },
-            }}
-          >
-            <HeroSection />
-          </landinPageProps.Provider>
-        </Provider>
-      </Router>
+    renderWithProviders(
+      <landinPageProps.Provider
+        value={{
+          totalMinted: 10,
+          winner: {
+            success: false,
+          },
+        }}
+      >
+        <HeroSection />
+      </landinPageProps.Provider>
     );
 
     //   Act
@@ -70,21 +58,17 @@ describe("Hero section", () => {
 
   test("If minted value is less than 5000 begin the hunt button should redirect to story intro", () => {
     //Arrange
-    render(
-      <Router>
-        <Provider store={configureStore().store}>
-          <landinPageProps.Provider
-            value={{
-              totalMinted: 5000,
-              winner: {
-                success: false,
-              },
-            }}
-          >
-            <HeroSection />
-          </landinPageProps.Provider>
-        </Provider>
-      </Router>
+    renderWithProviders(
+      <landinPageProps.Provider
+        value={{
+          totalMinted: 5000,
+          winner: {
+            success: false,
+          },
+        }}
+      >
+        <HeroSection />
+      </landinPageProps.Provider>
     );
 
     //   Act
@@ -97,19 +81,15 @@ describe("Hero section", () => {
 
   test("Winner is reveal then hero card should be hidden", () => {
     //Arrange
-    render(
-      <Router>
-        <Provider store={configureStore().store}>
-          <landinPageProps.Provider
-            value={{
-              totalMinted: 5000,
-              isWinner: true,
-            }}
-          >
-            <HeroSection />
-          </landinPageProps.Provider>
-        </Provider>
-      </Router>
+    renderWithProviders(
+      <landinPageProps.Provider
+        value={{
+          totalMinted: 5000,
+          isWinner: true,
+        }}
+      >
+        <HeroSection />
+      </landinPageProps.Provider>
     );
 
     //   Act
@@ -119,22 +99,20 @@ describe("Hero section", () => {
     const outputElement = screen.getByTestId("hero-card");
     expect(outputElement).toHaveClass("d-none");
   });
+
   test('Clicking on "Join the hunt" button connect metamask popup will be open', async () => {
     //Arrange
-    const { container } = render(
-      <Router>
-        <Provider store={configureStore().store}>
-          <landinPageProps.Provider
-            value={{
-              totalMinted: 12,
-              isWinner: false,
-            }}
-          >
-            <HeroSection />
-            <PopUp />
-          </landinPageProps.Provider>
-        </Provider>
-      </Router>
+    renderWithProviders(
+      <landinPageProps.Provider
+        value={{
+          totalMinted: 12,
+          isWinner: false,
+          showModal: "",
+        }}
+      >
+        <HeroSection />
+        <PopUp />
+      </landinPageProps.Provider>
     );
 
     //   Act
@@ -145,8 +123,8 @@ describe("Hero section", () => {
     const outputElement = await screen.findByTestId(
       "metamask-modal",
       {},
-      { timeout: 3000 }
+      { timeout: 30000 }
     );
     expect(outputElement).toBeInTheDocument();
-  });
+  }, 30000);
 });
