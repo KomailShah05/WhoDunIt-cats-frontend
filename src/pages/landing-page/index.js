@@ -56,7 +56,7 @@ const LandingPage = () => {
         <MintedSection />
         <HowItWorks />
         <WhoDidIt />
-        <PopUp />
+        {showModal && <PopUp />}
         <SmallPopup />
         <Toast />
         <ScrollingModal />
