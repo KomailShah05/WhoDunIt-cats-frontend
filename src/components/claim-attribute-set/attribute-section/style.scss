@@ -58,7 +58,7 @@
 }
 
 .metadata-nft {
-  max-width: 20.7rem;
+  max-width: 100%;
   margin-top: 32px;
   margin-bottom: $size-12;
   & p {
@@ -138,9 +138,10 @@
 
 .selected-cat {
   margin-top: $size-30;
-  min-width: 14rem;
+  min-width: 100%;
   @media screen and (max-width: $breakpoint-lg) {
     max-width: 14rem;
+    min-width: unset;
   }
   @media screen and (max-width: $breakpoint-sm) {
     min-width: 100%;
