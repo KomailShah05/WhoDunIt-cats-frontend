@@ -40,16 +40,23 @@ const MintedSection = () => {
                 <img src={winnerData?.winner?.profile_img_url} alt="winner" />
               </div>
               <p className="winner-name">
-                {winnerData?.winner?.user?.username}
+                {winnerData?.winner?.user?.username !== null
+                  ? winnerData?.winner?.user?.username
+                  : "Unnamed"}
               </p>
-              <button
-                className="btn whodunit-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#scrollModal"
-                data-bs-dismiss="modal"
-              >
-                {eng_lang.buttonConstants.who_dun_it}
-              </button>
+              <div className="position-relative whodunit-btn-container">
+                <span className="mas mas-whodunit">
+                  {eng_lang.buttonConstants.who_dun_it}
+                </span>
+                <button
+                  className="btn whodunit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#scrollModal"
+                  data-bs-dismiss="modal"
+                >
+                  {eng_lang.buttonConstants.who_dun_it}
+                </button>
+              </div>
             </div>
           </div>
         </div>

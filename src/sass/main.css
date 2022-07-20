@@ -230,6 +230,7 @@ p {
 
 .sub-btn-container {
   max-width: 24.438rem;
+  overflow: hidden;
 }
 
 .subscribe-btn {
@@ -269,6 +270,24 @@ p {
     font-size: 1.125rem;
     line-height: 1.25rem;
   }
+}
+
+.btn.whodunit-btn {
+  background: #000000;
+  -webkit-mask: url("../../assets/images/mask.png");
+  mask: url("../../assets/images/mask.png");
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+}
+
+.btn.whodunit-btn:hover {
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
 }
 
 @keyframes ani {
