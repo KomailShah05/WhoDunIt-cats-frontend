@@ -1,15 +1,16 @@
-import { render } from "@testing-library/react";
+// libraries
+import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { MemoryRouter as Router } from "react-router-dom";
 import axiosMock from "axios";
 
+// constants
 import configureStore from "../../../redux/store";
 import { landinPageProps } from "../../../pages/landing-page";
-
+import { eng_lang } from "../../../lib/utills/constants";
 import { API_BASE_URL } from "../../../enviroments";
 
-import { getMintedTokens } from "../../../redux/actions/nfts";
-
+// components
 import MintedSection from ".";
 
 test("Fetch Minted NFTS Amount Successfully", async () => {
@@ -34,7 +35,10 @@ test("Fetch Minted NFTS Amount Successfully", async () => {
   await expect(
     axiosMock.get(`${API_BASE_URL}/nfts/count-minted`)
   ).resolves.toEqual(mockResults);
+
   expect(axiosMock.get).toHaveBeenCalledWith(
     `${API_BASE_URL}/nfts/count-minted`
   );
+
+  await expect(screen.queryByText(eng_lang.totalNoOfMintToken)).toBeVisible();
 });
