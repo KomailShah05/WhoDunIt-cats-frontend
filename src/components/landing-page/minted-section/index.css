@@ -152,6 +152,7 @@
   background-image: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain !important;
   width: 100%;
 }
 
@@ -168,7 +169,6 @@
 @media screen and (max-width: 4000px) {
   .winner-reveal {
     top: -3em;
-    background-size: contain !important;
   }
 }
 

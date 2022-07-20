@@ -129,7 +129,7 @@
   background-image: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-
+  background-size: contain !important;
   // height: 100%;
   width: 100%;
   @media (max-width: 2800px) {
@@ -144,7 +144,6 @@
 
   @media screen and (max-width: 4000px) {
     top: -3em;
-    background-size: contain !important;
   }
   @media (max-width: 2000px) {
     top: -2em;
