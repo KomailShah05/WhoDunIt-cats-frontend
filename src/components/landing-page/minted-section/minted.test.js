@@ -8,6 +8,8 @@ import { landinPageProps } from "../../../pages/landing-page";
 
 import { API_BASE_URL } from "../../../enviroments";
 
+import { getMintedTokens } from "../../../redux/actions/nfts";
+
 import MintedSection from ".";
 
 test("Fetch Minted NFTS Amount Successfully", async () => {
@@ -22,10 +24,17 @@ test("Fetch Minted NFTS Amount Successfully", async () => {
     </Router>
   );
 
-  let response = await axiosMock.get(`${API_BASE_URL}/nfts/count-minted`);
-  await axiosMock.get.mockImplementationOnce(() => Promise.resolve(data));
+  const mockResults = {
+    success: true,
+    data: {
+      totalMinted: 5000,
+    },
+  };
+  axiosMock.get.mockImplementationOnce(() => Promise.resolve(mockResults));
+  await expect(
+    axiosMock.get(`${API_BASE_URL}/nfts/count-minted`)
+  ).resolves.toEqual(mockResults);
   expect(axiosMock.get).toHaveBeenCalledWith(
     `${API_BASE_URL}/nfts/count-minted`
   );
-  expect(response.data.totalMinted).toEqual(totalMinted);
 });
