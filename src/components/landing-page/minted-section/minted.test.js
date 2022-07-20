@@ -1,26 +1,14 @@
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { MemoryRouter as Router } from "react-router-dom";
-import axios from "axios";
+import axiosMock from "axios";
 
 import configureStore from "../../../redux/store";
 import { landinPageProps } from "../../../pages/landing-page";
 
-import { BASE_URL } from "../../../enviroments";
+import { API_BASE_URL } from "../../../enviroments";
 
 import MintedSection from ".";
-
-jest.mock("axios", () => {
-  return {
-    create: jest.fn(() => ({
-      get: jest.fn(),
-      interceptors: {
-        request: { use: jest.fn(), eject: jest.fn() },
-        response: { use: jest.fn(), eject: jest.fn() },
-      },
-    })),
-  };
-});
 
 test("Fetch Minted NFTS Amount Successfully", async () => {
   //Arrange
@@ -34,9 +22,10 @@ test("Fetch Minted NFTS Amount Successfully", async () => {
     </Router>
   );
 
-  // let response = await axios.get(`${BASE_URL}nfts/count-minted`);
-
-  // const totalMintedNFTS = 5000;
-  // expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}nfts/count-minted`);
-  // expect(response).toEqual(totalMintedNFTS);
+  let response = await axiosMock.get(`${API_BASE_URL}/nfts/count-minted`);
+  await axiosMock.get.mockImplementationOnce(() => Promise.resolve(data));
+  expect(axiosMock.get).toHaveBeenCalledWith(
+    `${API_BASE_URL}/nfts/count-minted`
+  );
+  expect(response.data.totalMinted).toEqual(totalMinted);
 });
