@@ -42,3 +42,37 @@ test("Fetch Minted NFTS Amount Successfully", async () => {
 
   await expect(screen.queryByText(eng_lang.totalNoOfMintToken)).toBeVisible();
 });
+
+test("claim api unit test returns claimed nft amount", async () => {
+  //Arrange
+  render(
+    <Router>
+      <Provider store={configureStore().store}>
+        <landinPageProps.Provider
+          value={{ totalMinted: 5000, isWinner: true, totalClaimed: 5000 }}
+        >
+          <MintedSection />
+        </landinPageProps.Provider>
+      </Provider>
+    </Router>
+  );
+
+  const mockResults = {
+    success: true,
+    data: {
+      totalClaimed: 5000,
+    },
+  };
+  axiosMock.get.mockImplementationOnce(() => Promise.resolve(mockResults));
+  await expect(
+    axiosMock.get(`${API_BASE_URL}/nfts/count-claimed`)
+  ).resolves.toEqual(mockResults);
+
+  expect(axiosMock.get).toHaveBeenCalledWith(
+    `${API_BASE_URL}/nfts/count-claimed`
+  );
+
+  await expect(
+    screen.queryByText(eng_lang.winnerRevealLandingPage.heading)
+  ).toBeVisible();
+});
