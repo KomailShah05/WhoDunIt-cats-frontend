@@ -27,10 +27,16 @@
   margin-top: 19.875rem;
 }
 
+@media screen and (max-width: 2000px) {
+  .hero-content {
+    padding-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-content {
     margin-top: 15.625rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 }
 
