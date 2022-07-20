@@ -14,12 +14,17 @@ const NftDetails = () => {
         <img src={winnerData?.killerCat?.imagePath} alt="brown_cat" />
       </div>
       <div className="col-md-7 ps-md-5">
-        <h3 className="text-white">
-          {winnerData?.killerCat?.plackNumber.toString().length === 5
-            ? `Cat#0${winnerData?.killerCat?.plackNumber}`
-            : `Cat#${winnerData?.killerCat?.plackNumber}`}
-        </h3>
+        <h3 className="text-white">{`Cat#${winnerData?.killerCat?.nft}`}</h3>
         <div className="scroll-modal__body-margin">
+          <div className="d-flex justify-content-between">
+            <p>{eng_lang.winnerRevealLandingPage.plack_number}</p>
+            <h5 className="text-white">
+              {" "}
+              {winnerData?.killerCat?.plackNumber.toString().length === 6
+                ? `${winnerData?.killerCat?.plackNumber}`
+                : `0${winnerData?.killerCat?.plackNumber}`}
+            </h5>
+          </div>
           <div className="d-flex justify-content-between">
             <p>{eng_lang.winnerRevealLandingPage.skin}</p>
             <h5 className="text-white">{winnerData?.killerCat?.skin}</h5>

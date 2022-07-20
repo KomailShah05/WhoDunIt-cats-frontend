@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { Parallax } from "react-parallax";
 
 // components
-import WalkingCats from "../walking-cats";
+// import WalkingCats from "../walking-cats";
+import CrowdSimulator from "../crowd-simulator";
 
 //constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -22,7 +23,7 @@ const MintedSection = () => {
       {isWinner === true && (
         <div className="position-relative overflow-visible ">
           <div className="winner-reveal ">
-            <div className="d-flex flex-column align-items-center winner-content">
+            <div className="d-flex flex-column align-items-center winner-content ">
               <h2 className="solved-heading">
                 {eng_lang.winnerRevealLandingPage.heading}
               </h2>
@@ -39,16 +40,23 @@ const MintedSection = () => {
                 <img src={winnerData?.winner?.profile_img_url} alt="winner" />
               </div>
               <p className="winner-name">
-                {winnerData?.winner?.user?.username}
+                {winnerData?.winner?.user?.username !== null
+                  ? winnerData?.winner?.user?.username
+                  : "Unnamed"}
               </p>
-              <button
-                className="btn whodunit-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#scrollModal"
-                data-bs-dismiss="modal"
-              >
-                {eng_lang.buttonConstants.who_dun_it}
-              </button>
+              <div className="position-relative whodunit-btn-container">
+                <span className="mas mas-whodunit">
+                  {eng_lang.buttonConstants.who_dun_it}
+                </span>
+                <button
+                  className="btn whodunit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#scrollModal"
+                  data-bs-dismiss="modal"
+                >
+                  {eng_lang.buttonConstants.who_dun_it}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -62,7 +70,7 @@ const MintedSection = () => {
         >
           <div className="container-xl">
             <div
-              className={`d-flex justify-content-center align-items-center w-100 ${
+              className={`d-flex justify-content-center align-items-center w-100 mb-4em ${
                 isWinner === true && "winner-mobile"
               } `}
             >
@@ -81,7 +89,8 @@ const MintedSection = () => {
             </div>
           </div>
         </div>
-        <WalkingCats />
+        {/* <WalkingCats /> */}
+        <CrowdSimulator />
       </Parallax>
     </>
   );
