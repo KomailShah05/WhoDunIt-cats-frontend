@@ -20,7 +20,7 @@ const HeroSection = () => {
   // const url = window.location.pathname;
 
   const handleModalOpen = () => {
-    dispatch(showModalAction("conncetToBuy"));
+    dispatch(showModalAction(eng_lang.conncetToBuy));
   };
 
   return (

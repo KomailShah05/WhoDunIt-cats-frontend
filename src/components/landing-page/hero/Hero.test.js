@@ -10,6 +10,8 @@ import { PopUp } from "../../join-the-hunt";
 import { eng_lang } from "../../../lib/utills/constants";
 import { landinPageProps } from "../../../pages/landing-page";
 import { renderWithProviders } from "../../../lib/utills/unit-tests-jest/test-utills";
+import { setupStore } from "../../../lib/utills/unit-tests-jest/store-utills";
+import { showModalAction } from "../../../redux/actions/nfts";
 
 describe("Hero section", () => {
   test("If minted value is 5000 then show Now the hunt begins heading", () => {
@@ -100,24 +102,28 @@ describe("Hero section", () => {
     expect(outputElement).toHaveClass("d-none");
   });
 
-  test('Clicking on "Join the hunt" button connect metamask popup will be open', async () => {
+  test('Dispatch action "showModalAction" and then will open "connect metamask" popup.', async () => {
+    //   Act
+    const store = setupStore();
+    store.dispatch(showModalAction(eng_lang.conncetToBuy));
+    const {
+      nftsReducer: { showModal },
+    } = store.getState();
+
     //Arrange
     renderWithProviders(
       <landinPageProps.Provider
         value={{
           totalMinted: 12,
           isWinner: false,
-          showModal: "",
+          showModal: showModal,
         }}
       >
         <HeroSection />
         <PopUp />
-      </landinPageProps.Provider>
+      </landinPageProps.Provider>,
+      { store }
     );
-
-    //   Act
-    const button = screen.getByTestId("join-hunt");
-    userEvent.click(button);
 
     //   Assert
     const outputElement = await screen.findByTestId(
@@ -125,6 +131,8 @@ describe("Hero section", () => {
       {},
       { timeout: 30000 }
     );
-    expect(outputElement).toBeInTheDocument();
-  }, 30000);
+
+    expect(outputElement).toHaveClass("show");
+    expect(outputElement).toHaveClass("d-block");
+  });
 });
