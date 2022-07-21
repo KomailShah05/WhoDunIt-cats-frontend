@@ -87,14 +87,12 @@ const App = () => {
               />
             </>
           )}
-          {isWinner !== true &&
-            totalMinted >= eng_lang.totalNoOfMintToken &&
-            totalClaimed >= eng_lang.totalNoOfClaimed && (
-              <Route
-                path={routes.CLAIM_ATTRIBUTE}
-                element={withHeaderAndFooter(<ClaimAttributeSet />)}
-              />
-            )}
+          {isWinner !== true && totalMinted >= eng_lang.totalNoOfMintToken && (
+            <Route
+              path={routes.CLAIM_ATTRIBUTE}
+              element={withHeaderAndFooter(<ClaimAttributeSet />)}
+            />
+          )}
 
           <Route
             path={routes.TERMS_AND_CONDITIONS}
