@@ -151,7 +151,7 @@ test("Winner Reveal is not shown if winner is not true in redux", async () => {
     </Router>
   );
 
-  await expect(
+  expect(
     screen.queryByText(eng_lang.winnerRevealLandingPage.heading)
   ).toBeNull();
 });
