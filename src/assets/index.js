@@ -1,5 +1,4 @@
 // imports
-import HowToExport from "./images/how-to-export.svg";
 import Underline from "./images/under-line.svg";
 import TwitterIcon from "./images/twitter-footer-icon.svg";
 import DiscordIcon from "./images/discord-footer-icon.svg";
@@ -38,8 +37,11 @@ import cat3 from "./images/cat3.png";
 import cat4 from "./images/cat4.png";
 import cat5 from "./images/cat5.png";
 
+const HowToExport = "https://d1lu1ykcmin7ci.cloudfront.net/how-to-export.svg";
+
 const Caseboard_Colored =
   "https://d1lu1ykcmin7ci.cloudfront.net/Caseboard_Colored.svg";
+
 // exports
 export {
   Caseboard_Colored,
