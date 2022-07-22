@@ -19,6 +19,14 @@
   }
 }
 
+.btn-block-container span {
+  color: transparent;
+}
+
+.btn-block-container:hover span {
+  color: #ffffff;
+}
+
 .block__btn-text {
   font-family: "Gochi Hand", cursive;
   font-style: normal;

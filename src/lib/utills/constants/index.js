@@ -18,6 +18,7 @@ export const blc_func_name = {
 
 export const api_routes = {
   MINTED_COUNT: "nfts/count-minted",
+  CLAIMED_COUNT: "nfts/count-claimed",
   NEW_NFT_MINTED: "nfts/mint",
   ADD_USER_WALLET: "users/add-user-wallet",
   CREATE_VOUCHER: "vouchers",
@@ -47,6 +48,7 @@ export const eng_lang = {
   conncetToBuy: "conncetToBuy",
   buyModal: "buyModal",
   totalNoOfMintToken: 5000,
+  totalNoOfClaimed: 5000,
   pageSize: 9,
   claim_nft: "nft claimed succesfully",
   dont_claim_nft: "nft claimed unsuccesfully",
@@ -321,7 +323,8 @@ export const eng_lang = {
   winnerRevealLandingPage: {
     heading: "MYSTERY SOLVED!",
     cat_no: "Cat#0",
-    cat_name: "Cat Name",
+    // cat_name: "Cat Name",
+    plack_number: "Plack Number",
     eye: "Eye",
     skin: "Skin",
     height: "Height",

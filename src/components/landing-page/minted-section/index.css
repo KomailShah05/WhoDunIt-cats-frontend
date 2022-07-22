@@ -149,15 +149,16 @@
 .winner-reveal {
   position: absolute;
   z-index: 1;
-  background: url(../../../assets/images/paper-bg.png);
+  background-image: url(../../../assets/images/paper-bg.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain !important;
   width: 100%;
 }
 
 @media (max-width: 2800px) {
   .winner-reveal {
-    top: 105%;
+    top: -4em;
   }
   .winner-reveal .solved-heading {
     font-size: 1.5rem;
@@ -165,48 +166,53 @@
   }
 }
 
+@media screen and (max-width: 4000px) {
+  .winner-reveal {
+    top: -3em;
+  }
+}
+
 @media (max-width: 2000px) {
   .winner-reveal {
-    top: 70%;
-  }
-}
-
-@media (max-width: 1800px) {
-  .winner-reveal {
-    top: 100%;
-  }
-}
-
-@media (max-width: 992px) {
-  .winner-reveal {
-    top: 29% !important;
+    top: -2em;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-reveal {
     max-width: 80%;
-    top: 30% !important;
+    margin-left: 4rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .winner-reveal {
     max-width: 100%;
-    background-size: contain;
-    top: 35% !important;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .winner-reveal {
-    top: 28% !important;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .winner-reveal {
-    top: 30% !important;
+    top: -4em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .winner-reveal {
+    top: -4em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .winner-reveal {
+    top: -4.5em;
+  }
+}
+
+@media (max-width: 280px) {
+  .winner-reveal {
+    top: -5em;
   }
 }
 
@@ -277,6 +283,17 @@
 
 .winner-profile {
   margin-bottom: 0.5rem;
+  max-width: 2.75rem;
+  max-height: 2.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.winner-profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .winner-name {
@@ -294,38 +311,104 @@
   }
 }
 
-.whodunit-btn {
+.whodunit-btn-container {
+  margin-bottom: 5rem;
+  overflow: hidden;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+.btn.whodunit-btn {
   background: #000000;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
-  margin-bottom: 5rem;
   padding: 0.5rem 1.5rem;
   border-radius: 0;
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
 }
 
-.whodunit-btn:hover {
-  background: #333333;
-  color: #ffffff;
-}
-
-@media screen and (max-width: 2800px) {
-  .whodunit-btn {
+@media screen and (max-width: 3900px) {
+  .btn.whodunit-btn {
     font-size: 1rem !important;
     line-height: 1rem !important;
+    padding: 0.5rem 1.5rem !important;
   }
 }
 
 @media screen and (max-width: 2000px) {
-  .whodunit-btn {
+  .btn.whodunit-btn {
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .btn.whodunit-btn {
     font-size: 1.5rem !important;
     line-height: 1.75rem !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .whodunit-btn {
+  .btn.whodunit-btn {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+.mas-whodunit {
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+@media screen and (max-width: 3900px) {
+  .mas-whodunit {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .mas-whodunit {
+    font-size: 1.5rem !important;
+    line-height: 1.75rem !important;
+  }
+}
+
+@-moz-document url-prefix() {
+  @media screen and (max-width: 3900px) {
+    .mas-whodunit.moz-style {
+      font-size: 0.9rem !important;
+      line-height: 1rem !important;
+      padding: 0.5rem 1.5rem !important;
+    }
+  }
+  @media screen and (max-width: 2000px) {
+    .mas-whodunit.moz-style {
+      font-size: 1.3rem !important;
+      line-height: 1.75rem !important;
+      padding: 0.5rem 1.875rem !important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .mas-whodunit.moz-style {
+      font-size: 0.8rem !important;
+      line-height: 1rem !important;
+      padding: 0.5rem 1.875rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mas-whodunit {
     font-size: 1rem !important;
     line-height: 1rem !important;
   }
@@ -366,12 +449,24 @@
 @media screen and (max-width: 768px) {
   .react-parallax .react-parallax-bgimage {
     display: none;
-    heoght: auto;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .winner-mobile {
-    margin-bottom: 50em;
+    margin-bottom: 50em !important;
+  }
+  .mb-4em {
+    margin-bottom: 4em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .winner-mobile {
+    margin-bottom: 40em !important;
+  }
+  .mb-4em {
+    margin-bottom: 0;
   }
 }

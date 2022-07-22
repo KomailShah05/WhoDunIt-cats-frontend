@@ -127,6 +127,9 @@ p {
     font-size: $font-20;
     line-height: $line-height-24;
   }
+  @-moz-document url-prefix() {
+    font-size: 1.4rem;
+  }
 }
 
 .btn {
@@ -222,8 +225,12 @@ p {
   }
 }
 
+.btn-container {
+  overflow: hidden;
+}
 .sub-btn-container {
   max-width: 24.438rem; //391px
+  overflow: hidden;
 }
 
 .subscribe-btn {
@@ -262,6 +269,24 @@ p {
   }
 }
 
+.btn.whodunit-btn {
+  @include button(
+    $black,
+    "../../assets/images/mask.png",
+    7100%,
+    100%,
+    none,
+    $white
+  );
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+
+  &:hover {
+    -webkit-animation: ani 0.7s steps(70) forwards;
+    animation: ani 0.7s steps(70) forwards;
+  }
+}
 @keyframes ani {
   from {
     -webkit-mask-position: 0 0;

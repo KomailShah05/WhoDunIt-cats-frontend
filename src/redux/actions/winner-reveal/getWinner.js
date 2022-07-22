@@ -13,7 +13,6 @@ const getWinnerAction = () => {
       // api call to get total tokent minted
       let response = await getRequest(api_routes.WINNER_REVEAL);
       if (response) dispatch(saveWinnerStatus(response));
-      console.log(response);
     } catch (err) {
       dispatch(saveWinnerFail());
     }
@@ -26,6 +25,10 @@ const saveWinnerStatus = (success) => {
       type: types.WINNER_REVEAL,
       payload: success,
     });
+    dispatch({
+      type: types.WINNER_STATUS,
+      payload: true,
+    });
   };
 };
 
@@ -34,6 +37,11 @@ const saveWinnerFail = () => {
     dispatch({
       type: types.WINNER_REVEAL,
       payload: {},
+    });
+
+    dispatch({
+      type: types.WINNER_STATUS,
+      payload: false,
     });
   };
 };

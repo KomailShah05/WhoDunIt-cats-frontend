@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { Parallax } from "react-parallax";
 
 // components
-import WalkingCats from "../walking-cats";
+// import WalkingCats from "../walking-cats";
+import CrowdSimulator from "../crowd-simulator";
 
 //constants
 import { eng_lang } from "../../../lib/utills/constants";
@@ -13,22 +14,16 @@ import { landinPageProps } from "../../../pages/landing-page";
 import "./index.scss";
 
 // Assets
-import {
-  pixelated_cat,
-  border,
-  winner_avatar,
-  minted_bg,
-} from "../../../assets";
+import { pixelated_cat, border, minted_bg } from "../../../assets";
 
 const MintedSection = () => {
-  const { totalMinted, winner } = useContext(landinPageProps);
-  // const url = window.location.pathname;
+  const { totalMinted, isWinner, winnerData } = useContext(landinPageProps);
   return (
     <>
-      {winner?.success === true && (
-        <>
-          <div className="winner-reveal">
-            <div className="d-flex flex-column align-items-center winner-content">
+      {isWinner === true && (
+        <div className="position-relative overflow-visible ">
+          <div className="winner-reveal ">
+            <div className="d-flex flex-column align-items-center winner-content ">
               <h2 className="solved-heading">
                 {eng_lang.winnerRevealLandingPage.heading}
               </h2>
@@ -41,46 +36,49 @@ const MintedSection = () => {
               <h3 className="detective-heading">
                 {eng_lang.winnerRevealLandingPage.case_detective}
               </h3>
-              <img
-                src={winner_avatar}
-                alt="winner"
-                className="winner-profile"
-              />
+              <div className="winner-profile">
+                <img src={winnerData?.winner?.profile_img_url} alt="winner" />
+              </div>
               <p className="winner-name">
-                {eng_lang.winnerRevealLandingPage.winner_name}
+                {winnerData?.winner?.user?.username !== null
+                  ? winnerData?.winner?.user?.username
+                  : "Unnamed"}
               </p>
-              <button
-                className="btn whodunit-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#scrollModal"
-                data-bs-dismiss="modal"
-              >
-                {eng_lang.buttonConstants.who_dun_it}
-              </button>
+              <div className="position-relative whodunit-btn-container">
+                <span className="mas moz-style mas-whodunit">
+                  {eng_lang.buttonConstants.who_dun_it}
+                </span>
+                <button
+                  className="btn whodunit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#scrollModal"
+                  data-bs-dismiss="modal"
+                >
+                  {eng_lang.buttonConstants.who_dun_it}
+                </button>
+              </div>
             </div>
           </div>
-        </>
+        </div>
       )}
       <Parallax bgImage={minted_bg} strength={300}>
         <div
           id="minted"
           className={`${
-            winner?.success === true && "minted-section-winner flex-column"
+            isWinner === true && "minted-section-winner flex-column"
           }`}
         >
           <div className="container-xl">
             <div
-              className={`d-flex justify-content-center align-items-center w-100 ${
-                winner?.success === true && "winner-mobile"
+              className={`d-flex justify-content-center align-items-center w-100 mb-4em ${
+                isWinner === true && "winner-mobile"
               } `}
             >
-              <div
-                className={`text-box ${winner?.success === true && "d-none"}`}
-              >
+              <div className={`text-box ${isWinner === true && "d-none"}`}>
                 <h2 className="text-white text-capitalize">
                   {eng_lang.mintedSection.total_Minted}
                 </h2>
-                <p className="minted-text">
+                <p data-testid="totalMinted" className="minted-text">
                   {totalMinted || 0}
                   <br />
                   <span className="remaining-minted">
@@ -91,7 +89,8 @@ const MintedSection = () => {
             </div>
           </div>
         </div>
-        <WalkingCats />
+        {/* <WalkingCats /> */}
+        <CrowdSimulator />
       </Parallax>
     </>
   );

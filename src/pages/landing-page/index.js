@@ -1,6 +1,6 @@
 //libraries
-import React, { createContext, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { createContext } from "react";
+import { useSelector } from "react-redux";
 
 //pages
 
@@ -15,11 +15,8 @@ import {
 import { PopUp, ScrollingModal } from "../../components/join-the-hunt";
 import Toast from "../../lib/helper/toast";
 
-// actions-redux
-import { getWinnerAction } from "../../redux/actions/winner-reveal";
-import { eng_lang } from "../../lib/utills/constants";
-
 //constants
+// import { eng_lang } from "../../lib/utills/constants";
 
 //styles
 
@@ -28,21 +25,13 @@ import { eng_lang } from "../../lib/utills/constants";
 export const landinPageProps = createContext();
 
 const LandingPage = () => {
-  const dispatch = useDispatch();
   const {
     nftsReducer: { totalMinted, btnLoading, showModal },
     voucherReducer: { voucherLoading, voucher },
     metaMaskWalletReducer: { walletConnected, walletAddress },
     buyReducer: { buyInProgress, buyError, congrats, tokenId },
-    winnerReducer: { winner },
+    winnerReducer: { isWinner, winnerData },
   } = useSelector((state) => state);
-
-  useEffect(() => {
-    if (totalMinted >= eng_lang.totalNoOfMintToken) {
-      dispatch(getWinnerAction());
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <>
@@ -59,14 +48,15 @@ const LandingPage = () => {
           congrats,
           showModal,
           tokenId,
-          winner,
+          isWinner,
+          winnerData,
         }}
       >
         <HeroSection />
         <MintedSection />
         <HowItWorks />
         <WhoDidIt />
-        <PopUp />
+        {showModal && <PopUp />}
         <SmallPopup />
         <Toast />
         <ScrollingModal />

@@ -2,18 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 .hero {
-  background-image: url(../../../assets/images/HeroImg.png);
+  background-image: url(https://d1lu1ykcmin7ci.cloudfront.net/HeroImg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50.625rem;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 @media screen and (max-width: 992px) {
   .hero {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    min-height: 100%;
   }
 }
 
@@ -21,10 +27,16 @@
   margin-top: 19.875rem;
 }
 
+@media screen and (max-width: 2000px) {
+  .hero-content {
+    padding-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-content {
     margin-top: 15.625rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -98,6 +110,12 @@
   line-height: 1.75rem;
 }
 
+@media screen and (max-width: 2500px) {
+  .hero-mas {
+    padding-bottom: 9px !important;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .hero-mas {
     padding-bottom: 9px !important;
@@ -117,6 +135,12 @@
   font-weight: 400;
   border: 0;
   outline: 0;
+}
+
+@-moz-document url-prefix() {
+  .btn.hero-card-btn {
+    padding: 10px 33px 6px 24px !important;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -19,12 +19,12 @@ const Footer = () => {
           <div className="col-lg-5 first-col">
             <ul className="list-unstyled list">
               <li>
-                <Link to={routes.FAQS}>{eng_lang.footer.faq}</Link>
+                <a href={routes.FAQS}>{eng_lang.footer.faq}</a>
               </li>
               <li>
-                <Link to={routes.TERMS_AND_CONDITIONS}>
+                <a href={routes.TERMS_AND_CONDITIONS}>
                   {eng_lang.footer.terms_and_conditions}
-                </Link>
+                </a>
               </li>
               <li>
                 <Link to={"/"}>{eng_lang.footer.support_email} </Link>
@@ -36,22 +36,22 @@ const Footer = () => {
             {" "}
             <ul className="list-unstyled list ">
               <li>
-                <Link to={"/"}>
+                <a href={"/"} target="_blank" rel="noreferrer">
                   <img src={TwitterIcon} alt="twitter" />
                   {eng_lang.footer.twitter}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to={"/"}>
+                <a href={"/"} target="_blank" rel="noreferrer">
                   <img src={DiscordIcon} alt="discord" />
                   {eng_lang.footer.discord}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to={"/"}>
+                <a href={"/"} target="_blank" rel="noreferrer">
                   <img src={InstagramIcon} alt="instagram" />
                   {eng_lang.footer.instagram}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
