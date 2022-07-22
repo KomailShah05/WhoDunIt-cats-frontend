@@ -22,7 +22,7 @@ const BlockButton = ({
 }) => {
   return (
     <div className="d-grid gap-2 block">
-      <div className="btn-container position-relative">
+      <div className="btn-container btn-block-container position-relative">
         <span
           className={`mas mas-block ${
             transparent_btn && "btn-secondary block__bg-tranparent"

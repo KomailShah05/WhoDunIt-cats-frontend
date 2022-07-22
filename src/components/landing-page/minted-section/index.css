@@ -363,8 +363,6 @@
 .mas-whodunit {
   padding: 0.5rem 1.5rem !important;
   border-radius: 0;
-  -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   -webkit-appearance: none !important;
   appearance: none !important;
   -moz-appearance: none !important;
@@ -382,6 +380,30 @@
   .mas-whodunit {
     font-size: 1.5rem !important;
     line-height: 1.75rem !important;
+  }
+}
+
+@-moz-document url-prefix() {
+  @media screen and (max-width: 3900px) {
+    .mas-whodunit.moz-style {
+      font-size: 0.9rem !important;
+      line-height: 1rem !important;
+      padding: 0.5rem 1.5rem !important;
+    }
+  }
+  @media screen and (max-width: 2000px) {
+    .mas-whodunit.moz-style {
+      font-size: 1.3rem !important;
+      line-height: 1.75rem !important;
+      padding: 0.5rem 1.875rem !important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .mas-whodunit.moz-style {
+      font-size: 0.8rem !important;
+      line-height: 1rem !important;
+      padding: 0.5rem 1.875rem !important;
+    }
   }
 }
 

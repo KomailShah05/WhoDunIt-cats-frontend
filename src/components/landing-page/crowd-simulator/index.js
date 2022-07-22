@@ -2,15 +2,12 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 
-// assets
-import CatCrowd from "../../../assets/images/Cat_Crowd.png";
-
 // styles
 import "./style.scss";
 
 const CrowdSimulator = () => {
   const config = {
-    src: CatCrowd,
+    src: "https://d1lu1ykcmin7ci.cloudfront.net/Cat_Crowd.png",
     rows: 10,
     cols: 3,
   };

@@ -127,6 +127,9 @@ p {
     font-size: $font-20;
     line-height: $line-height-24;
   }
+  @-moz-document url-prefix() {
+    font-size: 1.4rem;
+  }
 }
 
 .btn {
@@ -222,6 +225,9 @@ p {
   }
 }
 
+.btn-container {
+  overflow: hidden;
+}
 .sub-btn-container {
   max-width: 24.438rem; //391px
   overflow: hidden;

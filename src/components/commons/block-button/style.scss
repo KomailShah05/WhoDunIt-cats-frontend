@@ -18,6 +18,17 @@
   }
 }
 
+.btn-block-container {
+  span {
+    color: transparent;
+  }
+  &:hover {
+    span {
+      color: $white;
+    }
+  }
+}
+
 .block {
   &__btn-text {
     font-family: $font-family-gochi-hand;
