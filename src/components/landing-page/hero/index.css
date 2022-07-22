@@ -131,6 +131,12 @@
   outline: 0;
 }
 
+@-moz-document url-prefix() {
+  .btn.hero-card-btn {
+    padding: 10px 30px 6px 24px !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .btn.hero-card-btn {
     width: 100%;
