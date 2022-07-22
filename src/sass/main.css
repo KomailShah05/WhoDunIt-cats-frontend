@@ -129,6 +129,12 @@ p {
   }
 }
 
+@-moz-document url-prefix() {
+  .mas {
+    font-size: 1.4rem;
+  }
+}
+
 .btn.btn-primary {
   padding: 10px 24px 6px;
   border-radius: 0px;

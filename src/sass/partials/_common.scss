@@ -127,6 +127,9 @@ p {
     font-size: $font-20;
     line-height: $line-height-24;
   }
+  @-moz-document url-prefix() {
+    font-size: 1.4rem;
+  }
 }
 
 .btn {
