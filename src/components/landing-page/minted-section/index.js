@@ -45,7 +45,7 @@ const MintedSection = () => {
                   : "Unnamed"}
               </p>
               <div className="position-relative whodunit-btn-container">
-                <span className="mas mas-whodunit">
+                <span className="mas moz-style mas-whodunit">
                   {eng_lang.buttonConstants.who_dun_it}
                 </span>
                 <button

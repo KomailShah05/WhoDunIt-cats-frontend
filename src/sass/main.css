@@ -228,6 +228,10 @@ p {
   }
 }
 
+.btn-container {
+  overflow: hidden;
+}
+
 .sub-btn-container {
   max-width: 24.438rem;
   overflow: hidden;
