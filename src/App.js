@@ -18,7 +18,7 @@ import {
 import EtheriumProvider from "./services/etherium-blockchain/EtheriumProvider";
 import { withHeaderAndFooter } from "./withHeaderAndFooter";
 
-//constants
+//constantss
 import { eng_lang, routes } from "./lib/utills/constants";
 import {
   getMintedTokens,
