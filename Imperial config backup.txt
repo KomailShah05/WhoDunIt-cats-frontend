@@ -73,7 +73,7 @@ APPLY   IMPMAN01   MANDATORY CHAR   VENDOR   2028    LIST    MODEL	IR-2-G12
 									IR-6-SU-C																																																															
 									IR-6-SU-XB																																																															
 									IR-6-XB																																																															
-									IR-G36																																																														
+									IR-G36																																																															
 									IR-G36-C																																																															
 									IR-G36-XB																																																															
 									IR-2-G36																																																															
@@ -365,7 +365,7 @@ IF    #BASE MODEL    =:   IR-6-RG24
 			  IR-6-RG24-C-XB																																																																					
 			  IR-6-RG24-XB																																																																					
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL    																																																																								
 																																																																								
 CG-12
 																																																																								
@@ -382,7 +382,7 @@ IF    #BASE MODEL    =:   IR-4-G12
                           IR-2-G12																																																																								
                           IR-2-G12-XB																																																																								
                           																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL    																																																																								
 																																																																								
 1IN THICK GRIDDLE PLATE 12IN WIDE
 IR-12 THERMO-GRIDD
@@ -431,7 +431,7 @@ IF    #BASE MODEL    =:   IR-4-RG24
                           																																																																								
                           																																																																								
                           																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL  																																																																								
 																																																																								
 1IN THICK GRIDDLE PLATE 24IN WIDE
 IR-24 THERMO-GRIDD
@@ -1144,7 +1144,7 @@ IF   #ACCESSORY MODEL    =:  IRSB-36
                              IRCM-48																																																																								
 																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL 																																																																								
 																																																																								
 10-14060
 ISB-LEGS, ICMA-LEGS
@@ -1156,7 +1156,7 @@ TSIL   FI     CHOOSE   ONE   !??Salamander & cheesemelter mounting options
 IF   #ACCESSORY MODEL   =:   IRCM-60																																																																								
 			     IRCM-72																																																																					
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL   																																																																								
 																																																																								
 10-14060
 ISB-LEGS, ICMA-LEGS
@@ -1167,7 +1167,7 @@ TSIL   FI     CHOOSE   ONE   !??Salamander & cheesemelter mounting options
 																																																																								
 IF   #ACCESSORY MODEL    =     IRCM-84																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
+THEN      SELECT   VENDOR     2028     LIST   MODEL   																																																																								
 																																																																								
 10-14060
 ISB-LEGS, ICMA-LEGS
@@ -1198,7 +1198,7 @@ TSIL    FI     CHOOSE     MANY   !??Salamander & cheesemelter options
 																																																																								
 IF   #ACCESSORY MODEL    =   IRCM-24																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL	ADD																																																																							
+THEN      SELECT   VENDOR     2028     LIST   MODEL																																																																								
 																																																																								
 ICMA-24 RACK
 																																																																								
@@ -1208,7 +1208,7 @@ TSIL   FI   CHOOSE   ONE    !??Extra rack
 IF   #ACCESSORY MODEL    =:   IRCM-36																																																																								
 			      ICMA-36-E																																																																					
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL	ADD																																																																							
+THEN      SELECT   VENDOR     2028     LIST   MODEL																																																																								
 																																																																								
 ICMA-36 RACK
 																																																																								
@@ -1217,7 +1217,7 @@ TSIL   FI   CHOOSE   ONE    !??Extra rack
 																																																																								
 IF   #ACCESSORY MODEL    =   IRCM-48																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL	ADD																																																																							
+THEN      SELECT   VENDOR     2028     LIST   MODEL																																																																							
 																																																																								
 ICMA-48 RACK
 																																																																								
@@ -1226,7 +1226,7 @@ TSIL   FI   CHOOSE   ONE    !??Extra rack
 																																																																								
 IF   #ACCESSORY MODEL    =   IRCM-60																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL	ADD																																																																							
+THEN      SELECT   VENDOR     2028     LIST   MODEL																																																																								
 																																																																								
 ICMA-60 RACK
 																																																																								
@@ -1235,7 +1235,7 @@ TSIL   FI   CHOOSE   ONE    !??Extra rack
 																																																																								
 IF   #ACCESSORY MODEL    =   IRCM-72																																																																								
 																																																																								
-THEN      SELECT   VENDOR     2028     LIST   MODEL	ADD																																																																							
+THEN      SELECT   VENDOR     2028     LIST   MODEL																																																																								
 																																																																								
 ICMA-72 RACK
 																																																																								
@@ -2397,7 +2397,7 @@ IF   #BASE MODEL   =:   IHR-2-12-XB
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
 																																																																								
-IHR-S/S INTERIOR CABINET BASE 12 IN AND 18 IN
+*ZZIMP1218XB   Stainless steel interior on open cabinet base 	           1199.88  0  /M1
 IR-SPR S/S DOOR
 *ZZ1218SHELF   Stainless steel center shelf on open cabinet base 	    709  0  /M1																																																																							
 																																																																								
@@ -2414,7 +2414,7 @@ IF   #BASE MODEL   =:   IHR-4-24-XB
 THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
 																																																																								
 IR-SPR S/S DOOR
-IHR-S/S INTERIOR CABINET BASE 24 IN AND 36 IN
+*ZZIMP2436XB   Stainless steel interior on open cabinet base 	          1517.40  0  /M1
 *ZZ2426SHELF   Stainless steel center shelf on open cabinet base          925  0  /M1																																																																								
 																																																																								
 TSIL   FI   !??Stainless steel options_																																																																								
@@ -2444,7 +2444,7 @@ IF   #BASE MODEL   =:   IHR-6-XB
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL     ADD																																																																								
 																																																																								
-IHR-S/S INTERIOR CABINET BASE 24 IN AND 36 IN
+*ZZIMP2436XB   Stainless steel interior on open cabinet base 	          1517.40  0  /M1
 IR-SPR S/S DOORS-36
 *ZZ2426SHELF   Stainless steel center shelf on open cabinet base          925  0  /M1																																																																								
 																																																																								
@@ -2519,7 +2519,7 @@ IF   #BASE MODEL   =:   IHR-1FT-M
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 IHMS-18																																																																								
 IHMS-24																																																																								
 IHMS-36																																																																								
@@ -2539,7 +2539,7 @@ IF   #BASE MODEL   =	IHR-PL36-M
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 IHMS-36																																																																								
 IHMS-54																																																																								
 IHMS-72																																																																								
@@ -2560,7 +2560,7 @@ IF   #ACCESSORY MODEL   =:   IHMS-36
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
 STAND-CASTERS
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 																																																																								
 TSIL    FI   CHOOSE    ONE  !??Casters/legs																																																																								
 																																																																								
@@ -2571,7 +2571,7 @@ IF   #ACCESSORY MODEL   =:   IHMS-72
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
 STAND-CASTERS-6
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 																																																																								
 TSIL   FI     CHOOSE    ONE   !??Casters/legs																																																																								
 																																																																								
@@ -9745,7 +9745,7 @@ IF   #BASE MODEL   =    IHR-6-E-M
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 IHMS-36																																																																								
 IHR-XX-RM-36																																																																								
 IHR-XX-SC-36																																																																								
@@ -9760,7 +9760,7 @@ IF   #BASE MODEL   =:   IHR-4-1HT-E-M
 																																																																								
 THEN      SELECT   VENDOR     2028     LIST   MODEL   ADD																																																																								
 																																																																								
-STAINLESS STEEL LEGS WELDED ON BROILER (SET OF 4)
+*ZZIMPAC5066B   Stainless steel legs, 4", factory welded, in lieu of standard		     807.84  0  /M1	
 IHMS-18																																																																								
 IHMS-24																																																																								
 IHMS-36																																																																								
